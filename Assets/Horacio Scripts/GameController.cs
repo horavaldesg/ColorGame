@@ -62,7 +62,7 @@ public class GameController : MonoBehaviour
         
 
         gamepad = (DualShockGamepad)Gamepad.all[0];
-        gamepad.SetLightBarColor(Color.yellow);
+        gamepad.SetLightBarColor(Color.green);
 
         //Main Camera
         mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
