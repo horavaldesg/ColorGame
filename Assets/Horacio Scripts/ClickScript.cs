@@ -14,7 +14,7 @@ public class ClickScript : MonoBehaviour {
         //{
             RaycastHit hit;
         Debug.DrawRay(mainCamera.transform.position, transform.up, Color.red);
-            if (Physics.Raycast(mainCamera.transform.position, mainCamera.transform.up, out hit))
+            if (Physics.Raycast(mainCamera.transform.position, mainCamera.transform.up, out hit, 1))
             {
             if (hit.collider.gameObject.CompareTag("Ground"))
             {
