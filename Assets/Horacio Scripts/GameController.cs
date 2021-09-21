@@ -18,7 +18,6 @@ public class GameController : MonoBehaviour
 
     public int CamMode;
 
-
     //Sensitivity
     [SerializeField] float horizontalSens;
     [SerializeField] float verticalSens;
@@ -26,9 +25,6 @@ public class GameController : MonoBehaviour
     float horizontalSensConst;
     float verticalSensConst;
     float rotY;
-    [SerializeField] float adsSensHorizontal;
-    [SerializeField] float adsSensVertical;
-    bool ads;
 
     //Jumping/Gravity
     [SerializeField] Transform checkPos;
@@ -68,9 +64,6 @@ public class GameController : MonoBehaviour
         gamepad = (DualShockGamepad)Gamepad.all[0];
         gamepad.SetLightBarColor(Color.yellow);
 
-        
-
-      
         //Main Camera
         mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         FOVConst = mainCamera.fieldOfView;
@@ -107,7 +100,7 @@ public class GameController : MonoBehaviour
         damage = 30;
        
     }
-    void Jump()
+    public void Jump()
     {
         if (grounded)
         {
@@ -126,7 +119,7 @@ public class GameController : MonoBehaviour
         controls.Gameplay.Disable();
     }
 
-    private void Update()
+    public void Update()
     {
         camTransform = mainCamera.transform;
        
@@ -154,11 +147,8 @@ public class GameController : MonoBehaviour
             verticalSpeed = 0;
         }
 
-
-
-        //transform.Translate(m, Space.World);
-
         cc.Move(movement);
+
         //Player Rotation
         if (CamMode == 0)
         {
@@ -177,8 +167,9 @@ public class GameController : MonoBehaviour
 
 
         }
-        else if(CamMode == 1)
+        else if (CamMode == 1)
         {
+
             camTransform = FirstCam.transform;
             Vector2 r = new Vector2(0, rotate.x) * horizontalSens * Time.deltaTime;
             transform.Rotate(r, Space.Self);
@@ -193,11 +184,7 @@ public class GameController : MonoBehaviour
             camTransform.transform.localRotation = Quaternion.Euler(rotY, 0, 0);
         }
 
-
-
     }
- 
-      
 
     public void CamViewChange()
     {

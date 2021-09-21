@@ -59,3 +59,41 @@ public class CamChange : MonoBehaviour
         }
     }
 }
+
+
+/*
+  //Player Rotation
+        if (CamMode == 0)
+        {
+            camTransform = ThirdCam.transform;
+            Vector2 r = new Vector2(0, rotate.x) * horizontalSens * Time.deltaTime;
+            transform.Rotate(r, Space.Self);
+            Quaternion q = transform.rotation;
+            q.eulerAngles = new Vector3(q.eulerAngles.x, q.eulerAngles.y, 0);
+            transform.rotation = q;
+
+            //Camera Rotation
+
+            rotY += -rotate.y * verticalSens * Time.deltaTime;
+            rotY = Mathf.Clamp(rotY, -90, 90);
+            camTransform.transform.localRotation = Quaternion.Euler(rotY, 0, 0);
+
+
+        }
+        else if (CamMode == 1)
+        {
+
+            camTransform = FirstCam.transform;
+            Vector2 r = new Vector2(0, rotate.x) * horizontalSens * Time.deltaTime;
+            transform.Rotate(r, Space.Self);
+            Quaternion q = transform.rotation;
+            q.eulerAngles = new Vector3(q.eulerAngles.x, q.eulerAngles.y, 0);
+            transform.rotation = q;
+
+            //Camera Rotation
+
+            rotY += -rotate.y * verticalSens * Time.deltaTime;
+            rotY = Mathf.Clamp(rotY, -90, 90);
+            camTransform.transform.localRotation = Quaternion.Euler(rotY, 0, 0);
+        }
+  */
