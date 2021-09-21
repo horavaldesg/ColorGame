@@ -50,18 +50,17 @@ public class GameController : MonoBehaviour
     [SerializeField] float speedBoost = 1;
 
    
-    //Damage
-    public float damage;
-
-    //Full auto
-    public float fireRate;
+   
 
     //LightBar
     DualShockGamepad gamepad;
 
     //Rumbles
+   
     private void Awake()
     {
+        
+
         gamepad = (DualShockGamepad)Gamepad.all[0];
         gamepad.SetLightBarColor(Color.yellow);
 
@@ -77,7 +76,6 @@ public class GameController : MonoBehaviour
         horizontalSensConst = horizontalSens;
         verticalSensConst = verticalSens;
         controls = new PlayerControls();
-
         //Jump
         controls.Gameplay.Jump.started += tgb => Jump();
 
@@ -97,9 +95,7 @@ public class GameController : MonoBehaviour
         controls.Gameplay.Rotation.performed += tgb => rotate = tgb.ReadValue<Vector2>();
         controls.Gameplay.Rotation.canceled += tgb => rotate = Vector2.zero;
 
-        //Damage
-        damage = 30;
-       
+        
     }
     public void Jump()
     {
@@ -116,7 +112,7 @@ public class GameController : MonoBehaviour
     }
     private void OnDisable()
     {
-        gamepad.ResetHaptics();
+        //gamepad.ResetHaptics();
         controls.Gameplay.Disable();
     }
 
