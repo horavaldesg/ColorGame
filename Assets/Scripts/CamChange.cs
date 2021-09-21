@@ -8,10 +8,6 @@ public class CamChange : MonoBehaviour
     public GameObject FirstCam;
     public GameObject ThirdCam;
 
-    public InputAction camChange;
-
-    public InputActionMap gameplayActions;
-
     public int CamMode;
 
     void FixedUpdate()
@@ -29,26 +25,6 @@ public class CamChange : MonoBehaviour
         // 'Move' code here
     }
 
-    /*
-    void Update()
-    {
-        if (CamMode == 1)
-        {
-            CamMode = 0;
-
-        }
-        else
-        {
-            CamMode += 1;
-
-        }
-
-        StartCoroutine(CameraChange());
-
-        Debug.Log("ViewChange");
-    }
-    */
-
     public void CamViewChange()
     {
         if (CamMode == 1)
@@ -63,19 +39,17 @@ public class CamChange : MonoBehaviour
         }
 
         StartCoroutine(CameraChange());
-
-        Debug.Log("ViewChange");
     }
 
 
     IEnumerator CameraChange()
     {
-        yield return new WaitForSeconds(.01f);
+        yield return new WaitForSeconds(.02f);
 
         if (CamMode == 0)
         {
-            ThirdCam.SetActive(true);
             FirstCam.SetActive(false);
+            ThirdCam.SetActive(true);
         }
         
         if(CamMode == 1)
