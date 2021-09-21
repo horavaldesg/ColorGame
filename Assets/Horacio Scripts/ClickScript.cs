@@ -14,7 +14,7 @@ public class ClickScript : MonoBehaviour {
         //{
         RaycastHit hit;
         Debug.DrawRay(ojTransform.transform.position, transform.up, Color.red);
-        if (Physics.Raycast(ojTransform.transform.position, ojTransform.transform.up, out hit, 1))
+        if (Physics.Raycast(ojTransform.transform.position, -ojTransform.transform.up, out hit, 1))
         {
             if (hit.collider.gameObject.CompareTag("Ground"))
             {
@@ -26,11 +26,24 @@ public class ClickScript : MonoBehaviour {
                     t = 0;
 
                 }
-
-
-
-
             }
+        }
+        //Hands
+        if (Physics.Raycast(ojTransform.transform.position, ojTransform.transform.forward, out hit, 1))
+        {
+            /*
+            if (hit.collider.gameObject.CompareTag("Wall"))
+            {
+                t += Time.deltaTime;
+                if (t > footstepRate)
+                {
+                    Instantiate(footStepTexture, hit.point + Vector3.up * 0.01f, Quaternion.Euler(0, 0, 0));
+                    Debug.Log("Ground");
+                    t = 0;
+
+                }
+            }
+            */
         }
     }
 }
