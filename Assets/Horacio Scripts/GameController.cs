@@ -60,6 +60,8 @@ public class GameController : MonoBehaviour
     public enum controlSchemes {Gamepad, Keyboard };
 
     public controlSchemes controlScheme;
+
+    //public GameObject OptionsObj;
     
     private void Awake()
     {
@@ -102,6 +104,11 @@ public class GameController : MonoBehaviour
         //Rotation
         controls.Gameplay.Rotation.performed += tgb => rotate = tgb.ReadValue<Vector2>();
         controls.Gameplay.Rotation.canceled += tgb => rotate = Vector2.zero;
+
+        //Options
+        //controls.Gameplay.Options.performed += tgb => OptionsObj.SetActive(true);
+
+        //controls.Gameplay.Circle.performed += tgb => OptionsObj.SetActive(false);
 
         
     }
