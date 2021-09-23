@@ -22,8 +22,7 @@ public class GameController : MonoBehaviour
     //Sensitivity
     [SerializeField] float horizontalSens;
     [SerializeField] float verticalSens;
-    [SerializeField] float controllerSensHorizontal;
-    [SerializeField] float controllerSensVertical;
+
     float horizontalSensConst;
     float verticalSensConst;
     float rotY;
@@ -57,7 +56,7 @@ public class GameController : MonoBehaviour
     DualShockGamepad gamepad;
 
     //Rumbles
-    public enum controlSchemes {Gamepad, Keyboard };
+    public enum controlSchemes {Gamepad, KBM };
 
     public controlSchemes controlScheme;
     
@@ -130,15 +129,11 @@ public class GameController : MonoBehaviour
         if (controlScheme == controlSchemes.Gamepad)
         {
             InputBinding actionMask = new InputBinding { groups = "Gamepad" };
-            horizontalSensConst = controllerSensHorizontal;
-            verticalSensConst = controllerSensHorizontal;
             controls.bindingMask = actionMask;
         }
-        else if (controlScheme == controlSchemes.Keyboard)
+        else if (controlScheme == controlSchemes.KBM)
         {
             InputBinding actionMask = new InputBinding { groups = "KBM" };
-            horizontalSensConst = horizontalSens;
-            verticalSensConst = verticalSens;
             controls.bindingMask = actionMask;
         }
         
@@ -174,7 +169,7 @@ public class GameController : MonoBehaviour
         if (CamMode == 0)
         {
             camTransform = ThirdCam.transform;
-            Vector2 r = new Vector2(0, rotate.x) * horizontalSensConst * Time.deltaTime * 10;
+            Vector2 r = new Vector2(0, rotate.x) * horizontalSens * Time.deltaTime * 10;
             transform.Rotate(r, Space.Self);
             Quaternion q = transform.rotation;
             q.eulerAngles = new Vector3(q.eulerAngles.x, q.eulerAngles.y, 0);
@@ -182,7 +177,7 @@ public class GameController : MonoBehaviour
 
             //Camera Rotation
 
-            rotY += -rotate.y * verticalSensConst * Time.deltaTime * 10;
+            rotY += -rotate.y * verticalSens * Time.deltaTime;
             rotY = Mathf.Clamp(rotY, -90, 90);
             camTransform.transform.localRotation = Quaternion.Euler(rotY, 0, 0);
 
@@ -192,7 +187,7 @@ public class GameController : MonoBehaviour
         {
 
             camTransform = FirstCam.transform;
-            Vector2 r = new Vector2(0, rotate.x) * horizontalSensConst * Time.deltaTime * 10;
+            Vector2 r = new Vector2(0, rotate.x) * horizontalSens * Time.deltaTime * 10;
             transform.Rotate(r, Space.Self);
             Quaternion q = transform.rotation;
             q.eulerAngles = new Vector3(q.eulerAngles.x, q.eulerAngles.y, 0);
@@ -200,7 +195,7 @@ public class GameController : MonoBehaviour
 
             //Camera Rotation
 
-            rotY += -rotate.y * verticalSensConst * Time.deltaTime * 10;
+            rotY += -rotate.y * verticalSens * Time.deltaTime;
             rotY = Mathf.Clamp(rotY, -90, 90);
             camTransform.transform.localRotation = Quaternion.Euler(rotY, 0, 0);
         }
