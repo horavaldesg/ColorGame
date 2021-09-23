@@ -368,7 +368,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerHand
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4878512216783215457, guid: ff39e850387604e94b9f86e671367001, type: 3}
+    - {fileID: 1971926575955526483, guid: ff39e850387604e94b9f86e671367001, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ff39e850387604e94b9f86e671367001, type: 3}
 --- !u!4 &1051181053 stripped
 Transform:
@@ -582,9 +584,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1e70dad53deb49d8898c957d68b21f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ojTransform: {fileID: 1868289711}
+  ojTransform: {fileID: 0}
+  LeftFootTrnf: {fileID: 0}
+  RightFootTrnf: {fileID: 0}
   footStepTexture: {fileID: 3535107655431476019, guid: 98ce3115732d848778e82e2e3ff6025a, type: 3}
   footstepRate: 0.25
+  altSteps: 0
 --- !u!1 &1973167301
 GameObject:
   m_ObjectHideFlags: 0

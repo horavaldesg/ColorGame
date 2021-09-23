@@ -1,5 +1,54 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &578577559380721041
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4066653434332910529}
+  - component: {fileID: 1626754892366846274}
+  m_Layer: 0
+  m_Name: 'FeetSpawn '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4066653434332910529
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 578577559380721041}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.5, y: -0.399, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4905552399645422712}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1626754892366846274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 578577559380721041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1e70dad53deb49d8898c957d68b21f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ojTransform: {fileID: 578577559380721041}
+  LeftFootTrnf: {fileID: 7666444395883358154}
+  RightFootTrnf: {fileID: 7838594929045351175}
+  footStepTexture: {fileID: 3535107655431476019, guid: 98ce3115732d848778e82e2e3ff6025a, type: 3}
+  footstepRate: 0.25
+  altSteps: 0.4
 --- !u!1 &2678727137597139637
 GameObject:
   m_ObjectHideFlags: 0
@@ -95,6 +144,7 @@ Transform:
   - {fileID: 4905552399918309931}
   - {fileID: 4905552400397980553}
   - {fileID: 3751534729245755792}
+  - {fileID: 4066653434332910529}
   - {fileID: 5145410546178358284}
   - {fileID: 6719508254479703047}
   m_Father: {fileID: 0}
@@ -487,7 +537,7 @@ GameObject:
   - component: {fileID: 5145410546178358284}
   - component: {fileID: 1971926575955526483}
   m_Layer: 0
-  m_Name: FeetSpawn (1)
+  m_Name: Left Foot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -505,7 +555,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4905552399645422712}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1971926575955526483
 MonoBehaviour:
@@ -520,8 +570,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ojTransform: {fileID: 7666444395883358154}
+  LeftFootTrnf: {fileID: 0}
+  RightFootTrnf: {fileID: 0}
   footStepTexture: {fileID: 3535107655431476019, guid: 98ce3115732d848778e82e2e3ff6025a, type: 3}
   footstepRate: 0.25
+  altSteps: 0
 --- !u!1 &7838594929045351175
 GameObject:
   m_ObjectHideFlags: 0
@@ -533,7 +586,7 @@ GameObject:
   - component: {fileID: 6719508254479703047}
   - component: {fileID: 4878512216783215457}
   m_Layer: 0
-  m_Name: FeetSpawn (2)
+  m_Name: Right Foot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -551,7 +604,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4905552399645422712}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4878512216783215457
 MonoBehaviour:
@@ -566,8 +619,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ojTransform: {fileID: 7838594929045351175}
+  LeftFootTrnf: {fileID: 0}
+  RightFootTrnf: {fileID: 0}
   footStepTexture: {fileID: 3535107655431476019, guid: 98ce3115732d848778e82e2e3ff6025a, type: 3}
   footstepRate: 0.25
+  altSteps: 0
 --- !u!1001 &2678727138202263108
 PrefabInstance:
   m_ObjectHideFlags: 0
