@@ -6,8 +6,7 @@ using UnityEngine.InputSystem.DualShock;
 
 public class GameController : MonoBehaviour
 {
-    
-   
+
     //Controller
     PlayerControls controls;
     //Camera
