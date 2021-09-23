@@ -157,7 +157,7 @@ public class GameController : MonoBehaviour
         //Forward/Backward Movement
         float forwardSpeed = move.y * speed * speedBoost * Time.deltaTime;
 
-        if (canMove)
+        if (canMove && grounded)
         {
             movement += transform.forward * forwardSpeed;
         }
@@ -166,8 +166,8 @@ public class GameController : MonoBehaviour
             movement += transform.forward * forwardSpeed;
             canMove = true;
         }
-        Debug.Log (move.y);
-        Debug.Log(canMove);
+        //Debug.Log (move.y);
+        //Debug.Log(canMove);
         //Left/Right Movement
         float sideSpeed = move.x * speed * speedBoost * Time.deltaTime;
         movement += transform.right * sideSpeed;

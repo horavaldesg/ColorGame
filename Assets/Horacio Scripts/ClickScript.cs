@@ -57,21 +57,35 @@ public class ClickScript : MonoBehaviour
         //Hands
         if (Physics.Raycast(handTransform.transform.position, handTransform.transform.forward, out hit, 0.5f))
         {
-
-            if (hit.collider.gameObject.CompareTag("Wall"))
+            if (hit.collider.gameObject.CompareTag("XLeft"))
             {
                 Instantiate(handPrintTexture, hit.point + Vector3.forward * -0.01f, Quaternion.Euler(-90, 0, 0));
-                //Debug.Log("Wall");
-
+            }
+            else if (hit.collider.gameObject.CompareTag("XRight"))
+            {
+                Instantiate(handPrintTexture, hit.point + Vector3.forward * 0.01f, Quaternion.Euler(90, 0, 0));
+            }
+            else if (hit.collider.gameObject.CompareTag("ZRight"))
+            {
+                Instantiate(handPrintTexture, hit.point + Vector3.forward * -0.01f, Quaternion.Euler(0, 0, 90));
+            }
+            else if (hit.collider.gameObject.CompareTag("ZLeft"))
+            {
+                Instantiate(handPrintTexture, hit.point + Vector3.forward * 0.01f, Quaternion.Euler(0, 0, -90));
+            }
+            else if (hit.collider.gameObject.CompareTag("Top"))
+            {
+                Instantiate(footStepTexture, hit.point + Vector3.up * 0.01f, Quaternion.Euler(0, 0, 0));
 
             }
+            
             
             
         }
        
         if (Physics.SphereCast(transform.position - cc.center, cc.height / 2, transform.forward, out hit, 1))
         {
-            if (hit.collider.gameObject.CompareTag("Wall") || hit.collider.CompareTag("HandPrint"))
+            if (hit.collider.gameObject.layer == 9 || hit.collider.CompareTag("HandPrint"))
             {
                 GameController.canMove = false;
 
