@@ -37,7 +37,7 @@ public class GameController : MonoBehaviour
     public float jumpSpeed = 9;
 
     //Movement
-    Vector2 move;
+    public static Vector2 move;
     Vector2 rotate;
 
     public static int shotCount;
@@ -133,7 +133,6 @@ public class GameController : MonoBehaviour
 
     public void Update()
     {
-        
         if (controlScheme == controlSchemes.Gamepad)
         {
             InputBinding actionMask = new InputBinding { groups = "Gamepad" };
