@@ -22,7 +22,7 @@ public class ClickScript : MonoBehaviour {
                 if (t > footstepRate)
                 {
                     Instantiate(footStepTexture, hit.point + Vector3.up * 0.01f, Quaternion.Euler(0, 0, 0));
-                    Debug.Log("Ground");
+                    //Debug.Log("Ground");
                     t = 0;
 
                 }
