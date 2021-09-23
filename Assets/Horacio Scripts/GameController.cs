@@ -61,8 +61,12 @@ public class GameController : MonoBehaviour
     {
 
         Cursor.lockState = CursorLockMode.Locked;
-        //gamepad = (DualShockGamepad)Gamepad.all[0];
-        //gamepad.SetLightBarColor(Color.green);
+        if(gamepad != null)
+        {
+            gamepad = (DualShockGamepad)Gamepad.all[0];
+            gamepad.SetLightBarColor(Color.green);
+        }
+
 
         //Main Camera
         mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
