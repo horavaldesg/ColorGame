@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 public class AnimationScript : MonoBehaviour
 {
     Animator anim;
-   
+    public static bool jump;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,5 +31,6 @@ public class AnimationScript : MonoBehaviour
             anim.SetFloat("move", 0);
 
         }
+        anim.SetBool("jump", jump);
     }
 }

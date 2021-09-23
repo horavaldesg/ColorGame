@@ -116,6 +116,7 @@ public class GameController : MonoBehaviour
     {
         if (grounded)
         {
+            AnimationScript.jump = true;
             verticalSpeed = jumpSpeed;
             grounded = false;
         }
@@ -156,7 +157,7 @@ public class GameController : MonoBehaviour
         //Forward/Backward Movement
         float forwardSpeed = move.y * speed * speedBoost * Time.deltaTime;
 
-        if (canMove && grounded)
+        if (canMove)
         {
             movement += transform.forward * forwardSpeed;
         }
@@ -180,6 +181,7 @@ public class GameController : MonoBehaviour
         //Ground Check
         if (Physics.CheckSphere(checkPos.position, 0.5f, groundMask) && verticalSpeed <= 0)
         {
+            AnimationScript.jump = false;
             grounded = true;
             verticalSpeed = 0;
         }
