@@ -171,6 +171,7 @@ public class GameController : MonoBehaviour
         cc.Move(movement);
 
         //Player Rotation
+        //Third Person
         if (CamMode == 0)
         {
             camTransform = ThirdCam.transform;
@@ -188,6 +189,7 @@ public class GameController : MonoBehaviour
 
 
         }
+        //First Person
         else if (CamMode == 1)
         {
 

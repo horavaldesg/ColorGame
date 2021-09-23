@@ -165,11 +165,11 @@ MonoBehaviour:
   camTransform: {fileID: 4905552399918309931}
   FirstCam: {fileID: 4905552400474188788}
   ThirdCam: {fileID: 4905552399918309934}
-  CamMode: 0
+  CamMode: 1
   horizontalSens: 5
   verticalSens: 5
-  controllerHorizontalSens: 10
-  controllerVerticalSens: 10
+  controllerHorizontalSens: 20
+  controllerVerticalSens: 20
   checkPos: {fileID: 3751534729245755792}
   groundMask:
     serializedVersion: 2
@@ -228,7 +228,7 @@ GameObject:
   - component: {fileID: 4905552399813385563}
   - component: {fileID: 4905552399813385560}
   - component: {fileID: 4905552399813385561}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -506,7 +506,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 375
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -535,7 +535,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5145410546178358284}
-  - component: {fileID: 1971926575955526483}
   m_Layer: 0
   m_Name: Left Foot
   m_TagString: Untagged
@@ -557,24 +556,6 @@ Transform:
   m_Father: {fileID: 4905552399645422712}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1971926575955526483
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7666444395883358154}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1e70dad53deb49d8898c957d68b21f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ojTransform: {fileID: 7666444395883358154}
-  LeftFootTrnf: {fileID: 0}
-  RightFootTrnf: {fileID: 0}
-  footStepTexture: {fileID: 3535107655431476019, guid: 98ce3115732d848778e82e2e3ff6025a, type: 3}
-  footstepRate: 0.25
-  altSteps: 0
 --- !u!1 &7838594929045351175
 GameObject:
   m_ObjectHideFlags: 0
@@ -584,7 +565,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6719508254479703047}
-  - component: {fileID: 4878512216783215457}
   m_Layer: 0
   m_Name: Right Foot
   m_TagString: Untagged
@@ -606,24 +586,6 @@ Transform:
   m_Father: {fileID: 4905552399645422712}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4878512216783215457
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7838594929045351175}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1e70dad53deb49d8898c957d68b21f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ojTransform: {fileID: 7838594929045351175}
-  LeftFootTrnf: {fileID: 0}
-  RightFootTrnf: {fileID: 0}
-  footStepTexture: {fileID: 3535107655431476019, guid: 98ce3115732d848778e82e2e3ff6025a, type: 3}
-  footstepRate: 0.25
-  altSteps: 0
 --- !u!1001 &2678727138202263108
 PrefabInstance:
   m_ObjectHideFlags: 0
