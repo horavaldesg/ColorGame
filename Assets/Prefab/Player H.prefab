@@ -341,8 +341,8 @@ MonoBehaviour:
   FirstCam: {fileID: 7005566687639106401}
   ThirdCam: {fileID: 7005566688165886651}
   CamMode: 0
-  horizontalSens: 150
-  verticalSens: 150
+  horizontalSens: 100
+  verticalSens: 100
   checkPos: {fileID: 1242114808474620165}
   groundMask:
     serializedVersion: 2
@@ -351,8 +351,6 @@ MonoBehaviour:
   cc: {fileID: 7005566688623324395}
   speed: 5
   speedBoost: 1
-  damage: 0
-  fireRate: 0
 --- !u!143 &7005566688623324395
 CharacterController:
   m_ObjectHideFlags: 0
