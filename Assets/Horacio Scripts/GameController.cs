@@ -56,10 +56,13 @@ public class GameController : MonoBehaviour
     DualShockGamepad gamepad;
 
     //Rumbles
-   
+    public enum controlSchemes {Gamepad, KBM };
+
+    public controlSchemes controlScheme;
+    
     private void Awake()
     {
-
+        
         Cursor.lockState = CursorLockMode.Locked;
         if(gamepad != null)
         {
@@ -122,9 +125,21 @@ public class GameController : MonoBehaviour
 
     public void Update()
     {
+        
+        if (controlScheme == controlSchemes.Gamepad)
+        {
+            InputBinding actionMask = new InputBinding { groups = "Gamepad" };
+            controls.bindingMask = actionMask;
+        }
+        else if (controlScheme == controlSchemes.KBM)
+        {
+            InputBinding actionMask = new InputBinding { groups = "KBM" };
+            controls.bindingMask = actionMask;
+        }
+        
+        
         camTransform = mainCamera.transform;
        
-
         movement = Vector3.zero;
 
         //Forward/Backward Movement
