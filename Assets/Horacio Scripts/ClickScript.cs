@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ClickScript : MonoBehaviour
 {
+    public CharacterController cc;
     public GameObject LeftFootTrnf;
     public GameObject RightFootTrnf;
 
@@ -64,7 +65,21 @@ public class ClickScript : MonoBehaviour
 
 
             }
+            
+            
         }
+       
+        if (Physics.SphereCast(transform.position - cc.center, cc.height / 2, transform.forward, out hit, 1))
+        {
+            if (hit.collider.gameObject.CompareTag("Wall") || hit.collider.CompareTag("HandPrint"))
+            {
+                GameController.canMove = false;
 
+            }
+        }
+        else
+        {
+            GameController.canMove = true;
+        }
     }
 }

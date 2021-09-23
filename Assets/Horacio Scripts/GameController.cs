@@ -55,6 +55,7 @@ public class GameController : MonoBehaviour
     //LightBar
     DualShockGamepad gamepad;
 
+    public static bool canMove;
     //Rumbles
     public enum controlSchemes {Gamepad, Keyboard };
 
@@ -108,7 +109,7 @@ public class GameController : MonoBehaviour
         //controls.Gameplay.Options.performed += tgb => OptionsObj.SetActive(true);
 
         //controls.Gameplay.Circle.performed += tgb => OptionsObj.SetActive(false);
-
+        canMove = true;
         
     }
     public void Jump()
@@ -155,8 +156,18 @@ public class GameController : MonoBehaviour
 
         //Forward/Backward Movement
         float forwardSpeed = move.y * speed * speedBoost * Time.deltaTime;
-        movement += transform.forward * forwardSpeed;
 
+        if (canMove)
+        {
+            movement += transform.forward * forwardSpeed;
+        }
+        else if(!canMove && move.y < 0)
+        {
+            movement += transform.forward * forwardSpeed;
+            canMove = true;
+        }
+        Debug.Log (move.y);
+        Debug.Log(canMove);
         //Left/Right Movement
         float sideSpeed = move.x * speed * speedBoost * Time.deltaTime;
         movement += transform.right * sideSpeed;
