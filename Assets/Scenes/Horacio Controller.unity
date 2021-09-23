@@ -163,6 +163,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7005566688623324394, guid: 5e7924882bae44bbfaae8c305fcb5ae8, type: 3}
+      propertyPath: CamMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7005566688623324394, guid: 5e7924882bae44bbfaae8c305fcb5ae8, type: 3}
       propertyPath: verticalSens
       value: 5
       objectReference: {fileID: 0}
@@ -173,6 +177,14 @@ PrefabInstance:
     - target: {fileID: 7005566688623324394, guid: 5e7924882bae44bbfaae8c305fcb5ae8, type: 3}
       propertyPath: controlSchemeGamepad
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7005566688623324394, guid: 5e7924882bae44bbfaae8c305fcb5ae8, type: 3}
+      propertyPath: controllerVerticalSens
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7005566688623324394, guid: 5e7924882bae44bbfaae8c305fcb5ae8, type: 3}
+      propertyPath: controllerHorizontalSens
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7005566688623324396, guid: 5e7924882bae44bbfaae8c305fcb5ae8, type: 3}
       propertyPath: m_Name
