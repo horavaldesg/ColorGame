@@ -15,6 +15,6 @@ public class ParentWall : MonoBehaviour
     void Update()
     {
         parentRotation = this.transform.rotation.eulerAngles;
-        Debug.Log(gameObject.transform.localEulerAngles);
+        //Debug.Log(gameObject.transform.localEulerAngles);
     }
 }

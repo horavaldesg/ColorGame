@@ -66,7 +66,7 @@ public class ClickScript : MonoBehaviour
                 if (parentRot != Vector3.zero)
                 {
                     Instantiate(handPrintTexture, hit.point + Vector3.forward * -0.01f, Quaternion.Euler(-90, parentRot.y, 0));
-                    Debug.Log(hit.collider.GetComponentInParent<Transform>().localEulerAngles.y);
+                    //Debug.Log(hit.collider.GetComponentInParent<Transform>().localEulerAngles.y);
                 }
                 else
                 {
@@ -119,11 +119,19 @@ public class ClickScript : MonoBehaviour
                 Instantiate(footStepTexture, hit.point + Vector3.up * 0.01f, Quaternion.Euler(0, 0, 0));
 
             }
-            
+            if(hit.collider.gameObject.CompareTag("XLeft") || hit.collider.gameObject.CompareTag("XRight") || hit.collider.gameObject.CompareTag("ZRight") || hit.collider.gameObject.CompareTag("ZLeft") || hit.collider.gameObject.CompareTag("HandPrint"))
+            {
+                AnimationScript.touching = true;
+            }
             
             
         }
-       
+        else
+        {
+            AnimationScript.touching = false;
+
+        }
+
         if (Physics.SphereCast(transform.position - cc.center, cc.height / 2, transform.forward, out hit, 1))
         {
             if (hit.collider.gameObject.layer == 9 || hit.collider.CompareTag("HandPrint"))

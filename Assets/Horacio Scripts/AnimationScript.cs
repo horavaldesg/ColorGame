@@ -7,6 +7,7 @@ public class AnimationScript : MonoBehaviour
 {
     Animator anim;
     public static bool jump;
+    public static bool touching;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,5 +33,7 @@ public class AnimationScript : MonoBehaviour
 
         }
         anim.SetBool("jump", jump);
+        anim.SetBool("touching", touching);
+        Debug.Log(touching);
     }
 }
