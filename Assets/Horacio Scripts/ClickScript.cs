@@ -31,7 +31,7 @@ public class ClickScript : MonoBehaviour
                 leftT += Time.deltaTime;
                 if (leftT > footstepRate)
                 {
-                    Instantiate(footStepTexture, hit.point + Vector3.up * 0.01f, Quaternion.Euler(0, 0, 0));
+                    //Instantiate(footStepTexture, hit.point + Vector3.up * 0.01f, Quaternion.Euler(0, 0, 0));
                     //Debug.Log("Ground");
                     leftT = 0;
 
@@ -47,7 +47,7 @@ public class ClickScript : MonoBehaviour
                 if (hit.collider.gameObject.CompareTag("Ground"))
                 {
 
-                    Instantiate(footStepTexture, hit.point + Vector3.up * 0.01f, Quaternion.Euler(0, 0, 0));
+                    //Instantiate(footStepTexture, hit.point + Vector3.up * 0.01f, Quaternion.Euler(0, 0, 0));
 
                 }
 
@@ -59,19 +59,60 @@ public class ClickScript : MonoBehaviour
         {
             if (hit.collider.gameObject.CompareTag("XLeft"))
             {
-                Instantiate(handPrintTexture, hit.point + Vector3.forward * -0.01f, Quaternion.Euler(-90, 0, 0));
+
+                //Debug.Log(ParentWall.parentRotation);
+                Vector3 parentRot = hit.collider.GetComponentInParent<ParentWall>().parentRotation;
+                Debug.Log(parentRot);
+                if (parentRot != Vector3.zero)
+                {
+                    Instantiate(handPrintTexture, hit.point + Vector3.forward * -0.01f, Quaternion.Euler(-90, parentRot.y, 0));
+                    Debug.Log(hit.collider.GetComponentInParent<Transform>().localEulerAngles.y);
+                }
+                else
+                {
+                    Instantiate(handPrintTexture, hit.point + Vector3.forward * -0.01f, Quaternion.Euler(-90, 0, 0));
+                }
             }
             else if (hit.collider.gameObject.CompareTag("XRight"))
             {
-                Instantiate(handPrintTexture, hit.point + Vector3.forward * 0.01f, Quaternion.Euler(90, 0, 0));
+                Vector3 parentRot = hit.collider.GetComponentInParent<ParentWall>().parentRotation;
+
+                if (parentRot != Vector3.zero)
+                {
+                    Instantiate(handPrintTexture, hit.point + Vector3.forward * 0.01f, Quaternion.Euler(90, parentRot.y, 0));
+
+                }
+                else
+                {
+                    Instantiate(handPrintTexture, hit.point + Vector3.forward * 0.01f, Quaternion.Euler(90, 0, 0));
+                }
             }
             else if (hit.collider.gameObject.CompareTag("ZRight"))
             {
-                Instantiate(handPrintTexture, hit.point + Vector3.forward * -0.01f, Quaternion.Euler(0, 0, 90));
+                Vector3 parentRot = hit.collider.GetComponentInParent<ParentWall>().parentRotation;
+
+                if (parentRot != Vector3.zero)
+                {
+                    Instantiate(handPrintTexture, hit.point + Vector3.forward * -0.01f, Quaternion.Euler(0, parentRot.y, 90));
+
+                }
+                else
+                {
+                    Instantiate(handPrintTexture, hit.point + Vector3.forward * -0.01f, Quaternion.Euler(0, 0, 90));
+                }
             }
             else if (hit.collider.gameObject.CompareTag("ZLeft"))
             {
-                Instantiate(handPrintTexture, hit.point + Vector3.forward * 0.01f, Quaternion.Euler(0, 0, -90));
+                Vector3 parentRot = hit.collider.GetComponentInParent<ParentWall>().parentRotation;
+
+                if (parentRot != Vector3.zero)
+                {
+                    Instantiate(handPrintTexture, hit.point + Vector3.forward * 0.01f, Quaternion.Euler(0, parentRot.y, -90));
+                }
+                else
+                {
+                    Instantiate(handPrintTexture, hit.point + Vector3.forward * 0.01f, Quaternion.Euler(0, 0, -90));
+                }
             }
             else if (hit.collider.gameObject.CompareTag("Top"))
             {
