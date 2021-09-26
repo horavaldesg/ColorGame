@@ -34,6 +34,6 @@ public class AnimationScript : MonoBehaviour
         }
         anim.SetBool("jump", jump);
         anim.SetBool("touching", touching);
-        Debug.Log(touching);
+        //Debug.Log(touching);
     }
 }
