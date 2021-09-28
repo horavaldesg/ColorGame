@@ -259,7 +259,7 @@ MonoBehaviour:
   speed: 5
   speedBoost: 1
   controlScheme: 1
-  OptionsObj: {fileID: 0}
+  OptionsObj: {fileID: 8990421565367422949}
 --- !u!143 &4905552399645422718
 CharacterController:
   m_ObjectHideFlags: 0
@@ -1400,6 +1400,11 @@ PrefabInstance:
       objectReference: {fileID: 4905552399645422719}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 358f401b45c720148b770fae8cbbb54d, type: 3}
+--- !u!1 &8990421565367422949 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 312130268427470056, guid: 358f401b45c720148b770fae8cbbb54d, type: 3}
+  m_PrefabInstance: {fileID: 8687597700972595981}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &8990421565367422953 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 312130268427470052, guid: 358f401b45c720148b770fae8cbbb54d, type: 3}
