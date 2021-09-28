@@ -47,10 +47,12 @@ MonoBehaviour:
   LeftFootTrnf: {fileID: 7666444395883358154}
   RightFootTrnf: {fileID: 7838594929045351175}
   handTransform: {fileID: 8827479078464505960}
-  footStepTexture: {fileID: 3535107655431476019, guid: 98ce3115732d848778e82e2e3ff6025a, type: 3}
-  handPrintTexture: {fileID: 3535107655431476019, guid: 98ce3115732d848778e82e2e3ff6025a, type: 3}
+  leftFootTexture: {fileID: 7844180659115529922, guid: 537ed745124f0c142ba1777389a83739, type: 3}
+  RightFootTexture: {fileID: 6834518500650429600, guid: 26fe6e757a02f0841a044236c934c25a, type: 3}
+  handPrintTexture: {fileID: 480127871697619069, guid: eeaab54bcdbb9774a90caae48f85f376, type: 3}
   footstepRate: 0.25
   altSteps: 0.4
+  parentObj: {fileID: 4905552399645422713}
 --- !u!1 &2678727137597139637
 GameObject:
   m_ObjectHideFlags: 0
