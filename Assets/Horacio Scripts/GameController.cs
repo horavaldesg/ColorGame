@@ -61,8 +61,8 @@ public class GameController : MonoBehaviour
 
     public controlSchemes controlScheme;
 
-    //public GameObject OptionsObj;
-    
+    public GameObject OptionsObj;
+
     private void Awake()
     {
 
@@ -112,9 +112,9 @@ public class GameController : MonoBehaviour
         controls.Gameplay.Rotation.canceled += tgb => rotate = Vector2.zero;
 
         //Options
-        //controls.Gameplay.Options.performed += tgb => OptionsObj.SetActive(true);
+        controls.Gameplay.Options.performed += tgb => OptionsObj.SetActive(true);
 
-        //controls.Gameplay.Circle.performed += tgb => OptionsObj.SetActive(false);
+        controls.Gameplay.Circle.performed += tgb => OptionsObj.SetActive(false);
 
         canMove = true;
         
