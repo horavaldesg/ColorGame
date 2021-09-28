@@ -31,7 +31,7 @@ public class ClickScript : MonoBehaviour
                 leftT += Time.deltaTime;
                 if (leftT > footstepRate)
                 {
-                    //Instantiate(footStepTexture, hit.point + Vector3.up * 0.01f, Quaternion.Euler(0, 0, 0));
+                    Instantiate(footStepTexture, hit.point + Vector3.up * 0.01f, Quaternion.Euler(0, 0, 0));
                     //Debug.Log("Ground");
                     leftT = 0;
 
@@ -47,7 +47,7 @@ public class ClickScript : MonoBehaviour
                 if (hit.collider.gameObject.CompareTag("Ground"))
                 {
 
-                    //Instantiate(footStepTexture, hit.point + Vector3.up * 0.01f, Quaternion.Euler(0, 0, 0));
+                    Instantiate(footStepTexture, hit.point + Vector3.up * 0.01f, Quaternion.Euler(0, 0, 0));
 
                 }
 
