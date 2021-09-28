@@ -109,7 +109,7 @@ public class GameController : MonoBehaviour
         //Options
         controls.Gameplay.Options.performed += tgb => OptionsObj.SetActive(!OptionsObj.activeSelf);
 
-        controls.Gameplay.Circle.performed += tgb => OptionsObj.SetActive(false);
+        controls.Gameplay.Circle.performed += tgb => OptionsObj.SetActive(!OptionsObj.activeSelf);
 
         canMove = true;
         
