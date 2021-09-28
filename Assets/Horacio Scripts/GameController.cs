@@ -66,12 +66,7 @@ public class GameController : MonoBehaviour
     private void Awake()
     {
 
-        if (PauseMenu.GamePause)
-        {
-            Cursor.lockState = CursorLockMode.None;
-        }
-
-        Cursor.lockState = CursorLockMode.Locked;
+       
 
         if(gamepad != null)
         {
@@ -141,6 +136,14 @@ public class GameController : MonoBehaviour
 
     public void Update()
     {
+        if (OptionsObj.activeSelf)
+        {
+            Cursor.lockState = CursorLockMode.None;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+        }
         if (controlScheme == controlSchemes.Gamepad)
         {
             InputBinding actionMask = new InputBinding { groups = "Gamepad" };
