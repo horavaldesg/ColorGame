@@ -20,15 +20,10 @@ public class FlipMirror : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("Collision " + rot.transform.localEulerAngles.y);
-        if(rot.localEulerAngles.y == 0)
-        {
-            rot.rotation = Quaternion.Euler(rot.localEulerAngles.x, 180, rot.localEulerAngles.z);
-            room1.SetActive(true);
-        }
-        else if (rot.transform.localEulerAngles.y == 180)
-        {
-            rot.rotation = Quaternion.Euler(rot.localEulerAngles.x, 0, rot.localEulerAngles.z);
-            room1.SetActive(false);
-        }
+        
+            rot.rotation = Quaternion.Euler(rot.localEulerAngles.x, rot.localEulerAngles.y - 180, rot.localEulerAngles.z);
+            room1.SetActive(!room1.activeSelf);
+        
+        
     }
 }

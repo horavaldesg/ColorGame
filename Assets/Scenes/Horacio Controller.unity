@@ -263,7 +263,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-2642
+  m_Name: pb_Mesh-32796
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -510,7 +510,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-2654
+  m_Name: pb_Mesh-32808
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -679,6 +679,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 167999173}
+    - target: {fileID: 195691129003470277, guid: 31ee7dac64c6702458268a36df5d5217, type: 3}
+      propertyPath: room1
+      value: 
+      objectReference: {fileID: 1220401458}
     - target: {fileID: 1216197497907000993, guid: 31ee7dac64c6702458268a36df5d5217, type: 3}
       propertyPath: m_Name
       value: Mirror
@@ -1317,7 +1321,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-2666
+  m_Name: pb_Mesh-32820
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2395,7 +2399,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-2702
+  m_Name: pb_Mesh-32856
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2627,13 +2631,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1220401458 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4104011266970767346, guid: 99621c994311940c190be2808a651dd1, type: 3}
+  m_PrefabInstance: {fileID: 4104011266571316147}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1286571840
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-2690
+  m_Name: pb_Mesh-32844
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3841,7 +3850,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-2678
+  m_Name: pb_Mesh-32832
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
