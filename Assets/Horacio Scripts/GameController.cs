@@ -106,14 +106,16 @@ public class GameController : MonoBehaviour
         controls.Gameplay.Rotation.canceled += tgb => rotate = Vector2.zero;
 
         //Options
-        controls.Gameplay.Options.performed += tgb => OptionsObj.SetActive(!OptionsObj.activeSelf);
-        controls.UI.Options.performed += tgb => OptionsObj.SetActive(!OptionsObj.activeSelf);
+        if (OptionsObj != null)
+        {
+            controls.Gameplay.Options.performed += tgb => OptionsObj.SetActive(!OptionsObj.activeSelf);
+            controls.UI.Options.performed += tgb => OptionsObj.SetActive(!OptionsObj.activeSelf);
 
 
-        controls.Gameplay.Circle.performed += tgb => OptionsObj.SetActive(!OptionsObj.activeSelf);
-        controls.UI.Circle.performed += tgb => OptionsObj.SetActive(!OptionsObj.activeSelf);
+            controls.Gameplay.Circle.performed += tgb => OptionsObj.SetActive(!OptionsObj.activeSelf);
+            controls.UI.Circle.performed += tgb => OptionsObj.SetActive(!OptionsObj.activeSelf);
 
-
+        }
         canMove = true;
         
     }
