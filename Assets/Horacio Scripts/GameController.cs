@@ -49,8 +49,7 @@ public class GameController : MonoBehaviour
     [SerializeField] float speed = 3;
     [SerializeField] float speedBoost = 1;
 
-   
-   
+
 
     //LightBar
     DualShockGamepad gamepad;
@@ -66,8 +65,8 @@ public class GameController : MonoBehaviour
     private void Awake()
     {
 
-       
 
+       
         if(gamepad != null)
         {
             gamepad = (DualShockGamepad)Gamepad.all[0];
@@ -108,8 +107,12 @@ public class GameController : MonoBehaviour
 
         //Options
         controls.Gameplay.Options.performed += tgb => OptionsObj.SetActive(!OptionsObj.activeSelf);
+        controls.UI.Options.performed += tgb => OptionsObj.SetActive(!OptionsObj.activeSelf);
+
 
         controls.Gameplay.Circle.performed += tgb => OptionsObj.SetActive(!OptionsObj.activeSelf);
+        controls.UI.Circle.performed += tgb => OptionsObj.SetActive(!OptionsObj.activeSelf);
+
 
         canMove = true;
         
@@ -139,10 +142,17 @@ public class GameController : MonoBehaviour
         if (OptionsObj.activeSelf)
         {
             Cursor.lockState = CursorLockMode.None;
+            //InputActionMap
+            controls.UI.Enable();
+
+            controls.Gameplay.Disable();
         }
         else
         {
             Cursor.lockState = CursorLockMode.Locked;
+            controls.UI.Disable();
+
+            controls.Gameplay.Enable();
         }
         if (controlScheme == controlSchemes.Gamepad)
         {
