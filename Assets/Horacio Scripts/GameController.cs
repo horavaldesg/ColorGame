@@ -112,7 +112,7 @@ public class GameController : MonoBehaviour
         controls.Gameplay.Rotation.canceled += tgb => rotate = Vector2.zero;
 
         //Options
-        controls.Gameplay.Options.performed += tgb => OptionsObj.SetActive(true);
+        controls.Gameplay.Options.performed += tgb => OptionsObj.SetActive(!OptionsObj.activeSelf);
 
         controls.Gameplay.Circle.performed += tgb => OptionsObj.SetActive(false);
 
