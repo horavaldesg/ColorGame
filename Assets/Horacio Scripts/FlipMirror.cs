@@ -17,6 +17,7 @@ public class FlipMirror : MonoBehaviour
     {
         
     }
+    /*
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("Collision " + rot.transform.localEulerAngles.y);
@@ -25,5 +26,12 @@ public class FlipMirror : MonoBehaviour
             room1.SetActive(!room1.activeSelf);
         
         
+    }
+    */
+    private void OnTriggerExit(Collider other)
+    {
+        rot.rotation = Quaternion.Euler(rot.localEulerAngles.x, rot.localEulerAngles.y - 180, rot.localEulerAngles.z);
+        room1.SetActive(!room1.activeSelf);
+
     }
 }
