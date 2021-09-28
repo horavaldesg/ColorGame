@@ -49,6 +49,14 @@ public class @ColorGame : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Pause"",
+                    ""type"": ""Button"",
+                    ""id"": ""8f7e9479-a0f1-4e93-ab81-99fdfab792c7"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -247,6 +255,28 @@ public class @ColorGame : IInputActionCollection, IDisposable
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
                     ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2ddb491d-1bfd-40ea-a0d5-8e2b0e1cff81"",
+                    ""path"": ""<Keyboard>/Escape"",
+                    ""interactions"": ""Press"",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""737c327c-8bab-412d-be50-9d38cd06b9fa"",
+                    ""path"": ""<Gamepad>/Start"",
+                    ""interactions"": ""Press"",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad;Joystick"",
+                    ""action"": ""Pause"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -828,6 +858,7 @@ public class @ColorGame : IInputActionCollection, IDisposable
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
         m_Player_Look = m_Player.FindAction("Look", throwIfNotFound: true);
         m_Player_CamViewChange = m_Player.FindAction("CamViewChange", throwIfNotFound: true);
+        m_Player_Pause = m_Player.FindAction("Pause", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -893,6 +924,7 @@ public class @ColorGame : IInputActionCollection, IDisposable
     private readonly InputAction m_Player_Move;
     private readonly InputAction m_Player_Look;
     private readonly InputAction m_Player_CamViewChange;
+    private readonly InputAction m_Player_Pause;
     public struct PlayerActions
     {
         private @ColorGame m_Wrapper;
@@ -901,6 +933,7 @@ public class @ColorGame : IInputActionCollection, IDisposable
         public InputAction @Move => m_Wrapper.m_Player_Move;
         public InputAction @Look => m_Wrapper.m_Player_Look;
         public InputAction @CamViewChange => m_Wrapper.m_Player_CamViewChange;
+        public InputAction @Pause => m_Wrapper.m_Player_Pause;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -922,6 +955,9 @@ public class @ColorGame : IInputActionCollection, IDisposable
                 @CamViewChange.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnCamViewChange;
                 @CamViewChange.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnCamViewChange;
                 @CamViewChange.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnCamViewChange;
+                @Pause.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPause;
+                @Pause.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPause;
+                @Pause.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPause;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -938,6 +974,9 @@ public class @ColorGame : IInputActionCollection, IDisposable
                 @CamViewChange.started += instance.OnCamViewChange;
                 @CamViewChange.performed += instance.OnCamViewChange;
                 @CamViewChange.canceled += instance.OnCamViewChange;
+                @Pause.started += instance.OnPause;
+                @Pause.performed += instance.OnPause;
+                @Pause.canceled += instance.OnPause;
             }
         }
     }
@@ -1098,6 +1137,7 @@ public class @ColorGame : IInputActionCollection, IDisposable
         void OnMove(InputAction.CallbackContext context);
         void OnLook(InputAction.CallbackContext context);
         void OnCamViewChange(InputAction.CallbackContext context);
+        void OnPause(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

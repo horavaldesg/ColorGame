@@ -97,6 +97,14 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Pause"",
+                    ""type"": ""Button"",
+                    ""id"": ""6f349b6c-be6e-4547-ba3d-06aec78b80ed"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -339,6 +347,28 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
                     ""action"": ""Circle"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1e2fa4bf-2f04-4d42-8fa6-dd40a9d89acf"",
+                    ""path"": ""<Keyboard>/#(`)"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KBM"",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""126246a4-d3b8-48cb-b1e6-0527fefb99a6"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Pause"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -893,6 +923,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         m_Gameplay_ChangeCamera = m_Gameplay.FindAction("ChangeCamera", throwIfNotFound: true);
         m_Gameplay_Options = m_Gameplay.FindAction("Options", throwIfNotFound: true);
         m_Gameplay_Circle = m_Gameplay.FindAction("Circle", throwIfNotFound: true);
+        m_Gameplay_Pause = m_Gameplay.FindAction("Pause", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -964,6 +995,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
     private readonly InputAction m_Gameplay_ChangeCamera;
     private readonly InputAction m_Gameplay_Options;
     private readonly InputAction m_Gameplay_Circle;
+    private readonly InputAction m_Gameplay_Pause;
     public struct GameplayActions
     {
         private @PlayerControls m_Wrapper;
@@ -978,6 +1010,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         public InputAction @ChangeCamera => m_Wrapper.m_Gameplay_ChangeCamera;
         public InputAction @Options => m_Wrapper.m_Gameplay_Options;
         public InputAction @Circle => m_Wrapper.m_Gameplay_Circle;
+        public InputAction @Pause => m_Wrapper.m_Gameplay_Pause;
         public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1017,6 +1050,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @Circle.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnCircle;
                 @Circle.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnCircle;
                 @Circle.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnCircle;
+                @Pause.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnPause;
+                @Pause.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnPause;
+                @Pause.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnPause;
             }
             m_Wrapper.m_GameplayActionsCallbackInterface = instance;
             if (instance != null)
@@ -1051,6 +1087,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @Circle.started += instance.OnCircle;
                 @Circle.performed += instance.OnCircle;
                 @Circle.canceled += instance.OnCircle;
+                @Pause.started += instance.OnPause;
+                @Pause.performed += instance.OnPause;
+                @Pause.canceled += instance.OnPause;
             }
         }
     }
@@ -1190,6 +1229,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         void OnChangeCamera(InputAction.CallbackContext context);
         void OnOptions(InputAction.CallbackContext context);
         void OnCircle(InputAction.CallbackContext context);
+        void OnPause(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

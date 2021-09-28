@@ -65,8 +65,14 @@ public class GameController : MonoBehaviour
     
     private void Awake()
     {
-        
+
+        if (PauseMenu.GamePause)
+        {
+            Cursor.lockState = CursorLockMode.None;
+        }
+
         Cursor.lockState = CursorLockMode.Locked;
+
         if(gamepad != null)
         {
             gamepad = (DualShockGamepad)Gamepad.all[0];
@@ -109,6 +115,7 @@ public class GameController : MonoBehaviour
         //controls.Gameplay.Options.performed += tgb => OptionsObj.SetActive(true);
 
         //controls.Gameplay.Circle.performed += tgb => OptionsObj.SetActive(false);
+
         canMove = true;
         
     }
