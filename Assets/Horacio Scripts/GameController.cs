@@ -197,39 +197,42 @@ public class GameController : MonoBehaviour
 
         //Player Rotation
         //Third Person
-        if (CamMode == 0)
+        if (!OptionsObj.activeSelf)
         {
-            camTransform = ThirdCam.transform;
-            Vector2 r = new Vector2(0, rotate.x) * horizontalSensConst * Time.deltaTime * 10;
-            transform.Rotate(r, Space.Self);
-            Quaternion q = transform.rotation;
-            q.eulerAngles = new Vector3(q.eulerAngles.x, q.eulerAngles.y, 0);
-            transform.rotation = q;
+            if (CamMode == 0)
+            {
+                camTransform = ThirdCam.transform;
+                Vector2 r = new Vector2(0, rotate.x) * horizontalSensConst * Time.deltaTime * 10;
+                transform.Rotate(r, Space.Self);
+                Quaternion q = transform.rotation;
+                q.eulerAngles = new Vector3(q.eulerAngles.x, q.eulerAngles.y, 0);
+                transform.rotation = q;
 
-            //Camera Rotation
+                //Camera Rotation
 
-            rotY += -rotate.y * verticalSensConst * Time.deltaTime * 10;
-            rotY = Mathf.Clamp(rotY, -90, 90);
-            camTransform.transform.localRotation = Quaternion.Euler(rotY, 0, 0);
+                rotY += -rotate.y * verticalSensConst * Time.deltaTime * 10;
+                rotY = Mathf.Clamp(rotY, -90, 90);
+                camTransform.transform.localRotation = Quaternion.Euler(rotY, 0, 0);
 
 
-        }
-        //First Person
-        else if (CamMode == 1)
-        {
+            }
+            //First Person
+            else if (CamMode == 1)
+            {
 
-            camTransform = FirstCam.transform;
-            Vector2 r = new Vector2(0, rotate.x) * horizontalSensConst * Time.deltaTime * 10;
-            transform.Rotate(r, Space.Self);
-            Quaternion q = transform.rotation;
-            q.eulerAngles = new Vector3(q.eulerAngles.x, q.eulerAngles.y, 0);
-            transform.rotation = q;
+                camTransform = FirstCam.transform;
+                Vector2 r = new Vector2(0, rotate.x) * horizontalSensConst * Time.deltaTime * 10;
+                transform.Rotate(r, Space.Self);
+                Quaternion q = transform.rotation;
+                q.eulerAngles = new Vector3(q.eulerAngles.x, q.eulerAngles.y, 0);
+                transform.rotation = q;
 
-            //Camera Rotation
+                //Camera Rotation
 
-            rotY += -rotate.y * verticalSensConst * Time.deltaTime * 10;
-            rotY = Mathf.Clamp(rotY, -90, 90);
-            camTransform.transform.localRotation = Quaternion.Euler(rotY, 0, 0);
+                rotY += -rotate.y * verticalSensConst * Time.deltaTime * 10;
+                rotY = Mathf.Clamp(rotY, -90, 90);
+                camTransform.transform.localRotation = Quaternion.Euler(rotY, 0, 0);
+            }
         }
 
     }
