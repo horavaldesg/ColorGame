@@ -9,7 +9,7 @@ public class ClickScript : MonoBehaviour
     public GameObject RightFootTrnf;
 
     public GameObject handTransform;
-
+    public float distanceToDraw;
     public GameObject leftFootTexture;
     public GameObject RightFootTexture;
 
@@ -65,8 +65,122 @@ public class ClickScript : MonoBehaviour
             }
             tAltSteps = 0;
         }
+
+        if (GameController.paintOnClick == false)
+        {
+            if (Physics.Raycast(handTransform.transform.position, handTransform.transform.forward, out hit, distanceToDraw))
+            {
+                if (hit.collider.gameObject.CompareTag("XLeft"))
+                {
+
+                    //Debug.Log(ParentWall.parentRotation);
+
+                    Vector3 parentRot = hit.collider.GetComponentInParent<ParentWall>().parentRotation;
+                    //Debug.Log(parentRot);
+                    if (parentRot != Vector3.zero)
+                    {
+                        GameObject print =
+                        Instantiate(handPrintTexture, hit.point + Vector3.forward * -0.01f, Quaternion.Euler(90, parentRot.y + 180, 0));
+                        //Debug.Log(hit.collider.GetComponentInParent<Transform>().localEulerAngles.y);
+                        print.transform.parent = hit.collider.gameObject.transform;
+                    }
+                    else
+                    {
+                        GameObject print =
+                        Instantiate(handPrintTexture, hit.point + Vector3.forward * -0.01f, Quaternion.Euler(90, 180, 0));
+                        print.transform.parent = hit.collider.gameObject.transform;
+                    }
+                }
+                else if (hit.collider.gameObject.CompareTag("XRight"))
+                {
+                    Vector3 parentRot = hit.collider.GetComponentInParent<ParentWall>().parentRotation;
+
+                    if (parentRot != Vector3.zero)
+                    {
+                        GameObject print =
+                        Instantiate(handPrintTexture, hit.point + Vector3.forward * 0.01f, Quaternion.Euler(90, parentRot.y, 0));
+                        print.transform.parent = hit.collider.gameObject.transform;
+
+                    }
+                    else
+                    {
+                        GameObject print =
+                        Instantiate(handPrintTexture, hit.point + Vector3.forward * 0.01f, Quaternion.Euler(90, 0, 0));
+                        print.transform.parent = hit.collider.gameObject.transform;
+                    }
+                }
+                else if (hit.collider.gameObject.CompareTag("ZRight"))
+                {
+                    Vector3 parentRot = hit.collider.GetComponentInParent<ParentWall>().parentRotation;
+
+                    if (parentRot != Vector3.zero)
+                    {
+                        GameObject print =
+                        Instantiate(handPrintTexture, hit.point + Vector3.forward * -0.01f, Quaternion.Euler(90, parentRot.y, 90));
+                        print.transform.parent = hit.collider.gameObject.transform;
+
+                    }
+                    else
+                    {
+                        GameObject print =
+                        Instantiate(handPrintTexture, hit.point + Vector3.forward * -0.01f, Quaternion.Euler(90, 0, 90));
+                        print.transform.parent = hit.collider.gameObject.transform;
+                    }
+                }
+                else if (hit.collider.gameObject.CompareTag("ZLeft"))
+                {
+                    Vector3 parentRot = hit.collider.GetComponentInParent<ParentWall>().parentRotation;
+
+                    if (parentRot != Vector3.zero)
+                    {
+                        GameObject print =
+                        Instantiate(handPrintTexture, hit.point + Vector3.forward * 0.01f, Quaternion.Euler(90, parentRot.y, -90));
+                        print.transform.parent = hit.collider.gameObject.transform;
+                    }
+                    else
+                    {
+                        GameObject print =
+                        Instantiate(handPrintTexture, hit.point + Vector3.forward * 0.01f, Quaternion.Euler(90, 0, -90));
+                        print.transform.parent = hit.collider.gameObject.transform;
+                    }
+                }
+
+                if (hit.collider.gameObject.CompareTag("XLeft") || hit.collider.gameObject.CompareTag("XRight") || hit.collider.gameObject.CompareTag("ZRight") || hit.collider.gameObject.CompareTag("ZLeft") || hit.collider.gameObject.CompareTag("HandPrint"))
+                {
+                    AnimationScript.touching = true;
+                }
+
+
+            }
+            else
+            {
+                AnimationScript.touching = false;
+
+            }
+        }
+    
+
+        if (Physics.SphereCast(transform.position - cc.center, cc.height / 2, transform.forward, out hit, 1))
+        {
+            if (hit.collider.gameObject.layer == 9 || hit.collider.CompareTag("HandPrint"))
+            {
+                GameController.canMove = false;
+                
+
+            }
+        }
+        else
+        {
+
+            GameController.canMove = true;
+        }
+    }
+    public void PaintonClick()
+    {
         //Hands
-        if (Physics.Raycast(handTransform.transform.position, handTransform.transform.forward, out hit, 0.5f))
+        RaycastHit hit;
+
+        if (Physics.Raycast(handTransform.transform.position, handTransform.transform.forward, out hit, distanceToDraw))
         {
             if (hit.collider.gameObject.CompareTag("XLeft"))
             {
@@ -77,14 +191,14 @@ public class ClickScript : MonoBehaviour
                 //Debug.Log(parentRot);
                 if (parentRot != Vector3.zero)
                 {
-                    GameObject print = 
+                    GameObject print =
                     Instantiate(handPrintTexture, hit.point + Vector3.forward * -0.01f, Quaternion.Euler(90, parentRot.y + 180, 0));
                     //Debug.Log(hit.collider.GetComponentInParent<Transform>().localEulerAngles.y);
                     print.transform.parent = hit.collider.gameObject.transform;
                 }
                 else
                 {
-                    GameObject print = 
+                    GameObject print =
                     Instantiate(handPrintTexture, hit.point + Vector3.forward * -0.01f, Quaternion.Euler(90, 180, 0));
                     print.transform.parent = hit.collider.gameObject.transform;
                 }
@@ -95,7 +209,7 @@ public class ClickScript : MonoBehaviour
 
                 if (parentRot != Vector3.zero)
                 {
-                    GameObject print = 
+                    GameObject print =
                     Instantiate(handPrintTexture, hit.point + Vector3.forward * 0.01f, Quaternion.Euler(90, parentRot.y, 0));
                     print.transform.parent = hit.collider.gameObject.transform;
 
@@ -113,7 +227,7 @@ public class ClickScript : MonoBehaviour
 
                 if (parentRot != Vector3.zero)
                 {
-                    GameObject print = 
+                    GameObject print =
                     Instantiate(handPrintTexture, hit.point + Vector3.forward * -0.01f, Quaternion.Euler(90, parentRot.y, 90));
                     print.transform.parent = hit.collider.gameObject.transform;
 
@@ -131,44 +245,29 @@ public class ClickScript : MonoBehaviour
 
                 if (parentRot != Vector3.zero)
                 {
-                    GameObject print = 
+                    GameObject print =
                     Instantiate(handPrintTexture, hit.point + Vector3.forward * 0.01f, Quaternion.Euler(90, parentRot.y, -90));
                     print.transform.parent = hit.collider.gameObject.transform;
                 }
                 else
                 {
-                    GameObject print = 
+                    GameObject print =
                     Instantiate(handPrintTexture, hit.point + Vector3.forward * 0.01f, Quaternion.Euler(90, 0, -90));
                     print.transform.parent = hit.collider.gameObject.transform;
                 }
             }
-           
-            if(hit.collider.gameObject.CompareTag("XLeft") || hit.collider.gameObject.CompareTag("XRight") || hit.collider.gameObject.CompareTag("ZRight") || hit.collider.gameObject.CompareTag("ZLeft") || hit.collider.gameObject.CompareTag("HandPrint"))
+
+            if (hit.collider.gameObject.CompareTag("XLeft") || hit.collider.gameObject.CompareTag("XRight") || hit.collider.gameObject.CompareTag("ZRight") || hit.collider.gameObject.CompareTag("ZLeft") || hit.collider.gameObject.CompareTag("HandPrint"))
             {
                 AnimationScript.touching = true;
             }
-            
-            
+
+
         }
         else
         {
             AnimationScript.touching = false;
 
-        }
-
-        if (Physics.SphereCast(transform.position - cc.center, cc.height / 2, transform.forward, out hit, 1))
-        {
-            if (hit.collider.gameObject.layer == 9 || hit.collider.CompareTag("HandPrint"))
-            {
-                GameController.canMove = false;
-                
-
-            }
-        }
-        else
-        {
-
-            GameController.canMove = true;
         }
     }
 }

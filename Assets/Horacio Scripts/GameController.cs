@@ -61,11 +61,12 @@ public class GameController : MonoBehaviour
     public controlSchemes controlScheme;
 
     public GameObject OptionsObj;
-    Rigidbody rb;
+    public GameObject clickScript;
+    public bool PaintOnClick;
+    public static bool paintOnClick;
     private void Awake()
     {
-        rb = GetComponent<Rigidbody>();
-
+        paintOnClick = PaintOnClick;
        
         if(gamepad != null)
         {
@@ -117,6 +118,11 @@ public class GameController : MonoBehaviour
 
         }
         canMove = true;
+        //Shoot
+        if (PaintOnClick)
+        {
+            controls.Gameplay.Shoot.performed += tgb => clickScript.GetComponent<ClickScript>().PaintonClick();
+        }
         
     }
     public void Jump()

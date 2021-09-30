@@ -286,6 +286,17 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""2363bc46-3071-489f-a01a-ebea326f35b2"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KBM"",
+                    ""action"": ""Shoot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""7a077a8b-edf4-4b9b-8eab-2de1fb0778c0"",
                     ""path"": ""<Gamepad>/buttonWest"",
                     ""interactions"": """",
