@@ -18,6 +18,7 @@ public class SettingsMenu : MonoBehaviour
 
     void Start()
     {
+        /*
         resolutions = Screen.resolutions;
 
         resDropdown.ClearOptions();
@@ -40,20 +41,21 @@ public class SettingsMenu : MonoBehaviour
         resDropdown.AddOptions(options);
         resDropdown.value = currentResIndex;
         resDropdown.RefreshShownValue();
+        */
     }
 
     public void SetVolume(float volume)
     {
         audioMixer.SetFloat("Volume", volume);
     }
-
+    /*
     public void SetRes(int resIndex)
     {
         Resolution res = resolutions[resIndex];
 
         Screen.SetResolution(res.width, res.height, Screen.fullScreen);
     }
-
+    */
     public void SetQuality(int qualityIndex)
     {
         QualitySettings.SetQualityLevel(qualityIndex);
