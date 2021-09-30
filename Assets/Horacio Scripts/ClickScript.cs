@@ -84,7 +84,9 @@ public class ClickScript : MonoBehaviour
                 }
                 else
                 {
+                    GameObject print = 
                     Instantiate(handPrintTexture, hit.point + Vector3.forward * -0.01f, Quaternion.Euler(90, 180, 0));
+                    print.transform.parent = hit.collider.gameObject.transform;
                 }
             }
             else if (hit.collider.gameObject.CompareTag("XRight"))
