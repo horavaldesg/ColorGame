@@ -122,6 +122,7 @@ public class GameController : MonoBehaviour
         if (PaintOnClick)
         {
             controls.Gameplay.Shoot.performed += tgb => clickScript.GetComponent<ClickScript>().PaintonClick();
+            controls.Gameplay.Shoot.canceled += tgb => AnimationScript.handClick = false;
         }
         
     }

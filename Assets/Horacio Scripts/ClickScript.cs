@@ -65,8 +65,19 @@ public class ClickScript : MonoBehaviour
             }
             tAltSteps = 0;
         }
-
-        if (GameController.paintOnClick == false)
+        //Hand Close To wall
+        if (Physics.Raycast(handTransform.transform.position, handTransform.transform.forward, out hit, distanceToDraw))
+        {
+            if(hit.collider.gameObject.layer == 9)
+            {
+                AnimationScript.handCloseToWall = true;
+            }
+        }
+        else
+        {
+            AnimationScript.handCloseToWall = false;
+        }
+            if (GameController.paintOnClick == false)
         {
             if (Physics.Raycast(handTransform.transform.position, handTransform.transform.forward, out hit, distanceToDraw))
             {
@@ -147,16 +158,16 @@ public class ClickScript : MonoBehaviour
 
                 if (hit.collider.gameObject.CompareTag("XLeft") || hit.collider.gameObject.CompareTag("XRight") || hit.collider.gameObject.CompareTag("ZRight") || hit.collider.gameObject.CompareTag("ZLeft") || hit.collider.gameObject.CompareTag("HandPrint"))
                 {
-                    AnimationScript.touching = true;
+                    //AnimationScript.touching = true;
                 }
 
+                else
+                {
+                    //AnimationScript.touching = false;
 
+                }
             }
-            else
-            {
-                AnimationScript.touching = false;
-
-            }
+            
         }
     
 
@@ -177,6 +188,7 @@ public class ClickScript : MonoBehaviour
     }
     public void PaintonClick()
     {
+        AnimationScript.handClick = true;
         //Hands
         RaycastHit hit;
 
@@ -259,15 +271,15 @@ public class ClickScript : MonoBehaviour
 
             if (hit.collider.gameObject.CompareTag("XLeft") || hit.collider.gameObject.CompareTag("XRight") || hit.collider.gameObject.CompareTag("ZRight") || hit.collider.gameObject.CompareTag("ZLeft") || hit.collider.gameObject.CompareTag("HandPrint"))
             {
-                AnimationScript.touching = true;
+                //AnimationScript.touching = true;
+            }
+            else
+            {
+                //AnimationScript.touching = false;
+
             }
 
-
         }
-        else
-        {
-            AnimationScript.touching = false;
-
-        }
+      
     }
 }
