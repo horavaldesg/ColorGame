@@ -38,7 +38,9 @@ public class ClickScript : MonoBehaviour
                 leftT += Time.deltaTime;
                 if (leftT > footstepRate)
                 {
+                    GameObject print = 
                     Instantiate(leftFootTexture, hit.point + Vector3.up * 0.01f, Quaternion.Euler(0, parentTransforom.localEulerAngles.y + 180, 0));
+                    print.transform.parent = hit.collider.gameObject.transform;
                     //Debug.Log(parentObj.transform.localEulerAngles.y);
                     //Debug.Log("Ground");
                     leftT = 0;
@@ -54,8 +56,9 @@ public class ClickScript : MonoBehaviour
             {
                 if (hit.collider.gameObject.CompareTag("Ground"))
                 {
-
+                    GameObject print =
                     Instantiate(RightFootTexture, hit.point + Vector3.up * 0.01f, Quaternion.Euler(0, parentTransforom.localEulerAngles.y + 180, 0));
+                    print.transform.parent = hit.collider.gameObject.transform;
 
                 }
 
@@ -69,12 +72,15 @@ public class ClickScript : MonoBehaviour
             {
 
                 //Debug.Log(ParentWall.parentRotation);
+
                 Vector3 parentRot = hit.collider.GetComponentInParent<ParentWall>().parentRotation;
                 //Debug.Log(parentRot);
                 if (parentRot != Vector3.zero)
                 {
+                    GameObject print = 
                     Instantiate(handPrintTexture, hit.point + Vector3.forward * -0.01f, Quaternion.Euler(90, parentRot.y + 180, 0));
                     //Debug.Log(hit.collider.GetComponentInParent<Transform>().localEulerAngles.y);
+                    print.transform.parent = hit.collider.gameObject.transform;
                 }
                 else
                 {
@@ -87,12 +93,16 @@ public class ClickScript : MonoBehaviour
 
                 if (parentRot != Vector3.zero)
                 {
+                    GameObject print = 
                     Instantiate(handPrintTexture, hit.point + Vector3.forward * 0.01f, Quaternion.Euler(90, parentRot.y, 0));
+                    print.transform.parent = hit.collider.gameObject.transform;
 
                 }
                 else
                 {
+                    GameObject print =
                     Instantiate(handPrintTexture, hit.point + Vector3.forward * 0.01f, Quaternion.Euler(90, 0, 0));
+                    print.transform.parent = hit.collider.gameObject.transform;
                 }
             }
             else if (hit.collider.gameObject.CompareTag("ZRight"))
@@ -101,12 +111,16 @@ public class ClickScript : MonoBehaviour
 
                 if (parentRot != Vector3.zero)
                 {
+                    GameObject print = 
                     Instantiate(handPrintTexture, hit.point + Vector3.forward * -0.01f, Quaternion.Euler(90, parentRot.y, 90));
+                    print.transform.parent = hit.collider.gameObject.transform;
 
                 }
                 else
                 {
+                    GameObject print =
                     Instantiate(handPrintTexture, hit.point + Vector3.forward * -0.01f, Quaternion.Euler(90, 0, 90));
+                    print.transform.parent = hit.collider.gameObject.transform;
                 }
             }
             else if (hit.collider.gameObject.CompareTag("ZLeft"))
@@ -115,11 +129,15 @@ public class ClickScript : MonoBehaviour
 
                 if (parentRot != Vector3.zero)
                 {
+                    GameObject print = 
                     Instantiate(handPrintTexture, hit.point + Vector3.forward * 0.01f, Quaternion.Euler(90, parentRot.y, -90));
+                    print.transform.parent = hit.collider.gameObject.transform;
                 }
                 else
                 {
+                    GameObject print = 
                     Instantiate(handPrintTexture, hit.point + Vector3.forward * 0.01f, Quaternion.Euler(90, 0, -90));
+                    print.transform.parent = hit.collider.gameObject.transform;
                 }
             }
            
@@ -141,11 +159,13 @@ public class ClickScript : MonoBehaviour
             if (hit.collider.gameObject.layer == 9 || hit.collider.CompareTag("HandPrint"))
             {
                 GameController.canMove = false;
+                
 
             }
         }
         else
         {
+
             GameController.canMove = true;
         }
     }

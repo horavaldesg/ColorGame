@@ -61,10 +61,10 @@ public class GameController : MonoBehaviour
     public controlSchemes controlScheme;
 
     public GameObject OptionsObj;
-
+    Rigidbody rb;
     private void Awake()
     {
-
+        rb = GetComponent<Rigidbody>();
 
        
         if(gamepad != null)
@@ -179,15 +179,16 @@ public class GameController : MonoBehaviour
         //Forward/Backward Movement
         float forwardSpeed = move.y * speed * speedBoost * Time.deltaTime;
 
-        if (canMove)
-        {
+        //if (canMove)
+        //{
             movement += transform.forward * forwardSpeed;
-        }
-        else if(!canMove && move.y < 0)
-        {
-            movement += transform.forward * forwardSpeed;
-            canMove = true;
-        }
+        //}
+        //else if(!canMove && move.y < 0)
+        //{
+        //    movement += transform.forward * forwardSpeed;
+        //    canMove = true;
+        //}
+
         //Debug.Log (move.y);
         //Debug.Log(canMove);
         //Left/Right Movement
