@@ -19,7 +19,7 @@ public class DropDownScript : MonoBehaviour
         {
             dropdown.value = 1;
         }
-        Debug.Log(dropdown.value);
+        //Debug.Log(dropdown.value);
     }
 
     // Update is called once per frame
