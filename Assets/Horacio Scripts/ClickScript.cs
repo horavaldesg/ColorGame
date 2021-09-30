@@ -57,7 +57,7 @@ public class ClickScript : MonoBehaviour
                 if (hit.collider.gameObject.CompareTag("Ground"))
                 {
                     GameObject print =
-                    Instantiate(RightFootTexture, hit.point + Vector3.up * 0.01f, Quaternion.Euler(0, parentTransforom.localEulerAngles.y + 180, 0));
+                    Instantiate(RightFootTexture, hit.point + Vector3.up * 0.01f, Quaternion.Euler(hit.collider.transform.localEulerAngles.y, parentTransforom.localEulerAngles.y + 180, 0));
                     print.transform.parent = hit.collider.gameObject.transform;
 
                 }
