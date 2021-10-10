@@ -152,7 +152,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2678727137597139637}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.6, z: 9.4}
+  m_LocalPosition: {x: 0, y: 0, z: 1.15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2496816491211782575}
@@ -277,7 +277,7 @@ GameObject:
   - component: {fileID: 4905552399645422718}
   - component: {fileID: 2678727138252830891}
   - component: {fileID: 4189855771888489632}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerHand
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -786,7 +786,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8827479078464505960}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.65, y: 0, z: 0}
+  m_LocalPosition: {x: 0.58700085, y: -0.07099998, z: 0.041001916}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2678727137597139636}
@@ -805,7 +805,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   handTransform: {fileID: 8827479078464505960}
-  distanceToDraw: 0
+  distanceToDraw: 1
 --- !u!135 &9062107308281431461
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -836,11 +836,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5e85546e263aae245823156935f879d4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.64
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5e85546e263aae245823156935f879d4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -8.39
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5e85546e263aae245823156935f879d4, type: 3}
       propertyPath: m_LocalRotation.w

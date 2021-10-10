@@ -1859,22 +1859,6 @@ PrefabInstance:
       propertyPath: handPrintTexture
       value: 
       objectReference: {fileID: 480127871697619069, guid: a25c0f254003d454ba312a502f33abe2, type: 3}
-    - target: {fileID: 2496816491211782575, guid: ff39e850387604e94b9f86e671367001, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2496816491211782575, guid: ff39e850387604e94b9f86e671367001, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2678727137597139636, guid: ff39e850387604e94b9f86e671367001, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2678727137597139636, guid: ff39e850387604e94b9f86e671367001, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 1.15
-      objectReference: {fileID: 0}
     - target: {fileID: 3857880798730731347, guid: ff39e850387604e94b9f86e671367001, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -1926,10 +1910,6 @@ PrefabInstance:
     - target: {fileID: 4905552399645422713, guid: ff39e850387604e94b9f86e671367001, type: 3}
       propertyPath: m_Name
       value: PlayerHand
-      objectReference: {fileID: 0}
-    - target: {fileID: 4905552399645422713, guid: ff39e850387604e94b9f86e671367001, type: 3}
-      propertyPath: m_Layer
-      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4905552399645422719, guid: ff39e850387604e94b9f86e671367001, type: 3}
       propertyPath: PaintOnClick
@@ -2003,30 +1983,10 @@ PrefabInstance:
       propertyPath: m_CullingMask.m_Bits
       value: 1911
       objectReference: {fileID: 0}
-    - target: {fileID: 7158876785081284323, guid: ff39e850387604e94b9f86e671367001, type: 3}
-      propertyPath: distanceToDraw
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7714890393899997597, guid: ff39e850387604e94b9f86e671367001, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: c0b3454b09206804d931cc2f07a81ccb, type: 2}
-    - target: {fileID: 8827479078464505960, guid: ff39e850387604e94b9f86e671367001, type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8950490068453891256, guid: ff39e850387604e94b9f86e671367001, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.58700085
-      objectReference: {fileID: 0}
-    - target: {fileID: 8950490068453891256, guid: ff39e850387604e94b9f86e671367001, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.07099998
-      objectReference: {fileID: 0}
-    - target: {fileID: 8950490068453891256, guid: ff39e850387604e94b9f86e671367001, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.041001916
-      objectReference: {fileID: 0}
     - target: {fileID: 8990421565367422949, guid: ff39e850387604e94b9f86e671367001, type: 3}
       propertyPath: m_IsActive
       value: 0
