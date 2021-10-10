@@ -19,6 +19,6 @@ public class ChangeFirstSelected : MonoBehaviour
     }
     public void FirstSelected(GameObject firstSelected)
     {
-        eventSystem.firstSelectedGameObject = firstSelected;
+        eventSystem.SetSelectedGameObject(firstSelected, new BaseEventData(eventSystem));
     }
 }
