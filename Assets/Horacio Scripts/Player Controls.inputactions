@@ -92,6 +92,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "Interaction",
+                    "type": "Button",
+                    "id": "5165c1dc-25c5-43cd-ac8b-a811e2269e17",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -378,6 +386,17 @@
                     "processors": "",
                     "groups": "Keyboard&Mouse;KBM",
                     "action": "Options",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c0761286-69b1-428c-9107-c3800c2172f7",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KBM",
+                    "action": "Interaction",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

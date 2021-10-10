@@ -105,6 +105,14 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Interaction"",
+                    ""type"": ""Button"",
+                    ""id"": ""5165c1dc-25c5-43cd-ac8b-a811e2269e17"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -391,6 +399,17 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""processors"": """",
                     ""groups"": ""Keyboard&Mouse;KBM"",
                     ""action"": ""Options"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c0761286-69b1-428c-9107-c3800c2172f7"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KBM"",
+                    ""action"": ""Interaction"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1025,6 +1044,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         m_Gameplay_Options = m_Gameplay.FindAction("Options", throwIfNotFound: true);
         m_Gameplay_Circle = m_Gameplay.FindAction("Circle", throwIfNotFound: true);
         m_Gameplay_Pause = m_Gameplay.FindAction("Pause", throwIfNotFound: true);
+        m_Gameplay_Interaction = m_Gameplay.FindAction("Interaction", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -1100,6 +1120,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
     private readonly InputAction m_Gameplay_Options;
     private readonly InputAction m_Gameplay_Circle;
     private readonly InputAction m_Gameplay_Pause;
+    private readonly InputAction m_Gameplay_Interaction;
     public struct GameplayActions
     {
         private @PlayerControls m_Wrapper;
@@ -1115,6 +1136,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         public InputAction @Options => m_Wrapper.m_Gameplay_Options;
         public InputAction @Circle => m_Wrapper.m_Gameplay_Circle;
         public InputAction @Pause => m_Wrapper.m_Gameplay_Pause;
+        public InputAction @Interaction => m_Wrapper.m_Gameplay_Interaction;
         public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1157,6 +1179,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @Pause.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnPause;
                 @Pause.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnPause;
                 @Pause.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnPause;
+                @Interaction.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnInteraction;
+                @Interaction.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnInteraction;
+                @Interaction.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnInteraction;
             }
             m_Wrapper.m_GameplayActionsCallbackInterface = instance;
             if (instance != null)
@@ -1194,6 +1219,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @Pause.started += instance.OnPause;
                 @Pause.performed += instance.OnPause;
                 @Pause.canceled += instance.OnPause;
+                @Interaction.started += instance.OnInteraction;
+                @Interaction.performed += instance.OnInteraction;
+                @Interaction.canceled += instance.OnInteraction;
             }
         }
     }
@@ -1358,6 +1386,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         void OnOptions(InputAction.CallbackContext context);
         void OnCircle(InputAction.CallbackContext context);
         void OnPause(InputAction.CallbackContext context);
+        void OnInteraction(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

@@ -124,6 +124,10 @@ public class GameController : MonoBehaviour
             controls.Gameplay.Shoot.performed += tgb => clickScript.GetComponent<ClickScript>().PaintonClick();
             controls.Gameplay.Shoot.canceled += tgb => AnimationScript.handClick = false;
         }
+
+        //Interaction
+        controls.Gameplay.Interaction.performed += tgb => ThrowableBall.ballTouching = !ThrowableBall.ballTouching;
+
         
     }
     public void Jump()
