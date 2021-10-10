@@ -96,8 +96,14 @@ AudioMixerController:
   m_EnableSuspend: 1
   m_UpdateMode: 0
   m_ExposedParameters:
+  - guid: aa1f8e4707882f64eba2b55cae332c88
+    name: Ambience Voume
   - guid: dbd8e6b8126110e49831dd8add99d6a2
-    name: Volume
+    name: Master Volume
+  - guid: b442e7514a64954409c750ba24534240
+    name: Music Volume
+  - guid: 0e3a7edd864e4de48bdd52beb07813c2
+    name: Narrative Volume
   m_AudioMixerGroupViews:
   - guids:
     - c35b8e14916400647996485ea9c1f2e2
