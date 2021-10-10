@@ -30,7 +30,7 @@ public class ThrowableBall : MonoBehaviour
             {
                 ball = hit.collider.gameObject;
                 canGrab = true;
-                Debug.Log(canGrab);
+                //Debug.Log(canGrab);
                 if (ballTouching)
                 {
                     Rigidbody rb = ball.gameObject.GetComponent<Rigidbody>();
