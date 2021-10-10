@@ -48,6 +48,9 @@ public class SettingsMenu : MonoBehaviour
     {
         audioMixer.SetFloat("Volume", volume);
     }
+
+
+
     /*
     public void SetRes(int resIndex)
     {
