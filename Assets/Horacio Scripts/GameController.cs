@@ -18,6 +18,7 @@ public class GameController : MonoBehaviour
 
     public int CamMode;
 
+    public GameObject handTransform;
     //Sensitivity
     [SerializeField] float horizontalSens;
     [SerializeField] float verticalSens;
@@ -126,11 +127,12 @@ public class GameController : MonoBehaviour
         }
 
         //Interaction
-        if (ThrowableBall.canGrab)
-        {
-            controls.Gameplay.Interaction.performed += tgb => ThrowableBall.ballTouching = !ThrowableBall.ballTouching;
+       
+            controls.Gameplay.Interaction.performed += tgb => ThrowableBall.PickUp();
 
-        }
+        
+        //Shoot
+        controls.Gameplay.Shoot.performed += tgb => ThrowableBall.Shoot(handTransform);
 
     }
     public void Jump()

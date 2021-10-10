@@ -323,6 +323,7 @@ MonoBehaviour:
   FirstCam: {fileID: 4905552400474188788}
   ThirdCam: {fileID: 4905552399918309934}
   CamMode: 1
+  handTransform: {fileID: 8827479078464505960}
   horizontalSens: 5
   verticalSens: 5
   controllerHorizontalSens: 20
@@ -769,6 +770,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8950490068453891256}
   - component: {fileID: 7158876785081284323}
+  - component: {fileID: 9062107308281431461}
   m_Layer: 0
   m_Name: Hand Transform
   m_TagString: Untagged
@@ -803,6 +805,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   handTransform: {fileID: 8827479078464505960}
+  distanceToDraw: 0
+--- !u!135 &9062107308281431461
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8827479078464505960}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.25
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &2678727138202263108
 PrefabInstance:
   m_ObjectHideFlags: 0
