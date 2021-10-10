@@ -44,12 +44,25 @@ public class SettingsMenu : MonoBehaviour
         */
     }
 
-    public void SetVolume(float volume)
+    public void SetMasterVolume(float volume)
     {
-        audioMixer.SetFloat("Volume", volume);
+        audioMixer.SetFloat("Master Volume", volume);
     }
 
+    public void SetAmbienceVolume(float volume)
+    {
+        audioMixer.SetFloat("Ambience Volume", volume);
+    }
 
+    public void SetNarrativeVolume(float volume)
+    {
+        audioMixer.SetFloat("Narrative Volume", volume);
+    }
+
+    public void SetMusicVolume(float volume)
+    {
+        audioMixer.SetFloat("Music Volume", volume);
+    }
 
     /*
     public void SetRes(int resIndex)
