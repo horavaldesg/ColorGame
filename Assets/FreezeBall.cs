@@ -21,6 +21,7 @@ public class FreezeBall : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             rb.constraints = RigidbodyConstraints.FreezeAll;
+
         }
     }
 }
