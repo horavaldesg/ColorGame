@@ -8,14 +8,16 @@ public class ThrowableBall : MonoBehaviour
     [SerializeField] float distanceToDraw;
     public static bool ballTouching;
     public static bool canGrab;
-    GameObject ball;
-    bool hasBall;
+    public static GameObject ball;
+    public static bool hasBall;
+    public static bool canShoot;
     // Start is called before the first frame update
     void Start()
     {
         ballTouching = false;
         hasBall = false;
         canGrab = false;
+        canShoot = false;
     }
 
     // Update is called once per frame
@@ -26,12 +28,15 @@ public class ThrowableBall : MonoBehaviour
         {
             if (hit.collider.CompareTag("Ball"))
             {
+                ball = hit.collider.gameObject;
                 canGrab = true;
+                //Debug.Log(canGrab);
                 if (ballTouching)
                 {
-                    Rigidbody rb = hit.collider.gameObject.GetComponent<Rigidbody>();
+                    Rigidbody rb = ball.gameObject.GetComponent<Rigidbody>();
 
                     rb.constraints = RigidbodyConstraints.None;
+
                     hasBall = true;
 
 
@@ -42,27 +47,50 @@ public class ThrowableBall : MonoBehaviour
         if (hasBall)
         {
             ball.transform.position = handTransform.transform.position;
+            ball.transform.rotation = handTransform.transform.rotation;
         }
 
         if (!ballTouching)
         {
             hasBall = false;
         }
-           
-       
+
+        if (canShoot)
+        {
+            hasBall = false;
+            Rigidbody rb = ball.GetComponent<Rigidbody>();
+            rb.AddForce(ball.transform.forward * 15, ForceMode.Impulse);
+            ballTouching = false;
+            canGrab = false;
+            canShoot = false;
+        }
 
     }
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Ball"))
-        {
-           ball = other.gameObject;
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.CompareTag("Ball"))
+    //    {
+    //       ball = other.gameObject;
             
-            //ballTouching = true;
+    //        //ballTouching = true;
+
+    //    }
+        
+    //}
+    public static void PickUp()
+    {
+        if (canGrab)
+        {
+            ballTouching = !ballTouching;
+            canGrab = false; 
 
         }
-        
     }
-
-   
+   public static void Shoot(GameObject handTransform)
+    {
+        if (hasBall)
+        {
+            canShoot = true;
+        }
+    }
 }

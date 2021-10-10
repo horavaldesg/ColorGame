@@ -1927,6 +1927,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerHand
       objectReference: {fileID: 0}
+    - target: {fileID: 4905552399645422713, guid: ff39e850387604e94b9f86e671367001, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4905552399645422719, guid: ff39e850387604e94b9f86e671367001, type: 3}
       propertyPath: PaintOnClick
       value: 0
@@ -1979,6 +1983,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: fa0ce96f6695f4d448c3fd3dbe2deeb4, type: 2}
+    - target: {fileID: 4905552399813385567, guid: ff39e850387604e94b9f86e671367001, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4905552400474188790, guid: ff39e850387604e94b9f86e671367001, type: 3}
       propertyPath: m_BackGroundColor.b
       value: 0
@@ -1991,6 +1999,10 @@ PrefabInstance:
       propertyPath: m_BackGroundColor.r
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4905552400474188790, guid: ff39e850387604e94b9f86e671367001, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 1911
+      objectReference: {fileID: 0}
     - target: {fileID: 7158876785081284323, guid: ff39e850387604e94b9f86e671367001, type: 3}
       propertyPath: distanceToDraw
       value: 1
@@ -1999,6 +2011,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: c0b3454b09206804d931cc2f07a81ccb, type: 2}
+    - target: {fileID: 8827479078464505960, guid: ff39e850387604e94b9f86e671367001, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8950490068453891256, guid: ff39e850387604e94b9f86e671367001, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.58700085
@@ -3702,24 +3718,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!1 &983556108 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8827479078464505960, guid: ff39e850387604e94b9f86e671367001, type: 3}
-  m_PrefabInstance: {fileID: 392491259}
-  m_PrefabAsset: {fileID: 0}
---- !u!135 &983556111
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 983556108}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.25
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &990051076
 GameObject:
   m_ObjectHideFlags: 0
@@ -3730,7 +3728,7 @@ GameObject:
   m_Component:
   - component: {fileID: 990051078}
   - component: {fileID: 990051077}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3831,7 +3829,7 @@ GameObject:
   - component: {fileID: 1000314542}
   - component: {fileID: 1000314541}
   - component: {fileID: 1000314545}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Throwable Ball
   m_TagString: Ball
   m_Icon: {fileID: 0}
@@ -3929,7 +3927,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 122
   m_CollisionDetection: 0
 --- !u!4 &1074734222 stripped
 Transform:
