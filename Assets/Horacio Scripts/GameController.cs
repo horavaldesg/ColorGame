@@ -126,9 +126,12 @@ public class GameController : MonoBehaviour
         }
 
         //Interaction
-        controls.Gameplay.Interaction.performed += tgb => ThrowableBall.ballTouching = !ThrowableBall.ballTouching;
+        if (ThrowableBall.canGrab)
+        {
+            controls.Gameplay.Interaction.performed += tgb => ThrowableBall.ballTouching = !ThrowableBall.ballTouching;
 
-        
+        }
+
     }
     public void Jump()
     {

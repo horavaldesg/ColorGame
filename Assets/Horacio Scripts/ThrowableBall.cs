@@ -6,14 +6,16 @@ public class ThrowableBall : MonoBehaviour
 {
     public GameObject handTransform;
     [SerializeField] float distanceToDraw;
-    Rigidbody rb;
     public static bool ballTouching;
+    public static bool canGrab;
     GameObject ball;
-    
+    bool hasBall;
     // Start is called before the first frame update
     void Start()
     {
-        
+        ballTouching = false;
+        hasBall = false;
+        canGrab = false;
     }
 
     // Update is called once per frame
@@ -24,13 +26,31 @@ public class ThrowableBall : MonoBehaviour
         {
             if (hit.collider.CompareTag("Ball"))
             {
+                canGrab = true;
                 if (ballTouching)
                 {
-                    ball.transform.position = handTransform.transform.position;
+                    Rigidbody rb = hit.collider.gameObject.GetComponent<Rigidbody>();
+
+                    rb.constraints = RigidbodyConstraints.None;
+                    hasBall = true;
+
+
                 }
+
             }
         }
+        if (hasBall)
+        {
+            ball.transform.position = handTransform.transform.position;
+        }
+
+        if (!ballTouching)
+        {
+            hasBall = false;
+        }
+           
        
+
     }
     private void OnTriggerEnter(Collider other)
     {
