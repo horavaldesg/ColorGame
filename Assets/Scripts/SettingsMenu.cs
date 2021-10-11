@@ -7,43 +7,83 @@ using UnityEngine.SceneManagement;
 
 public class SettingsMenu : MonoBehaviour
 {
+    //Resolutions
+    private const string RES_PREF = "resolution";
+
+    [SerializeField]
+    private Text resText;
+
+    private Resolution[] resolutions;
+
+    private int currentResIndex = 0;
+
+    //Options
     public GameObject Menu;
     public GameObject Options;
 
+    //Audio
     public AudioMixer audioMixer;
-
-    public Dropdown resDropdown;
-
-    Resolution[] resolutions;
 
     void Start()
     {
-        /*
         resolutions = Screen.resolutions;
 
-        resDropdown.ClearOptions();
+        currentResIndex = PlayerPrefs.GetInt(RES_PREF, 0);
 
-        List<string> options = new List<string>();
-
-        int currentResIndex = 0;
-
-        for (int i = 0; i < resolutions.Length; i++)
-        {
-            string option = resolutions[i].width + " x " + resolutions[i].height;
-            options.Add(option);
-
-            if (resolutions[i].width == Screen.currentResolution.width && resolutions[i].height == Screen.currentResolution.height)
-            {
-                currentResIndex = i;
-            }
-        }
-
-        resDropdown.AddOptions(options);
-        resDropdown.value = currentResIndex;
-        resDropdown.RefreshShownValue();
-        */
     }
 
+    //Resolution Cycling
+    private void SetResText(Resolution resolution)
+    {
+        resText.text = resolution.width + "x" + resolution.height;
+    }
+
+    public void SetNextRes() 
+    {
+        currentResIndex = GetNextWrappedIndex(resolutions, currentResIndex);
+        SetResText(resolutions[currentResIndex]);
+    }
+    public void SetPrevRes()
+    {
+        currentResIndex = GetPrevWrappedIndex(resolutions, currentResIndex);
+        SetResText(resolutions[currentResIndex]);
+    }
+
+
+    //Resolution Index Wrap
+    private int GetNextWrappedIndex<T>(IList<T> collection, int currentIndex)
+    {
+        if (collection.Count < 1) return 0;
+        return (currentIndex + 1) % collection.Count;
+    }
+
+    private int GetPrevWrappedIndex<T>(IList<T> collection, int currentIndex)
+    {
+        if (collection.Count < 1) return 0;
+        if ((currentIndex - 1) < 0) return collection.Count - 1;
+        return (currentIndex - 1) % collection.Count;
+    }
+
+    //Apply Res
+    private void SetandApplyRes(int newResIndex)
+    { 
+        
+    }
+
+    private void ApplyCurrentRes()
+    {
+        ApplyRes(currentResIndex);
+    }
+
+    private void ApplyRes(Resolution resolution)
+    {
+        SetResText(resolution);
+
+        Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
+        PlayerPrefs.SetInt(RES_PREF, currentResIndex);
+    }
+
+    // Volumes
     public void SetMasterVolume(float volume)
     {
         audioMixer.SetFloat("Master Volume", volume);
@@ -64,24 +104,19 @@ public class SettingsMenu : MonoBehaviour
         audioMixer.SetFloat("Music Volume", volume);
     }
 
-    /*
-    public void SetRes(int resIndex)
-    {
-        Resolution res = resolutions[resIndex];
-
-        Screen.SetResolution(res.width, res.height, Screen.fullScreen);
-    }
-    */
+    // Graphics Quality
     public void SetQuality(int qualityIndex)
     {
         QualitySettings.SetQualityLevel(qualityIndex);
     }
 
+    // Fullscreen Toggle
     public void SetFullscreen(bool isFull)
     {
         Screen.fullScreen = isFull;
     }
 
+    // Play and Back
     public void Play()
     {
         SceneManager.LoadScene("Test Level");
@@ -89,9 +124,10 @@ public class SettingsMenu : MonoBehaviour
 
     public void Title()
     {
-        SceneManager.LoadScene("Mario UI");
+        SceneManager.LoadScene("Horacio UI");
     }
 
+    //Toggle Main Menu
     public void OptionsMenu()
     {
         Menu.SetActive(false);
@@ -103,7 +139,8 @@ public class SettingsMenu : MonoBehaviour
         Menu.SetActive(true);
         Options.SetActive(false);
     }
-
+    
+    //Quit
     public void Quit()
     {
         Application.Quit();
