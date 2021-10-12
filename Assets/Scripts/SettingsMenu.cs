@@ -72,7 +72,7 @@ public class SettingsMenu : MonoBehaviour
 
     private void ApplyCurrentRes()
     {
-        ApplyRes(currentResIndex);
+        //ApplyRes(currentResIndex);
     }
 
     private void ApplyRes(Resolution resolution)
