@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-public class BehaviourScript : MonoBehaviour
+public class RoamingAI : MonoBehaviour
 {
     //public GameObject player;
     NavMeshAgent agent;
+    public float detectionDistance;
     public Transform[] target;
     AudioSource audioSc;
     Rigidbody rb;
@@ -14,12 +15,13 @@ public class BehaviourScript : MonoBehaviour
     float safeDistance = 10;
     float specPos = 20;
     int i;
-    public enum BehaviorState {Copy, Seek, Flee};
+    public enum BehaviorState {Copy, Seek, Stop};
 
     public BehaviorState currentState;
     // Start is called before the first frame update
     void Start()
     {
+        
         Randomize();
         audioSc = GetComponent<AudioSource>();
         agent = GetComponent<NavMeshAgent>();
@@ -40,14 +42,24 @@ public class BehaviourScript : MonoBehaviour
                 break;
             case BehaviorState.Seek: Seek();
                 break;
-            case BehaviorState.Flee: Flee();
+            case BehaviorState.Stop: Stop();
                 break;
             default: Debug.Log("Switch error");
                 break;
         }
-        
-       
-        
+
+        RaycastHit hit;
+        if (Physics.Raycast(agent.transform.position, agent.transform.forward, out hit, detectionDistance))
+        {
+            if (hit.collider.CompareTag("Player"))
+            {
+                //End Sequence
+                Debug.Log("Collided with " + hit.collider.gameObject.name);
+                currentState = BehaviorState.Stop;
+            }
+
+        }
+
     }
 
     void Seek()
@@ -67,21 +79,10 @@ public class BehaviourScript : MonoBehaviour
             //agent.destination = transform.position;
         }
     }
-    void Flee()
+    void Stop()
     {
 
-        Vector3 differenceVector = transform.position - target[0].position;
-        if(differenceVector.magnitude < safeDistance)
-        {
-            agent.destination = transform.position + differenceVector;
-            
-
-        }
-        else
-        {
-            Seek();
-            //agent.destination = transform.position;
-        }
+        agent.destination = transform.position;
 
 
     }
