@@ -54,7 +54,7 @@ public class RoamingAI : MonoBehaviour
             if (hit.collider.CompareTag("Player"))
             {
                 //End Sequence
-                Debug.Log("Collided with " + hit.collider.gameObject.name);
+                //Debug.Log("Collided with " + hit.collider.gameObject.name);
                 currentState = BehaviorState.Stop;
             }
 
