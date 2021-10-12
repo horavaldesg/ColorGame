@@ -1987,6 +1987,18 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: c0b3454b09206804d931cc2f07a81ccb, type: 2}
+    - target: {fileID: 8950490068453891256, guid: ff39e850387604e94b9f86e671367001, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9986295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8950490068453891256, guid: ff39e850387604e94b9f86e671367001, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.052335896
+      objectReference: {fileID: 0}
+    - target: {fileID: 8950490068453891256, guid: ff39e850387604e94b9f86e671367001, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8990421565367422949, guid: ff39e850387604e94b9f86e671367001, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -3707,8 +3719,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 15
-  m_Range: 5
+  m_Intensity: 6
+  m_Range: 7.5
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
