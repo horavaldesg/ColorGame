@@ -4,28 +4,26 @@ using UnityEngine;
 
 public class CreateRenderTexture : MonoBehaviour
 {
-    public RenderTexture mirrorTexture;
+    RenderTexture mirrorTexture;
     Camera cam;
     Renderer matRender;
+    public RenderTextureFormat textureFormat;
+    Shader shader;
     // Start is called before the first frame update
     void Start()
     {
-        //mirrorTexture = new RenderTexture(1024, 1024, 24, RenderTextureFormat.R8);
-        //mirrorTexture.Create();
-        //var rt = new RenderTexture(1024, 1024, 24);
-        /*
-        RenderTexture newMirror;
-        newMirror = Instantiate(mirrorTexture);
-        mirrorTexture = newMirror;
         cam = GetComponentInChildren<Camera>();
-        cam.targetTexture = mirrorTexture;
+        matRender = GetComponent<Renderer>();
 
-        */
-        cam = GetComponentInChildren<Camera>();
+        mirrorTexture = new RenderTexture(1024, 1024, 24, textureFormat);
+        mirrorTexture.Create();
+       
         cam.targetTexture = mirrorTexture;
-        matRender = this.GetComponent<Renderer>();
-
-        this.matRender.material.SetTexture("Albedo", mirrorTexture);
+        
+        matRender.material = new Material(Shader.Find("Standard"));
+        matRender.material.mainTexture = mirrorTexture;
+        matRender.material.color = Color.white;
+        
     }
 
     // Update is called once per frame

@@ -11,10 +11,10 @@ public class AddRenderTexture : MonoBehaviour
     {
         //var rt = new RenderTexture(1024, 1024, 24, RenderTextureFormat.R8);
         //rt.Create();
-        rt = GetComponentInParent<CreateRenderTexture>().mirrorTexture;
-        camera = GetComponent<Camera>();
-        this.camera.targetTexture = rt;
-        Debug.Log(this.gameObject.name);
+        //rt = GetComponentInParent<CreateRenderTexture>().mirrorTexture;
+        //camera = GetComponent<Camera>();
+        //this.camera.targetTexture = rt;
+        //Debug.Log(this.gameObject.name);
     }
 
     // Update is called once per frame
