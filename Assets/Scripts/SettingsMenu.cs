@@ -66,13 +66,14 @@ public class SettingsMenu : MonoBehaviour
 
     //Apply Res
     private void SetandApplyRes(int newResIndex)
-    { 
-        
+    {
+        currentResIndex = newResIndex;
+        ApplyCurrentRes();
     }
 
     private void ApplyCurrentRes()
     {
-        //ApplyRes(currentResIndex);
+        ApplyRes(resolutions[currentResIndex]);
     }
 
     private void ApplyRes(Resolution resolution)
@@ -81,6 +82,11 @@ public class SettingsMenu : MonoBehaviour
 
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
         PlayerPrefs.SetInt(RES_PREF, currentResIndex);
+    }
+
+    public void ApplyChanges()
+    {
+        SetandApplyRes(currentResIndex);
     }
 
     // Volumes
