@@ -125,7 +125,7 @@ public class SettingsMenu : MonoBehaviour
     // Play and Back
     public void Play()
     {
-        SceneManager.LoadScene("Test Level");
+        SceneManager.LoadScene("Level 1");
     }
 
     public void Title()
