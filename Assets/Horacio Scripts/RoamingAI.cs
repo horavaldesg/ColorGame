@@ -8,6 +8,7 @@ public class RoamingAI : MonoBehaviour
     NavMeshAgent agent;
     public float detectionDistance;
     public Transform[] target;
+    public Transform player;
     AudioSource audioSc;
     Rigidbody rb;
     float speed = 3f;
@@ -15,7 +16,8 @@ public class RoamingAI : MonoBehaviour
     float safeDistance = 10;
     float specPos = 20;
     int i;
-    public enum BehaviorState {Copy, Seek, Stop};
+    float t = 0;
+    public enum BehaviorState { SeekPlayer, Seek, Stop};
 
     public BehaviorState currentState;
     // Start is called before the first frame update
@@ -31,14 +33,14 @@ public class RoamingAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Debug.Log(t);
     }
 
     private void FixedUpdate()
     {
         switch (currentState)
         {
-            case BehaviorState.Copy: Randomize();
+            case BehaviorState.SeekPlayer: SeekPlayer();
                 break;
             case BehaviorState.Seek: Seek();
                 break;
@@ -49,14 +51,15 @@ public class RoamingAI : MonoBehaviour
         }
 
         RaycastHit hit;
-        if (Physics.Raycast(agent.transform.position, agent.transform.forward, out hit, detectionDistance))
+        if (Physics.Raycast(agent.transform.position, agent.transform.forward, out hit))
         {
             if (hit.collider.CompareTag("Player"))
             {
                 //End Sequence
                 //Debug.Log("Collided with " + hit.collider.gameObject.name);
-                currentState = BehaviorState.Stop;
+                currentState = BehaviorState.SeekPlayer;
             }
+            
 
         }
 
@@ -89,5 +92,27 @@ public class RoamingAI : MonoBehaviour
     void Randomize()
     {
         i = Random.Range(0, target.Length);
+    }
+    void SeekPlayer()
+    {
+       
+        t += Time.deltaTime;
+        if (t < 3)
+        {
+            Vector3 differenceVector = player.position - transform.position;
+            if (differenceVector.magnitude > minDistance)
+            {
+                agent.destination = player.position;
+                //rb.MovePosition(transform.position + moveVector);
+
+
+            }
+           
+        }
+        else
+        {
+            
+            currentState = BehaviorState.Seek;
+        }
     }
 }

@@ -1006,6 +1006,7 @@ MonoBehaviour:
   - {fileID: 1370348508}
   - {fileID: 1606550237}
   - {fileID: 1781118356}
+  player: {fileID: 1503435233}
   currentState: 1
 --- !u!1001 &275237592
 PrefabInstance:
@@ -4752,6 +4753,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4104011266970767350, guid: 99621c994311940c190be2808a651dd1, type: 3}
   m_PrefabInstance: {fileID: 1445905263}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1503435233 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9168793329956596390, guid: 5928650220ab149eeb0bbc504b14178d, type: 3}
+  m_PrefabInstance: {fileID: 4263252012998013157}
   m_PrefabAsset: {fileID: 0}
 --- !u!43 &1524447541
 Mesh:
