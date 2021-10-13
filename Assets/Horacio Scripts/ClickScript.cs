@@ -22,8 +22,13 @@ public class ClickScript : MonoBehaviour
     [SerializeField] float altSteps;
     float tAltSteps;
     public GameObject parentObj;
+
+    //Audio Play (Play Test Readiness)
+    AudioSource footstepAudio;
+
     private void Start()
     {
+        footstepAudio = GetComponent<AudioSource>();
     }
     void Update()
     {
@@ -38,6 +43,7 @@ public class ClickScript : MonoBehaviour
                 leftT += Time.deltaTime;
                 if (leftT > footstepRate)
                 {
+                    footstepAudio.Play();
                     GameObject print = 
                     Instantiate(leftFootTexture, hit.point + Vector3.up * 0.01f, Quaternion.Euler(0, parentTransforom.localEulerAngles.y + 180, 0));
                     print.transform.parent = hit.collider.gameObject.transform;
@@ -56,6 +62,7 @@ public class ClickScript : MonoBehaviour
             {
                 if (hit.collider.gameObject.CompareTag("Ground"))
                 {
+                    footstepAudio.Play();
                     GameObject print =
                     Instantiate(RightFootTexture, hit.point + Vector3.up * 0.01f, Quaternion.Euler(0, parentTransforom.localEulerAngles.y + 180, 0));
                     print.transform.parent = hit.collider.gameObject.transform;
