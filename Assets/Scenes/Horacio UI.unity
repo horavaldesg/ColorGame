@@ -214,6 +214,19 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5752755922274251659, guid: 5fd7740dbd598c44f95d3161cc35a443, type: 3}
   m_PrefabInstance: {fileID: 5752755921681956880}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &326227419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 326227416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e81c02b261ea4147b8d31ba73001643, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioMixer: {fileID: 24100000, guid: 1490f72734b9d4246acfcf6949e09ddd, type: 2}
 --- !u!1 &495718157
 GameObject:
   m_ObjectHideFlags: 0
@@ -331,7 +344,6 @@ MonoBehaviour:
   resText: {fileID: 1341011205}
   Menu: {fileID: 1820515361}
   Options: {fileID: 1519798757}
-  audioMixer: {fileID: 24100000, guid: 1490f72734b9d4246acfcf6949e09ddd, type: 2}
 --- !u!1 &572508666
 GameObject:
   m_ObjectHideFlags: 0
@@ -842,6 +854,24 @@ MonoBehaviour:
   - {fileID: 750904736}
   - {fileID: 2056511226}
   - {fileID: 1967572334}
+--- !u!1 &1239238698 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5752755923401966077, guid: 5fd7740dbd598c44f95d3161cc35a443, type: 3}
+  m_PrefabInstance: {fileID: 5752755921681956880}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1239238701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1239238698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e81c02b261ea4147b8d31ba73001643, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioMixer: {fileID: 24100000, guid: 1490f72734b9d4246acfcf6949e09ddd, type: 2}
 --- !u!1 &1307020756
 GameObject:
   m_ObjectHideFlags: 0
@@ -921,6 +951,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1307020756}
   m_CullTransparentMesh: 1
+--- !u!1 &1322478879 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5752755921785520689, guid: 5fd7740dbd598c44f95d3161cc35a443, type: 3}
+  m_PrefabInstance: {fileID: 5752755921681956880}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1322478882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1322478879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e81c02b261ea4147b8d31ba73001643, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioMixer: {fileID: 24100000, guid: 1490f72734b9d4246acfcf6949e09ddd, type: 2}
 --- !u!114 &1341011205 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5752755922775504149, guid: 5fd7740dbd598c44f95d3161cc35a443, type: 3}
@@ -1287,6 +1335,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1538474821}
   m_CullTransparentMesh: 1
+--- !u!1 &1663444808 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5752755923284135851, guid: 5fd7740dbd598c44f95d3161cc35a443, type: 3}
+  m_PrefabInstance: {fileID: 5752755921681956880}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1663444811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1663444808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e81c02b261ea4147b8d31ba73001643, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioMixer: {fileID: 24100000, guid: 1490f72734b9d4246acfcf6949e09ddd, type: 2}
 --- !u!1 &1672174122
 GameObject:
   m_ObjectHideFlags: 0
@@ -1688,6 +1754,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 495718161}
     m_Modifications:
     - target: {fileID: 5752755921785520691, guid: 5fd7740dbd598c44f95d3161cc35a443, type: 3}
+      propertyPath: m_MaxValue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5752755921785520691, guid: 5fd7740dbd598c44f95d3161cc35a443, type: 3}
+      propertyPath: m_MinValue
+      value: 0.0001
+      objectReference: {fileID: 0}
+    - target: {fileID: 5752755921785520691, guid: 5fd7740dbd598c44f95d3161cc35a443, type: 3}
       propertyPath: m_Colors.m_SelectedColor.b
       value: 1
       objectReference: {fileID: 0}
@@ -1700,9 +1774,21 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5752755921785520691, guid: 5fd7740dbd598c44f95d3161cc35a443, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5752755921785520691, guid: 5fd7740dbd598c44f95d3161cc35a443, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 495718162}
+      objectReference: {fileID: 1322478882}
+    - target: {fileID: 5752755921785520691, guid: 5fd7740dbd598c44f95d3161cc35a443, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetNarrativeVolume
+      objectReference: {fileID: 0}
+    - target: {fileID: 5752755921785520691, guid: 5fd7740dbd598c44f95d3161cc35a443, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SetVolume, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 5752755921785520691, guid: 5fd7740dbd598c44f95d3161cc35a443, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_FloatArgument
       value: 1
@@ -1720,6 +1806,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 495718162}
     - target: {fileID: 5752755922274251661, guid: 5fd7740dbd598c44f95d3161cc35a443, type: 3}
+      propertyPath: m_MaxValue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5752755922274251661, guid: 5fd7740dbd598c44f95d3161cc35a443, type: 3}
+      propertyPath: m_MinValue
+      value: 0.0001
+      objectReference: {fileID: 0}
+    - target: {fileID: 5752755922274251661, guid: 5fd7740dbd598c44f95d3161cc35a443, type: 3}
       propertyPath: m_Colors.m_SelectedColor.b
       value: 1
       objectReference: {fileID: 0}
@@ -1732,9 +1826,21 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5752755922274251661, guid: 5fd7740dbd598c44f95d3161cc35a443, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5752755922274251661, guid: 5fd7740dbd598c44f95d3161cc35a443, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 495718162}
+      objectReference: {fileID: 326227419}
+    - target: {fileID: 5752755922274251661, guid: 5fd7740dbd598c44f95d3161cc35a443, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetMasterVolume
+      objectReference: {fileID: 0}
+    - target: {fileID: 5752755922274251661, guid: 5fd7740dbd598c44f95d3161cc35a443, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SetVolume, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 5752755922274251661, guid: 5fd7740dbd598c44f95d3161cc35a443, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_FloatArgument
       value: 1
@@ -1864,6 +1970,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1166245606}
     - target: {fileID: 5752755923284135853, guid: 5fd7740dbd598c44f95d3161cc35a443, type: 3}
+      propertyPath: m_MaxValue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5752755923284135853, guid: 5fd7740dbd598c44f95d3161cc35a443, type: 3}
+      propertyPath: m_MinValue
+      value: 0.0001
+      objectReference: {fileID: 0}
+    - target: {fileID: 5752755923284135853, guid: 5fd7740dbd598c44f95d3161cc35a443, type: 3}
       propertyPath: m_Colors.m_SelectedColor.b
       value: 1
       objectReference: {fileID: 0}
@@ -1876,14 +1990,34 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5752755923284135853, guid: 5fd7740dbd598c44f95d3161cc35a443, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5752755923284135853, guid: 5fd7740dbd598c44f95d3161cc35a443, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 495718162}
+      objectReference: {fileID: 1663444811}
+    - target: {fileID: 5752755923284135853, guid: 5fd7740dbd598c44f95d3161cc35a443, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetMusicVolume
+      objectReference: {fileID: 0}
+    - target: {fileID: 5752755923284135853, guid: 5fd7740dbd598c44f95d3161cc35a443, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SetVolume, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 5752755923284135853, guid: 5fd7740dbd598c44f95d3161cc35a443, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_FloatArgument
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5752755923401966079, guid: 5fd7740dbd598c44f95d3161cc35a443, type: 3}
+      propertyPath: m_MaxValue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5752755923401966079, guid: 5fd7740dbd598c44f95d3161cc35a443, type: 3}
+      propertyPath: m_MinValue
+      value: 0.0001
+      objectReference: {fileID: 0}
+    - target: {fileID: 5752755923401966079, guid: 5fd7740dbd598c44f95d3161cc35a443, type: 3}
       propertyPath: m_Colors.m_SelectedColor.b
       value: 1
       objectReference: {fileID: 0}
@@ -1896,9 +2030,21 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5752755923401966079, guid: 5fd7740dbd598c44f95d3161cc35a443, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5752755923401966079, guid: 5fd7740dbd598c44f95d3161cc35a443, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 495718162}
+      objectReference: {fileID: 1239238701}
+    - target: {fileID: 5752755923401966079, guid: 5fd7740dbd598c44f95d3161cc35a443, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetAmbienceVolume
+      objectReference: {fileID: 0}
+    - target: {fileID: 5752755923401966079, guid: 5fd7740dbd598c44f95d3161cc35a443, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SetVolume, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 5752755923401966079, guid: 5fd7740dbd598c44f95d3161cc35a443, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_FloatArgument
       value: 1

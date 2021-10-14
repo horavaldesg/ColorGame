@@ -97,11 +97,11 @@ AudioMixerController:
   m_UpdateMode: 0
   m_ExposedParameters:
   - guid: aa1f8e4707882f64eba2b55cae332c88
-    name: Ambience Voume
+    name: AmbienceVoume
   - guid: dbd8e6b8126110e49831dd8add99d6a2
-    name: Master Volume
+    name: MasterVolume
   - guid: b442e7514a64954409c750ba24534240
-    name: Music Volume
+    name: MusicVolume
   - guid: 0e3a7edd864e4de48bdd52beb07813c2
     name: Narrative Volume
   m_AudioMixerGroupViews:
@@ -159,7 +159,7 @@ AudioMixerSnapshotController:
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: 914ca7bf8035198448eeda2dee146a99
   m_FloatValues:
-    b442e7514a64954409c750ba24534240: -80
+    b442e7514a64954409c750ba24534240: -0.002441872
   m_TransitionOverrides: {}
 --- !u!243 &6758554069591782648
 AudioMixerGroupController:

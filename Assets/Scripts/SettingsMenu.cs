@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Audio;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
@@ -20,9 +19,6 @@ public class SettingsMenu : MonoBehaviour
     //Options
     public GameObject Menu;
     public GameObject Options;
-
-    //Audio
-    public AudioMixer audioMixer;
 
     void Start()
     {
@@ -87,27 +83,6 @@ public class SettingsMenu : MonoBehaviour
     public void ApplyChanges()
     {
         SetandApplyRes(currentResIndex);
-    }
-
-    // Volumes
-    public void SetMasterVolume(float volume)
-    {
-        audioMixer.SetFloat("Master Volume", volume);
-    }
-
-    public void SetAmbienceVolume(float volume)
-    {
-        audioMixer.SetFloat("Ambience Volume", volume);
-    }
-
-    public void SetNarrativeVolume(float volume)
-    {
-        audioMixer.SetFloat("Narrative Volume", volume);
-    }
-
-    public void SetMusicVolume(float volume)
-    {
-        audioMixer.SetFloat("Music Volume", volume);
     }
 
     // Graphics Quality
