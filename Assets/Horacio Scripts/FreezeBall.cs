@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class FreezeBall : MonoBehaviour
 {
     Rigidbody rb;
+    AudioSource ballBounce;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +24,7 @@ public class FreezeBall : MonoBehaviour
         {
             rb.constraints = RigidbodyConstraints.FreezeAll;
 
+            ballBounce.Play();
         }
     }
 }
