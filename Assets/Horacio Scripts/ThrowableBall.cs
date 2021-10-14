@@ -6,6 +6,8 @@ public class ThrowableBall : MonoBehaviour
 {
     public GameObject handTransform;
     [SerializeField] float distanceToDraw;
+    public GameObject interactionText;
+
     public static bool ballTouching;
     public static bool canGrab;
     public static GameObject ball;
@@ -28,6 +30,7 @@ public class ThrowableBall : MonoBehaviour
         {
             if (hit.collider.CompareTag("Ball"))
             {
+                interactionText.SetActive(true);
                 ball = hit.collider.gameObject;
                 canGrab = true;
                 //Debug.Log(canGrab);
@@ -44,10 +47,15 @@ public class ThrowableBall : MonoBehaviour
 
             }
         }
+        else
+        {
+            interactionText.SetActive(false);
+        }
         if (hasBall)
         {
             ball.transform.position = handTransform.transform.position;
             ball.transform.rotation = handTransform.transform.rotation;
+            interactionText.SetActive(false);
         }
 
         if (!ballTouching)
