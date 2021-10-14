@@ -31,7 +31,7 @@ public class FlipMirror : MonoBehaviour
     */
     private void OnTriggerEnter(Collider other)
     {
-        rot.rotation = Quaternion.Euler(rot.localEulerAngles.x, rot.localEulerAngles.y - 180, rot.localEulerAngles.z);
+        //rot.rotation = Quaternion.Euler(rot.localEulerAngles.x, rot.localEulerAngles.y - 180, rot.localEulerAngles.z);
         //room1.SetActive(!room1.activeSelf);
         mirrorPhase.Play();
 
