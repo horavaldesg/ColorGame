@@ -14,7 +14,7 @@ public class GameController : MonoBehaviour
     public Transform camTransform;
     float FOVConst;
     public GameObject FirstCam;
-    public GameObject ThirdCam;
+    //public GameObject ThirdCam;
 
     public int CamMode;
 
@@ -96,7 +96,7 @@ public class GameController : MonoBehaviour
         controls.Gameplay.Jump.started += tgb => Jump();
 
         //Change Camera
-        controls.Gameplay.ChangeCamera.performed += tgb => CamViewChange();
+       // controls.Gameplay.ChangeCamera.performed += tgb => CamViewChange();
 
         //Movement
         controls.Gameplay.Move.performed += tgb => move = tgb.ReadValue<Vector2>();
@@ -246,6 +246,7 @@ public class GameController : MonoBehaviour
 
         //Player Rotation
         //Third Person
+        /*
         if (!OptionsObj.activeSelf)
         {
             if (CamMode == 0)
@@ -265,9 +266,10 @@ public class GameController : MonoBehaviour
 
 
             }
+        */
             //First Person
-            else if (CamMode == 1)
-            {
+           // else if (CamMode == 1)
+            //{
 
                 camTransform = FirstCam.transform;
                 Vector2 r = new Vector2(0, rotate.x) * horizontalSensConst * Time.deltaTime * 10;
@@ -281,11 +283,11 @@ public class GameController : MonoBehaviour
                 rotY += -rotate.y * verticalSensConst * Time.deltaTime * 10;
                 rotY = Mathf.Clamp(rotY, -90, 90);
                 camTransform.transform.localRotation = Quaternion.Euler(rotY, 0, 0);
-            }
-        }
-
+            //}
+      // }
+        
     }
-
+    /*
     public void CamViewChange()
     {
         if (CamMode == 1)
@@ -302,7 +304,7 @@ public class GameController : MonoBehaviour
         StartCoroutine(CameraChange());
     }
 
-
+    
     IEnumerator CameraChange()
     {
         yield return new WaitForSeconds(.02f);
@@ -318,6 +320,6 @@ public class GameController : MonoBehaviour
             FirstCam.SetActive(true);
             ThirdCam.SetActive(false);
         }
-    }
+    */
 }
 
