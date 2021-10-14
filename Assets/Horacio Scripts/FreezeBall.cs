@@ -11,6 +11,7 @@ public class FreezeBall : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        ballBounce = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
