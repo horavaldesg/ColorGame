@@ -25,6 +25,7 @@ public class ClickScript : MonoBehaviour
 
     //Audio Play (Play Test Readiness)
     AudioSource footstepAudio;
+    public AudioSource handPrintAudio;
 
     private void Start()
     {
@@ -78,6 +79,8 @@ public class ClickScript : MonoBehaviour
             if(hit.collider.gameObject.layer == 9)
             {
                 AnimationScript.handCloseToWall = true;
+                handPrintAudio.Play();
+
             }
         }
         else
