@@ -125,8 +125,11 @@ public class RoamingAI : MonoBehaviour
         {
             Animator anim = other.GetComponent<Animator>();
             anim.SetBool("Caught", true);
-            AnimatorClipInfo[] clipInfo = anim.GetCurrentAnimatorClipInfo(0);
-            float clipTime = clipInfo[0].clip.length;
+            
+            float clipTime = anim.runtimeAnimatorController.animationClips[5].length;
+            
+            
+            Debug.Log(clipTime);
             StartCoroutine(loadScene(clipTime));
             Debug.Log("Caught");
         }

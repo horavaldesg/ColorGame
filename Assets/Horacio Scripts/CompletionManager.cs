@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class CompletionManager : MonoBehaviour
 {
     public string scene;
+    public int totalRooms;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,7 +16,7 @@ public class CompletionManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(CompletedRoom.totalCompleted == CompletedRoom.completed)
+        if (totalRooms == CompletedRoom.completed)
         {
             SceneManager.LoadScene(scene);
         }
