@@ -2,9 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 public class RoamingAI : MonoBehaviour
 {
     //public GameObject player;
+
+    Scene currentScene;
+
     NavMeshAgent agent;
     public float detectionDistance;
     public Transform[] target;
@@ -23,7 +27,7 @@ public class RoamingAI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        currentScene = SceneManager.GetActiveScene();
         Randomize();
         audioSc = GetComponent<AudioSource>();
         agent = GetComponent<NavMeshAgent>();
@@ -114,5 +118,23 @@ public class RoamingAI : MonoBehaviour
             
             currentState = BehaviorState.Seek;
         }
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            Animator anim = other.GetComponent<Animator>();
+            anim.SetBool("Caught", true);
+            AnimatorClipInfo[] clipInfo = anim.GetCurrentAnimatorClipInfo(0);
+            float clipTime = clipInfo[0].clip.length;
+            StartCoroutine(loadScene(clipTime));
+            Debug.Log("Caught");
+        }
+    }
+    private IEnumerator loadScene(float time)
+    {
+        yield return new WaitForSeconds(time);
+        SceneManager.LoadScene(currentScene.name);
+
     }
 }
