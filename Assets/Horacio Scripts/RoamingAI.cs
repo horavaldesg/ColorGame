@@ -33,7 +33,7 @@ public class RoamingAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(t);
+        //Debug.Log(t);
     }
 
     private void FixedUpdate()
