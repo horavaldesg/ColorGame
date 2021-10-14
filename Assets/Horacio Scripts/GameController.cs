@@ -182,6 +182,7 @@ public class GameController : MonoBehaviour
         if (controlScheme == controlSchemes.Gamepad)
         {
             InputBinding actionMask = new InputBinding { groups = "Gamepad" };
+            InputTextManager.inputText = "Press Square to Interact";
             horizontalSensConst = controllerHorizontalSens;
             verticalSensConst = controllerVerticalSens;
             controls.bindingMask = actionMask;
@@ -189,6 +190,7 @@ public class GameController : MonoBehaviour
         else if (controlScheme == controlSchemes.Keyboard)
         {
             InputBinding actionMask = new InputBinding { groups = "KBM" };
+            InputTextManager.inputText = "Press E to Interact";
             horizontalSensConst = horizontalSens;
             verticalSensConst = verticalSens;
             controls.bindingMask = actionMask;
