@@ -558,7 +558,7 @@ RectTransform:
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.16600001, y: 0.061327342}
-  m_AnchorMax: {x: 0.8245209, y: 0.38065466}
+  m_AnchorMax: {x: 0.82352084, y: 0.39448148}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -584,10 +584,12 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Controls:
 
-    Keyboard - WASD to move, Mouse to look around
+    Keyboard - WASD to move, Mouse to look around, Left Mouse
+    Button to Throw light ball
 
-    Controller
-    - Left Stick to move, Right Stick to look around
+
+    Controller - Left Stick to move, Right Stick
+    to look around, Right Trigger to throw light ball
 
     Goal: Find all the lit
     mirror rooms
@@ -619,7 +621,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50.15
+  m_fontSize: 32.15
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -627,7 +629,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 4096
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
