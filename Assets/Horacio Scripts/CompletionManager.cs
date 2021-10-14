@@ -1,9 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public class RoomEnter : MonoBehaviour
+using UnityEngine.SceneManagement;
+
+public class CompletionManager : MonoBehaviour
 {
-    public GameObject col;
     public string scene;
     // Start is called before the first frame update
     void Start()
@@ -14,14 +15,9 @@ public class RoomEnter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
-    }
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Player"))
+        if(CompletedRoom.totalCompleted == CompletedRoom.completed)
         {
-            CompletedRoom.completed += 1;
-            Destroy(col);
+            SceneManager.LoadScene(scene);
         }
     }
 }
