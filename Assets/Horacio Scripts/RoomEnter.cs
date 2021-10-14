@@ -4,7 +4,7 @@ using UnityEngine;
 public class RoomEnter : MonoBehaviour
 {
     public GameObject col;
-    public string scene;
+    //public string scene;
     // Start is called before the first frame update
     void Start()
     {
