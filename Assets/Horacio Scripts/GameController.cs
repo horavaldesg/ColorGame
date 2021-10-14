@@ -65,11 +65,14 @@ public class GameController : MonoBehaviour
     public GameObject clickScript;
     public bool PaintOnClick;
     public static bool paintOnClick;
+
+    public static bool hasMoveableObject;
     private void Awake()
     {
+        hasMoveableObject = false;
         paintOnClick = PaintOnClick;
-       
-        if(gamepad != null)
+
+        if (gamepad != null)
         {
             gamepad = (DualShockGamepad)Gamepad.all[0];
             gamepad.SetLightBarColor(Color.green);
@@ -79,8 +82,9 @@ public class GameController : MonoBehaviour
         //Main Camera
         mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         FOVConst = mainCamera.fieldOfView;
-        
-       
+
+
+
         //Constants
         speedBoost = 1;
         //horizontalSens = 100f;
@@ -96,16 +100,19 @@ public class GameController : MonoBehaviour
 
         //Movement
         controls.Gameplay.Move.performed += tgb => move = tgb.ReadValue<Vector2>();
+        controls.Gameplay.Move.performed += tgb => MoveableObjects.moveBox = tgb.ReadValue<Vector2>();
         controls.Gameplay.Move.canceled += tgb => move = Vector3.zero;
         controls.Gameplay.Move.canceled += tgb => movement = Vector3.zero;
-        
+
         //Run
         //controls.Gameplay.SpeedBoost.performed += tgb => speedBoost = 3;
         //controls.Gameplay.SpeedBoost.canceled += tgb => speedBoost = 1;
 
         //Rotation
         controls.Gameplay.Rotation.performed += tgb => rotate = tgb.ReadValue<Vector2>();
+        controls.Gameplay.Rotation.performed += tgb => MoveableObjects.rotataBox = tgb.ReadValue<Vector2>();
         controls.Gameplay.Rotation.canceled += tgb => rotate = Vector2.zero;
+
 
         //Options
         if (OptionsObj != null)
@@ -127,10 +134,10 @@ public class GameController : MonoBehaviour
         }
 
         //Interaction
-       
-            controls.Gameplay.Interaction.performed += tgb => ThrowableBall.PickUp();
 
-        
+        controls.Gameplay.Interaction.performed += tgb => ThrowableBall.PickUp();
+
+
         //Shoot
         controls.Gameplay.Shoot.performed += tgb => ThrowableBall.Shoot(handTransform);
 
@@ -224,8 +231,16 @@ public class GameController : MonoBehaviour
             grounded = true;
             verticalSpeed = 0;
         }
-
-        cc.Move(movement);
+        if (!hasMoveableObject)
+        {
+            cc.enabled = true;
+            cc.Move(movement);
+        }
+        else if (hasMoveableObject)
+        {
+            cc.enabled = false;
+        }
+        
 
         //Player Rotation
         //Third Person
