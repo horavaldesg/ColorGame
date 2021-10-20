@@ -67,6 +67,8 @@ public class GameController : MonoBehaviour
     public static bool paintOnClick;
 
     public static bool hasMoveableObject;
+
+    public float boxPush = 2.0f;
     private void Awake()
     {
         hasMoveableObject = false;
@@ -100,7 +102,6 @@ public class GameController : MonoBehaviour
 
         //Movement
         controls.Gameplay.Move.performed += tgb => move = tgb.ReadValue<Vector2>();
-        controls.Gameplay.Move.performed += tgb => MoveableObjects.moveBox = tgb.ReadValue<Vector2>();
         controls.Gameplay.Move.canceled += tgb => move = Vector3.zero;
         controls.Gameplay.Move.canceled += tgb => movement = Vector3.zero;
 
@@ -110,7 +111,6 @@ public class GameController : MonoBehaviour
 
         //Rotation
         controls.Gameplay.Rotation.performed += tgb => rotate = tgb.ReadValue<Vector2>();
-        controls.Gameplay.Rotation.performed += tgb => MoveableObjects.rotataBox = tgb.ReadValue<Vector2>();
         controls.Gameplay.Rotation.canceled += tgb => rotate = Vector2.zero;
 
 
@@ -321,5 +321,20 @@ public class GameController : MonoBehaviour
             ThirdCam.SetActive(false);
         }
     */
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        if (hit.collider.gameObject.CompareTag("Box"))
+        {
+            Rigidbody box = hit.collider.GetComponent<Rigidbody>();
+            if (box == null || box.isKinematic)
+            {
+                return;
+            }
+            Vector3 boxDir = new Vector3(hit.moveDirection.x, 0, hit.moveDirection.z);
+
+           
+            box.velocity = boxDir * boxPush;
+        }
+    }
 }
 
