@@ -7,6 +7,7 @@ public class CompletionManager : MonoBehaviour
 {
     public string scene;
     public int totalRooms;
+    public bool mirrorsToComplete;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,9 +17,19 @@ public class CompletionManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (totalRooms == CompletedRoom.completed)
+        if (mirrorsToComplete)
         {
-            SceneManager.LoadScene(scene);
+            if (totalRooms == CompletedRoom.completed)
+            {
+                SceneManager.LoadScene(scene);
+            }
+        }
+        else
+        {
+            if (MoveableObjects.isOnCollider)
+            {
+                SceneManager.LoadScene(scene);
+            }
         }
     }
 }
