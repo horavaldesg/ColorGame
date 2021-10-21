@@ -27,8 +27,9 @@ public class RoamingAI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        i = 0;
         currentScene = SceneManager.GetActiveScene();
-        Randomize();
+        //Randomize();
         audioSc = GetComponent<AudioSource>();
         agent = GetComponent<NavMeshAgent>();
         rb = GetComponent<Rigidbody>();
@@ -42,6 +43,7 @@ public class RoamingAI : MonoBehaviour
 
     private void FixedUpdate()
     {
+        Debug.Log(i);
         switch (currentState)
         {
             case BehaviorState.SeekPlayer: SeekPlayer();
@@ -80,9 +82,21 @@ public class RoamingAI : MonoBehaviour
 
 
         }
-        if (agent.destination == target[i].position)
+       
+           
+        else
         {
-            i += 1;
+            if(i == target.Length - 1)
+            {
+                i = 0;
+            }
+            else
+            {
+                i += 1;
+            }
+            
+            
+
         }
 
         
