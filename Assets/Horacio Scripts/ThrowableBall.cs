@@ -13,6 +13,7 @@ public class ThrowableBall : MonoBehaviour
     public static GameObject ball;
     public static bool hasBall;
     public static bool canShoot;
+    public AudioSource throwSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -66,6 +67,7 @@ public class ThrowableBall : MonoBehaviour
 
         if (canShoot)
         {
+            throwSound.Play();
             hasBall = false;
             Rigidbody rb = ball.GetComponent<Rigidbody>();
             rb.AddForce(ball.transform.forward * 15, ForceMode.Impulse);

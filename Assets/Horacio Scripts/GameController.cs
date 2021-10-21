@@ -69,6 +69,9 @@ public class GameController : MonoBehaviour
     public static bool hasMoveableObject;
 
     public float boxPush = 2.0f;
+
+    public AudioSource footstepsAudio;
+
     private void Awake()
     {
         hasMoveableObject = false;
@@ -98,12 +101,14 @@ public class GameController : MonoBehaviour
         controls.Gameplay.Jump.started += tgb => Jump();
 
         //Change Camera
-       // controls.Gameplay.ChangeCamera.performed += tgb => CamViewChange();
+        // controls.Gameplay.ChangeCamera.performed += tgb => CamViewChange();
 
         //Movement
+        controls.Gameplay.Move.performed += tgb => footstepsAudio.Play();
         controls.Gameplay.Move.performed += tgb => move = tgb.ReadValue<Vector2>();
         controls.Gameplay.Move.canceled += tgb => move = Vector3.zero;
         controls.Gameplay.Move.canceled += tgb => movement = Vector3.zero;
+
 
         //Run
         //controls.Gameplay.SpeedBoost.performed += tgb => speedBoost = 3;
@@ -160,6 +165,8 @@ public class GameController : MonoBehaviour
     {
         //gamepad.ResetHaptics();
         controls.Gameplay.Disable();
+        footstepsAudio.Stop();
+
     }
 
     public void Update()
