@@ -10,6 +10,7 @@ public class AnimationScript : MonoBehaviour
     //public static bool touching;
     public static bool handCloseToWall;
     public static bool handClick;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -38,7 +39,7 @@ public class AnimationScript : MonoBehaviour
         //anim.SetBool("touching", touching);
         anim.SetBool("CloseToWall", handCloseToWall);
         anim.SetBool("OnClick", handClick);
-       
+        
         //Debug.Log(touching);
     }
 }
