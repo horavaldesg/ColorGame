@@ -21,7 +21,7 @@ public class RoamingAI : MonoBehaviour
     float specPos = 20;
     int i;
     float t = 0;
-    public enum BehaviorState { SeekPlayer, Seek, Stop};
+    public enum BehaviorState { SeekPlayer, Seek, Stop, SeekInOrder};
 
     public BehaviorState currentState;
     // Start is called before the first frame update
@@ -50,6 +50,8 @@ public class RoamingAI : MonoBehaviour
                 break;
             case BehaviorState.Stop: Stop();
                 break;
+            case BehaviorState.SeekInOrder: SeekInOrder();
+                break;
             default: Debug.Log("Switch error");
                 break;
         }
@@ -68,7 +70,23 @@ public class RoamingAI : MonoBehaviour
         }
 
     }
+    void SeekInOrder()
+    {
+        Vector3 differenceVector = target[i].position - transform.position;
+        if (differenceVector.magnitude > minDistance)
+        {
+            agent.destination = target[i].position;
+            //rb.MovePosition(transform.position + moveVector);
 
+
+        }
+        if (agent.destination == target[i].position)
+        {
+            i += 1;
+        }
+
+        
+    }
     void Seek()
     {
         Vector3 differenceVector = target[i].position - transform.position;
