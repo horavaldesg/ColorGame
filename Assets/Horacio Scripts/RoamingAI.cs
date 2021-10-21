@@ -21,14 +21,14 @@ public class RoamingAI : MonoBehaviour
     float specPos = 20;
     int i;
     float t = 0;
-    public enum BehaviorState { SeekPlayer, Seek, Stop};
+    public enum BehaviorState { SeekPlayer, Seek, Stop, SeekInOrder};
 
     public BehaviorState currentState;
     // Start is called before the first frame update
     void Start()
     {
         currentScene = SceneManager.GetActiveScene();
-        Randomize();
+        //Randomize();
         audioSc = GetComponent<AudioSource>();
         agent = GetComponent<NavMeshAgent>();
         rb = GetComponent<Rigidbody>();
@@ -42,6 +42,7 @@ public class RoamingAI : MonoBehaviour
 
     private void FixedUpdate()
     {
+        //Debug.Log(i);
         switch (currentState)
         {
             case BehaviorState.SeekPlayer: SeekPlayer();
@@ -49,6 +50,8 @@ public class RoamingAI : MonoBehaviour
             case BehaviorState.Seek: Seek();
                 break;
             case BehaviorState.Stop: Stop();
+                break;
+            case BehaviorState.SeekInOrder: SeekInOrder();
                 break;
             default: Debug.Log("Switch error");
                 break;
@@ -68,7 +71,30 @@ public class RoamingAI : MonoBehaviour
         }
 
     }
+    void SeekInOrder()
+    {
+        Vector3 differenceVector = target[i].position - transform.position;
+        if (differenceVector.magnitude > minDistance)
+        {
+            agent.destination = target[i].position;
+            //rb.MovePosition(transform.position + moveVector);
 
+
+        }
+        else
+        {
+            if(i == target.Length - 1)
+            {
+                i = 0;
+            }
+            else
+            {
+                i += 1;
+            }
+            //PlayerMovement.canMove = false;
+            //agent.destination = transform.position;
+        }
+    }
     void Seek()
     {
         Vector3 differenceVector = target[i].position - transform.position;
