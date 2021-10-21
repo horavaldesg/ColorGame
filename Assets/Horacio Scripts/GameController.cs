@@ -165,7 +165,6 @@ public class GameController : MonoBehaviour
     {
         //gamepad.ResetHaptics();
         controls.Gameplay.Disable();
-        footstepsAudio.Stop();
 
     }
 
@@ -232,6 +231,7 @@ public class GameController : MonoBehaviour
         //Gravity
         verticalSpeed += Gravity * Time.deltaTime;
         movement += transform.up * verticalSpeed * Time.deltaTime;
+
 
         //Ground Check
         if (Physics.CheckSphere(checkPos.position, 0.5f, groundMask) && verticalSpeed <= 0)
