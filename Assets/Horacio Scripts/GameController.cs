@@ -18,7 +18,7 @@ public class GameController : MonoBehaviour
 
     public int CamMode;
 
-    public GameObject handTransform;
+    GameObject handTransform;
     //Sensitivity
     [SerializeField] float horizontalSens;
     [SerializeField] float verticalSens;

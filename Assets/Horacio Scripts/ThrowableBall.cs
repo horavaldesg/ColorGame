@@ -7,7 +7,7 @@ public class ThrowableBall : MonoBehaviour
     public GameObject handTransform;
     [SerializeField] float distanceToDraw;
     public GameObject interactionText;
-
+    GameObject camTransform;
     public static bool ballTouching;
     public static bool canGrab;
     public static GameObject ball;
@@ -16,6 +16,7 @@ public class ThrowableBall : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        camTransform = GameObject.FindGameObjectWithTag("MainCamera");
         ballTouching = false;
         hasBall = false;
         canGrab = false;
@@ -26,7 +27,7 @@ public class ThrowableBall : MonoBehaviour
     void Update()
     {
         RaycastHit hit;
-        if (Physics.Raycast(handTransform.transform.position, handTransform.transform.forward, out hit, distanceToDraw))
+        if (Physics.Raycast(camTransform.transform.position, camTransform.transform.forward, out hit, distanceToDraw))
         {
             if (hit.collider.CompareTag("Ball"))
             {

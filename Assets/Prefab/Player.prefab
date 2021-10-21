@@ -5133,7 +5133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa51b641e3d5a403f98e016460ae959b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  handTransform: {fileID: 4732047827779671734}
+  handTransform: {fileID: 3687770965992858447}
   distanceToDraw: 1
   interactionText: {fileID: 6522228304750527180}
 --- !u!135 &5109632343353629563
@@ -6840,7 +6840,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camTransform: {fileID: 9168793331463142645}
   FirstCam: {fileID: 9168793330940818730}
-  ThirdCam: {fileID: 9168793331463142640}
   CamMode: 1
   handTransform: {fileID: 4732047827779671734}
   horizontalSens: 5
@@ -6859,6 +6858,7 @@ MonoBehaviour:
   OptionsObj: {fileID: 5183214198030209339}
   clickScript: {fileID: 3687770965992858447}
   PaintOnClick: 0
+  boxPush: 2
 --- !u!143 &9168793329956596384
 CharacterController:
   m_ObjectHideFlags: 0
