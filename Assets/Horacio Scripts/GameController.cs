@@ -170,6 +170,7 @@ public class GameController : MonoBehaviour
 
     public void Update()
     {
+        
         if (OptionsObj.activeSelf)
         {
             Cursor.lockState = CursorLockMode.None;
