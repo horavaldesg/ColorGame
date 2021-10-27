@@ -20,10 +20,11 @@ public class GameController : MonoBehaviour
 
     GameObject handTransform;
     //Sensitivity
-    [SerializeField] float horizontalSens;
-    [SerializeField] float verticalSens;
-    [SerializeField] float controllerHorizontalSens;
-    [SerializeField] float controllerVerticalSens;
+    [SerializeField] FloatVariable horizontalSens;
+    [SerializeField] FloatVariable verticalSens;
+    [SerializeField] FloatVariable controllerHorizontalSens;
+    [SerializeField] FloatVariable controllerVerticalSens;
+
     float horizontalSensConst;
     float verticalSensConst;
     float rotY;
@@ -94,8 +95,8 @@ public class GameController : MonoBehaviour
         speedBoost = 1;
         //horizontalSens = 100f;
         //verticalSens = 100f;
-        horizontalSensConst = horizontalSens;
-        verticalSensConst = verticalSens;
+        horizontalSensConst = horizontalSens.Value;
+        verticalSensConst = verticalSens.Value;
         controls = new PlayerControls();
         //Jump
         controls.Gameplay.Jump.started += tgb => Jump();
@@ -170,6 +171,7 @@ public class GameController : MonoBehaviour
 
     public void Update()
     {
+        
         if (OptionsObj.activeSelf)
         {
             Cursor.lockState = CursorLockMode.None;
@@ -189,16 +191,16 @@ public class GameController : MonoBehaviour
         {
             InputBinding actionMask = new InputBinding { groups = "Gamepad" };
             InputTextManager.inputText = "Press Square to Interact";
-            horizontalSensConst = controllerHorizontalSens;
-            verticalSensConst = controllerVerticalSens;
+            horizontalSensConst = controllerHorizontalSens.Value;
+            verticalSensConst = controllerVerticalSens.Value;
             controls.bindingMask = actionMask;
         }
         else if (controlScheme == controlSchemes.Keyboard)
         {
             InputBinding actionMask = new InputBinding { groups = "KBM" };
             InputTextManager.inputText = "Press E to Interact";
-            horizontalSensConst = horizontalSens;
-            verticalSensConst = verticalSens;
+            horizontalSensConst = horizontalSens.Value;
+            verticalSensConst = verticalSens.Value;
             controls.bindingMask = actionMask;
         }
         

@@ -20,7 +20,7 @@ public class OnSelectButton : MonoBehaviour
     {
             menu = GetComponent<UnityEngine.InputSystem.UI.InputSystemUIInputModule>().GetComponent<EventSystem>().currentSelectedGameObject.name;
         //menu = GetComponent<EventSystem>().currentSelectedGameObject.name;
-        Debug.Log(menu);
+        //Debug.Log(menu);
             switch (menu)
             {
                 case "Controller":

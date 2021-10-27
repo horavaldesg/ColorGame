@@ -1547,6 +1547,7 @@ MonoBehaviour:
   handTransform: {fileID: 2242629583624018065}
   distanceToDraw: 2
   interactionText: {fileID: 303829983604837611}
+  throwSound: {fileID: 0}
 --- !u!135 &1755832519639881052
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1732,10 +1733,10 @@ MonoBehaviour:
   camTransform: {fileID: 0}
   FirstCam: {fileID: 2417007071325387533}
   CamMode: 1
-  horizontalSens: 5
-  verticalSens: 5
-  controllerHorizontalSens: 20
-  controllerVerticalSens: 20
+  horizontalSens: {fileID: 11400000, guid: 56c815d592a8e4a778b34d97eea110f7, type: 2}
+  verticalSens: {fileID: 11400000, guid: f3225b8ac9bc84daeb8da14c50bd3dd9, type: 2}
+  controllerHorizontalSens: {fileID: 11400000, guid: ab620ed12634144f890aebcc84a2f209, type: 2}
+  controllerVerticalSens: {fileID: 11400000, guid: 0d4e2a70dbc8d41409b456c2bf4c631e, type: 2}
   checkPos: {fileID: 5876856937636485481}
   groundMask:
     serializedVersion: 2
@@ -1749,6 +1750,7 @@ MonoBehaviour:
   clickScript: {fileID: 7897466512335089000}
   PaintOnClick: 0
   boxPush: 2
+  footstepsAudio: {fileID: 0}
 --- !u!143 &2417007072623125639
 CharacterController:
   m_ObjectHideFlags: 0
