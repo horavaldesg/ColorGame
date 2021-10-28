@@ -5,6 +5,8 @@ using UnityEngine;
 public class MoveableObjects : MonoBehaviour
 {
     public bool isOnCollider;
+    public static int completedBoxes;
+
     // Start is called before the first frame update
     private void Update()
     {
@@ -17,6 +19,7 @@ public class MoveableObjects : MonoBehaviour
             Rigidbody rb = other.GetComponent<Rigidbody>();
             other.transform.position = new Vector3(transform.position.x, other.transform.position.y, transform.position.z);
             isOnCollider = true;
+            completedBoxes += 1;
             //rb.constraints = RigidbodyConstraints.FreezeAll;
         }
     }
