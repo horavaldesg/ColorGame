@@ -16,7 +16,7 @@ public class MoveableObjects : MonoBehaviour
     {
         if (other.CompareTag("Box"))
         {
-            if (boxName == other.GetComponent<BoxCompletion>().boxName)
+            if (boxName == other.gameObject.GetComponent<BoxCompletion>().boxName)
             {
 
 
