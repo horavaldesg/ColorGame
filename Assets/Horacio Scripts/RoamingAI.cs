@@ -22,6 +22,7 @@ public class RoamingAI : MonoBehaviour
     int i;
     float t = 0;
     [SerializeField] float distanceToRemove;
+    GameObject[] paints;
     public enum BehaviorState { SeekPlayer, Seek, Stop, SeekInOrder, SeekBall, SeekHands};
 
     public BehaviorState currentState;
@@ -55,7 +56,10 @@ public class RoamingAI : MonoBehaviour
             case BehaviorState.SeekInOrder: SeekInOrder();
                 break;
             case BehaviorState.SeekHands:
-                //SeekPaint();
+                SeekPaint();
+                break;
+            case BehaviorState.SeekBall:
+                SeekBall();
                 break;
             default: Debug.Log("Switch error");
                 break;
@@ -70,31 +74,59 @@ public class RoamingAI : MonoBehaviour
                 //Debug.Log("Collided with " + hit.collider.gameObject.name);
                 currentState = BehaviorState.SeekPlayer;
             }
-            if (hit.collider.CompareTag("HandPrint"))
-            {
-                Destroy(hit.collider.gameObject);
-            }
-            
+           
 
         }
-
+        if(paints != null)
+        {
+            currentState = BehaviorState.SeekHands;
+        }
     }
     void SeekPaint()
     {
-        GameObject[] paints = GameObject.FindGameObjectsWithTag("HandPrint");
+        
+        paints = GameObject.FindGameObjectsWithTag("HandPrint");
         int i = paints.Length - 1;
         Vector3 differenceVector = paints[i].transform.position - transform.position;
-       
+        if (differenceVector.magnitude > minDistance)
+        {
+            t += Time.deltaTime;
+        }
+        if (i < 5)
+        {
             agent.destination = paints[i].transform.position;
-            //rb.MovePosition(transform.position + moveVector);
+        }
+
+        else
+        {
+            t = 0;
+            currentState = BehaviorState.SeekBall;
+        }
 
 
-        
-       
     }
     void SeekBall()
     {
+        GameObject ball = GameObject.FindGameObjectWithTag("Ball");
+        Vector3 differenceVector = ball.transform.position - transform.position;
+        if (differenceVector.magnitude > minDistance)
+        {
 
+            t += Time.deltaTime;
+
+        }
+        if(t < 3)
+        {
+            agent.destination = ball.transform.position;
+
+        }
+        else
+        {
+            t = 0;
+            currentState = BehaviorState.Seek;
+
+        }
+        
     }
     void SeekInOrder()
     {
@@ -102,7 +134,6 @@ public class RoamingAI : MonoBehaviour
         if (differenceVector.magnitude > minDistance)
         {
             agent.destination = target[i].position;
-            //rb.MovePosition(transform.position + moveVector);
 
 
         }
@@ -116,8 +147,7 @@ public class RoamingAI : MonoBehaviour
             {
                 i += 1;
             }
-            //PlayerMovement.canMove = false;
-            //agent.destination = transform.position;
+            
         }
     }
     void Seek()
@@ -126,15 +156,13 @@ public class RoamingAI : MonoBehaviour
         if (differenceVector.magnitude > minDistance)
         {
             agent.destination = target[i].position;
-            //rb.MovePosition(transform.position + moveVector);
             
 
         }
         else
         {
             Randomize();
-            //PlayerMovement.canMove = false;
-            //agent.destination = transform.position;
+           
         }
     }
     void Stop()
@@ -158,7 +186,6 @@ public class RoamingAI : MonoBehaviour
             if (differenceVector.magnitude > minDistance)
             {
                 agent.destination = player.position;
-                //rb.MovePosition(transform.position + moveVector);
 
 
             }
@@ -166,7 +193,7 @@ public class RoamingAI : MonoBehaviour
         }
         else
         {
-            
+            t = 0;
             currentState = BehaviorState.Seek;
         }
     }
@@ -184,6 +211,11 @@ public class RoamingAI : MonoBehaviour
             StartCoroutine(loadScene(clipTime));
             Debug.Log("Caught");
         }
+        if (other.gameObject.CompareTag("HandPrint"))
+        {
+            Destroy(other.gameObject);
+        }
+
     }
     private IEnumerator loadScene(float time)
     {

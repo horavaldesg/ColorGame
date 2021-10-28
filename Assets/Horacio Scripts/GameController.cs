@@ -277,6 +277,7 @@ public class GameController : MonoBehaviour
                 {
                     hit.collider.gameObject.transform.position = boxTransform.position;
                     hit.collider.gameObject.transform.rotation = boxTransform.rotation;
+                    
                 }
             }
            
