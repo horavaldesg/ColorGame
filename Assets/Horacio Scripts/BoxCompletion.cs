@@ -4,13 +4,10 @@ using UnityEngine;
 
 public class BoxCompletion : MonoBehaviour
 {
-    GameObject[] boxes;
-    public static bool completed;
-    bool[] boxCompletion;
+    public string boxName;
     // Start is called before the first frame update
     void Start()
     {
-        completed = false;
         
     }
 
