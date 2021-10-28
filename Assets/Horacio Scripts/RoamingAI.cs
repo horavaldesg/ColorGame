@@ -55,7 +55,7 @@ public class RoamingAI : MonoBehaviour
             case BehaviorState.SeekInOrder: SeekInOrder();
                 break;
             case BehaviorState.SeekHands:
-                SeekPaint();
+                //SeekPaint();
                 break;
             default: Debug.Log("Switch error");
                 break;
