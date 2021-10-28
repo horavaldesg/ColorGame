@@ -72,10 +72,13 @@ public class GameController : MonoBehaviour
     public static bool hasMoveableObject;
 
     public float boxPush = 2.0f;
-
+    bool pullBox;
+    bool boxPickup;
+    public Transform boxTransform;
     public AudioSource footstepsAudio;
 
     public UnityEvent changeFirstSelected;
+
     private void Awake()
     {
         hasMoveableObject = false;
@@ -145,8 +148,10 @@ public class GameController : MonoBehaviour
         //Interaction
 
         controls.Gameplay.Interaction.performed += tgb => ThrowableBall.PickUp();
-
-
+        pullBox = false;
+        
+            controls.Gameplay.Interaction.performed += tgb => pullBox = !pullBox;
+        
         //Shoot
         controls.Gameplay.Shoot.performed += tgb => ThrowableBall.Shoot(handTransform);
 
@@ -259,8 +264,20 @@ public class GameController : MonoBehaviour
         {
             cc.enabled = false;
         }
-        
-
+        RaycastHit hit;
+        if (Physics.Raycast(camTransform.transform.position, camTransform.transform.forward, out hit, 2))
+        {
+            if (hit.collider.gameObject.CompareTag("Box"))
+            {
+                Debug.Log("Can pick up");
+                boxPickup = true;
+                if (pullBox)
+                {
+                    hit.collider.gameObject.transform.position = boxTransform.position;
+                }
+            }
+           
+        }
         //Player Rotation
         //Third Person
         /*
@@ -284,11 +301,11 @@ public class GameController : MonoBehaviour
 
             }
         */
-            //First Person
-           // else if (CamMode == 1)
-            //{
+        //First Person
+        // else if (CamMode == 1)
+        //{
 
-                camTransform = FirstCam.transform;
+        camTransform = FirstCam.transform;
                 Vector2 r = new Vector2(0, rotate.x) * horizontalSensConst * Time.deltaTime * 10;
                 transform.Rotate(r, Space.Self);
                 Quaternion q = transform.rotation;
@@ -342,15 +359,22 @@ public class GameController : MonoBehaviour
     {
         if (hit.collider.gameObject.CompareTag("Box"))
         {
+            boxPickup = true;
             Rigidbody box = hit.collider.GetComponent<Rigidbody>();
             if (box == null || box.isKinematic)
             {
                 return;
             }
-            Vector3 boxDir = new Vector3(hit.moveDirection.x, 0, hit.moveDirection.z);
+            else
+            {
+                Vector3 boxDir = new Vector3(hit.moveDirection.x, 0, hit.moveDirection.z);
 
-           
-            box.velocity = boxDir * boxPush;
+
+                box.velocity = boxDir * boxPush;
+            }
+            
+
+            
         }
     }
 }
