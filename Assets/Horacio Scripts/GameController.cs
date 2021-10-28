@@ -73,6 +73,7 @@ public class GameController : MonoBehaviour
 
     public float boxPush = 2.0f;
     bool pullBox;
+    public GameObject interactionText;
     bool boxPickup;
     public Transform boxTransform;
     public AudioSource footstepsAudio;
@@ -203,7 +204,7 @@ public class GameController : MonoBehaviour
         if (ctScheme.controlScheme == InputHandler.controlSchemes.Gamepad)
         {
             InputBinding actionMask = new InputBinding { groups = "Gamepad" };
-            InputTextManager.inputText = "Press Square to Interact";
+            InputTextManager.inputText = "Press " + controls.Gameplay.Interaction.GetBindingDisplayString().ToUpper() + " to Interact";
             horizontalSensConst = controllerHorizontalSens.Value;
             verticalSensConst = controllerVerticalSens.Value;
             controls.bindingMask = actionMask;
@@ -211,7 +212,7 @@ public class GameController : MonoBehaviour
         else if (ctScheme.controlScheme == InputHandler.controlSchemes.Keyboard)
         {
             InputBinding actionMask = new InputBinding { groups = "KBM" };
-            InputTextManager.inputText = "Press E to Interact";
+            InputTextManager.inputText = "Press " + controls.Gameplay.Interaction.GetBindingDisplayString().ToUpper() + " to Interact";
             horizontalSensConst = horizontalSens.Value;
             verticalSensConst = verticalSens.Value;
             controls.bindingMask = actionMask;
@@ -269,6 +270,7 @@ public class GameController : MonoBehaviour
         {
             if (hit.collider.gameObject.CompareTag("Box"))
             {
+                interactionText.SetActive(true);
                 Debug.Log("Can pick up");
                 boxPickup = true;
                 if (pullBox)
@@ -278,6 +280,11 @@ public class GameController : MonoBehaviour
             }
            
         }
+        else
+        {
+            interactionText.SetActive(false);
+        }
+
         //Player Rotation
         //Third Person
         /*
