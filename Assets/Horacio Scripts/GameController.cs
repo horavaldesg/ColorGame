@@ -79,6 +79,8 @@ public class GameController : MonoBehaviour
 
     public UnityEvent changeFirstSelected;
 
+    AudioSource dragAudio;
+
     private void Awake()
     {
         hasMoveableObject = false;
@@ -367,10 +369,12 @@ public class GameController : MonoBehaviour
     {
         if (hit.collider.gameObject.CompareTag("Box"))
         {
+            dragAudio = hit.gameObject.GetComponent<AudioSource>();
             boxPickup = true;
             Rigidbody box = hit.collider.GetComponent<Rigidbody>();
             if (box == null || box.isKinematic)
             {
+                dragAudio.Stop();
                 return;
             }
             else
@@ -379,6 +383,7 @@ public class GameController : MonoBehaviour
 
 
                 box.velocity = boxDir * boxPush;
+                dragAudio.Play();
             }
             
 
