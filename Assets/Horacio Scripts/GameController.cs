@@ -276,6 +276,7 @@ public class GameController : MonoBehaviour
                 if (pullBox)
                 {
                     hit.collider.gameObject.transform.position = boxTransform.position;
+                    hit.collider.gameObject.transform.rotation = boxTransform.rotation;
                 }
             }
            
