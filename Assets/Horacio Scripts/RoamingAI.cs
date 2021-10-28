@@ -21,7 +21,8 @@ public class RoamingAI : MonoBehaviour
     float specPos = 20;
     int i;
     float t = 0;
-    public enum BehaviorState { SeekPlayer, Seek, Stop, SeekInOrder};
+    [SerializeField] float distanceToRemove;
+    public enum BehaviorState { SeekPlayer, Seek, Stop, SeekInOrder, SeekBall, SeekHands};
 
     public BehaviorState currentState;
     // Start is called before the first frame update
@@ -53,12 +54,15 @@ public class RoamingAI : MonoBehaviour
                 break;
             case BehaviorState.SeekInOrder: SeekInOrder();
                 break;
+            case BehaviorState.SeekHands:
+                SeekPaint();
+                break;
             default: Debug.Log("Switch error");
                 break;
         }
 
         RaycastHit hit;
-        if (Physics.Raycast(agent.transform.position, agent.transform.forward, out hit))
+        if (Physics.Raycast(agent.transform.position, agent.transform.forward, out hit, distanceToRemove))
         {
             if (hit.collider.CompareTag("Player"))
             {
@@ -66,9 +70,30 @@ public class RoamingAI : MonoBehaviour
                 //Debug.Log("Collided with " + hit.collider.gameObject.name);
                 currentState = BehaviorState.SeekPlayer;
             }
+            if (hit.collider.CompareTag("HandPrint"))
+            {
+                Destroy(hit.collider.gameObject);
+            }
             
 
         }
+
+    }
+    void SeekPaint()
+    {
+        GameObject[] paints = GameObject.FindGameObjectsWithTag("HandPrint");
+        int i = paints.Length - 1;
+        Vector3 differenceVector = paints[i].transform.position - transform.position;
+       
+            agent.destination = paints[i].transform.position;
+            //rb.MovePosition(transform.position + moveVector);
+
+
+        
+       
+    }
+    void SeekBall()
+    {
 
     }
     void SeekInOrder()

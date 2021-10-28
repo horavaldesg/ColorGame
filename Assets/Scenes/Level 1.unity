@@ -1985,7 +1985,7 @@ GameObject:
   - component: {fileID: 259006151}
   m_Layer: 0
   m_Name: Lit RightHand(Clone) (5)
-  m_TagString: HandPrint
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -2307,7 +2307,8 @@ MonoBehaviour:
   - {fileID: 1123925671}
   - {fileID: 926219377}
   player: {fileID: 4905552399743031875}
-  currentState: 3
+  distanceToRemove: 0
+  currentState: 5
 --- !u!82 &264595224
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2493,7 +2494,7 @@ GameObject:
   - component: {fileID: 322451580}
   m_Layer: 0
   m_Name: Lit RightHand(Clone) (13)
-  m_TagString: HandPrint
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -3143,7 +3144,7 @@ GameObject:
   - component: {fileID: 361476018}
   m_Layer: 0
   m_Name: Lit RightHand(Clone) (11)
-  m_TagString: HandPrint
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -3518,8 +3519,8 @@ GameObject:
   m_Name: Paintproof edge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 2
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &411811351
 Transform:
@@ -3863,8 +3864,8 @@ GameObject:
   m_Name: Platform
   m_TagString: Ground
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 2
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &434872400
 Transform:
@@ -4221,7 +4222,7 @@ GameObject:
   - component: {fileID: 505548106}
   m_Layer: 0
   m_Name: Lit RightHand(Clone) (10)
-  m_TagString: HandPrint
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -20984,7 +20985,7 @@ GameObject:
   - component: {fileID: 870126590}
   m_Layer: 0
   m_Name: Lit RightHand(Clone)
-  m_TagString: HandPrint
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -21908,7 +21909,7 @@ GameObject:
   - component: {fileID: 1024988777}
   m_Layer: 0
   m_Name: Lit RightHand(Clone) (7)
-  m_TagString: HandPrint
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -23710,6 +23711,7 @@ MonoBehaviour:
   - {fileID: 1123925671}
   - {fileID: 926219377}
   player: {fileID: 4905552399743031875}
+  distanceToRemove: 0
   currentState: 3
 --- !u!195 &1390422212
 NavMeshAgent:
@@ -24099,7 +24101,7 @@ GameObject:
   - component: {fileID: 1470209072}
   m_Layer: 0
   m_Name: Lit RightHand(Clone) (6)
-  m_TagString: HandPrint
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -29214,7 +29216,7 @@ GameObject:
   - component: {fileID: 1557523356}
   m_Layer: 0
   m_Name: Lit RightHand(Clone) (4)
-  m_TagString: HandPrint
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -39590,7 +39592,7 @@ GameObject:
   - component: {fileID: 1676360073}
   m_Layer: 0
   m_Name: Lit RightHand(Clone) (9)
-  m_TagString: HandPrint
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -40621,7 +40623,7 @@ GameObject:
   - component: {fileID: 1879665223}
   m_Layer: 0
   m_Name: Lit RightHand(Clone) (12)
-  m_TagString: HandPrint
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -41275,7 +41277,7 @@ GameObject:
   - component: {fileID: 1940850197}
   m_Layer: 0
   m_Name: Lit RightHand(Clone) (1)
-  m_TagString: HandPrint
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -41371,7 +41373,7 @@ GameObject:
   - component: {fileID: 1951216783}
   m_Layer: 0
   m_Name: Lit RightHand(Clone) (2)
-  m_TagString: HandPrint
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -41639,7 +41641,7 @@ GameObject:
   - component: {fileID: 1986492893}
   m_Layer: 0
   m_Name: Lit RightHand(Clone) (3)
-  m_TagString: HandPrint
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -42247,6 +42249,7 @@ MonoBehaviour:
   - {fileID: 1123925671}
   - {fileID: 926219377}
   player: {fileID: 4905552399743031875}
+  distanceToRemove: 0
   currentState: 3
 --- !u!195 &2086402737
 NavMeshAgent:
@@ -42487,8 +42490,8 @@ GameObject:
   m_Name: Paintproof edge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 2
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &2125282785
 Transform:
