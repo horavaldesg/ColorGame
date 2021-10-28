@@ -9,7 +9,7 @@ public class GameController : MonoBehaviour
 {
 
     //Controller
-    PlayerControls controls;
+    public static PlayerControls controls;
     //Camera
     Camera mainCamera;
     public Transform camTransform;
@@ -59,9 +59,10 @@ public class GameController : MonoBehaviour
 
     public static bool canMove;
     //Rumbles
-    public enum controlSchemes {Gamepad, Keyboard };
+    public InputHandler ctScheme;
+    //public enum controlSchemes {Gamepad, Keyboard };
 
-    public controlSchemes controlScheme;
+    //public controlSchemes controlScheme;
 
     public GameObject OptionsObj;
     public GameObject clickScript;
@@ -126,11 +127,11 @@ public class GameController : MonoBehaviour
         if (OptionsObj != null)
         {
             controls.Gameplay.Options.performed += tgb => OptionsManager();
-            controls.UI.Options.performed += tgb => OptionsManager();
+            controls.UI1.Options.performed += tgb => OptionsManager();
 
 
             controls.Gameplay.Circle.performed += tgb => OptionsObj.SetActive(false);
-            controls.UI.Circle.performed += tgb => OptionsObj.SetActive(false);
+            controls.UI1.Circle.performed += tgb => OptionsObj.SetActive(false);
 
         }
         canMove = true;
@@ -183,18 +184,18 @@ public class GameController : MonoBehaviour
         {
             Cursor.lockState = CursorLockMode.None;
             //InputActionMap
-            controls.UI.Enable();
+            controls.UI1.Enable();
 
-            controls.Gameplay.Disable();
+            //controls.Gameplay.Disable();
         }
         else
         {
             Cursor.lockState = CursorLockMode.Locked;
-            controls.UI.Disable();
+            controls.UI1.Disable();
 
-            controls.Gameplay.Enable();
+            //controls.Gameplay.Enable();
         }
-        if (controlScheme == controlSchemes.Gamepad)
+        if (ctScheme.controlScheme == InputHandler.controlSchemes.Gamepad)
         {
             InputBinding actionMask = new InputBinding { groups = "Gamepad" };
             InputTextManager.inputText = "Press Square to Interact";
@@ -202,7 +203,7 @@ public class GameController : MonoBehaviour
             verticalSensConst = controllerVerticalSens.Value;
             controls.bindingMask = actionMask;
         }
-        else if (controlScheme == controlSchemes.Keyboard)
+        else if (ctScheme.controlScheme == InputHandler.controlSchemes.Keyboard)
         {
             InputBinding actionMask = new InputBinding { groups = "KBM" };
             InputTextManager.inputText = "Press E to Interact";

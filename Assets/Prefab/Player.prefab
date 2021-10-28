@@ -587,7 +587,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1826928785855029732}
-  - {fileID: 4480918314115246418}
+  - {fileID: 3662498956672986340}
   m_Father: {fileID: 2417007072623125633}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1746,8 +1746,8 @@ MonoBehaviour:
   cc: {fileID: 2417007072623125639}
   speed: 5
   speedBoost: 1
-  controlScheme: 1
-  OptionsObj: {fileID: 4480918313697058386}
+  ctScheme: {fileID: 11400000, guid: d041247aa2be74d86944ac160c046446, type: 2}
+  OptionsObj: {fileID: 3662498956454026212}
   clickScript: {fileID: 7897466512335089000}
   PaintOnClick: 0
   boxPush: 2
@@ -1755,12 +1755,12 @@ MonoBehaviour:
   changeFirstSelected:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4480918314115246417}
+      - m_Target: {fileID: 3662498956672986343}
         m_TargetAssemblyTypeName: ChangeFirstSelected, Assembly-CSharp
         m_MethodName: FirstSelected
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 4480918313585635227}
+          m_ObjectArgument: {fileID: 3662498956124531245}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -3413,7 +3413,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9317fd46447d948ff984d875412064af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameController: {fileID: 2417007072623125638}
+  gameController: {fileID: 11400000, guid: d041247aa2be74d86944ac160c046446, type: 2}
 --- !u!1 &7167706230136090076
 GameObject:
   m_ObjectHideFlags: 0
@@ -7263,6 +7263,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1826928785473953552}
     m_Modifications:
+    - target: {fileID: 2624082241945595599, guid: 828b6a821c6e44df695e0783c0f8f87a, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2924587642308340601, guid: 828b6a821c6e44df695e0783c0f8f87a, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -7313,14 +7317,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 828b6a821c6e44df695e0783c0f8f87a, type: 3}
---- !u!1 &4480918313697058386 stripped
+--- !u!1 &3662498956454026212 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 2924587642359913593, guid: 828b6a821c6e44df695e0783c0f8f87a, type: 3}
+  m_CorrespondingSourceObject: {fileID: 2624082242330614223, guid: 828b6a821c6e44df695e0783c0f8f87a, type: 3}
   m_PrefabInstance: {fileID: 1637431749051449899}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &4480918314115246417 stripped
+--- !u!114 &3662498956672986343 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2924587642308340602, guid: 828b6a821c6e44df695e0783c0f8f87a, type: 3}
+  m_CorrespondingSourceObject: {fileID: 2624082241945595596, guid: 828b6a821c6e44df695e0783c0f8f87a, type: 3}
   m_PrefabInstance: {fileID: 1637431749051449899}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -7329,13 +7333,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7027c25d1a85448318130cb753b3d0e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &4480918314115246418 stripped
+--- !u!4 &3662498956672986340 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 2924587642308340601, guid: 828b6a821c6e44df695e0783c0f8f87a, type: 3}
+  m_CorrespondingSourceObject: {fileID: 2624082241945595599, guid: 828b6a821c6e44df695e0783c0f8f87a, type: 3}
   m_PrefabInstance: {fileID: 1637431749051449899}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &4480918313585635227 stripped
+--- !u!1 &3662498956124531245 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 2924587641782988208, guid: 828b6a821c6e44df695e0783c0f8f87a, type: 3}
+  m_CorrespondingSourceObject: {fileID: 2624082241401268230, guid: 828b6a821c6e44df695e0783c0f8f87a, type: 3}
   m_PrefabInstance: {fileID: 1637431749051449899}
   m_PrefabAsset: {fileID: 0}

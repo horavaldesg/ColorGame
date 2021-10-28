@@ -6,16 +6,16 @@ using TMPro;
 public class DropDownScript : MonoBehaviour
 {
     TMP_Dropdown dropdown;
-    public GameController gameController;
+    public InputHandler gameController;
     // Start is called before the first frame update
     void Start()
     {
         dropdown = GetComponent<TMP_Dropdown>();
-        if (gameController.controlScheme == GameController.controlSchemes.Keyboard)
+        if (gameController.controlScheme == InputHandler.controlSchemes.Gamepad)
         {
             dropdown.value = 0;
         }
-        else if (gameController.controlScheme == GameController.controlSchemes.Gamepad)
+        else if (gameController.controlScheme == InputHandler.controlSchemes.Keyboard)
         {
             dropdown.value = 1;
         }
@@ -28,12 +28,14 @@ public class DropDownScript : MonoBehaviour
         //keyboard
         if(dropdown.value == 0)
         {
-            gameController.controlScheme = GameController.controlSchemes.Keyboard;
+            //dropdown.value = 0;
+            gameController.controlScheme = InputHandler.controlSchemes.Gamepad;
         }
         //controller
         else if(dropdown.value == 1)
         {
-            gameController.controlScheme = GameController.controlSchemes.Gamepad;
+            //dropdown.value = 1;
+            gameController.controlScheme = InputHandler.controlSchemes.Keyboard;
 
         }
     }
