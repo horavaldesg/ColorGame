@@ -26,7 +26,7 @@ public class CompletionManager : MonoBehaviour
         }
         else
         {
-            if (MoveableObjects.isOnCollider)
+            if (BoxCompletion.completed)
             {
                 SceneManager.LoadScene(scene);
             }

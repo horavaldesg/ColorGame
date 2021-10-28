@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MoveableObjects : MonoBehaviour
 {
-    public static bool isOnCollider;
+    public bool isOnCollider;
     // Start is called before the first frame update
     private void Update()
     {
