@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.DualShock;
+using UnityEngine.Events;
 
 public class GameController : MonoBehaviour
 {
@@ -73,6 +74,7 @@ public class GameController : MonoBehaviour
 
     public AudioSource footstepsAudio;
 
+    public UnityEvent changeFirstSelected;
     private void Awake()
     {
         hasMoveableObject = false;
@@ -123,8 +125,8 @@ public class GameController : MonoBehaviour
         //Options
         if (OptionsObj != null)
         {
-            controls.Gameplay.Options.performed += tgb => OptionsObj.SetActive(!OptionsObj.activeSelf);
-            controls.UI.Options.performed += tgb => OptionsObj.SetActive(!OptionsObj.activeSelf);
+            controls.Gameplay.Options.performed += tgb => OptionsManager();
+            controls.UI.Options.performed += tgb => OptionsManager();
 
 
             controls.Gameplay.Circle.performed += tgb => OptionsObj.SetActive(false);
@@ -147,6 +149,11 @@ public class GameController : MonoBehaviour
         //Shoot
         controls.Gameplay.Shoot.performed += tgb => ThrowableBall.Shoot(handTransform);
 
+    }
+    public void OptionsManager()
+    {
+        OptionsObj.SetActive(!OptionsObj.activeSelf);
+        changeFirstSelected.Invoke();
     }
     public void Jump()
     {
