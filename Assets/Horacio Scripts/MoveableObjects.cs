@@ -24,6 +24,10 @@ public class MoveableObjects : MonoBehaviour
                 other.transform.position = new Vector3(transform.position.x, other.transform.position.y, transform.position.z);
                 isOnCollider = true;
                 completedBoxes += 1;
+                if (completedBoxes % 2 == 0 && completedBoxes != 0)
+                {
+                    CompletedRoom.completed += 1;
+                }
             }
             //rb.constraints = RigidbodyConstraints.FreezeAll;
         }

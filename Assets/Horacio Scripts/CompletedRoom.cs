@@ -5,8 +5,9 @@ using TMPro;
 public class CompletedRoom : MonoBehaviour
 {
     public static int completed;
-
+    public static int totalRooms;
     TextMeshProUGUI text;
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +19,6 @@ public class CompletedRoom : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        text.SetText(completed.ToString("Rooms Completed: ##"));
+        text.SetText(completed.ToString("Rooms Completed: ## /") + totalRooms.ToString());
     }
 }

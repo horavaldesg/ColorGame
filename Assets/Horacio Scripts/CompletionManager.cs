@@ -12,7 +12,8 @@ public class CompletionManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        CompletedRoom.totalRooms = totalRooms;
+
     }
 
     // Update is called once per frame
