@@ -7,11 +7,13 @@ public class CompletionManager : MonoBehaviour
 {
     public string scene;
     public int totalRooms;
+    public int totalBoxes;
     public bool mirrorsToComplete;
     // Start is called before the first frame update
     void Start()
     {
-        
+        CompletedRoom.totalRooms = totalRooms;
+
     }
 
     // Update is called once per frame
@@ -26,7 +28,7 @@ public class CompletionManager : MonoBehaviour
         }
         else
         {
-            if (BoxCompletion.completed)
+            if (MoveableObjects.completedBoxes == totalBoxes)
             {
                 SceneManager.LoadScene(scene);
             }

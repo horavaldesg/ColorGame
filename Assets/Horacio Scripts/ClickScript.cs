@@ -25,9 +25,11 @@ public class ClickScript : MonoBehaviour
 
     //Audio Play (Play Test Readiness)
     public AudioSource handPrintAudio;
+    AudioSource footstepsAudio;
 
     private void Start()
     {
+        footstepsAudio = GetComponent<AudioSource>();
     }
     void Update()
     {
@@ -63,7 +65,7 @@ public class ClickScript : MonoBehaviour
                     GameObject print =
                     Instantiate(RightFootTexture, hit.point + Vector3.up * 0.01f, Quaternion.Euler(0, parentTransforom.localEulerAngles.y + 180, 0));
                     print.transform.parent = hit.collider.gameObject.transform;
-
+                    footstepsAudio.Play();
                 }
 
             }

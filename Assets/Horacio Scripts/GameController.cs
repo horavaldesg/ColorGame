@@ -76,9 +76,10 @@ public class GameController : MonoBehaviour
     public GameObject interactionText;
     bool boxPickup;
     public Transform boxTransform;
-    public AudioSource footstepsAudio;
 
     public UnityEvent changeFirstSelected;
+
+    AudioSource dragAudio;
 
     private void Awake()
     {
@@ -112,7 +113,6 @@ public class GameController : MonoBehaviour
         // controls.Gameplay.ChangeCamera.performed += tgb => CamViewChange();
 
         //Movement
-        controls.Gameplay.Move.performed += tgb => footstepsAudio.Play();
         controls.Gameplay.Move.performed += tgb => move = tgb.ReadValue<Vector2>();
         controls.Gameplay.Move.canceled += tgb => move = Vector3.zero;
         controls.Gameplay.Move.canceled += tgb => movement = Vector3.zero;
@@ -369,10 +369,12 @@ public class GameController : MonoBehaviour
     {
         if (hit.collider.gameObject.CompareTag("Box"))
         {
+            dragAudio = hit.gameObject.GetComponent<AudioSource>();
             boxPickup = true;
             Rigidbody box = hit.collider.GetComponent<Rigidbody>();
             if (box == null || box.isKinematic)
             {
+                dragAudio.Stop();
                 return;
             }
             else
@@ -381,6 +383,7 @@ public class GameController : MonoBehaviour
 
 
                 box.velocity = boxDir * boxPush;
+                dragAudio.Play();
             }
             
 

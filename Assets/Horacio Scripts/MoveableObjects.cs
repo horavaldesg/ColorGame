@@ -5,6 +5,8 @@ using UnityEngine;
 public class MoveableObjects : MonoBehaviour
 {
     public bool isOnCollider;
+    public static int completedBoxes;
+    public string boxName;
     // Start is called before the first frame update
     private void Update()
     {
@@ -14,9 +16,19 @@ public class MoveableObjects : MonoBehaviour
     {
         if (other.CompareTag("Box"))
         {
-            Rigidbody rb = other.GetComponent<Rigidbody>();
-            other.transform.position = new Vector3(transform.position.x, other.transform.position.y, transform.position.z);
-            isOnCollider = true;
+            if (boxName == other.gameObject.GetComponent<BoxCompletion>().boxName && other.gameObject.GetComponent<BoxCompletion>() != null)
+            {
+
+
+                Rigidbody rb = other.GetComponent<Rigidbody>();
+                other.transform.position = new Vector3(transform.position.x, other.transform.position.y, transform.position.z);
+                isOnCollider = true;
+                completedBoxes += 1;
+                if (completedBoxes % 2 == 0 && completedBoxes != 0)
+                {
+                    CompletedRoom.completed += 1;
+                }
+            }
             //rb.constraints = RigidbodyConstraints.FreezeAll;
         }
     }
