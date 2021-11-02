@@ -9,10 +9,12 @@ public class CompletionManager : MonoBehaviour
     public int totalRooms;
     public int totalBoxes;
     public bool mirrorsToComplete;
+    public static float boxestoComplete;
     // Start is called before the first frame update
     void Start()
     {
         CompletedRoom.totalRooms = totalRooms;
+        boxestoComplete = totalBoxes;
 
     }
 
@@ -33,5 +35,6 @@ public class CompletionManager : MonoBehaviour
                 SceneManager.LoadScene(scene);
             }
         }
+        //Debug.Log(MoveableObjects.completedBoxes);
     }
 }

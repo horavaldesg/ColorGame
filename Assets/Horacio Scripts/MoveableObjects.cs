@@ -7,10 +7,24 @@ public class MoveableObjects : MonoBehaviour
     public bool isOnCollider;
     public static int completedBoxes;
     public string boxName;
+    float modNum;
+    Collider collider;
     // Start is called before the first frame update
+    private void Start()
+    {
+        collider = GetComponent<Collider>();
+        completedBoxes = 0;
+    }
     private void Update()
     {
-        
+        if(CompletionManager.boxestoComplete % 2 == 0)
+        {
+            modNum = 0;
+        }
+        else if(CompletionManager.boxestoComplete % 2 == 1)
+        {
+            modNum = 1;
+        }
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -24,7 +38,10 @@ public class MoveableObjects : MonoBehaviour
                 other.transform.position = new Vector3(transform.position.x, other.transform.position.y, transform.position.z);
                 isOnCollider = true;
                 completedBoxes += 1;
-                if (completedBoxes % 2 == 0 && completedBoxes != 0)
+                Debug.Log(boxName);
+                Debug.Log(other.gameObject.GetComponent<BoxCompletion>().boxName);
+                collider.enabled = false;
+                if (completedBoxes % 2 == modNum && completedBoxes != 0)
                 {
                     CompletedRoom.completed += 1;
                 }
@@ -39,6 +56,7 @@ public class MoveableObjects : MonoBehaviour
             //Rigidbody rb = other.GetComponent<Rigidbody>();
             //other.transform.position = new Vector3(transform.position.x, other.transform.position.y, transform.position.z);
             isOnCollider = false;
+            //completedBoxes -= 1;
             //rb.constraints = RigidbodyConstraints.FreezeAll;
         }
     }
