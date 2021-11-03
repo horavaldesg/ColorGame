@@ -41,8 +41,12 @@ public class MoveableObjects : MonoBehaviour
                 Debug.Log(boxName);
                 Debug.Log(other.gameObject.GetComponent<BoxCompletion>().boxName);
                 collider.enabled = false;
-                if (completedBoxes % 2 == modNum && completedBoxes != 0)
+                GameController.pullBox = false;
+                GameController.boxPickup = false;
+                GameController.moveableBox = null;
+                if (completedBoxes % 2 == modNum && completedBoxes != 0 && completedBoxes != 1)
                 {
+                    
                     CompletedRoom.completed += 1;
                 }
             }

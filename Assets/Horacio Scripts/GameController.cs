@@ -72,15 +72,15 @@ public class GameController : MonoBehaviour
     public static bool hasMoveableObject;
 
     public float boxPush = 2.0f;
-    bool pullBox;
+    public static bool pullBox;
     public GameObject interactionText;
-    bool boxPickup;
+    public static bool boxPickup;
     public Transform boxTransform;
 
     public UnityEvent changeFirstSelected;
 
     AudioSource dragAudio;
-
+    public static GameObject moveableBox;
     private void Awake()
     {
         hasMoveableObject = false;
@@ -150,13 +150,16 @@ public class GameController : MonoBehaviour
 
         controls.Gameplay.Interaction.performed += tgb => ThrowableBall.PickUp();
         pullBox = false;
+
+        //controls.Gameplay.Interaction.performed += tgb => 
         
-            controls.Gameplay.Interaction.performed += tgb => pullBox = !pullBox;
-        
+
         //Shoot
         controls.Gameplay.Shoot.performed += tgb => ThrowableBall.Shoot(handTransform);
 
     }
+
+   
     public void OptionsManager()
     {
         OptionsObj.SetActive(!OptionsObj.activeSelf);
@@ -270,24 +273,28 @@ public class GameController : MonoBehaviour
         {
             if (hit.collider.gameObject.CompareTag("Box"))
             {
+                moveableBox = hit.collider.gameObject;
+                controls.Gameplay.Interaction.performed += tgb => pullBox = !pullBox;
+
                 interactionText.SetActive(true);
                 Debug.Log("Can pick up");
                 boxPickup = true;
-                if (pullBox)
-                {
-                    hit.collider.gameObject.transform.position = boxTransform.position;
-                    hit.collider.gameObject.transform.rotation = boxTransform.rotation;
-                    
-                }
+                
             }
            
         }
         else
         {
             interactionText.SetActive(false);
-            pullBox = false;
-        }
+            //pullBox = false;
 
+        }
+        if (pullBox && boxPickup)
+        {
+            moveableBox.transform.position = new Vector3(boxTransform.transform.position.x, moveableBox.transform.position.y, boxTransform.transform.position.z);
+            moveableBox.transform.rotation = boxTransform.rotation;
+
+        }
         //Player Rotation
         //Third Person
         /*
