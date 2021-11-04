@@ -92,6 +92,7 @@ public class ThrowableBall : MonoBehaviour
     {
         if (canGrab)
         {
+            RespawnBall.lifeSpan = true;
             ballTouching = !ballTouching;
             canGrab = false; 
 

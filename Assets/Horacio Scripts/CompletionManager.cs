@@ -21,6 +21,7 @@ public class CompletionManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (mirrorsToComplete)
         {
             if (totalRooms == CompletedRoom.completed)

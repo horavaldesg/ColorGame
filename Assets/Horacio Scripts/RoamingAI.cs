@@ -90,7 +90,7 @@ public class RoamingAI : MonoBehaviour
         Vector3 differenceVector = paints[i].transform.position - transform.position;
         if (differenceVector.magnitude > minDistance)
         {
-            t += Time.deltaTime;
+            t += Time.deltaTime * 2;
         }
         if (i < 5)
         {
@@ -112,7 +112,7 @@ public class RoamingAI : MonoBehaviour
         if (differenceVector.magnitude > minDistance)
         {
 
-            t += Time.deltaTime;
+            t += Time.deltaTime * 2;
 
         }
         if(t < 3)
@@ -123,7 +123,7 @@ public class RoamingAI : MonoBehaviour
         else
         {
             t = 0;
-            currentState = BehaviorState.Seek;
+            currentState = BehaviorState.SeekPlayer;
 
         }
         
