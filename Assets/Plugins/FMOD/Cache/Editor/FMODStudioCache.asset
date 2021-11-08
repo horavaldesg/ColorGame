@@ -37,11 +37,33 @@ MonoBehaviour:
   Path: Assets/NULL-VOID/Build/Desktop/Ambience.bank
   Name: Ambience
   StudioPath: bank:/Ambience
-  lastModified: 637719121075314708
+  lastModified: 637719125081621985
   FileSizes:
   - Name: Desktop
     Value: 482
   Exists: 1
+--- !u!114 &-7955653395152599606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Spenser VO List/SPENSER VO PARAM
+  m_EditorClassIdentifier: 
+  Name: SPENSER VO PARAM
+  Min: 0
+  Max: 12
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 1
+  IsGlobal: 0
+  Exists: 0
 --- !u!114 &-6959462766686008909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57,11 +79,34 @@ MonoBehaviour:
   Path: Assets/NULL-VOID/Build/Desktop/Narrative.bank
   Name: Narrative
   StudioPath: bank:/Narrative
-  lastModified: 637719121075945274
+  lastModified: 637719125082157507
   FileSizes:
   - Name: Desktop
     Value: 9483424
   Exists: 1
+--- !u!114 &-6245469635204836287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Background Music/3. Inside One's Mind
+  m_EditorClassIdentifier: 
+  Path: event:/Background Music/3. Inside One's Mind
+  guid: 27f59692eae23e498278d16634e18acf
+  Banks:
+  - {fileID: -2576070602210787501}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 256403
 --- !u!114 &-5658438892942162407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77,11 +122,34 @@ MonoBehaviour:
   Path: Assets/NULL-VOID/Build/Desktop/Master.bank
   Name: Build/Desktop/Master
   StudioPath: bank:/Master
-  lastModified: 637719121075284680
+  lastModified: 637719125081591947
   FileSizes:
   - Name: Desktop
     Value: 1012
   Exists: 1
+--- !u!114 &-5575549328081987565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Background Music/1. Faint Memories
+  m_EditorClassIdentifier: 
+  Path: event:/Background Music/1. Faint Memories
+  guid: abc2368578cb8d48b2136beda4633f49
+  Banks:
+  - {fileID: -2576070602210787501}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 139273
 --- !u!114 &-5295403420002746116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -124,10 +192,33 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 3781991307491359241}
+  - {fileID: 1892048784285789391}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-2620841318483815995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Background Music/10. Null's Theme
+  m_EditorClassIdentifier: 
+  Path: event:/Background Music/10. Null's Theme
+  guid: 31fe3b1e8c00ab44864f59ca9ead35d0
+  Banks:
+  - {fileID: -2576070602210787501}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 274772
 --- !u!114 &-2576070602210787501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,10 +234,32 @@ MonoBehaviour:
   Path: Assets/NULL-VOID/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 637719121076125437
+  lastModified: 637719125169522859
   FileSizes:
   - Name: Desktop
-    Value: 1600192
+    Value: 15087360
+  Exists: 1
+--- !u!114 &-2398019638826608537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Spenser VO List/SPENSER VO PARAM
+  m_EditorClassIdentifier: 
+  Name: SPENSER VO PARAM
+  Min: 0
+  Max: 12
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 1
+  IsGlobal: 0
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -167,16 +280,44 @@ MonoBehaviour:
   - {fileID: -2576070602210787501}
   - {fileID: -6959462766686008909}
   EditorEvents:
-  - {fileID: 740219376862307761}
   - {fileID: 8975431480885497523}
   - {fileID: -5122676858356610591}
+  - {fileID: -6245469635204836287}
+  - {fileID: -2620841318483815995}
+  - {fileID: 8347436425270748945}
+  - {fileID: 5859048321893111739}
+  - {fileID: 621405166235207231}
+  - {fileID: -5575549328081987565}
   EditorParameters: []
   MasterBanks:
   - {fileID: -5658438892942162407}
   StringsBanks:
   - {fileID: 6842272678379385642}
-  stringsBankWriteTime: 637719121075304696
+  stringsBankWriteTime: 637719125081601957
   cacheVersion: 8
+--- !u!114 &621405166235207231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Background Music/2. Welcome Home
+  m_EditorClassIdentifier: 
+  Path: event:/Background Music/2. Welcome Home
+  guid: 9e09b46e2773ea4cab9b2544250b9414
+  Banks:
+  - {fileID: -2576070602210787501}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 496062
 --- !u!114 &654229366581053244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -211,8 +352,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Background Music/Faint Memories
   guid: abc2368578cb8d48b2136beda4633f49
-  Banks:
-  - {fileID: -2576070602210787501}
+  Banks: []
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -220,6 +360,50 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 139273
+--- !u!114 &1892048784285789391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Emma VO List/EMMA VO PARAM
+  m_EditorClassIdentifier: 
+  Name: EMMA VO PARAM
+  Min: 0
+  Max: 8
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 1
+  IsGlobal: 0
+  Exists: 1
+--- !u!114 &2332333390214203106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Spenser VO List/SPENSER VO PARAM
+  m_EditorClassIdentifier: 
+  Name: SPENSER VO PARAM
+  Min: 0
+  Max: 12
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 1
+  IsGlobal: 0
+  Exists: 0
 --- !u!114 &2402691761954654249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -262,6 +446,51 @@ MonoBehaviour:
   Type: 1
   IsGlobal: 0
   Exists: 1
+--- !u!114 &4353474934438425131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Emma VO List/EMMA VO PARAM
+  m_EditorClassIdentifier: 
+  Name: EMMA VO PARAM
+  Min: 0
+  Max: 8
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 1
+  IsGlobal: 0
+  Exists: 0
+--- !u!114 &5859048321893111739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Background Music/5. Calm Before The Storm
+  m_EditorClassIdentifier: 
+  Path: event:/Background Music/5. Calm Before The Storm
+  guid: 85076ff4dc7f294c86c4d5c4441820f4
+  Banks:
+  - {fileID: -2576070602210787501}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 166125
 --- !u!114 &6842272678379385642
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -277,11 +506,56 @@ MonoBehaviour:
   Path: Assets/NULL-VOID/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637719121075304696
+  lastModified: 637719125081601957
   FileSizes:
   - Name: Desktop
-    Value: 1140
+    Value: 1404
   Exists: 1
+--- !u!114 &8151547882060780958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Emma VO List/EMMA VO PARAM
+  m_EditorClassIdentifier: 
+  Name: EMMA VO PARAM
+  Min: 0
+  Max: 8
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 1
+  IsGlobal: 0
+  Exists: 0
+--- !u!114 &8347436425270748945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Background Music/4. Guilt
+  m_EditorClassIdentifier: 
+  Path: event:/Background Music/4. Guilt
+  guid: 6a326353dd650044800da94460647d6d
+  Banks:
+  - {fileID: -2576070602210787501}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 127402
 --- !u!114 &8882589111340517335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -324,7 +598,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: -8729811705242384361}
+  - {fileID: -2398019638826608537}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
