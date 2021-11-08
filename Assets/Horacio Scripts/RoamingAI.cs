@@ -18,17 +18,23 @@ public class RoamingAI : MonoBehaviour
     float speed = 3f;
     float minDistance = 10;
     float safeDistance = 10;
+    public float distanceToPlayer;
+    public float distanceToBall;
+    public float distanceToPrints;
     float specPos = 20;
     int i;
     float t = 0;
     [SerializeField] float distanceToRemove;
     GameObject[] paints;
+    GameObject ball;
     public enum BehaviorState { SeekPlayer, Seek, Stop, SeekInOrder, SeekBall, SeekHands};
 
     public BehaviorState currentState;
     // Start is called before the first frame update
     void Start()
     {
+        ball = GameObject.FindGameObjectWithTag("Ball");
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         currentScene = SceneManager.GetActiveScene();
         //Randomize();
         audioSc = GetComponent<AudioSource>();
@@ -44,6 +50,8 @@ public class RoamingAI : MonoBehaviour
 
     private void FixedUpdate()
     {
+        paints = GameObject.FindGameObjectsWithTag("HandPrint");
+
         //Debug.Log(i);
         switch (currentState)
         {
@@ -65,6 +73,35 @@ public class RoamingAI : MonoBehaviour
                 break;
         }
 
+        //Roaming AI Priority List
+        //Hand Prints (Short Range), Player (Med Range), Light Ball (Long Range)
+        
+        Vector3 playerVector = player.transform.position - transform.position;
+        Vector3 ballVector = ball.transform.position - transform.position;
+        if (paints != null)
+        {
+            Vector3 handVector = paints[paints.Length - 1].transform.position - transform.position;
+            if (handVector.magnitude < distanceToPrints && handVector.magnitude < distanceToPlayer)
+            {
+                currentState = BehaviorState.SeekHands;
+            }
+            Debug.Log("Hand Distance: " + distanceToPrints + "Hand Vector" + handVector.magnitude);
+
+        }
+
+        if (playerVector.magnitude < distanceToPlayer && playerVector.magnitude > distanceToPrints)
+        {
+            currentState = BehaviorState.SeekPlayer;
+        }
+         if (ballVector.magnitude < distanceToBall && ballVector.magnitude > distanceToPlayer)
+        {
+            currentState = BehaviorState.SeekBall;
+        }
+        Debug.Log("Player Distance: " + distanceToPlayer + " Player Vector" + playerVector.magnitude);
+        Debug.Log("Ball Distance: " + distanceToBall + " Ball Vector" + ballVector.magnitude);
+
+
+        /*
         RaycastHit hit;
         if (Physics.Raycast(agent.transform.position, agent.transform.forward, out hit, distanceToRemove))
         {
@@ -81,6 +118,7 @@ public class RoamingAI : MonoBehaviour
         {
             currentState = BehaviorState.SeekHands;
         }
+        */
     }
     void SeekPaint()
     {
@@ -90,34 +128,37 @@ public class RoamingAI : MonoBehaviour
         Vector3 differenceVector = paints[i].transform.position - transform.position;
         if (differenceVector.magnitude > minDistance)
         {
-            t += Time.deltaTime * 2;
+            agent.destination = paints[i].transform.position;
         }
+        /*
         if (i < 5)
         {
-            agent.destination = paints[i].transform.position;
+            
         }
 
         else
         {
             t = 0;
-            currentState = BehaviorState.SeekBall;
+            //currentState = BehaviorState.SeekBall;
         }
+        */
 
 
     }
     void SeekBall()
     {
-        GameObject ball = GameObject.FindGameObjectWithTag("Ball");
+        
         Vector3 differenceVector = ball.transform.position - transform.position;
         if (differenceVector.magnitude > minDistance)
         {
 
-            t += Time.deltaTime * 2;
+            agent.destination = ball.transform.position;
 
         }
+        /*
         if(t < 3)
         {
-            agent.destination = ball.transform.position;
+            
 
         }
         else
@@ -126,6 +167,7 @@ public class RoamingAI : MonoBehaviour
             currentState = BehaviorState.SeekPlayer;
 
         }
+        */
         
     }
     void SeekInOrder()
@@ -137,6 +179,7 @@ public class RoamingAI : MonoBehaviour
 
 
         }
+        /*
         else
         {
             if(i == target.Length - 1)
@@ -149,6 +192,7 @@ public class RoamingAI : MonoBehaviour
             }
             
         }
+        */
     }
     void Seek()
     {
@@ -180,8 +224,8 @@ public class RoamingAI : MonoBehaviour
     {
        
         t += Time.deltaTime;
-        if (t < 3)
-        {
+        //if (t < 3)
+        //{
             Vector3 differenceVector = player.position - transform.position;
             if (differenceVector.magnitude > minDistance)
             {
@@ -190,12 +234,12 @@ public class RoamingAI : MonoBehaviour
 
             }
            
-        }
-        else
-        {
-            t = 0;
-            currentState = BehaviorState.Seek;
-        }
+        //}
+        //else
+        //{
+            //t = 0;
+            //currentState = BehaviorState.Seek;
+        //}
     }
     private void OnTriggerEnter(Collider other)
     {

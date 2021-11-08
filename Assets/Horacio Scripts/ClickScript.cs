@@ -77,7 +77,7 @@ public class ClickScript : MonoBehaviour
             if(hit.collider.gameObject.layer == 9)
             {
                 AnimationScript.handCloseToWall = true;
-                handPrintAudio.Play();
+                //handPrintAudio.Play();
 
             }
         }
