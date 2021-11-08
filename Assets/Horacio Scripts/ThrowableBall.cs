@@ -55,11 +55,25 @@ public class ThrowableBall : MonoBehaviour
         }
         if (hasBall)
         {
+            if (ball.GetComponentInChildren<Light>().intensity > 0)
+            {
+                ball.GetComponentInChildren<Light>().intensity -= Time.deltaTime * 0.5f;
+                ball.GetComponentInChildren<Light>().range -= Time.deltaTime * 0.5f;
+
+            }
             ball.transform.position = handTransform.transform.position;
             ball.transform.rotation = handTransform.transform.rotation;
             interactionText.SetActive(false);
         }
+        else
+        {
+            if (ball.GetComponentInChildren<Light>().intensity < 6 && ball.GetComponentInChildren<Light>().intensity < 7.5f)
+            {
+                ball.GetComponentInChildren<Light>().intensity += Time.deltaTime * 0.5f;
+                ball.GetComponentInChildren<Light>().range += Time.deltaTime * 0.5f;
 
+            }
+        }
         if (!ballTouching)
         {
             hasBall = false;
