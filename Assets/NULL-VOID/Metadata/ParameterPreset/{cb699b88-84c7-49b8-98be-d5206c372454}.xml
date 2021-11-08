@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{cb699b88-84c7-49b8-98be-d5206c372454}">
+		<property name="name">
+			<value>SPENSER VO PARAM</value>
+		</property>
+		<relationship name="folder">
+			<destination>{681fadcd-992e-4f0b-ab76-cd8b20119f04}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{49e65f39-f419-4005-9b3c-0f589f424c8e}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{49e65f39-f419-4005-9b3c-0f589f424c8e}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>13</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>SPENSER VO 1</value>
+			<value>SPENSER VO 2</value>
+			<value>SPENSER VO 3</value>
+			<value>SPENSER VO 4</value>
+			<value>SPENSER VO 5</value>
+			<value>SPENSER VO 6</value>
+			<value>SPENSER VO 7</value>
+			<value>SPENSER VO 8</value>
+			<value>SPENSER VO 9</value>
+			<value>SPENSER VO 10</value>
+			<value>SPENSER VO 11</value>
+			<value>SPENSER VO 12</value>
+			<value>SPENSER VO 13</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

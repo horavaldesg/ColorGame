@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{e8821e7e-8f10-409e-bb6a-581a312bca2c}">
+		<property name="name">
+			<value>EMMA VO PARAM</value>
+		</property>
+		<relationship name="folder">
+			<destination>{681fadcd-992e-4f0b-ab76-cd8b20119f04}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{705e6d43-a2c9-4953-8aaa-bbfdecfb5935}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{705e6d43-a2c9-4953-8aaa-bbfdecfb5935}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>9</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>EMMA VO 1</value>
+			<value>EMMA VO 2</value>
+			<value>EMMA VO 3</value>
+			<value>EMMA VO 4</value>
+			<value>EMMA VO 5</value>
+			<value>EMMA VO 6</value>
+			<value>EMMA VO 7</value>
+			<value>EMMA VO 8</value>
+			<value>EMMA VO 9</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
