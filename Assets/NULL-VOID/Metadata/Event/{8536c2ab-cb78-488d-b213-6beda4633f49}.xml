@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="Event" id="{8536c2ab-cb78-488d-b213-6beda4633f49}">
 		<property name="name">
-			<value>Faint Memories</value>
+			<value>1. Faint Memories</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>
@@ -30,6 +30,9 @@
 		</relationship>
 		<relationship name="timeline">
 			<destination>{bec3281a-0c73-459b-af48-ef966927019f}</destination>
+		</relationship>
+		<relationship name="banks">
+			<destination>{6277f71d-2f87-42b6-b021-9bf1deee31b1}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixer" id="{a6dc2734-7f31-4996-947d-71056210bdd4}">

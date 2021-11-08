@@ -1,5 +1,27 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8729811705242384361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Spenser VO List/SPENSER VO PARAM
+  m_EditorClassIdentifier: 
+  Name: SPENSER VO PARAM
+  Min: 0
+  Max: 12
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 1
+  IsGlobal: 0
+  Exists: 1
 --- !u!114 &-8511749291413813719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,7 +37,7 @@ MonoBehaviour:
   Path: Assets/NULL-VOID/Build/Desktop/Ambience.bank
   Name: Ambience
   StudioPath: bank:/Ambience
-  lastModified: 637719116133524917
+  lastModified: 637719121075314708
   FileSizes:
   - Name: Desktop
     Value: 482
@@ -35,10 +57,10 @@ MonoBehaviour:
   Path: Assets/NULL-VOID/Build/Desktop/Narrative.bank
   Name: Narrative
   StudioPath: bank:/Narrative
-  lastModified: 637719116133544927
+  lastModified: 637719121075945274
   FileSizes:
   - Name: Desktop
-    Value: 482
+    Value: 9483424
   Exists: 1
 --- !u!114 &-5658438892942162407
 MonoBehaviour:
@@ -55,11 +77,57 @@ MonoBehaviour:
   Path: Assets/NULL-VOID/Build/Desktop/Master.bank
   Name: Build/Desktop/Master
   StudioPath: bank:/Master
-  lastModified: 637719116133494889
+  lastModified: 637719121075284680
   FileSizes:
   - Name: Desktop
     Value: 1012
   Exists: 1
+--- !u!114 &-5295403420002746116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Emma VO List/EMMA VO PARAM
+  m_EditorClassIdentifier: 
+  Name: EMMA VO PARAM
+  Min: 0
+  Max: 8
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 1
+  IsGlobal: 0
+  Exists: 0
+--- !u!114 &-5122676858356610591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Emma VO/Emma VO List
+  m_EditorClassIdentifier: 
+  Path: event:/Emma VO/Emma VO List
+  guid: ec8b42b0ba09e34fa388a97851c54109
+  Banks:
+  - {fileID: -6959462766686008909}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 3781991307491359241}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-2576070602210787501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75,10 +143,10 @@ MonoBehaviour:
   Path: Assets/NULL-VOID/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 637719116133554943
+  lastModified: 637719121076125437
   FileSizes:
   - Name: Desktop
-    Value: 482
+    Value: 1600192
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -98,13 +166,16 @@ MonoBehaviour:
   - {fileID: -8511749291413813719}
   - {fileID: -2576070602210787501}
   - {fileID: -6959462766686008909}
-  EditorEvents: []
+  EditorEvents:
+  - {fileID: 740219376862307761}
+  - {fileID: 8975431480885497523}
+  - {fileID: -5122676858356610591}
   EditorParameters: []
   MasterBanks:
   - {fileID: -5658438892942162407}
   StringsBanks:
   - {fileID: 6842272678379385642}
-  stringsBankWriteTime: 637719116133514907
+  stringsBankWriteTime: 637719121075304696
   cacheVersion: 8
 --- !u!114 &654229366581053244
 MonoBehaviour:
@@ -126,6 +197,29 @@ MonoBehaviour:
   - Name: 
     Value: 1012
   Exists: 0
+--- !u!114 &740219376862307761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Background Music/Faint Memories
+  m_EditorClassIdentifier: 
+  Path: event:/Background Music/Faint Memories
+  guid: abc2368578cb8d48b2136beda4633f49
+  Banks:
+  - {fileID: -2576070602210787501}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 139273
 --- !u!114 &2402691761954654249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -146,6 +240,28 @@ MonoBehaviour:
   - Name: 
     Value: 814
   Exists: 0
+--- !u!114 &3781991307491359241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Emma VO List/EMMA VO PARAM
+  m_EditorClassIdentifier: 
+  Name: EMMA VO PARAM
+  Min: 0
+  Max: 8
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 1
+  IsGlobal: 0
+  Exists: 1
 --- !u!114 &6842272678379385642
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,8 +277,54 @@ MonoBehaviour:
   Path: Assets/NULL-VOID/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637719116133514907
+  lastModified: 637719121075304696
   FileSizes:
   - Name: Desktop
-    Value: 952
+    Value: 1140
   Exists: 1
+--- !u!114 &8882589111340517335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Spenser VO List/SPENSER VO PARAM
+  m_EditorClassIdentifier: 
+  Name: SPENSER VO PARAM
+  Min: 0
+  Max: 12
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 1
+  IsGlobal: 0
+  Exists: 0
+--- !u!114 &8975431480885497523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Spenser VO/Spenser VO List
+  m_EditorClassIdentifier: 
+  Path: event:/Spenser VO/Spenser VO List
+  guid: 1b2afca23bc4bb45a1517591ac132f7e
+  Banks:
+  - {fileID: -6959462766686008909}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -8729811705242384361}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
