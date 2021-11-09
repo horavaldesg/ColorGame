@@ -155,6 +155,28 @@ MonoBehaviour:
   Type: 1
   IsGlobal: 0
   Exists: 0
+--- !u!114 &-8217512782755484251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Emma VO List/EMMA VO PARAM
+  m_EditorClassIdentifier: 
+  Name: EMMA VO PARAM
+  Min: 0
+  Max: 8
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 1
+  IsGlobal: 0
+  Exists: 1
 --- !u!114 &-8198825592734161916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -748,10 +770,10 @@ MonoBehaviour:
   Path: Assets/NULL-VOID/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637720546965808695
+  lastModified: 637720577642130678
   FileSizes:
   - Name: Desktop
-    Value: 2066
+    Value: 2070
   Exists: 1
 --- !u!114 &-4868673385258000224
 MonoBehaviour:
@@ -855,7 +877,7 @@ MonoBehaviour:
   Path: Assets/NULL-VOID/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 637720546968856292
+  lastModified: 637720577645156041
   FileSizes:
   - Name: Desktop
     Value: 15088128
@@ -880,7 +902,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: -2593101933951870159}
+  - {fileID: 6378884914654636543}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -1475,37 +1497,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
-  EditorBanks:
-  - {fileID: -5121154487730685719}
-  - {fileID: 4005751110062420792}
-  - {fileID: -4745271893132769163}
-  - {fileID: -4737063440716178500}
-  - {fileID: 1194568782244974408}
-  EditorEvents:
-  - {fileID: -8596660691618354177}
-  - {fileID: -5223787114841216511}
-  - {fileID: 5649620155450341894}
-  - {fileID: -1281496468167058136}
-  - {fileID: -773768781995939138}
-  - {fileID: 7611069660940852785}
-  - {fileID: -7591218343912568452}
-  - {fileID: 4084736447399251734}
-  - {fileID: -5489288666519109943}
-  - {fileID: 9079241720297695241}
-  - {fileID: 239769824509850949}
-  - {fileID: -8384384238974248500}
-  - {fileID: 6251428045653972975}
-  - {fileID: -4752238704812270389}
-  - {fileID: 2685870831284445841}
-  - {fileID: -701423654279184581}
-  - {fileID: -4590641864704221636}
-  - {fileID: 6414234852858784720}
+  EditorBanks: []
+  EditorEvents: []
   EditorParameters: []
-  MasterBanks:
-  - {fileID: -4745271893132769163}
-  StringsBanks:
-  - {fileID: -5121154487730685719}
-  stringsBankWriteTime: 637720546965808695
+  MasterBanks: []
+  StringsBanks: []
+  stringsBankWriteTime: 0
   cacheVersion: 8
 --- !u!114 &239769824509850949
 MonoBehaviour:
@@ -1699,7 +1696,7 @@ MonoBehaviour:
   Path: Assets/NULL-VOID/Build/Desktop/Narrative.bank
   Name: Narrative
   StudioPath: bank:/Narrative
-  lastModified: 637720546970514405
+  lastModified: 637720577646540181
   FileSizes:
   - Name: Desktop
     Value: 9483424
@@ -2119,7 +2116,7 @@ MonoBehaviour:
   Path: Assets/NULL-VOID/Build/Desktop/Ambience.bank
   Name: Ambience
   StudioPath: bank:/Ambience
-  lastModified: 637720546966658072
+  lastModified: 637720577643017353
   FileSizes:
   - Name: Desktop
     Value: 1900544
@@ -2462,6 +2459,28 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 127402
+--- !u!114 &6378884914654636543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Spenser VO List/SPENSER VO PARAM
+  m_EditorClassIdentifier: 
+  Name: SPENSER VO PARAM
+  Min: 0
+  Max: 12
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 1
+  IsGlobal: 0
+  Exists: 1
 --- !u!114 &6414234852858784720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2482,7 +2501,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: -3092579387557192441}
+  - {fileID: -8217512782755484251}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
