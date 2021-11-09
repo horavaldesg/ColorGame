@@ -2041,7 +2041,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2624082240474063798}
   - component: {fileID: 2624082240474063799}
-  - component: {fileID: 2624082241103414769}
+  - component: {fileID: 8512665926640706983}
   m_Layer: 5
   m_Name: Master Volume
   m_TagString: Untagged
@@ -2123,9 +2123,9 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2624082241103414769}
-        m_TargetAssemblyTypeName: SetVolume, Assembly-CSharp
-        m_MethodName: SetMasterVolume
+      - m_Target: {fileID: 8512665926640706983}
+        m_TargetAssemblyTypeName: VCAController, Assembly-CSharp
+        m_MethodName: SetVol
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2135,7 +2135,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &2624082241103414769
+--- !u!114 &8512665926640706983
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2144,10 +2144,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2624082240474063793}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e81c02b261ea4147b8d31ba73001643, type: 3}
+  m_Script: {fileID: 11500000, guid: 1203d33f1e8a5314cb7694820a229dd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioMixer: {fileID: 24100000, guid: 1490f72734b9d4246acfcf6949e09ddd, type: 2}
+  vcaName: Master
 --- !u!1 &2624082240490009994
 GameObject:
   m_ObjectHideFlags: 0
@@ -3312,7 +3312,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2624082240996200968}
   - component: {fileID: 2624082240996200969}
-  - component: {fileID: 2624082242133294344}
+  - component: {fileID: 7697653928957646448}
   m_Layer: 5
   m_Name: Narrative Volume
   m_TagString: Untagged
@@ -3394,9 +3394,9 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2624082242133294344}
-        m_TargetAssemblyTypeName: SetVolume, Assembly-CSharp
-        m_MethodName: SetNarrativeVolume
+      - m_Target: {fileID: 7697653928957646448}
+        m_TargetAssemblyTypeName: VCAController, Assembly-CSharp
+        m_MethodName: SetVol
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3406,7 +3406,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &2624082242133294344
+--- !u!114 &7697653928957646448
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3415,10 +3415,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2624082240996200971}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e81c02b261ea4147b8d31ba73001643, type: 3}
+  m_Script: {fileID: 11500000, guid: 1203d33f1e8a5314cb7694820a229dd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioMixer: {fileID: 24100000, guid: 1490f72734b9d4246acfcf6949e09ddd, type: 2}
+  vcaName: Narrative
 --- !u!1 &2624082241007211530
 GameObject:
   m_ObjectHideFlags: 0
@@ -3768,7 +3768,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2624082241341382550}
   - component: {fileID: 2624082241341382551}
-  - component: {fileID: 2624082241369061217}
+  - component: {fileID: 2735007487115533822}
   m_Layer: 5
   m_Name: Music Volume
   m_TagString: Untagged
@@ -3850,9 +3850,9 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2624082241369061217}
-        m_TargetAssemblyTypeName: SetVolume, Assembly-CSharp
-        m_MethodName: SetMusicVolume
+      - m_Target: {fileID: 2735007487115533822}
+        m_TargetAssemblyTypeName: VCAController, Assembly-CSharp
+        m_MethodName: SetVol
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3862,7 +3862,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &2624082241369061217
+--- !u!114 &2735007487115533822
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3871,10 +3871,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2624082241341382545}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e81c02b261ea4147b8d31ba73001643, type: 3}
+  m_Script: {fileID: 11500000, guid: 1203d33f1e8a5314cb7694820a229dd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioMixer: {fileID: 24100000, guid: 1490f72734b9d4246acfcf6949e09ddd, type: 2}
+  vcaName: Music
 --- !u!1 &2624082241349969412
 GameObject:
   m_ObjectHideFlags: 0
@@ -4623,7 +4623,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2624082241526321604}
   - component: {fileID: 2624082241526321605}
-  - component: {fileID: 2624082242016499719}
+  - component: {fileID: 5042894376112185627}
   m_Layer: 5
   m_Name: Ambience Volume
   m_TagString: Untagged
@@ -4705,9 +4705,9 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2624082242016499719}
-        m_TargetAssemblyTypeName: SetVolume, Assembly-CSharp
-        m_MethodName: SetAmbienceVolume
+      - m_Target: {fileID: 5042894376112185627}
+        m_TargetAssemblyTypeName: VCAController, Assembly-CSharp
+        m_MethodName: SetVol
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4717,7 +4717,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &2624082242016499719
+--- !u!114 &5042894376112185627
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4726,10 +4726,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2624082241526321607}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e81c02b261ea4147b8d31ba73001643, type: 3}
+  m_Script: {fileID: 11500000, guid: 1203d33f1e8a5314cb7694820a229dd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioMixer: {fileID: 24100000, guid: 1490f72734b9d4246acfcf6949e09ddd, type: 2}
+  vcaName: Ambience
 --- !u!1 &2624082241625668098
 GameObject:
   m_ObjectHideFlags: 0
