@@ -13,7 +13,11 @@ public class ThrowableBall : MonoBehaviour
     public static GameObject ball;
     public static bool hasBall;
     public static bool canShoot;
-    public AudioSource throwSound;
+
+    //Audio
+    [FMODUnity.EventRef]
+    public string throwSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -81,7 +85,7 @@ public class ThrowableBall : MonoBehaviour
 
         if (canShoot)
         {
-            throwSound.Play();
+            PlayThrow(throwSound);
             hasBall = false;
             Rigidbody rb = ball.GetComponent<Rigidbody>();
             rb.AddForce(ball.transform.forward * 15, ForceMode.Impulse);
@@ -118,5 +122,13 @@ public class ThrowableBall : MonoBehaviour
         {
             canShoot = true;
         }
+    }
+
+    void PlayThrow(string path)
+    {
+        FMOD.Studio.EventInstance Throw = FMODUnity.RuntimeManager.CreateInstance(path);
+        Throw.start();
+        Throw.release();
+
     }
 }

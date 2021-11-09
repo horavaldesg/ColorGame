@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.01.00">
 	<object class="Event" id="{e325a18e-354b-4871-99af-7f95a4292aa6}">
+		<property name="color">
+			<value>Yellow</value>
+		</property>
 		<property name="name">
 			<value>MOM VO</value>
 		</property>
@@ -70,6 +73,9 @@
 		<relationship name="modules">
 			<destination>{77828326-8273-41cf-a661-8befb0711564}</destination>
 		</relationship>
+		<relationship name="markers">
+			<destination>{c274e6ea-b3f6-4dd1-8d3d-fa6348fd3dfb}</destination>
+		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{a3559794-2098-4b77-ae71-828939c351a7}">
 		<relationship name="effectChain">
@@ -93,6 +99,15 @@
 			<value>true</value>
 		</property>
 		<property name="name" />
+		<property name="volume">
+			<value>10</value>
+		</property>
+		<property name="looping">
+			<value>true</value>
+		</property>
+		<property name="playlistMode">
+			<value>1</value>
+		</property>
 		<relationship name="sounds">
 			<destination>{0ebfbc15-72ef-437c-8342-9e40301ddd40}</destination>
 			<destination>{6b89879c-6513-46b5-ae58-19aa18166c53}</destination>
@@ -115,6 +130,20 @@
 		</relationship>
 		<relationship name="output">
 			<destination>{a3559794-2098-4b77-ae71-828939c351a7}</destination>
+		</relationship>
+	</object>
+	<object class="LoopRegion" id="{c274e6ea-b3f6-4dd1-8d3d-fa6348fd3dfb}">
+		<property name="position">
+			<value>0</value>
+		</property>
+		<property name="length">
+			<value>1</value>
+		</property>
+		<relationship name="timeline">
+			<destination>{23aa78c1-61c3-4dd6-b632-68c41f3efac7}</destination>
+		</relationship>
+		<relationship name="markerTrack">
+			<destination>{9a7402f0-3359-4949-a048-99a36e50f55f}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{b1456fe7-cdfd-42d6-abe3-c2be8fde9d89}">

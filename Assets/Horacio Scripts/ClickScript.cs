@@ -23,14 +23,10 @@ public class ClickScript : MonoBehaviour
     float tAltSteps;
     public GameObject parentObj;
 
-    //Audio Play (Play Test Readiness)
-    public AudioSource handPrintAudio;
-    AudioSource footstepsAudio;
+    //Audio
+    [FMODUnity.EventRef]
+    public string handSound;
 
-    private void Start()
-    {
-        footstepsAudio = GetComponent<AudioSource>();
-    }
     void Update()
     {
         Transform parentTransforom = parentObj.transform;
@@ -65,7 +61,6 @@ public class ClickScript : MonoBehaviour
                     GameObject print =
                     Instantiate(RightFootTexture, hit.point + Vector3.up * 0.01f, Quaternion.Euler(0, parentTransforom.localEulerAngles.y + 180, 0));
                     print.transform.parent = hit.collider.gameObject.transform;
-                    footstepsAudio.Play();
                 }
 
             }
@@ -166,6 +161,7 @@ public class ClickScript : MonoBehaviour
 
                 if (hit.collider.gameObject.CompareTag("XLeft") || hit.collider.gameObject.CompareTag("XRight") || hit.collider.gameObject.CompareTag("ZRight") || hit.collider.gameObject.CompareTag("ZLeft") || hit.collider.gameObject.CompareTag("HandPrint"))
                 {
+                    PlayHand(handSound);
                     //AnimationScript.touching = true;
                 }
 
@@ -289,5 +285,14 @@ public class ClickScript : MonoBehaviour
 
         }
       
+    }
+
+
+    void PlayHand(string path)
+    {
+        FMOD.Studio.EventInstance Handpaint = FMODUnity.RuntimeManager.CreateInstance(path);
+        Handpaint.start();
+        Handpaint.release();
+
     }
 }

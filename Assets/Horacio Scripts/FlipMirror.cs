@@ -5,7 +5,11 @@ using UnityEngine;
 public class FlipMirror : MonoBehaviour
 {
     Transform rot;
-    public AudioSource mirrorPhase;
+
+    //Audio
+    [FMODUnity.EventRef]
+    public string mirrorPhase;
+
     //public GameObject room1;
     // Start is called before the first frame update
     void Start()
@@ -33,7 +37,15 @@ public class FlipMirror : MonoBehaviour
     {
         //rot.rotation = Quaternion.Euler(rot.localEulerAngles.x, rot.localEulerAngles.y - 180, rot.localEulerAngles.z);
         //room1.SetActive(!room1.activeSelf);
-        mirrorPhase.Play();
+        PlayMirror(mirrorPhase);
+
+    }
+
+    void PlayMirror(string path)
+    {
+        FMOD.Studio.EventInstance MirrorPhase = FMODUnity.RuntimeManager.CreateInstance(path);
+        MirrorPhase.start();
+        MirrorPhase.release();
 
     }
 }

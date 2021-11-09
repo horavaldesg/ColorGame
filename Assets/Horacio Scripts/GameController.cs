@@ -85,6 +85,9 @@ public class GameController : MonoBehaviour
     [FMODUnity.EventRef]
     public string footsteps;
 
+    [FMODUnity.EventRef]
+    public string dragSound;
+
     private void Awake()
     {
         hasMoveableObject = false;
@@ -297,6 +300,7 @@ public class GameController : MonoBehaviour
         }
         if (pullBox && boxPickup)
         {
+            PlayDrag(dragSound);
             moveableBox.transform.position = new Vector3(boxTransform.transform.position.x, moveableBox.transform.position.y, boxTransform.transform.position.z);
             moveableBox.transform.rotation = boxTransform.rotation;
 
@@ -406,6 +410,14 @@ public class GameController : MonoBehaviour
         FMOD.Studio.EventInstance Footsteps = FMODUnity.RuntimeManager.CreateInstance(footsteps);
         Footsteps.start();
         Footsteps.release();
+    }
+
+    void PlayDrag(string path)
+    {
+        FMOD.Studio.EventInstance Drag = FMODUnity.RuntimeManager.CreateInstance(path);
+        Drag.start();
+        Drag.release();
+
     }
 }
 
