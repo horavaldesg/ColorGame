@@ -7,7 +7,7 @@
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x8000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0000026359E96CE8 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 000001F4DF6CF3C8 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -18,10 +18,63 @@
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
-[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
-[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] SystemI::createSound                     : filename = Assets/NULL-VOID/Build/Desktop/Ambience.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000001F4E0474D58 : node = 000001F4DFD09920
+[LOG] SystemI::createSound                     : add node to async list : head = 000001F4DFCD6AB8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F4E0474D58
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/NULL-VOID/Build/Desktop/Ambience.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1887392
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001F4DFD09A30
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Voiceline 1', format=5, channels=2, frequency=48000, lengthbytes=149376, lengthpcm=615677, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.168823.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F4E0474D58
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 1887392
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 13152
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000EFE87DF5B8
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFC555960E0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFC555960B0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFC555961B0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFC55596270
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001F273BB9FA8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='NEW Foosteps', format=5, channels=2, frequency=48000, lengthbytes=3712, lengthpcm=16300, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999969.
+[LOG] SoundI::release                          : Voiceline 4 (000001F4E0471AB8)
+[LOG] SoundI::release                          :     Voiceline 4 (000001F27CEFD548)
+[LOG] SoundI::release                          :     Voiceline 4 (000001F4E0471FC8)
+[LOG] SoundI::release                          : 4. Guilt (000001F4E0473768)
+[LOG] SoundI::release                          :     4. Guilt (000001F27CEFD208)
+[LOG] SoundI::release                          :     4. Guilt (000001F4E0473258)
+[LOG] SoundI::release                          : Ghost Sounds (000001F2733D4B48)
+[LOG] SoundI::release                          :     Ghost Sounds (000001F27CEFD3A8)
+[LOG] SoundI::release                          :     Ghost Sounds (000001F4E04709D8)
+[LOG] SoundI::release                          : Voiceline 1 (000001F4E0474D58)
+[LOG] SoundI::release                          :     Voiceline 1 (000001F4E0221BA8)
+[LOG] SoundI::release                          :     Voiceline 1 (000001F4E0473408)
+[LOG] SoundI::release                          :  (000001F42855F998)
+[LOG] SoundI::release                          :     NEW Foosteps (000001F272FAF898)
+[LOG] SoundI::release                          :  (000001F4D695E388)
+[LOG] SoundI::release                          :     High Heels (000001F277FC3228)
+[LOG] SoundI::release                          :  (000001F4D695C6C8)
+[LOG] SoundI::release                          :     NEW Object Slam (000001F277FC3088)
+[LOG] Thread::callback                         : FMOD Studio update thread finished.
+[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
+[LOG] LiveUpdate::release                      : 
+[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
+[LOG] Thread::callback                         : FMOD stream thread finished.
+[LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] SystemI::close                           : Closed.
