@@ -283,8 +283,10 @@ public class GameController : MonoBehaviour
             if (hit.collider.gameObject.CompareTag("Box"))
             {
                 moveableBox = hit.collider.gameObject;
-                controls.Gameplay.Interaction.performed += tgb => pullBox = !pullBox;
-
+                if (moveableBox != null)
+                {
+                    controls.Gameplay.Interaction.performed += tgb => pullBox = !pullBox;
+                }
                 interactionText.SetActive(true);
                 Debug.Log("Can pick up");
                 boxPickup = true;
@@ -295,16 +297,22 @@ public class GameController : MonoBehaviour
         else
         {
             interactionText.SetActive(false);
+            
             //pullBox = false;
 
         }
-        if (pullBox && boxPickup)
+        if (pullBox && boxPickup && moveableBox != null)
         {
             PlayDrag(dragSound);
             moveableBox.transform.position = new Vector3(boxTransform.transform.position.x, moveableBox.transform.position.y, boxTransform.transform.position.z);
             moveableBox.transform.rotation = boxTransform.rotation;
 
         }
+        else
+        {
+            moveableBox = null;
+        }
+        Debug.Log(moveableBox);
         //Player Rotation
         //Third Person
         /*
