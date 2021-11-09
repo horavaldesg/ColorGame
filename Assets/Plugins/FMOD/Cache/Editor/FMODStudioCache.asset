@@ -36,8 +36,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Background Music/10. Null's Theme
   guid: 31fe3b1e8c00ab44864f59ca9ead35d0
-  Banks:
-  - {fileID: -7292403873120615274}
+  Banks: []
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -65,6 +64,52 @@ MonoBehaviour:
   - Name: Desktop
     Value: 482
   Exists: 1
+--- !u!114 &-8198825592734161916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/MUSIC - Background Music/2. Welcome Home
+  m_EditorClassIdentifier: 
+  Path: event:/MUSIC - Background Music/2. Welcome Home
+  guid: 9e09b46e2773ea4cab9b2544250b9414
+  Banks:
+  - {fileID: -7292403873120615274}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 496062
+--- !u!114 &-8067300096455492940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Mirror/Mirror Ambience
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Mirror/Mirror Ambience
+  guid: 0ec282fd10fdbc4f9ef720b300e8c6b0
+  Banks:
+  - {fileID: -2341257137982433802}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 69851
 --- !u!114 &-7955653395152599606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -102,7 +147,7 @@ MonoBehaviour:
   Path: Assets/NULL-VOID/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637719128727294666
+  lastModified: 637720239842995203
   FileSizes:
   - Name: Desktop
     Value: 1012
@@ -122,7 +167,7 @@ MonoBehaviour:
   Path: Assets/NULL-VOID/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 637719128814443213
+  lastModified: 637720239843775913
   FileSizes:
   - Name: Desktop
     Value: 15087360
@@ -147,6 +192,28 @@ MonoBehaviour:
   - Name: Desktop
     Value: 9483424
   Exists: 1
+--- !u!114 &-6904715589924944539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Emma VO List/EMMA VO PARAM
+  m_EditorClassIdentifier: 
+  Name: EMMA VO PARAM
+  Min: 0
+  Max: 8
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 1
+  IsGlobal: 0
+  Exists: 0
 --- !u!114 &-6245469635204836287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,6 +280,51 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 139273
+--- !u!114 &-5524284098092673993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Spenser VO List/SPENSER VO PARAM
+  m_EditorClassIdentifier: 
+  Name: SPENSER VO PARAM
+  Min: 0
+  Max: 12
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 1
+  IsGlobal: 0
+  Exists: 1
+--- !u!114 &-5480651476580329026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/MUSIC - Background Music/5. Calm Before The Storm
+  m_EditorClassIdentifier: 
+  Path: event:/MUSIC - Background Music/5. Calm Before The Storm
+  guid: 85076ff4dc7f294c86c4d5c4441820f4
+  Banks:
+  - {fileID: -7292403873120615274}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 166125
 --- !u!114 &-5295403420002746116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -259,6 +371,95 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-4790500090388222485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Emma VO List/EMMA VO PARAM
+  m_EditorClassIdentifier: 
+  Name: EMMA VO PARAM
+  Min: 0
+  Max: 8
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 1
+  IsGlobal: 0
+  Exists: 1
+--- !u!114 &-3044396063495132799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Spenser VO List/SPENSER VO PARAM
+  m_EditorClassIdentifier: 
+  Name: SPENSER VO PARAM
+  Min: 0
+  Max: 12
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 1
+  IsGlobal: 0
+  Exists: 0
+--- !u!114 &-3025526051910642258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Spenser VO List/SPENSER VO PARAM
+  m_EditorClassIdentifier: 
+  Name: SPENSER VO PARAM
+  Min: 0
+  Max: 12
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 1
+  IsGlobal: 0
+  Exists: 1
+--- !u!114 &-2807016803919232420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/Footsteps
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/Footsteps
+  guid: 30dafb72bda7304080743407549b14fc
+  Banks:
+  - {fileID: -2341257137982433802}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 339
 --- !u!114 &-2620841318483815995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -339,10 +540,10 @@ MonoBehaviour:
   Path: Assets/NULL-VOID/Build/Desktop/Ambience.bank
   Name: Ambience
   StudioPath: bank:/Ambience
-  lastModified: 637719128727334703
+  lastModified: 637720239842975185
   FileSizes:
   - Name: Desktop
-    Value: 482
+    Value: 863712
   Exists: 1
 --- !u!114 &-2033573951812227148
 MonoBehaviour:
@@ -365,7 +566,54 @@ MonoBehaviour:
     data2: 0
   Type: 1
   IsGlobal: 0
-  Exists: 1
+  Exists: 0
+--- !u!114 &-1663381826375598446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/MUSIC - Background Music/4. Guilt
+  m_EditorClassIdentifier: 
+  Path: event:/MUSIC - Background Music/4. Guilt
+  guid: 6a326353dd650044800da94460647d6d
+  Banks:
+  - {fileID: -7292403873120615274}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 127402
+--- !u!114 &-1130605648447515928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/NARRATIVE - Emma VO/Emma VO List
+  m_EditorClassIdentifier: 
+  Path: event:/NARRATIVE - Emma VO/Emma VO List
+  guid: ec8b42b0ba09e34fa388a97851c54109
+  Banks:
+  - {fileID: 1279650201032297125}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 432190005810786745}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-1033673860108083867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -381,10 +629,55 @@ MonoBehaviour:
   Path: Assets/NULL-VOID/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637719128727314691
+  lastModified: 637720239843015217
   FileSizes:
   - Name: Desktop
-    Value: 1404
+    Value: 1652
+  Exists: 1
+--- !u!114 &-255281206541673398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/MUSIC - Background Music/10. Null's Theme
+  m_EditorClassIdentifier: 
+  Path: event:/MUSIC - Background Music/10. Null's Theme
+  guid: 31fe3b1e8c00ab44864f59ca9ead35d0
+  Banks:
+  - {fileID: -7292403873120615274}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 274772
+--- !u!114 &-17632304541984688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Emma VO List/EMMA VO PARAM
+  m_EditorClassIdentifier: 
+  Name: EMMA VO PARAM
+  Min: 0
+  Max: 8
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 1
+  IsGlobal: 0
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -405,21 +698,47 @@ MonoBehaviour:
   - {fileID: -7292403873120615274}
   - {fileID: 1279650201032297125}
   EditorEvents:
-  - {fileID: 6874831143404799250}
-  - {fileID: -8639743765572223774}
-  - {fileID: 8976468086257806388}
-  - {fileID: 782502623071655339}
-  - {fileID: 7786609683961348323}
-  - {fileID: 8318898516045820179}
-  - {fileID: 2470271978720146386}
-  - {fileID: 3738036540378199121}
+  - {fileID: 2998685783408429800}
+  - {fileID: -255281206541673398}
+  - {fileID: -1663381826375598446}
+  - {fileID: -5480651476580329026}
+  - {fileID: -8198825592734161916}
+  - {fileID: 9095380108352486912}
+  - {fileID: 7580591015019418668}
+  - {fileID: -1130605648447515928}
+  - {fileID: -8067300096455492940}
+  - {fileID: -2807016803919232420}
+  - {fileID: 3356348213947430626}
+  - {fileID: 3641135849472884794}
   EditorParameters: []
   MasterBanks:
   - {fileID: -7546618116459072362}
   StringsBanks:
   - {fileID: -1033673860108083867}
-  stringsBankWriteTime: 637719128727314691
+  stringsBankWriteTime: 637720239843015217
   cacheVersion: 8
+--- !u!114 &432190005810786745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Emma VO List/EMMA VO PARAM
+  m_EditorClassIdentifier: 
+  Name: EMMA VO PARAM
+  Min: 0
+  Max: 8
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 1
+  IsGlobal: 0
+  Exists: 1
 --- !u!114 &621405166235207231
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -499,8 +818,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Background Music/5. Calm Before The Storm
   guid: 85076ff4dc7f294c86c4d5c4441820f4
-  Banks:
-  - {fileID: -7292403873120615274}
+  Banks: []
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -523,7 +841,7 @@ MonoBehaviour:
   Path: Assets/NULL-VOID/Build/Desktop/Narrative.bank
   Name: Narrative
   StudioPath: bank:/Narrative
-  lastModified: 637719128727865107
+  lastModified: 637720239844501476
   FileSizes:
   - Name: Desktop
     Value: 9483424
@@ -550,6 +868,28 @@ MonoBehaviour:
   Type: 1
   IsGlobal: 0
   Exists: 1
+--- !u!114 &2246287867654170474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Spenser VO List/SPENSER VO PARAM
+  m_EditorClassIdentifier: 
+  Name: SPENSER VO PARAM
+  Min: 0
+  Max: 12
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 1
+  IsGlobal: 0
+  Exists: 0
 --- !u!114 &2332333390214203106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -606,16 +946,106 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Spenser VO/Spenser VO List
   guid: 1b2afca23bc4bb45a1517591ac132f7e
-  Banks:
-  - {fileID: 1279650201032297125}
+  Banks: []
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: -2033573951812227148}
+  - {fileID: 4741302910524817118}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &2485893232636747884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Footsteps
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Footsteps
+  guid: 30dafb72bda7304080743407549b14fc
+  Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 339
+--- !u!114 &2998685783408429800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/MUSIC - Background Music/3. Inside One's Mind
+  m_EditorClassIdentifier: 
+  Path: event:/MUSIC - Background Music/3. Inside One's Mind
+  guid: 27f59692eae23e498278d16634e18acf
+  Banks:
+  - {fileID: -7292403873120615274}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 256403
+--- !u!114 &3356348213947430626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/NPC/Ghost Sounds
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/NPC/Ghost Sounds
+  guid: 8cd6cb152a20534695186fa10ea8ad61
+  Banks:
+  - {fileID: -2341257137982433802}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 16927
+--- !u!114 &3641135849472884794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/NPC/High Heels
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/NPC/High Heels
+  guid: d27a602e90943448a86ce2d303c2dc93
+  Banks:
+  - {fileID: -2341257137982433802}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 9877
 --- !u!114 &3738036540378199121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -630,13 +1060,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Emma VO/Emma VO List
   guid: ec8b42b0ba09e34fa388a97851c54109
-  Banks:
-  - {fileID: 1279650201032297125}
+  Banks: []
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 6737434813287443935}
+  - {fileID: -4790500090388222485}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -684,6 +1113,50 @@ MonoBehaviour:
   Type: 1
   IsGlobal: 0
   Exists: 0
+--- !u!114 &4741302910524817118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Spenser VO List/SPENSER VO PARAM
+  m_EditorClassIdentifier: 
+  Name: SPENSER VO PARAM
+  Min: 0
+  Max: 12
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 1
+  IsGlobal: 0
+  Exists: 1
+--- !u!114 &5240498819639058268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Footsteps/PlaySound
+  m_EditorClassIdentifier: 
+  Name: PlaySound
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 0
+  IsGlobal: 0
+  Exists: 0
 --- !u!114 &5859048321893111739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -707,6 +1180,28 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 166125
+--- !u!114 &5961840934963099486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Emma VO List/EMMA VO PARAM
+  m_EditorClassIdentifier: 
+  Name: EMMA VO PARAM
+  Min: 0
+  Max: 8
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 1
+  IsGlobal: 0
+  Exists: 0
 --- !u!114 &6737434813287443935
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -728,7 +1223,7 @@ MonoBehaviour:
     data2: 0
   Type: 1
   IsGlobal: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &6842272678379385642
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -763,8 +1258,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Background Music/3. Inside One's Mind
   guid: 27f59692eae23e498278d16634e18acf
-  Banks:
-  - {fileID: -7292403873120615274}
+  Banks: []
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -772,6 +1266,30 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 256403
+--- !u!114 &7580591015019418668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/NARRATIVE - Spenser VO/Spenser VO List
+  m_EditorClassIdentifier: 
+  Path: event:/NARRATIVE - Spenser VO/Spenser VO List
+  guid: 1b2afca23bc4bb45a1517591ac132f7e
+  Banks:
+  - {fileID: 1279650201032297125}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -5524284098092673993}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &7786609683961348323
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -786,8 +1304,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Background Music/2. Welcome Home
   guid: 9e09b46e2773ea4cab9b2544250b9414
-  Banks:
-  - {fileID: -7292403873120615274}
+  Banks: []
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -831,8 +1348,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Background Music/1. Faint Memories
   guid: abc2368578cb8d48b2136beda4633f49
-  Banks:
-  - {fileID: -7292403873120615274}
+  Banks: []
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -923,6 +1439,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Background Music/4. Guilt
   guid: 6a326353dd650044800da94460647d6d
+  Banks: []
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 127402
+--- !u!114 &9095380108352486912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/MUSIC - Background Music/1. Faint Memories
+  m_EditorClassIdentifier: 
+  Path: event:/MUSIC - Background Music/1. Faint Memories
+  guid: abc2368578cb8d48b2136beda4633f49
   Banks:
   - {fileID: -7292403873120615274}
   IsStream: 1
@@ -931,4 +1469,4 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 127402
+  Length: 139273

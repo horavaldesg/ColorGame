@@ -79,8 +79,12 @@ public class GameController : MonoBehaviour
 
     public UnityEvent changeFirstSelected;
 
-    AudioSource dragAudio;
     public static GameObject moveableBox;
+
+    //Audio
+    [FMODUnity.EventRef]
+    public string footsteps;
+
     private void Awake()
     {
         hasMoveableObject = false;
@@ -114,6 +118,7 @@ public class GameController : MonoBehaviour
 
         //Movement
         controls.Gameplay.Move.performed += tgb => move = tgb.ReadValue<Vector2>();
+        controls.Gameplay.Move.performed += tgb => PlayFootsteps(footsteps);
         controls.Gameplay.Move.canceled += tgb => move = Vector3.zero;
         controls.Gameplay.Move.canceled += tgb => movement = Vector3.zero;
 
@@ -178,6 +183,7 @@ public class GameController : MonoBehaviour
     private void OnEnable()
     {
         controls.Gameplay.Enable();
+        //FMODUnity.RuntimeManager.PlayOneShot(footsteps, GetComponent<Transform>().position);
     }
     private void OnDisable()
     {
@@ -376,12 +382,10 @@ public class GameController : MonoBehaviour
     {
         if (hit.collider.gameObject.CompareTag("Box"))
         {
-            dragAudio = hit.gameObject.GetComponent<AudioSource>();
             boxPickup = true;
             Rigidbody box = hit.collider.GetComponent<Rigidbody>();
             if (box == null || box.isKinematic)
             {
-                dragAudio.Stop();
                 return;
             }
             else
@@ -390,12 +394,18 @@ public class GameController : MonoBehaviour
 
 
                 box.velocity = boxDir * boxPush;
-                dragAudio.Play();
             }
             
 
             
         }
+    }
+
+    void PlayFootsteps(string footsteps) 
+    {
+        FMOD.Studio.EventInstance Footsteps = FMODUnity.RuntimeManager.CreateInstance(footsteps);
+        Footsteps.start();
+        Footsteps.release();
     }
 }
 
