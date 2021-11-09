@@ -161,7 +161,7 @@ public class ClickScript : MonoBehaviour
 
                 if (hit.collider.gameObject.CompareTag("XLeft") || hit.collider.gameObject.CompareTag("XRight") || hit.collider.gameObject.CompareTag("ZRight") || hit.collider.gameObject.CompareTag("ZLeft") || hit.collider.gameObject.CompareTag("HandPrint"))
                 {
-                    PlayHand(handSound);
+                    //PlayHand(handSound);
                     //AnimationScript.touching = true;
                 }
 

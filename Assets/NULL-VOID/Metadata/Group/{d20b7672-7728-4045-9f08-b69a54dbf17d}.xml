@@ -4,6 +4,9 @@
 		<property name="name">
 			<value>Narrative</value>
 		</property>
+		<relationship name="masters">
+			<destination>{e7d39a21-d552-472e-af6b-2a20c82305a1}</destination>
+		</relationship>
 		<relationship name="effectChain">
 			<destination>{bb5b1d43-cef1-4548-b883-c44aac95770f}</destination>
 		</relationship>

@@ -2451,7 +2451,7 @@ MonoBehaviour:
   handTransform: {fileID: 7782527729699932902}
   distanceToDraw: 2
   interactionText: {fileID: 7782527730256166424}
-  throwSound: {fileID: 0}
+  throwSound: 
 --- !u!135 &7782527729699932903
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4349,7 +4349,7 @@ MonoBehaviour:
   footstepRate: 0.25
   altSteps: 0.4
   parentObj: {fileID: 7782527730170512090}
-  handPrintAudio: {fileID: 0}
+  handSound: 
 --- !u!114 &7782527729845393588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7350,6 +7350,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  footsteps: 
+  dragSound: 
 --- !u!143 &7782527730170512091
 CharacterController:
   m_ObjectHideFlags: 0
@@ -10631,7 +10633,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7782527730581588131}
   - component: {fileID: 7782527730581588129}
-  - component: {fileID: 7782527730581588128}
   m_Layer: 5
   m_Name: Ambience Volume
   m_TagString: Untagged
@@ -10713,7 +10714,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7782527730581588128}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SetVolume, Assembly-CSharp
         m_MethodName: SetAmbienceVolume
         m_Mode: 0
@@ -10725,19 +10726,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &7782527730581588128
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7782527730581588130}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e81c02b261ea4147b8d31ba73001643, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioMixer: {fileID: 24100000, guid: 1490f72734b9d4246acfcf6949e09ddd, type: 2}
 --- !u!1 &7782527730581723258
 GameObject:
   m_ObjectHideFlags: 0
@@ -11247,7 +11235,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7782527730650092773}
   - component: {fileID: 7782527730650092571}
-  - component: {fileID: 7782527730650092570}
   m_Layer: 5
   m_Name: Music Volume
   m_TagString: Untagged
@@ -11329,7 +11316,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7782527730650092570}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SetVolume, Assembly-CSharp
         m_MethodName: SetMusicVolume
         m_Mode: 0
@@ -11341,19 +11328,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &7782527730650092570
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7782527730650092772}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e81c02b261ea4147b8d31ba73001643, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioMixer: {fileID: 24100000, guid: 1490f72734b9d4246acfcf6949e09ddd, type: 2}
 --- !u!1 &7782527730653198275
 GameObject:
   m_ObjectHideFlags: 0
@@ -12267,7 +12241,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7782527730739479574}
   - component: {fileID: 7782527730739479572}
-  - component: {fileID: 7782527730739479575}
   m_Layer: 5
   m_Name: Narrative Volume
   m_TagString: Untagged
@@ -12349,7 +12322,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7782527730739479575}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SetVolume, Assembly-CSharp
         m_MethodName: SetNarrativeVolume
         m_Mode: 0
@@ -12361,19 +12334,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &7782527730739479575
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7782527730739479569}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e81c02b261ea4147b8d31ba73001643, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioMixer: {fileID: 24100000, guid: 1490f72734b9d4246acfcf6949e09ddd, type: 2}
 --- !u!1 &7782527730741883914
 GameObject:
   m_ObjectHideFlags: 0
@@ -18342,7 +18302,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7782527731515381347}
   - component: {fileID: 7782527731515381345}
-  - component: {fileID: 7782527731515381344}
   m_Layer: 5
   m_Name: Master Volume
   m_TagString: Untagged
@@ -18424,7 +18383,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7782527731515381344}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SetVolume, Assembly-CSharp
         m_MethodName: SetMasterVolume
         m_Mode: 0
@@ -18436,19 +18395,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &7782527731515381344
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7782527731515381346}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e81c02b261ea4147b8d31ba73001643, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioMixer: {fileID: 24100000, guid: 1490f72734b9d4246acfcf6949e09ddd, type: 2}
 --- !u!1 &7782527731517519131
 GameObject:
   m_ObjectHideFlags: 0

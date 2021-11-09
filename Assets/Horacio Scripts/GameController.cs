@@ -303,7 +303,7 @@ public class GameController : MonoBehaviour
         }
         if (pullBox && boxPickup && moveableBox != null)
         {
-            PlayDrag(dragSound);
+            //PlayDrag(dragSound);
             moveableBox.transform.position = new Vector3(boxTransform.transform.position.x, moveableBox.transform.position.y, boxTransform.transform.position.z);
             moveableBox.transform.rotation = boxTransform.rotation;
 
