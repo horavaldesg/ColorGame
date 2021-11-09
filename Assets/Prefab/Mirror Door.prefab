@@ -2372,7 +2372,6 @@ GameObject:
   - component: {fileID: 7520337367059997611}
   - component: {fileID: 2922441503565741761}
   - component: {fileID: 4680377343484061207}
-  - component: {fileID: 4494431383245920663}
   m_Layer: 0
   m_Name: Mirror in
   m_TagString: Untagged
@@ -2410,7 +2409,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8ac1fac7459642c182c7d362203c041, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mirrorPhase: {fileID: 0}
+  mirrorPhase: 
 --- !u!65 &4680377343484061207
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2424,29 +2423,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3, y: 3, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4494431383245920663
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4240535104920855973}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  Event: 
-  PlayEvent: 0
-  StopEvent: 0
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: -1
-  OverrideMaxDistance: -1
 --- !u!1 &4483954373097248226
 GameObject:
   m_ObjectHideFlags: 0
@@ -4465,9 +4441,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3577818726740763918}
-  - component: {fileID: 8175709808264902756}
   - component: {fileID: 1805776005932900530}
-  - component: {fileID: 4141586792111645847}
   m_Layer: 0
   m_Name: Mirror out
   m_TagString: Untagged
@@ -4493,19 +4467,6 @@ Transform:
   m_Father: {fileID: 8316962948363607237}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!114 &8175709808264902756
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7143278441256395520}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8ac1fac7459642c182c7d362203c041, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mirrorPhase: {fileID: 0}
 --- !u!65 &1805776005932900530
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4519,29 +4480,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3, y: 3, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4141586792111645847
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7143278441256395520}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  Event: 
-  PlayEvent: 0
-  StopEvent: 0
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: -1
-  OverrideMaxDistance: -1
 --- !u!1 &7476355187023532871
 GameObject:
   m_ObjectHideFlags: 0

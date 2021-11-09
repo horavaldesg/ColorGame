@@ -2,12 +2,13 @@
 [LOG] Manager::init                            : maxchannels = 256 studioflags = 00000006 flags 00000000 extradriverdata 0000000000000000.
 [LOG] SystemI::init                            : Initialize version=20111 (118066), maxchannels=256, flags=0x00020000
 [LOG] SystemI::setOutputInternal               : Setting output to 'FMOD WASAPI Output'
-[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEX): wFormatTag=0xFFFE, nChannels=2, nSamplesPerSec=48000, nAvgBytesPerSec=384000, nBlockAlign=8, wBitsPerSample=32, cbSize=22.
+[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEX): wFormatTag=0xFFFE, nChannels=2, nSamplesPerSec=192000, nAvgBytesPerSec=1536000, nBlockAlign=8, wBitsPerSample=32, cbSize=22.
 [LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEXTENSIBLE): wValidBitsPerSample=32, dwChannelMask=0x00000003, SubFormat=00000003-0000-0010-8000-00AA00389B71.
-[LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
+[LOG] OutputWASAPI::init                       : Output buffer size: 16384 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
+[LOG] SystemI::init                            : Output requires a sample rate of 192000Hz, resampling will occur.
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x8000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 000001F4DF6CDAA8 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 00000247E06764A8 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -18,613 +19,754 @@
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
 [LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
 [LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 1887392
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 1887456
 [LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 13152
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000EFE840EFB8
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000DF601DEE98
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFC555960E0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFC555960B0
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFC555961B0
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFC55596270
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001F426BB9B38
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9FFB960E0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9FFB960B0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9FFB961B0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9FFB96270
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000247E062B3A8
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='NEW Foosteps', format=5, channels=2, frequency=48000, lengthbytes=3712, lengthpcm=16300, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999969.
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F4E046F8F8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F4E046F8F8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F4E0473C78
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F4E0473C78
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F4E046F8F8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F4E046F8F8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F4E0473C78
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F4E0473C78
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000247E619A3E8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000247E619A3E8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000247E619A598
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000247E619A598
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002480EA013F8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002480EA013F8
 [LOG] SystemI::createSound                     : filename = Assets/NULL-VOID/Build/Desktop/Ambience.bank : mode 02010082
 [LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001F4E0479438 : node = 000001F4D71FE650
-[LOG] SystemI::createSound                     : add node to async list : head = 000001F2640C3D88.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F4E0479438
+[LOG] SystemI::createSound                     : setdata soundi = 0000024724CFF2A8 : node = 00000247E0ED7130
+[LOG] SystemI::createSound                     : add node to async list : head = 000002480DDF4B28.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000024724CFF2A8
 [LOG] SystemI::createSoundInternal             :     Create name='Assets/NULL-VOID/Build/Desktop/Ambience.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1887392
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1887456
 [LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001F4D71FE760
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000247E0ED7240
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Voiceline 6', format=5, channels=2, frequency=48000, lengthbytes=135840, lengthpcm=546479, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.156830.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F4E0479438
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F4E046F8F8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F4E046F8F8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F4E047A368
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F4E047A368
-[LOG] SoundI::release                          : Voiceline 5 (000001F4E0471908)
-[LOG] SoundI::release                          :     Voiceline 5 (000001F427151258)
-[LOG] SoundI::release                          :     Voiceline 5 (000001F4E0473C78)
-[LOG] SystemI::createSound                     : filename = Assets/NULL-VOID/Build/Desktop/Ambience.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001F4E047DB18 : node = 000001F27B9DA9A0
-[LOG] SystemI::createSound                     : add node to async list : head = 000001F2640C3D88.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F4E047DB18
-[LOG] SystemI::createSoundInternal             :     Create name='Assets/NULL-VOID/Build/Desktop/Ambience.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1887392
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001F27B9DAAB0
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Ghost Sounds', format=5, channels=2, frequency=48000, lengthbytes=139680, lengthpcm=812512, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.181915.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F4E047DB18
-[LOG] SoundI::release                          : Ghost Sounds (000001F4E046FC58)
-[LOG] SoundI::release                          :     Ghost Sounds (000001F277DB13D8)
-[LOG] SoundI::release                          :     Ghost Sounds (000001F4E046F8F8)
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Voiceline 2', format=5, channels=2, frequency=48000, lengthbytes=144544, lengthpcm=579072, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.267426.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000024724CFF2A8
+[LOG] SoundI::release                          : Voiceline 2 (00000247DD8FFAC8)
+[LOG] SoundI::release                          :     Voiceline 2 (00000247B31988B8)
+[LOG] SoundI::release                          :     Voiceline 2 (00000247E619A598)
 [LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
 [LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 1887392
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 1887456
 [LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 13152
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000EFE840EFB8
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000DF601DEE98
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFC555960E0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFC555960B0
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFC555961B0
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFC55596270
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001F221B08188
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9FFB960E0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9FFB960B0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9FFB961B0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9FFB96270
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000247E062BBE8
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='Throw Sound', format=5, channels=1, frequency=48000, lengthbytes=3072, lengthpcm=17554, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.120575.
 [LOG] SystemI::createSound                     : filename = Assets/NULL-VOID/Build/Desktop/Ambience.bank : mode 02010082
 [LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001F4E0477FF8 : node = 000001F27B9DB260
-[LOG] SystemI::createSound                     : add node to async list : head = 000001F2640C3D88.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F4E0477FF8
+[LOG] SystemI::createSound                     : setdata soundi = 0000024724F3A3B8 : node = 00000247E0ED7770
+[LOG] SystemI::createSound                     : add node to async list : head = 000002480DDF4B28.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000024724F3A3B8
 [LOG] SystemI::createSoundInternal             :     Create name='Assets/NULL-VOID/Build/Desktop/Ambience.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1887392
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1887456
 [LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001F27B9DB370
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Voiceline 4', format=5, channels=2, frequency=48000, lengthbytes=138368, lengthpcm=559645, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.132019.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F4E0477FF8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F4E047A368
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F4E047A368
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F4E047CD98
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F4E047CD98
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F4E047A1B8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F4E047A1B8
-[LOG] SoundI::release                          : Voiceline 6 (000001F4E0479438)
-[LOG] SoundI::release                          :     Voiceline 6 (000001F273E58BC8)
-[LOG] SoundI::release                          :     Voiceline 6 (000001F4E047A368)
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F4E047CD98
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F4E047CD98
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F4E047A1B8
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F4E047A1B8
-[LOG] SystemI::createSound                     : filename = Assets/NULL-VOID/Build/Desktop/Ambience.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001F4E0479438 : node = 000001F4C55EE7B0
-[LOG] SystemI::createSound                     : add node to async list : head = 000001F2640C3D88.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F4E0479438
-[LOG] SystemI::createSoundInternal             :     Create name='Assets/NULL-VOID/Build/Desktop/Ambience.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1887392
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001F4C55EE8C0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000247E0ED7880
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Ghost Sounds', format=5, channels=2, frequency=48000, lengthbytes=139680, lengthpcm=812512, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.181915.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F4E0479438
-[LOG] SoundI::release                          : Ghost Sounds (000001F4E047DB18)
-[LOG] SoundI::release                          :     Ghost Sounds (000001F4C4FF9AF8)
-[LOG] SoundI::release                          :     Ghost Sounds (000001F4E047CD98)
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000024724F3A3B8
+[LOG] SoundI::release                          : Ghost Sounds (00000247DD8FF0A8)
+[LOG] SoundI::release                          :     Ghost Sounds (00000247B319D378)
+[LOG] SoundI::release                          :     Ghost Sounds (00000247E619A3E8)
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000247E619A088
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000247E619A088
 [LOG] SystemI::createSound                     : filename = Assets/NULL-VOID/Build/Desktop/Ambience.bank : mode 02010082
 [LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001F4E047EA48 : node = 000001F4DFD09560
-[LOG] SystemI::createSound                     : add node to async list : head = 000001F2640C3D88.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F4E047EA48
+[LOG] SystemI::createSound                     : setdata soundi = 0000024724F39998 : node = 00000247E0ED7270
+[LOG] SystemI::createSound                     : add node to async list : head = 000002480DDF4B28.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000024724F39998
 [LOG] SystemI::createSoundInternal             :     Create name='Assets/NULL-VOID/Build/Desktop/Ambience.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1887392
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1887456
 [LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001F4DFD09670
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000247E0ED7380
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Voiceline 4', format=5, channels=2, frequency=48000, lengthbytes=138368, lengthpcm=559645, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.132019.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000024724F39998
+[LOG] SoundI::release                          : Voiceline 2 (0000024724CFF2A8)
+[LOG] SoundI::release                          :     Voiceline 2 (00000247B319D038)
+[LOG] SoundI::release                          :     Voiceline 2 (000002480EA01098)
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002480EA013F8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002480EA013F8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000247E619A088
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000247E619A088
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000247E619A088
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000247E619A088
+[LOG] SoundI::release                          : 2 Emma VOID (00000247DD8FFE28)
+[LOG] SoundI::release                          :     2 Emma VOID (00000247B319AC78)
+[LOG] SoundI::release                          :     2 Emma VOID (000002480EA01908)
+[LOG] SystemI::createSound                     : filename = Assets/NULL-VOID/Build/Desktop/Ambience.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000024724F397E8 : node = 00000247E0ED78B0
+[LOG] SystemI::createSound                     : add node to async list : head = 000002480DDF4B28.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000024724F397E8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/NULL-VOID/Build/Desktop/Ambience.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1887456
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000247E0ED79C0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Ghost Sounds', format=5, channels=2, frequency=48000, lengthbytes=139680, lengthpcm=812512, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.181915.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000024724F397E8
+[LOG] SoundI::release                          : Ghost Sounds (0000024724F3A3B8)
+[LOG] SoundI::release                          :     Ghost Sounds (00000247B3197BB8)
+[LOG] SoundI::release                          :     Ghost Sounds (000002480EA01248)
+[LOG] SystemI::createSound                     : filename = Assets/NULL-VOID/Build/Desktop/Ambience.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 00000247DD8FF0A8 : node = 00000247E0ED7130
+[LOG] SystemI::createSound                     : add node to async list : head = 000002480DDF4B28.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000247DD8FF0A8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/NULL-VOID/Build/Desktop/Ambience.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1887456
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000247E0ED7240
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Voiceline 7', format=5, channels=2, frequency=48000, lengthbytes=145152, lengthpcm=590946, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.177032.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F4E047EA48
-[LOG] SoundI::release                          : Voiceline 4 (000001F4E0477FF8)
-[LOG] SoundI::release                          :     Voiceline 4 (000001F273E58D68)
-[LOG] SoundI::release                          :     Voiceline 4 (000001F4E047A1B8)
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000247DD8FF0A8
+[LOG] SoundI::release                          : Voiceline 4 (0000024724F39998)
+[LOG] SoundI::release                          :     Voiceline 4 (00000247B3197EF8)
+[LOG] SoundI::release                          :     Voiceline 4 (000002480EA01C68)
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002480EA013F8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002480EA013F8
 [LOG] SystemI::createSound                     : filename = Assets/NULL-VOID/Build/Desktop/Ambience.bank : mode 02010082
 [LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001F4E0479288 : node = 000001F4D71FE290
-[LOG] SystemI::createSound                     : add node to async list : head = 000001F2640C3D88.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F4E0479288
+[LOG] SystemI::createSound                     : setdata soundi = 000002480E0AD2F8 : node = 00000246CAC19440
+[LOG] SystemI::createSound                     : add node to async list : head = 000002480DDF4B28.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002480E0AD2F8
 [LOG] SystemI::createSoundInternal             :     Create name='Assets/NULL-VOID/Build/Desktop/Ambience.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1887392
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1887456
 [LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001F4D71FE3A0
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Voiceline 3', format=5, channels=2, frequency=48000, lengthbytes=141152, lengthpcm=567246, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.206024.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F4E0479288
-[LOG] SoundI::release                          : Voiceline 7 (000001F4E047EA48)
-[LOG] SoundI::release                          :     Voiceline 7 (000001F273E58BC8)
-[LOG] SoundI::release                          :     Voiceline 7 (000001F4E047DB18)
-[LOG] SystemI::createSound                     : filename = Assets/NULL-VOID/Build/Desktop/Ambience.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001F4E0474698 : node = 000001F4D71FE510
-[LOG] SystemI::createSound                     : add node to async list : head = 000001F2640C3D88.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F4E0474698
-[LOG] SystemI::createSoundInternal             :     Create name='Assets/NULL-VOID/Build/Desktop/Ambience.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1887392
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001F4D71FE620
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Ghost Sounds', format=5, channels=2, frequency=48000, lengthbytes=139680, lengthpcm=812512, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.181915.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F4E0474698
-[LOG] SoundI::release                          : Ghost Sounds (000001F4E0479438)
-[LOG] SoundI::release                          :     Ghost Sounds (000001F273E59588)
-[LOG] SoundI::release                          :     Ghost Sounds (000001F4E047A368)
-[LOG] SystemI::createSound                     : filename = Assets/NULL-VOID/Build/Desktop/Ambience.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001F4E047ABD8 : node = 000001F4DFD0B360
-[LOG] SystemI::createSound                     : add node to async list : head = 000001F2640C3D88.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F4E047ABD8
-[LOG] SystemI::createSoundInternal             :     Create name='Assets/NULL-VOID/Build/Desktop/Ambience.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1887392
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001F4DFD0B470
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Voiceline 6', format=5, channels=2, frequency=48000, lengthbytes=135840, lengthpcm=546479, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.156830.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F4E047ABD8
-[LOG] SoundI::release                          : Voiceline 3 (000001F4E0479288)
-[LOG] SoundI::release                          :     Voiceline 3 (000001F4C4FF9C98)
-[LOG] SoundI::release                          :     Voiceline 3 (000001F4E0479AF8)
-[LOG] SystemI::createSound                     : filename = Assets/NULL-VOID/Build/Desktop/Ambience.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001F4E047DB18 : node = 000001F273CD1180
-[LOG] SystemI::createSound                     : add node to async list : head = 000001F2640C3D88.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F4E047DB18
-[LOG] SystemI::createSoundInternal             :     Create name='Assets/NULL-VOID/Build/Desktop/Ambience.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1887392
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001F273CD1290
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Ghost Sounds', format=5, channels=2, frequency=48000, lengthbytes=139680, lengthpcm=812512, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.181915.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F4E047DB18
-[LOG] SoundI::release                          : Ghost Sounds (000001F4E0474698)
-[LOG] SoundI::release                          :     Ghost Sounds (000001F273E590A8)
-[LOG] SoundI::release                          :     Ghost Sounds (000001F4E0473C78)
-[LOG] SystemI::createSound                     : filename = Assets/NULL-VOID/Build/Desktop/Ambience.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001F4E0477FF8 : node = 000001F273CD1CC0
-[LOG] SystemI::createSound                     : add node to async list : head = 000001F2640C3D88.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F4E0477FF8
-[LOG] SystemI::createSoundInternal             :     Create name='Assets/NULL-VOID/Build/Desktop/Ambience.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1887392
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001F273CD1DD0
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Voiceline 3', format=5, channels=2, frequency=48000, lengthbytes=141152, lengthpcm=567246, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.206024.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F4E0477FF8
-[LOG] SoundI::release                          : Voiceline 6 (000001F4E047ABD8)
-[LOG] SoundI::release                          :     Voiceline 6 (000001F4C4FF7DB8)
-[LOG] SoundI::release                          :     Voiceline 6 (000001F4E04781A8)
-[LOG] SystemI::createSound                     : filename = Assets/NULL-VOID/Build/Desktop/Ambience.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001F4E0471908 : node = 000001F273CD12C0
-[LOG] SystemI::createSound                     : add node to async list : head = 000001F2640C3D88.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F4E0471908
-[LOG] SystemI::createSoundInternal             :     Create name='Assets/NULL-VOID/Build/Desktop/Ambience.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1887392
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001F273CD13D0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000246CAC19550
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Voiceline 1', format=5, channels=2, frequency=48000, lengthbytes=149376, lengthpcm=615677, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.168823.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F4E0471908
-[LOG] SoundI::release                          : Voiceline 3 (000001F4E0477FF8)
-[LOG] SoundI::release                          :     Voiceline 3 (000001F4C4FF9618)
-[LOG] SoundI::release                          :     Voiceline 3 (000001F4E0479AF8)
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002480E0AD2F8
+[LOG] SoundI::release                          : Voiceline 7 (00000247DD8FF0A8)
+[LOG] SoundI::release                          :     Voiceline 7 (00000247B31988B8)
+[LOG] SoundI::release                          :     Voiceline 7 (000002480EA01AB8)
 [LOG] SystemI::createSound                     : filename = Assets/NULL-VOID/Build/Desktop/Ambience.bank : mode 02010082
 [LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001F4E047A1B8 : node = 000001F273CD1040
-[LOG] SystemI::createSound                     : add node to async list : head = 000001F2640C3D88.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F4E047A1B8
+[LOG] SystemI::createSound                     : setdata soundi = 00000247B2BFA928 : node = 00000246CAC18540
+[LOG] SystemI::createSound                     : add node to async list : head = 000002480DDF4B28.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000247B2BFA928
 [LOG] SystemI::createSoundInternal             :     Create name='Assets/NULL-VOID/Build/Desktop/Ambience.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1887392
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1887456
 [LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001F273CD1150
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000246CAC18650
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Ghost Sounds', format=5, channels=2, frequency=48000, lengthbytes=139680, lengthpcm=812512, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.181915.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F4E047A1B8
-[LOG] SoundI::release                          : Ghost Sounds (000001F4E047DB18)
-[LOG] SoundI::release                          :     Ghost Sounds (000001F427151258)
-[LOG] SoundI::release                          :     Ghost Sounds (000001F4E047EA48)
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000247B2BFA928
+[LOG] SoundI::release                          : Ghost Sounds (0000024724F397E8)
+[LOG] SoundI::release                          :     Ghost Sounds (00000247B3198098)
+[LOG] SoundI::release                          :     Ghost Sounds (000002480EA01098)
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 1887456
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 13152
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000DF601DEE98
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF9FFB960E0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF9FFB960B0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF9FFB961B0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF9FFB96270
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000247E062BDF8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='MirrorPhase', format=5, channels=2, frequency=48000, lengthbytes=15328, lengthpcm=99206, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.336605.
 [LOG] SystemI::createSound                     : filename = Assets/NULL-VOID/Build/Desktop/Ambience.bank : mode 02010082
 [LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001F4E0479AF8 : node = 000001F273CD1900
-[LOG] SystemI::createSound                     : add node to async list : head = 000001F2640C3D88.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F4E0479AF8
+[LOG] SystemI::createSound                     : setdata soundi = 00000247B2BFAC88 : node = 00000246CAC18A40
+[LOG] SystemI::createSound                     : add node to async list : head = 000002480DDF4B28.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000247B2BFAC88
 [LOG] SystemI::createSoundInternal             :     Create name='Assets/NULL-VOID/Build/Desktop/Ambience.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1887392
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1887456
 [LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001F273CD1A10
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000246CAC18B50
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Voiceline 3', format=5, channels=2, frequency=48000, lengthbytes=141152, lengthpcm=567246, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.206024.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000247B2BFAC88
+[LOG] SoundI::release                          : Voiceline 1 (000002480E0AD2F8)
+[LOG] SoundI::release                          :     Voiceline 1 (00000247B3197BB8)
+[LOG] SoundI::release                          :     Voiceline 1 (000002480EA01758)
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000247E619A088
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000247E619A088
+[LOG] SystemI::createSound                     : filename = Assets/NULL-VOID/Build/Desktop/Ambience.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 00000247B2BFA5C8 : node = 00000246CAC18CC0
+[LOG] SystemI::createSound                     : add node to async list : head = 000002480DDF4B28.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000247B2BFA5C8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/NULL-VOID/Build/Desktop/Ambience.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1887456
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000246CAC18DD0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Ghost Sounds', format=5, channels=2, frequency=48000, lengthbytes=139680, lengthpcm=812512, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.181915.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000247B2BFA5C8
+[LOG] SoundI::release                          : Ghost Sounds (00000247B2BFA928)
+[LOG] SoundI::release                          :     Ghost Sounds (00000247B3197EF8)
+[LOG] SoundI::release                          :     Ghost Sounds (000002480EA01248)
+[LOG] SystemI::createSound                     : filename = Assets/NULL-VOID/Build/Desktop/Ambience.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 00000247B2BFA418 : node = 00000246CAC19A80
+[LOG] SystemI::createSound                     : add node to async list : head = 000002480DDF4B28.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000247B2BFA418
+[LOG] SystemI::createSound                     : filename = Assets/NULL-VOID/Build/Desktop/Ambience.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/NULL-VOID/Build/Desktop/Ambience.bank', mode=0x02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSound                     :     setdata soundi = 00000247B2BFA928 : node = 00000246CAC18540
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1887456
+[LOG] SystemI::createSound                     :     add node to async list : head = 000002480DDF4B28.  list count = 0
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSound                     :     filename = Assets/NULL-VOID/Build/Desktop/Ambience.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000246CAC19B90
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSound                     :     setdata soundi = 00000247B2BFAE38 : node = 00000246CAC19940
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSound                     :     add node to async list : head = 000002480DDF4B28.  list count = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Mirror Ambience', format=5, channels=2, frequency=48000, lengthbytes=595744, lengthpcm=3352868, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.272461.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000247B2BFA418
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000247B2BFA928
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/NULL-VOID/Build/Desktop/Ambience.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1887456
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000246CAC18650
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Mirror Ambience', format=5, channels=2, frequency=48000, lengthbytes=595744, lengthpcm=3352868, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.272461.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000247B2BFA928
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000247B2BFAE38
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/NULL-VOID/Build/Desktop/Ambience.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1887456
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000246CAC19A50
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Mirror Ambience', format=5, channels=2, frequency=48000, lengthbytes=595744, lengthpcm=3352868, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.272461.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000247B2BFAE38
+[LOG] SoundI::release                          : Mirror Ambience (0000024724CFFCC8)
+[LOG] SoundI::release                          :     Mirror Ambience (00000247B319B498)
+[LOG] SoundI::release                          :     Mirror Ambience (000002480EA01E18)
+[LOG] SoundI::release                          : Mirror Ambience (00000247DD8FF768)
+[LOG] SoundI::release                          :     Mirror Ambience (00000247B319D518)
+[LOG] SoundI::release                          :     Mirror Ambience (000002480EA013F8)
+[LOG] SoundI::release                          : Mirror Ambience (00000247DD8FF5B8)
+[LOG] SoundI::release                          :     Mirror Ambience (00000247B319C9B8)
+[LOG] SoundI::release                          :     Mirror Ambience (00000247E619A088)
+[LOG] SystemI::createSound                     : filename = Assets/NULL-VOID/Build/Desktop/Ambience.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002480E0AD2F8 : node = 00000246CAC19440
+[LOG] SystemI::createSound                     : add node to async list : head = 000002480DDF4B28.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002480E0AD2F8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/NULL-VOID/Build/Desktop/Ambience.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1887456
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000246CAC19550
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Voiceline 5', format=5, channels=2, frequency=48000, lengthbytes=136384, lengthpcm=555702, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.192810.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F4E0479AF8
-[LOG] SoundI::release                          : Voiceline 1 (000001F4E0471908)
-[LOG] SoundI::release                          :     Voiceline 1 (000001F428384B18)
-[LOG] SoundI::release                          :     Voiceline 1 (000001F4E0473AC8)
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002480E0AD2F8
+[LOG] SoundI::release                          : Voiceline 3 (00000247B2BFAC88)
+[LOG] SoundI::release                          :     Voiceline 3 (00000247B319DB98)
+[LOG] SoundI::release                          :     Voiceline 3 (000002480EA01908)
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002480EA01758
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002480EA01758
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002480EA01E18
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002480EA01E18
 [LOG] SystemI::createSound                     : filename = Assets/NULL-VOID/Build/Desktop/Ambience.bank : mode 02010082
 [LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001F4E047EA48 : node = 000001F273CD1CC0
-[LOG] SystemI::createSound                     : add node to async list : head = 000001F2640C3D88.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F4E047EA48
+[LOG] SystemI::createSound                     : setdata soundi = 0000024728AD7DE8 : node = 00000246CAC19800
+[LOG] SystemI::createSound                     : add node to async list : head = 000002480DDF4B28.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000024728AD7DE8
 [LOG] SystemI::createSoundInternal             :     Create name='Assets/NULL-VOID/Build/Desktop/Ambience.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1887392
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1887456
 [LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001F273CD1DD0
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Ghost Sounds', format=5, channels=2, frequency=48000, lengthbytes=139680, lengthpcm=812512, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.181915.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F4E047EA48
-[LOG] SoundI::release                          : Ghost Sounds (000001F4E047A1B8)
-[LOG] SoundI::release                          :     Ghost Sounds (000001F428384498)
-[LOG] SoundI::release                          :     Ghost Sounds (000001F4E0479288)
-[LOG] SystemI::createSound                     : filename = Assets/NULL-VOID/Build/Desktop/Ambience.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001F4E047ABD8 : node = 000001F273CD0F00
-[LOG] SystemI::createSound                     : add node to async list : head = 000001F2640C3D88.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F4E047ABD8
-[LOG] SystemI::createSoundInternal             :     Create name='Assets/NULL-VOID/Build/Desktop/Ambience.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1887392
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001F273CD1010
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000246CAC19910
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Voiceline 3', format=5, channels=2, frequency=48000, lengthbytes=141152, lengthpcm=567246, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.206024.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F4E047ABD8
-[LOG] SoundI::release                          : Voiceline 5 (000001F4E0479AF8)
-[LOG] SoundI::release                          :     Voiceline 5 (000001F273E58BC8)
-[LOG] SoundI::release                          :     Voiceline 5 (000001F4E047A368)
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F4E047CD98
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F4E047CD98
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F4E0479288
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F4E0479288
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000024728AD7DE8
 [LOG] SystemI::createSound                     : filename = Assets/NULL-VOID/Build/Desktop/Ambience.bank : mode 02010082
 [LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001F4E046F088 : node = 000001F273CD1900
-[LOG] SystemI::createSound                     : add node to async list : head = 000001F2640C3D88.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F4E046F088
+[LOG] SystemI::createSound                     : setdata soundi = 0000024728AD7C38 : node = 00000246CAC19BC0
+[LOG] SystemI::createSound                     : add node to async list : head = 000002480DDF4B28.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000024728AD7C38
 [LOG] SystemI::createSoundInternal             :     Create name='Assets/NULL-VOID/Build/Desktop/Ambience.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1887392
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1887456
 [LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001F273CD1A10
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Voiceline 1', format=5, channels=2, frequency=48000, lengthbytes=149376, lengthpcm=615677, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.168823.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F4E046F088
-[LOG] SystemI::createSound                     : filename = Assets/NULL-VOID/Build/Desktop/Ambience.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001F4E047DB18 : node = 000001F273CD1B80
-[LOG] SystemI::createSound                     : add node to async list : head = 000001F2640C3D88.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F4E047DB18
-[LOG] SystemI::createSoundInternal             :     Create name='Assets/NULL-VOID/Build/Desktop/Ambience.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1887392
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001F273CD1C90
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000246CAC19CD0
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Ghost Sounds', format=5, channels=2, frequency=48000, lengthbytes=139680, lengthpcm=812512, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.181915.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F4E047DB18
-[LOG] SoundI::release                          : Voiceline 3 (000001F4E047ABD8)
-[LOG] SoundI::release                          :     Voiceline 3 (000001F4C5E2DA38)
-[LOG] SoundI::release                          :     Voiceline 3 (000001F4E0479288)
-[LOG] SoundI::release                          : Ghost Sounds (000001F4E047EA48)
-[LOG] SoundI::release                          :     Ghost Sounds (000001F273A15418)
-[LOG] SoundI::release                          :     Ghost Sounds (000001F4E047CD98)
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000024728AD7C38
+[LOG] SoundI::release                          : Voiceline 5 (000002480E0AD2F8)
+[LOG] SoundI::release                          :     Voiceline 5 (00000247B319C9B8)
+[LOG] SoundI::release                          :     Voiceline 5 (000002480EA01E18)
+[LOG] SoundI::release                          : Ghost Sounds (00000247B2BFA5C8)
+[LOG] SoundI::release                          :     Ghost Sounds (00000247B319CCF8)
+[LOG] SoundI::release                          :     Ghost Sounds (000002480EA01758)
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002480EA01AB8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002480EA01AB8
+[LOG] SystemI::createSound                     : filename = Assets/NULL-VOID/Build/Desktop/Ambience.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 00000247B2BFA5C8 : node = 00000246CAC19D00
+[LOG] SystemI::createSound                     : add node to async list : head = 000002480DDF4B28.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000247B2BFA5C8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/NULL-VOID/Build/Desktop/Ambience.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1887456
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000246CAC19E10
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Voiceline 7', format=5, channels=2, frequency=48000, lengthbytes=145152, lengthpcm=590946, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.177032.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000247B2BFA5C8
+[LOG] SoundI::release                          : Voiceline 3 (0000024728AD7DE8)
+[LOG] SoundI::release                          :     Voiceline 3 (00000247B319D518)
+[LOG] SoundI::release                          :     Voiceline 3 (000002480EA013F8)
+[LOG] SystemI::createSound                     : filename = Assets/NULL-VOID/Build/Desktop/Ambience.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000024728AD7218 : node = 00000246CAC18A40
+[LOG] SystemI::createSound                     : add node to async list : head = 000002480DDF4B28.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000024728AD7218
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/NULL-VOID/Build/Desktop/Ambience.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1887456
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000246CAC18B50
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Ghost Sounds', format=5, channels=2, frequency=48000, lengthbytes=139680, lengthpcm=812512, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.181915.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000024728AD7218
+[LOG] SoundI::release                          : Ghost Sounds (0000024728AD7C38)
+[LOG] SoundI::release                          :     Ghost Sounds (00000247B3197EF8)
+[LOG] SoundI::release                          :     Ghost Sounds (000002480EA01098)
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002480EA01758
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002480EA01758
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002480EA01908
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002480EA01908
+[LOG] SystemI::createSound                     : filename = Assets/NULL-VOID/Build/Desktop/Ambience.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000024728AD7A88 : node = 00000246CAC18CC0
+[LOG] SystemI::createSound                     : add node to async list : head = 000002480DDF4B28.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000024728AD7A88
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/NULL-VOID/Build/Desktop/Ambience.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1887456
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000246CAC18DD0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Voiceline 7', format=5, channels=2, frequency=48000, lengthbytes=145152, lengthpcm=590946, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.177032.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000024728AD7A88
+[LOG] SoundI::release                          : Voiceline 7 (00000247B2BFA5C8)
+[LOG] SoundI::release                          :     Voiceline 7 (00000247B319B498)
+[LOG] SoundI::release                          :     Voiceline 7 (000002480EA01758)
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002480EA01C68
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002480EA01C68
+[LOG] SystemI::createSound                     : filename = Assets/NULL-VOID/Build/Desktop/Ambience.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000024728AD78D8 : node = 00000246CAC19800
+[LOG] SystemI::createSound                     : add node to async list : head = 000002480DDF4B28.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000024728AD78D8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/NULL-VOID/Build/Desktop/Ambience.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1887456
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000246CAC19910
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Ghost Sounds', format=5, channels=2, frequency=48000, lengthbytes=139680, lengthpcm=812512, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.181915.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000024728AD78D8
+[LOG] SoundI::release                          : Ghost Sounds (0000024728AD7218)
+[LOG] SoundI::release                          :     Ghost Sounds (00000247B31988B8)
+[LOG] SoundI::release                          :     Ghost Sounds (000002480EA01908)
+[LOG] SystemI::createSound                     : filename = Assets/NULL-VOID/Build/Desktop/Ambience.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 00000247B2BFA778 : node = 00000246CAC18A40
+[LOG] SystemI::createSound                     : add node to async list : head = 000002480DDF4B28.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000247B2BFA778
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/NULL-VOID/Build/Desktop/Ambience.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1887456
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000246CAC18B50
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Voiceline 3', format=5, channels=2, frequency=48000, lengthbytes=141152, lengthpcm=567246, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.206024.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000247B2BFA778
+[LOG] SoundI::release                          : Voiceline 7 (0000024728AD7A88)
+[LOG] SoundI::release                          :     Voiceline 7 (00000247B319CCF8)
+[LOG] SoundI::release                          :     Voiceline 7 (000002480EA01E18)
+[LOG] SystemI::createSound                     : filename = Assets/NULL-VOID/Build/Desktop/Ambience.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000024728AD7728 : node = 00000246CAC18CC0
+[LOG] SystemI::createSound                     : add node to async list : head = 000002480DDF4B28.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000024728AD7728
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/NULL-VOID/Build/Desktop/Ambience.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1887456
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000246CAC18DD0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Voiceline 7', format=5, channels=2, frequency=48000, lengthbytes=145152, lengthpcm=590946, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.177032.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000024728AD7728
+[LOG] SoundI::release                          : Voiceline 3 (00000247B2BFA778)
+[LOG] SoundI::release                          :     Voiceline 3 (00000247B319C9B8)
+[LOG] SoundI::release                          :     Voiceline 3 (000002480EA01098)
+[LOG] SystemI::createSound                     : filename = Assets/NULL-VOID/Build/Desktop/Ambience.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000024728AD73C8 : node = 00000246CAC18A40
+[LOG] SystemI::createSound                     : add node to async list : head = 000002480DDF4B28.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000024728AD73C8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/NULL-VOID/Build/Desktop/Ambience.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1887456
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000246CAC18B50
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Ghost Sounds', format=5, channels=2, frequency=48000, lengthbytes=139680, lengthpcm=812512, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.181915.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000024728AD73C8
+[LOG] SoundI::release                          : Ghost Sounds (0000024728AD78D8)
+[LOG] SoundI::release                          :     Ghost Sounds (00000247B319B498)
+[LOG] SoundI::release                          :     Ghost Sounds (000002480EA013F8)
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002480EA01248
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002480EA01248
+[LOG] SystemI::createSound                     : filename = Assets/NULL-VOID/Build/Desktop/Ambience.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000024728AD7C38 : node = 00000246CAC19800
+[LOG] SystemI::createSound                     : add node to async list : head = 000002480DDF4B28.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000024728AD7C38
+[LOG] SystemI::createSound                     : filename = Assets/NULL-VOID/Build/Desktop/Ambience.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/NULL-VOID/Build/Desktop/Ambience.bank', mode=0x02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSound                     :     setdata soundi = 00000247B2BFA0B8 : node = 00000246CAC19440
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1887456
+[LOG] SystemI::createSound                     :     add node to async list : head = 000002480DDF4B28.  list count = 0
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSound                     :     filename = Assets/NULL-VOID/Build/Desktop/Ambience.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000246CAC19910
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSound                     :     setdata soundi = 00000247B2BFA5C8 : node = 00000246CAC19BC0
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSound                     :     add node to async list : head = 000002480DDF4B28.  list count = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Mirror Ambience', format=5, channels=2, frequency=48000, lengthbytes=595744, lengthpcm=3352868, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.272461.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000024728AD7C38
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000247B2BFA0B8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/NULL-VOID/Build/Desktop/Ambience.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1887456
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000246CAC19550
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Mirror Ambience', format=5, channels=2, frequency=48000, lengthbytes=595744, lengthpcm=3352868, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.272461.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000247B2BFA0B8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000247B2BFA5C8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/NULL-VOID/Build/Desktop/Ambience.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1887456
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000246CAC19CD0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Mirror Ambience', format=5, channels=2, frequency=48000, lengthbytes=595744, lengthpcm=3352868, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.272461.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000247B2BFA5C8
+[LOG] SoundI::release                          : Mirror Ambience (00000247B2BFA928)
+[LOG] SoundI::release                          :     Mirror Ambience (00000247B319D038)
+[LOG] SoundI::release                          :     Mirror Ambience (000002480EA01AB8)
+[LOG] SoundI::release                          : Mirror Ambience (00000247B2BFA418)
+[LOG] SoundI::release                          :     Mirror Ambience (00000247B319CE98)
+[LOG] SoundI::release                          :     Mirror Ambience (000002480EA01C68)
+[LOG] SoundI::release                          : Mirror Ambience (00000247B2BFAE38)
+[LOG] SoundI::release                          :     Mirror Ambience (00000247B3197BB8)
+[LOG] SoundI::release                          :     Mirror Ambience (000002480EA01248)
+[LOG] SystemI::createSound                     : filename = Assets/NULL-VOID/Build/Desktop/Narrative.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 00000247B2BFAAD8 : node = 00000246CAC18540
+[LOG] SystemI::createSound                     : add node to async list : head = 000002480DDF4B28.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000247B2BFAAD8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/NULL-VOID/Build/Desktop/Narrative.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 9474400
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 9024
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000246CAC18650
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='3 Emma VOID', format=5, channels=2, frequency=48000, lengthbytes=295936, lengthpcm=1306160, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.250549.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000247B2BFAAD8
+[LOG] SystemI::createSound                     : filename = Assets/NULL-VOID/Build/Desktop/Ambience.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002480E0AD2F8 : node = 00000246CAC19940
+[LOG] SystemI::createSound                     : add node to async list : head = 000002480DDF4B28.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002480E0AD2F8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/NULL-VOID/Build/Desktop/Ambience.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1887456
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000246CAC19A50
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Voiceline 7', format=5, channels=2, frequency=48000, lengthbytes=145152, lengthpcm=590946, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.177032.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002480E0AD2F8
+[LOG] SoundI::release                          : Voiceline 7 (0000024728AD7728)
+[LOG] SoundI::release                          :     Voiceline 7 (00000247B3193298)
+[LOG] SoundI::release                          :     Voiceline 7 (000002480EA01758)
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002480EA01E18
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002480EA01E18
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002480EA01AB8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002480EA01AB8
+[LOG] SystemI::createSound                     : filename = Assets/NULL-VOID/Build/Desktop/Ambience.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000024728AD7DE8 : node = 00000246CAC18CC0
+[LOG] SystemI::createSound                     : add node to async list : head = 000002480DDF4B28.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000024728AD7DE8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/NULL-VOID/Build/Desktop/Ambience.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1887456
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000246CAC18DD0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Ghost Sounds', format=5, channels=2, frequency=48000, lengthbytes=139680, lengthpcm=812512, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.181915.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000024728AD7DE8
+[LOG] SoundI::release                          : Ghost Sounds (0000024728AD73C8)
+[LOG] SoundI::release                          :     Ghost Sounds (00000247B319C9B8)
+[LOG] SoundI::release                          :     Ghost Sounds (000002480EA01E18)
+[LOG] SystemI::createSound                     : filename = Assets/NULL-VOID/Build/Desktop/Ambience.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0000024728AD7A88 : node = 00000246CAC19D00
+[LOG] SystemI::createSound                     : add node to async list : head = 000002480DDF4B28.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000024728AD7A88
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/NULL-VOID/Build/Desktop/Ambience.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1887456
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000246CAC19E10
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Voiceline 1', format=5, channels=2, frequency=48000, lengthbytes=149376, lengthpcm=615677, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.168823.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000024728AD7A88
+[LOG] SoundI::release                          : Voiceline 7 (000002480E0AD2F8)
+[LOG] SoundI::release                          :     Voiceline 7 (00000247B319CE98)
+[LOG] SoundI::release                          :     Voiceline 7 (000002480EA01AB8)
+[LOG] SystemI::createSound                     : filename = Assets/NULL-VOID/Build/Desktop/Ambience.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002480E0AC8D8 : node = 00000246CAC18A40
+[LOG] SystemI::createSound                     : add node to async list : head = 000002480DDF4B28.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002480E0AC8D8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/NULL-VOID/Build/Desktop/Ambience.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1887456
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000246CAC18B50
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Ghost Sounds', format=5, channels=2, frequency=48000, lengthbytes=139680, lengthpcm=812512, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.181915.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002480E0AC8D8
+[LOG] SoundI::release                          : Ghost Sounds (0000024728AD7DE8)
+[LOG] SoundI::release                          :     Ghost Sounds (00000247B3194AF8)
+[LOG] SoundI::release                          :     Ghost Sounds (000002480EA01248)
+[LOG] SoundI::release                          : 3 Emma VOID (00000247B2BFAAD8)
+[LOG] SoundI::release                          :     3 Emma VOID (00000247B31988B8)
+[LOG] SoundI::release                          :     3 Emma VOID (000002480EA01C68)
+[LOG] SystemI::createSound                     : filename = Assets/NULL-VOID/Build/Desktop/Ambience.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 00000247B2BFA778 : node = 00000246CAC18540
+[LOG] SystemI::createSound                     : add node to async list : head = 000002480DDF4B28.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000247B2BFA778
+[LOG] SystemI::createSoundInternal             :     Create name='Assets/NULL-VOID/Build/Desktop/Ambience.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1887456
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000246CAC18650
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Voiceline 7', format=5, channels=2, frequency=48000, lengthbytes=145152, lengthpcm=590946, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.177032.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000247B2BFA778
+[LOG] SoundI::release                          : Voiceline 1 (0000024728AD7A88)
+[LOG] SoundI::release                          :     Voiceline 1 (00000247E5B04AB8)
+[LOG] SoundI::release                          :     Voiceline 1 (000002480EA01E18)
 [LOG] SystemI::createSound                     : filename = Assets/NULL-VOID/Build/Desktop/Music.bank : mode 02010082
 [LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001F4C5AAA578 : node = 000001F273CD1400
-[LOG] SystemI::createSound                     : add node to async list : head = 000001F2640C3D88.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F4C5AAA578
+[LOG] SystemI::createSound                     : setdata soundi = 00000247B2BFA268 : node = 00000246CAC18CC0
+[LOG] SystemI::createSound                     : add node to async list : head = 000002480DDF4B28.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000247B2BFA268
 [LOG] SystemI::createSoundInternal             :     Create name='Assets/NULL-VOID/Build/Desktop/Music.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 15081312
 [LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 6816
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001F273CD1510
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000246CAC18DD0
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='4. Guilt', format=5, channels=2, frequency=48000, lengthbytes=1518112, lengthpcm=6115309, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.937561.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F4C5AAA578
-[LOG] SoundI::release                          : 4. Guilt (000001F4E0472B98)
-[LOG] SoundI::release                          :     4. Guilt (000001F427150BD8)
-[LOG] SoundI::release                          :     4. Guilt (000001F4E046FFB8)
-[LOG] SystemI::createSound                     : filename = Assets/NULL-VOID/Build/Desktop/Ambience.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='10. Null's Theme', format=5, channels=2, frequency=48000, lengthbytes=2698080, lengthpcm=13189080, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.669403.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000247B2BFA268
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002480EA01908
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002480EA01908
+[LOG] SoundI::release                          : Ghost Sounds (000002480E0AC8D8)
+[LOG] SoundI::release                          :     Ghost Sounds (00000247E5B045D8)
+[LOG] SoundI::release                          :     Ghost Sounds (000002480EA01AB8)
+[LOG] SoundI::release                          : 3. Inside One's Mind (0000024724CFF968)
+[LOG] SoundI::release                          :     3. Inside One's Mind (00000247B3197A18)
+[LOG] SoundI::release                          :     3. Inside One's Mind (000002480EA015A8)
+[LOG] SoundI::release                          : Mirror Ambience (00000247B2BFA5C8)
+[LOG] SoundI::release                          :     Mirror Ambience (00000247B319B498)
+[LOG] SoundI::release                          :     Mirror Ambience (000002480EA01098)
+[LOG] SoundI::release                          : Mirror Ambience (00000247B2BFA0B8)
+[LOG] SoundI::release                          :     Mirror Ambience (00000247B319D518)
+[LOG] SoundI::release                          :     Mirror Ambience (000002480EA01908)
+[LOG] SoundI::release                          : Mirror Ambience (0000024728AD7C38)
+[LOG] SoundI::release                          :     Mirror Ambience (00000247B319CCF8)
+[LOG] SoundI::release                          :     Mirror Ambience (000002480EA013F8)
+[LOG] SoundI::release                          : Voiceline 7 (00000247B2BFA778)
+[LOG] SoundI::release                          :     Voiceline 7 (00000247E5B04778)
+[LOG] SoundI::release                          :     Voiceline 7 (000002480EA01248)
+[LOG] SystemI::createSound                     : filename = Assets/NULL-VOID/Build/Desktop/Music.bank : mode 02010082
 [LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001F4C5AA63A8 : node = 000001F273CD0F00
-[LOG] SystemI::createSound                     : add node to async list : head = 000001F2640C3D88.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F4C5AA63A8
-[LOG] SystemI::createSoundInternal             :     Create name='Assets/NULL-VOID/Build/Desktop/Ambience.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1887392
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001F273CD1010
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Voiceline 4', format=5, channels=2, frequency=48000, lengthbytes=138368, lengthpcm=559645, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.132019.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F4C5AA63A8
-[LOG] SoundI::release                          : Voiceline 1 (000001F4E046F088)
-[LOG] SoundI::release                          :     Voiceline 1 (000001F428385678)
-[LOG] SoundI::release                          :     Voiceline 1 (000001F4E046F8F8)
-[LOG] SystemI::createSound                     : filename = Assets/NULL-VOID/Build/Desktop/Ambience.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001F4C5AABD18 : node = 000001F273CD1540
-[LOG] SystemI::createSound                     : add node to async list : head = 000001F2640C3D88.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F4C5AABD18
-[LOG] SystemI::createSoundInternal             :     Create name='Assets/NULL-VOID/Build/Desktop/Ambience.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1887392
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001F273CD1650
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Ghost Sounds', format=5, channels=2, frequency=48000, lengthbytes=139680, lengthpcm=812512, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.181915.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F4C5AABD18
-[LOG] SoundI::release                          : Ghost Sounds (000001F4E047DB18)
-[LOG] SoundI::release                          :     Ghost Sounds (000001F428384FF8)
-[LOG] SoundI::release                          :     Ghost Sounds (000001F4C5AAA218)
-[LOG] SystemI::createSound                     : filename = Assets/NULL-VOID/Build/Desktop/Ambience.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001F4C5AAB2F8 : node = 000001F27B9D90A0
-[LOG] SystemI::createSound                     : add node to async list : head = 000001F2640C3D88.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F4C5AAB2F8
-[LOG] SystemI::createSoundInternal             :     Create name='Assets/NULL-VOID/Build/Desktop/Ambience.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1887392
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001F27B9D91B0
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Voiceline 3', format=5, channels=2, frequency=48000, lengthbytes=141152, lengthpcm=567246, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.206024.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F4C5AAB2F8
-[LOG] SoundI::release                          : Voiceline 4 (000001F4C5AA63A8)
-[LOG] SoundI::release                          :     Voiceline 4 (000001F273E59248)
-[LOG] SoundI::release                          :     Voiceline 4 (000001F4C5AA8C28)
-[LOG] SystemI::createSound                     : filename = Assets/NULL-VOID/Build/Desktop/Ambience.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001F4C5AA8A78 : node = 000001F4D71FE290
-[LOG] SystemI::createSound                     : add node to async list : head = 000001F2640C3D88.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F4C5AA8A78
-[LOG] SystemI::createSoundInternal             :     Create name='Assets/NULL-VOID/Build/Desktop/Ambience.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1887392
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001F4D71FE3A0
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Ghost Sounds', format=5, channels=2, frequency=48000, lengthbytes=139680, lengthpcm=812512, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.181915.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F4C5AA8A78
-[LOG] SoundI::release                          : Ghost Sounds (000001F4C5AABD18)
-[LOG] SoundI::release                          :     Ghost Sounds (000001F4C4FFAB38)
-[LOG] SoundI::release                          :     Ghost Sounds (000001F4C5AAB808)
-[LOG] SystemI::createSound                     : filename = Assets/NULL-VOID/Build/Desktop/Ambience.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001F4C5AABD18 : node = 000001F4D71FE650
-[LOG] SystemI::createSound                     : add node to async list : head = 000001F2640C3D88.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F4C5AABD18
-[LOG] SystemI::createSoundInternal             :     Create name='Assets/NULL-VOID/Build/Desktop/Ambience.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1887392
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001F4D71FE760
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Voiceline 6', format=5, channels=2, frequency=48000, lengthbytes=135840, lengthpcm=546479, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.156830.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F4C5AABD18
-[LOG] SoundI::release                          : Voiceline 3 (000001F4C5AAB2F8)
-[LOG] SoundI::release                          :     Voiceline 3 (000001F427150898)
-[LOG] SoundI::release                          :     Voiceline 3 (000001F4C5AAC228)
-[LOG] SystemI::createSound                     : filename = Assets/NULL-VOID/Build/Desktop/Ambience.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001F4C5AAB2F8 : node = 000001F4406DB240
-[LOG] SystemI::createSound                     : add node to async list : head = 000001F2640C3D88.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F4C5AAB2F8
-[LOG] SystemI::createSoundInternal             :     Create name='Assets/NULL-VOID/Build/Desktop/Ambience.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1887392
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001F4406DB350
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Voiceline 1', format=5, channels=2, frequency=48000, lengthbytes=149376, lengthpcm=615677, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.168823.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F4C5AAB2F8
-[LOG] SoundI::release                          : Voiceline 6 (000001F4C5AABD18)
-[LOG] SoundI::release                          :     Voiceline 6 (000001F4C5E2D558)
-[LOG] SoundI::release                          :     Voiceline 6 (000001F4C5AAB808)
-[LOG] SystemI::createSound                     : filename = Assets/NULL-VOID/Build/Desktop/Ambience.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001F4C5AAC8E8 : node = 000001F4D71FE650
-[LOG] SystemI::createSound                     : add node to async list : head = 000001F2640C3D88.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F4C5AAC8E8
-[LOG] SystemI::createSoundInternal             :     Create name='Assets/NULL-VOID/Build/Desktop/Ambience.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1887392
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001F4D71FE760
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Ghost Sounds', format=5, channels=2, frequency=48000, lengthbytes=139680, lengthpcm=812512, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.181915.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F4C5AAC8E8
-[LOG] SoundI::release                          : Ghost Sounds (000001F4C5AA8A78)
-[LOG] SoundI::release                          :     Ghost Sounds (000001F427150BD8)
-[LOG] SoundI::release                          :     Ghost Sounds (000001F4C5AA8C28)
-[LOG] SystemI::createSound                     : filename = Assets/NULL-VOID/Build/Desktop/Ambience.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000001F4C5A9EBD8 : node = 000001F4DFD09E20
-[LOG] SystemI::createSound                     : add node to async list : head = 000001F2640C3D88.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F4C5A9EBD8
-[LOG] SystemI::createSoundInternal             :     Create name='Assets/NULL-VOID/Build/Desktop/Ambience.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1887392
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001F4DFD09F30
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSound                     :     filename = Assets/NULL-VOID/Build/Desktop/Ambience.bank : mode 02010082
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Ghost Sounds', format=5, channels=2, frequency=48000, lengthbytes=139680, lengthpcm=812512, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.181915.
-[LOG] SystemI::createSound                     :     setdata soundi = 000001F4E046F598 : node = 000001F4DFD0BAE0
-[LOG] SystemI::createSound                     :     add node to async list : head = 000001F2640C3D88.  list count = 0
-[LOG] SystemI::createSound                     :     filename = Assets/NULL-VOID/Build/Desktop/Music.bank : mode 02010082
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     :     setdata soundi = 000001F4E0474698 : node = 000001F4DFD082A0
-[LOG] SystemI::createSound                     :     add node to async list : head = 000001F2640C3D88.  list count = 1
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F4C5A9EBD8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F4E046F598
-[LOG] SystemI::createSoundInternal             :     Create name='Assets/NULL-VOID/Build/Desktop/Ambience.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1887392
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13152
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001F4DFD0BBF0
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Voiceline 3', format=5, channels=2, frequency=48000, lengthbytes=141152, lengthpcm=567246, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.206024.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F4E046F598
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001F4E0474698
+[LOG] SystemI::createSound                     : setdata soundi = 0000024724CFF7B8 : node = 00000247D62590B0
+[LOG] SystemI::createSound                     : add node to async list : head = 000002480DDF4B28.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000024724CFF7B8
 [LOG] SystemI::createSoundInternal             :     Create name='Assets/NULL-VOID/Build/Desktop/Music.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 15081312
 [LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 6816
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001F4DFD083B0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000247D62591C0
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='4. Guilt', format=5, channels=2, frequency=48000, lengthbytes=1518112, lengthpcm=6115309, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.937561.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001F4E0474698
-[LOG] SoundI::release                          : 4. Guilt (000001F4C5AAA578)
-[LOG] SoundI::release                          :     4. Guilt (000001F4C4FFA318)
-[LOG] SoundI::release                          :     4. Guilt (000001F4C5AA6F78)
-[LOG] SoundI::release                          : Voiceline 1 (000001F4C5AAB2F8)
-[LOG] SoundI::release                          :     Voiceline 1 (000001F273E58D68)
-[LOG] SoundI::release                          :     Voiceline 1 (000001F4C5AAC3D8)
-[LOG] SoundI::release                          : Ghost Sounds (000001F4C5AAC8E8)
-[LOG] SoundI::release                          :     Ghost Sounds (000001F27AD46DD8)
-[LOG] SoundI::release                          :     Ghost Sounds (000001F4C5AAA8D8)
-[LOG] SoundI::release                          : 4. Guilt (000001F4E0474698)
-[LOG] SoundI::release                          :     4. Guilt (000001F4C5E2D558)
-[LOG] SoundI::release                          :     4. Guilt (000001F4E0473AC8)
-[LOG] SoundI::release                          : Ghost Sounds (000001F4C5A9EBD8)
-[LOG] SoundI::release                          :     Ghost Sounds (000001F4C5E2D078)
-[LOG] SoundI::release                          :     Ghost Sounds (000001F4E0470828)
-[LOG] SoundI::release                          : Voiceline 3 (000001F4E046F598)
-[LOG] SoundI::release                          :     Voiceline 3 (000001F4C5E2D218)
-[LOG] SoundI::release                          :     Voiceline 3 (000001F4E0473918)
-[LOG] SoundI::release                          :  (000001F4285617C8)
-[LOG] SoundI::release                          :     Throw Sound (000001F4283854D8)
-[LOG] SoundI::release                          :  (000001F440500088)
-[LOG] SoundI::release                          :     NEW Foosteps (000001F4C5775D88)
-[LOG] SoundI::release                          :  (000001F4D694FEF8)
-[LOG] SoundI::release                          :     High Heels (000001F4C5EA5098)
-[LOG] SoundI::release                          :  (000001F4D6959028)
-[LOG] SoundI::release                          :     NEW Object Slam (000001F4C5EA4EF8)
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='10. Null's Theme', format=5, channels=2, frequency=48000, lengthbytes=2698080, lengthpcm=13189080, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.669403.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000024724CFF7B8
+[LOG] SoundI::release                          : 10. Null's Theme (00000247B2BFA268)
+[LOG] SoundI::release                          :     10. Null's Theme (00000247E5B04918)
+[LOG] SoundI::release                          :     10. Null's Theme (000002480EA01C68)
+[LOG] SoundI::release                          : 10. Null's Theme (0000024724CFF7B8)
+[LOG] SoundI::release                          :     10. Null's Theme (00000247E5B04778)
+[LOG] SoundI::release                          :     10. Null's Theme (000002480EA01758)
+[LOG] SoundI::release                          :  (00000247E0678628)
+[LOG] SoundI::release                          :     Throw Sound (00000247B3197878)
+[LOG] SoundI::release                          :  (00000247E0686668)
+[LOG] SoundI::release                          :     MirrorPhase (00000247B319AC78)
+[LOG] SoundI::release                          :  (00000247E06874C8)
+[LOG] SoundI::release                          :     NEW Foosteps (00000247B319DED8)
+[LOG] SoundI::release                          :  (00000247E541C1E8)
+[LOG] SoundI::release                          :     NEW Object Slam (00000247B31995B8)
+[LOG] SoundI::release                          :  (00000247E5417A08)
+[LOG] SoundI::release                          :     High Heels (00000247B319AE18)
 [LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
@@ -635,3 +777,10 @@
 [LOG] Thread::callback                         : FMOD mixer thread finished.
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
 [LOG] SystemI::close                           : Closed.
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
