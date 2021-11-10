@@ -3577,7 +3577,7 @@ GameObject:
   - component: {fileID: 2282018249161676091}
   m_Layer: 0
   m_Name: Hand Transform
-  m_TagString: Untagged
+  m_TagString: Hand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3623,7 +3623,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.25
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2282018249164772626
 GameObject:
@@ -5519,6 +5519,7 @@ MonoBehaviour:
   altSteps: 0.4
   parentObj: {fileID: 2282018249764314374}
   handSound: event:/SFX/Player/Handpaint
+  footSteps: event:/SFX/Player/Footsteps
 --- !u!1 &2282018249564781985
 GameObject:
   m_ObjectHideFlags: 0
@@ -6579,7 +6580,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
+  m_fontSize: 24.6
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -7048,7 +7049,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
+  m_fontSize: 38.85
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1

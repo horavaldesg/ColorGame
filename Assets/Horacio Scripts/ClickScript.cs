@@ -26,6 +26,8 @@ public class ClickScript : MonoBehaviour
     //Audio
     [FMODUnity.EventRef]
     public string handSound;
+    [FMODUnity.EventRef]
+    public string footSteps;
 
     void Update()
     {
@@ -40,6 +42,7 @@ public class ClickScript : MonoBehaviour
                 leftT += Time.deltaTime;
                 if (leftT > footstepRate)
                 {
+                    PlayFootsteps(footSteps);
                     GameObject print = 
                     Instantiate(leftFootTexture, hit.point + Vector3.up * 0.01f, Quaternion.Euler(0, parentTransforom.localEulerAngles.y + 180, 0));
                     print.transform.parent = hit.collider.gameObject.transform;
@@ -293,6 +296,14 @@ public class ClickScript : MonoBehaviour
         FMOD.Studio.EventInstance Handpaint = FMODUnity.RuntimeManager.CreateInstance(path);
         Handpaint.start();
         Handpaint.release();
+
+    }
+
+    void PlayFootsteps(string path)
+    {
+        FMOD.Studio.EventInstance Footsteps = FMODUnity.RuntimeManager.CreateInstance(path);
+        Footsteps.start();
+        Footsteps.release();
 
     }
 }
