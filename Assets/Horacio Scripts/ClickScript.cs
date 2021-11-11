@@ -42,7 +42,7 @@ public class ClickScript : MonoBehaviour
                 leftT += Time.deltaTime;
                 if (leftT > footstepRate)
                 {
-                    PlayFootsteps(footSteps);
+                    //PlayFootsteps(footSteps);
                     GameObject print = 
                     Instantiate(leftFootTexture, hit.point + Vector3.up * 0.01f, Quaternion.Euler(0, parentTransforom.localEulerAngles.y + 180, 0));
                     print.transform.parent = hit.collider.gameObject.transform;
