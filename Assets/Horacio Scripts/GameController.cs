@@ -121,7 +121,7 @@ public class GameController : MonoBehaviour
 
         //Movement
         controls.Gameplay.Move.performed += tgb => move = tgb.ReadValue<Vector2>();
-        controls.Gameplay.Move.performed += tgb => PlayFootsteps(footsteps);
+        controls.Gameplay.Move.started += tgb => PlayFootsteps(footsteps);
         controls.Gameplay.Move.canceled += tgb => move = Vector3.zero;
         controls.Gameplay.Move.canceled += tgb => movement = Vector3.zero;
 
@@ -232,42 +232,9 @@ public class GameController : MonoBehaviour
         
         
         camTransform = mainCamera.transform;
-       
-        movement = Vector3.zero;
 
-        //Forward/Backward Movement
-        float forwardSpeed = move.y * speed * speedBoost * Time.deltaTime;
+        MovePlayer();
 
-        //if (canMove)
-        //{
-            movement += transform.forward * forwardSpeed;
-        //}
-        //else if(!canMove && move.y < 0)
-        //{
-        //    movement += transform.forward * forwardSpeed;
-        //    canMove = true;
-        //}
-
-        //Debug.Log (move.y);
-        //Debug.Log(canMove);
-        //Left/Right Movement
-        float sideSpeed = move.x * speed * speedBoost * Time.deltaTime;
-        movement += transform.right * sideSpeed;
-
-        //Movement Animator
-
-        //Gravity
-        verticalSpeed += Gravity * Time.deltaTime;
-        movement += transform.up * verticalSpeed * Time.deltaTime;
-
-
-        //Ground Check
-        if (Physics.CheckSphere(checkPos.position, 0.5f, groundMask) && verticalSpeed <= 0)
-        {
-            AnimationScript.jump = false;
-            grounded = true;
-            verticalSpeed = 0;
-        }
         if (!hasMoveableObject)
         {
             cc.enabled = true;
@@ -390,6 +357,48 @@ public class GameController : MonoBehaviour
             ThirdCam.SetActive(false);
         }
     */
+
+    private void MovePlayer()
+    {
+        movement = Vector3.zero;
+
+        //Forward/Backward Movement
+        float forwardSpeed = move.y * speed * speedBoost * Time.deltaTime;
+
+        //if (canMove)
+        //{
+        movement += transform.forward * forwardSpeed;
+        //}
+        //else if(!canMove && move.y < 0)
+        //{
+        //    movement += transform.forward * forwardSpeed;
+        //    canMove = true;
+        //}
+
+        //Debug.Log (move.y);
+        //Debug.Log(canMove);
+        //Left/Right Movement
+        float sideSpeed = move.x * speed * speedBoost * Time.deltaTime;
+        movement += transform.right * sideSpeed;
+
+        //PlayFootsteps(footsteps);
+
+        //Movement Animator
+
+        //Gravity
+        verticalSpeed += Gravity * Time.deltaTime;
+        movement += transform.up * verticalSpeed * Time.deltaTime;
+
+        //Ground Check
+        if (Physics.CheckSphere(checkPos.position, 0.5f, groundMask) && verticalSpeed <= 0)
+        {
+            AnimationScript.jump = false;
+            grounded = true;
+            verticalSpeed = 0;
+        }
+
+    }
+
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
         if (hit.collider.gameObject.CompareTag("Box"))
@@ -419,6 +428,8 @@ public class GameController : MonoBehaviour
         Footsteps.start();
         Footsteps.release();
     }
+
+
 
     void PlayDrag(string path)
     {
