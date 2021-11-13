@@ -19450,15 +19450,7 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2821619065334073930, guid: 19fa74a9a37fb1448bcde8657fa7d613, type: 3}
-      propertyPath: AllowFadeout
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3077922114813606882, guid: 19fa74a9a37fb1448bcde8657fa7d613, type: 3}
-      propertyPath: AllowFadeout
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4369168582189604776, guid: 19fa74a9a37fb1448bcde8657fa7d613, type: 3}
-      propertyPath: AllowFadeout
+      propertyPath: OverrideAttenuation
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8132726322723380149, guid: 19fa74a9a37fb1448bcde8657fa7d613, type: 3}
@@ -21277,6 +21269,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1376670996 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2282018249161676090, guid: a5ae197fe5d037142a1354465d831be4, type: 3}
+  m_PrefabInstance: {fileID: 1730399747}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1376670997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376670996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Ball
+  Event: event:/SFX/Object/Light Depletion
+  PlayEvent: 3
+  StopEvent: 4
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!43 &1388951897
 Mesh:
   m_ObjectHideFlags: 0
@@ -33924,9 +33944,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2282018248300731678, guid: a5ae197fe5d037142a1354465d831be4, type: 3}
-      propertyPath: m_TagString
-      value: Hand
+    - target: {fileID: 2282018249161676088, guid: a5ae197fe5d037142a1354465d831be4, type: 3}
+      propertyPath: lightDepl
+      value: event:/SFX/Object/Light Depletion
+      objectReference: {fileID: 0}
+    - target: {fileID: 2282018249332524138, guid: a5ae197fe5d037142a1354465d831be4, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 2282018249332524138, guid: a5ae197fe5d037142a1354465d831be4, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
       objectReference: {fileID: 0}
     - target: {fileID: 2282018249764314374, guid: a5ae197fe5d037142a1354465d831be4, type: 3}
       propertyPath: m_Name

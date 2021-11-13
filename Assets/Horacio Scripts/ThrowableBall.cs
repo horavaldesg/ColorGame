@@ -63,7 +63,6 @@ public class ThrowableBall : MonoBehaviour
             {
                 ball.GetComponentInChildren<Light>().intensity -= Time.deltaTime * 0.5f;
                 ball.GetComponentInChildren<Light>().range -= Time.deltaTime * 0.5f;
-
             }
             ball.transform.position = handTransform.transform.position;
             ball.transform.rotation = handTransform.transform.rotation;
@@ -79,6 +78,8 @@ public class ThrowableBall : MonoBehaviour
                     ball.GetComponentInChildren<Light>().range += Time.deltaTime * 0.5f;
 
                 }
+
+                // PUT 3D SOUND HERE
             }
         }
         if (!ballTouching)
@@ -98,17 +99,7 @@ public class ThrowableBall : MonoBehaviour
         }
 
     }
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    if (other.CompareTag("Ball"))
-    //    {
-    //       ball = other.gameObject;
-            
-    //        //ballTouching = true;
 
-    //    }
-        
-    //}
     public static void PickUp()
     {
         if (canGrab)

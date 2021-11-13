@@ -110,7 +110,6 @@ GameObject:
   - component: {fileID: 7076024136311883400}
   - component: {fileID: 4584938424655822087}
   - component: {fileID: 3077922114813606882}
-  - component: {fileID: 4369168582189604776}
   - component: {fileID: 2821619065334073930}
   m_Layer: 10
   m_Name: Throwable Ball
@@ -265,36 +264,13 @@ MonoBehaviour:
   Event: event:/SFX/Object/Object Slam
   PlayEvent: 7
   StopEvent: 2
-  AllowFadeout: 1
+  AllowFadeout: 0
   TriggerOnce: 0
   Preload: 0
   Params: []
   OverrideAttenuation: 0
   OverrideMinDistance: 0
   OverrideMaxDistance: 0
---- !u!114 &4369168582189604776
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8132726322733004316}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: Hand
-  Event: event:/SFX/Object/Light Depletion
-  PlayEvent: 3
-  StopEvent: 4
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!114 &2821619065334073930
 MonoBehaviour:
   m_ObjectHideFlags: 0

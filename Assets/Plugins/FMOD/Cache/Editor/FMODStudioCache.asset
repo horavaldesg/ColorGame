@@ -234,16 +234,15 @@ MonoBehaviour:
   m_Name: event:/SFX/Object/Light Depletion
   m_EditorClassIdentifier: 
   Path: event:/SFX/Object/Light Depletion
-  guid: 6f4a4e9a79cb244582999fb08ad62fd2
+  guid: bd53d31b469ef442b4d70b11b9b11c97
   Banks:
   - {fileID: 7812255373277157013}
-  - {fileID: -4607501197521040263}
   IsStream: 1
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 0
+  MaxDistance: 0
   Length: 15170
 --- !u!114 &-8217512782755484251
 MonoBehaviour:
@@ -305,7 +304,7 @@ MonoBehaviour:
   Path: Assets/NULL-VOID/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 637724178979761520
+  lastModified: 637724205127048300
   FileSizes:
   - Name: Desktop
     Value: 15087872
@@ -555,6 +554,28 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 274772
+--- !u!114 &-7369431987366209582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Emma VO List/EMMA VO PARAM
+  m_EditorClassIdentifier: 
+  Name: EMMA VO PARAM
+  Min: 0
+  Max: 8
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 1
+  IsGlobal: 0
+  Exists: 1
 --- !u!114 &-7292403873120615274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1128,7 +1149,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: -2769562430232547065}
+  - {fileID: -7369431987366209582}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -1240,7 +1261,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: -5946537943257349861}
+  - {fileID: 6436639114776410544}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -1322,10 +1343,10 @@ MonoBehaviour:
   Path: Assets/NULL-VOID/Build/Desktop/Narrative.bank
   Name: Narrative
   StudioPath: bank:/Narrative
-  lastModified: 637724178992923315
+  lastModified: 637724205127758947
   FileSizes:
   - Name: Desktop
-    Value: 9662816
+    Value: 9537632
   Exists: 1
 --- !u!114 &-4590641864704221636
 MonoBehaviour:
@@ -1479,7 +1500,7 @@ MonoBehaviour:
   Path: Assets/NULL-VOID/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637724178973484264
+  lastModified: 637724205125523404
   FileSizes:
   - Name: Desktop
     Value: 2302
@@ -2348,7 +2369,7 @@ MonoBehaviour:
   - {fileID: 2237642186516713750}
   StringsBanks:
   - {fileID: -3787140468433587659}
-  stringsBankWriteTime: 637724178973484264
+  stringsBankWriteTime: 637724205125523404
   cacheVersion: 8
 --- !u!114 &116873962233911229
 MonoBehaviour:
@@ -2916,7 +2937,7 @@ MonoBehaviour:
   Path: Assets/NULL-VOID/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637724178973464239
+  lastModified: 637724205125503380
   FileSizes:
   - Name: Desktop
     Value: 1990
@@ -3910,6 +3931,28 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &6436639114776410544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Spenser VO List/SPENSER VO PARAM
+  m_EditorClassIdentifier: 
+  Name: SPENSER VO PARAM
+  Min: 0
+  Max: 12
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 1
+  IsGlobal: 0
+  Exists: 1
 --- !u!114 &6613550651453889418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4190,10 +4233,10 @@ MonoBehaviour:
   Path: Assets/NULL-VOID/Build/Desktop/Ambience.bank
   Name: Ambience
   StudioPath: bank:/Ambience
-  lastModified: 637724178973444228
+  lastModified: 637724205125463344
   FileSizes:
   - Name: Desktop
-    Value: 2085920
+    Value: 2085664
   Exists: 1
 --- !u!114 &8072405485051105568
 MonoBehaviour:
