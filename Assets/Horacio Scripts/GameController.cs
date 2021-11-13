@@ -60,15 +60,15 @@ public class GameController : MonoBehaviour
     public static bool canMove;
     //Rumbles
     public InputHandler ctScheme;
-    //public enum controlSchemes {Gamepad, Keyboard };
 
-    //public controlSchemes controlScheme;
 
+    //Menu
     public GameObject OptionsObj;
     public GameObject clickScript;
     public bool PaintOnClick;
     public static bool paintOnClick;
-
+    
+    //Moveable OBJ
     public static bool hasMoveableObject;
 
     public float boxPush = 2.0f;
@@ -77,8 +77,10 @@ public class GameController : MonoBehaviour
     public static bool boxPickup;
     public Transform boxTransform;
 
+    //Options Menu
     public UnityEvent changeFirstSelected;
 
+    //Moveable Boxs
     public static GameObject moveableBox;
 
     //Audio
@@ -116,19 +118,11 @@ public class GameController : MonoBehaviour
         //Jump
         controls.Gameplay.Jump.started += tgb => Jump();
 
-        //Change Camera
-        // controls.Gameplay.ChangeCamera.performed += tgb => CamViewChange();
-
         //Movement
         controls.Gameplay.Move.performed += tgb => move = tgb.ReadValue<Vector2>();
         controls.Gameplay.Move.started += tgb => PlayFootsteps(footsteps);
         controls.Gameplay.Move.canceled += tgb => move = Vector3.zero;
         controls.Gameplay.Move.canceled += tgb => movement = Vector3.zero;
-
-
-        //Run
-        //controls.Gameplay.SpeedBoost.performed += tgb => speedBoost = 3;
-        //controls.Gameplay.SpeedBoost.canceled += tgb => speedBoost = 1;
 
         //Rotation
         controls.Gameplay.Rotation.performed += tgb => rotate = tgb.ReadValue<Vector2>();
@@ -159,7 +153,6 @@ public class GameController : MonoBehaviour
         controls.Gameplay.Interaction.performed += tgb => ThrowableBall.PickUp();
         pullBox = false;
 
-        //controls.Gameplay.Interaction.performed += tgb => 
         
 
         //Shoot
@@ -186,7 +179,6 @@ public class GameController : MonoBehaviour
     private void OnEnable()
     {
         controls.Gameplay.Enable();
-        //FMODUnity.RuntimeManager.PlayOneShot(footsteps, GetComponent<Transform>().position);
     }
     private void OnDisable()
     {
@@ -281,31 +273,6 @@ public class GameController : MonoBehaviour
         }
         Debug.Log(moveableBox);
         //Player Rotation
-        //Third Person
-        /*
-        if (!OptionsObj.activeSelf)
-        {
-            if (CamMode == 0)
-            {
-                camTransform = ThirdCam.transform;
-                Vector2 r = new Vector2(0, rotate.x) * horizontalSensConst * Time.deltaTime * 10;
-                transform.Rotate(r, Space.Self);
-                Quaternion q = transform.rotation;
-                q.eulerAngles = new Vector3(q.eulerAngles.x, q.eulerAngles.y, 0);
-                transform.rotation = q;
-
-                //Camera Rotation
-
-                rotY += -rotate.y * verticalSensConst * Time.deltaTime * 10;
-                rotY = Mathf.Clamp(rotY, -90, 90);
-                camTransform.transform.localRotation = Quaternion.Euler(rotY, 0, 0);
-
-
-            }
-        */
-        //First Person
-        // else if (CamMode == 1)
-        //{
 
         camTransform = FirstCam.transform;
                 Vector2 r = new Vector2(0, rotate.x) * horizontalSensConst * Time.deltaTime * 10;
@@ -319,44 +286,8 @@ public class GameController : MonoBehaviour
                 rotY += -rotate.y * verticalSensConst * Time.deltaTime * 10;
                 rotY = Mathf.Clamp(rotY, -90, 90);
                 camTransform.transform.localRotation = Quaternion.Euler(rotY, 0, 0);
-            //}
-      // }
         
     }
-    /*
-    public void CamViewChange()
-    {
-        if (CamMode == 1)
-        {
-            CamMode = 0;
-
-        }
-        else
-        {
-            CamMode += 1;
-
-        }
-
-        StartCoroutine(CameraChange());
-    }
-
-    
-    IEnumerator CameraChange()
-    {
-        yield return new WaitForSeconds(.02f);
-
-        if (CamMode == 0)
-        {
-            FirstCam.SetActive(false);
-            ThirdCam.SetActive(true);
-        }
-
-        if (CamMode == 1)
-        {
-            FirstCam.SetActive(true);
-            ThirdCam.SetActive(false);
-        }
-    */
 
     private void MovePlayer()
     {
@@ -365,23 +296,11 @@ public class GameController : MonoBehaviour
         //Forward/Backward Movement
         float forwardSpeed = move.y * speed * speedBoost * Time.deltaTime;
 
-        //if (canMove)
-        //{
         movement += transform.forward * forwardSpeed;
-        //}
-        //else if(!canMove && move.y < 0)
-        //{
-        //    movement += transform.forward * forwardSpeed;
-        //    canMove = true;
-        //}
 
-        //Debug.Log (move.y);
-        //Debug.Log(canMove);
         //Left/Right Movement
         float sideSpeed = move.x * speed * speedBoost * Time.deltaTime;
         movement += transform.right * sideSpeed;
-
-        //PlayFootsteps(footsteps);
 
         //Movement Animator
 
