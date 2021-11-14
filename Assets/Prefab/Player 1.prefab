@@ -5808,6 +5808,8 @@ MonoBehaviour:
         m_CallState: 2
   footsteps: event:/SFX/Player/Footsteps
   dragSound: event:/SFX/Object/Drag
+  controllerObj: {fileID: 8334557885461910287}
+  keyboardObj: {fileID: 8334557887420092553}
 --- !u!143 &2282018249764314375
 CharacterController:
   m_ObjectHideFlags: 0
@@ -7563,6 +7565,7 @@ MonoBehaviour:
   - {fileID: 8334557885873747007}
   - {fileID: 8334557885362913700}
   - {fileID: 8334557887258231049}
+  ctScheme: {fileID: 11400000, guid: d041247aa2be74d86944ac160c046446, type: 2}
 --- !u!1 &8334557885424893026
 GameObject:
   m_ObjectHideFlags: 0
@@ -8652,6 +8655,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7027c25d1a85448318130cb753b3d0e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ctScheme: {fileID: 11400000, guid: d041247aa2be74d86944ac160c046446, type: 2}
+  controller: {fileID: 8334557885461910287}
+  keyboard: {fileID: 8334557887420092553}
 --- !u!114 &8334557885607944783
 MonoBehaviour:
   m_ObjectHideFlags: 0

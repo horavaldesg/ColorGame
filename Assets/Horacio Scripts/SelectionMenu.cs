@@ -5,12 +5,23 @@ using UnityEngine;
 public class SelectionMenu : MonoBehaviour
 {
     public GameObject[] menus;
+    public InputHandler ctScheme;
     int i;
     // Start is called before the first frame update
     void Start()
     {
         i = -1;
-       
+
+        //if (ctScheme.controlScheme == InputHandler.controlSchemes.Gamepad)
+        //{
+        //    i = 0;
+        //}
+        //else if (ctScheme.controlScheme == InputHandler.controlSchemes.Keyboard)
+        //{
+        //    i = 1;
+        //}
+
+
     }
 
     // Update is called once per frame
@@ -20,7 +31,9 @@ public class SelectionMenu : MonoBehaviour
     }
     public void MenuHandler(int menuNum)
     {
-        i = menuNum;
+        
+         i = menuNum;
+        
         switch (i)
         {
             case 0:

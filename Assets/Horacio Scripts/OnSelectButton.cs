@@ -10,19 +10,31 @@ public class OnSelectButton : MonoBehaviour
     public GameObject[] menus;
     public GameObject optionsMenu;
     public InputHandler ctScheme;
+    
     // Start is called before the first frame update
     void Start()
     {
         //controls = new PlayerControls();
         //menu = GetComponent<EventSystem>().currentSelectedGameObject.name;
-
+        //if (ctScheme.controlScheme == InputHandler.controlSchemes.Gamepad)
+        //{
+        //    menu = "Controller";
+        //}
+        //else if (ctScheme.controlScheme == InputHandler.controlSchemes.Keyboard)
+        //{
+        //    menu = "Keyboard";
+        //}
     }
-
+    
     // Update is called once per frame
     void Update()
     {
-        if(optionsMenu.activeSelf) { 
+        if(optionsMenu.activeSelf) {
+
+            
             menu = GetComponent<UnityEngine.InputSystem.UI.InputSystemUIInputModule>().GetComponent<EventSystem>().currentSelectedGameObject.name;
+
+            
             //menu = GetComponent<EventSystem>().currentSelectedGameObject.name;
             //Debug.Log(menu);
             
@@ -107,6 +119,8 @@ public class OnSelectButton : MonoBehaviour
                     //break;
 
             }
+            //Input Menu Handler
+            
         }
     }
    

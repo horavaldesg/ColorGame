@@ -90,6 +90,10 @@ public class GameController : MonoBehaviour
     [FMODUnity.EventRef]
     public string dragSound;
 
+    //First Selected Obj
+    public GameObject controllerObj;
+    public GameObject keyboardObj;
+    
     private void Awake()
     {
         hasMoveableObject = false;
@@ -164,7 +168,17 @@ public class GameController : MonoBehaviour
     public void OptionsManager()
     {
         OptionsObj.SetActive(!OptionsObj.activeSelf);
-        changeFirstSelected.Invoke();
+        //changeFirstSelected.Invoke();
+        if (ctScheme.controlScheme == InputHandler.controlSchemes.Gamepad)
+        {
+            GetComponentInChildren<ChangeFirstSelected>().FirstSelected(controllerObj);
+        }
+        else if (ctScheme.controlScheme == InputHandler.controlSchemes.Keyboard)
+        {
+            GetComponentInChildren<ChangeFirstSelected>().FirstSelected(keyboardObj);
+        }
+
+
     }
     public void Jump()
     {
