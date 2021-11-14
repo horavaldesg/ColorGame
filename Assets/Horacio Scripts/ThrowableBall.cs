@@ -14,6 +14,9 @@ public class ThrowableBall : MonoBehaviour
     public static bool hasBall;
     public static bool canShoot;
 
+    //Ball Timer 
+    [SerializeField] float timeDecrease;
+    [SerializeField] float timeIncrease;
     //Audio
     [FMODUnity.EventRef]
     public string throwSound;
@@ -61,8 +64,8 @@ public class ThrowableBall : MonoBehaviour
         {
             if (ball.GetComponentInChildren<Light>().intensity > 0)
             {
-                ball.GetComponentInChildren<Light>().intensity -= Time.deltaTime * 0.5f;
-                ball.GetComponentInChildren<Light>().range -= Time.deltaTime * 0.5f;
+                ball.GetComponentInChildren<Light>().intensity -= Time.deltaTime * timeDecrease;
+                ball.GetComponentInChildren<Light>().range -= Time.deltaTime * timeDecrease;
             }
             ball.transform.position = handTransform.transform.position;
             ball.transform.rotation = handTransform.transform.rotation;
@@ -74,8 +77,8 @@ public class ThrowableBall : MonoBehaviour
             {
                 if (ball.GetComponentInChildren<Light>().intensity < 6 && ball.GetComponentInChildren<Light>().intensity < 7.5f)
                 {
-                    ball.GetComponentInChildren<Light>().intensity += Time.deltaTime * 0.5f;
-                    ball.GetComponentInChildren<Light>().range += Time.deltaTime * 0.5f;
+                    ball.GetComponentInChildren<Light>().intensity += Time.deltaTime * timeIncrease;
+                    ball.GetComponentInChildren<Light>().range += Time.deltaTime * timeIncrease;
 
                 }
 

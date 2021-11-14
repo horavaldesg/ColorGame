@@ -97,9 +97,12 @@ public class RoamingAI : MonoBehaviour
         {
             currentState = BehaviorState.SeekBall;
         }
-        Debug.Log("Player Distance: " + distanceToPlayer + " Player Vector" + playerVector.magnitude);
-        Debug.Log("Ball Distance: " + distanceToBall + " Ball Vector" + ballVector.magnitude);
-
+        //Debug.Log("Player Distance: " + distanceToPlayer + " Player Vector" + playerVector.magnitude);
+        //Debug.Log("Ball Distance: " + distanceToBall + " Ball Vector" + ballVector.magnitude);
+        if(agent.velocity == Vector3.zero)
+        {
+            currentState = BehaviorState.Seek;
+        }
 
         /*
         RaycastHit hit;
