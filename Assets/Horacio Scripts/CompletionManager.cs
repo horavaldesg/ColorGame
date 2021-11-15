@@ -38,4 +38,5 @@ public class CompletionManager : MonoBehaviour
         }
         //Debug.Log(MoveableObjects.completedBoxes);
     }
+    
 }

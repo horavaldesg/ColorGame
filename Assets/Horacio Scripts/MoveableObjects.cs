@@ -36,6 +36,7 @@ public class MoveableObjects : MonoBehaviour
 
                 Rigidbody rb = other.GetComponent<Rigidbody>();
                 other.transform.position = new Vector3(transform.position.x, other.transform.position.y, transform.position.z);
+                other.transform.rotation = Quaternion.Euler(other.transform.rotation.x, transform.rotation.y, other.transform.rotation.z);
                 isOnCollider = true;
                 completedBoxes += 1;
                 Debug.Log(boxName);
@@ -48,6 +49,8 @@ public class MoveableObjects : MonoBehaviour
                 {
                     
                     CompletedRoom.completed += 1;
+                    //Make mirror active
+                    RoomComplete.RoomCompleted();
                 }
             }
             //rb.constraints = RigidbodyConstraints.FreezeAll;
