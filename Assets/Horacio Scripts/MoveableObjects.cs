@@ -48,12 +48,12 @@ public class MoveableObjects : MonoBehaviour
                 GameController.boxPickup = false;
                 GameController.moveableBox = null;
                 RoomComplete.OnSocket();
-                if (completedBoxes % 2 == modNum && completedBoxes != 0 && completedBoxes != 1)
-                {
+                //if (completedBoxes % 2 == modNum && completedBoxes != 0 && completedBoxes != 1)
+                //{
                     
-                    CompletedRoom.completed += 1;
-                    //Make mirror active
-                }
+                //    CompletedRoom.completed += 1;
+                //    //Make mirror active
+                //}
             }
             //rb.constraints = RigidbodyConstraints.FreezeAll;
         }
