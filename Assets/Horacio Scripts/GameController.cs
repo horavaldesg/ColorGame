@@ -85,15 +85,17 @@ public class GameController : MonoBehaviour
 
     //Audio
     [FMODUnity.EventRef]
-    public string footsteps;
-
-    [FMODUnity.EventRef]
     public string dragSound;
 
     //First Selected Obj
     public GameObject controllerObj;
     public GameObject keyboardObj;
-    
+
+    //Audio
+    [FMODUnity.EventRef]
+    public string inputSound;
+    bool playerisMoving;
+
     private void Awake()
     {
         hasMoveableObject = false;
@@ -124,7 +126,6 @@ public class GameController : MonoBehaviour
 
         //Movement
         controls.Gameplay.Move.performed += tgb => move = tgb.ReadValue<Vector2>();
-        controls.Gameplay.Move.started += tgb => PlayFootsteps(footsteps);
         controls.Gameplay.Move.canceled += tgb => move = Vector3.zero;
         controls.Gameplay.Move.canceled += tgb => movement = Vector3.zero;
 
@@ -164,7 +165,12 @@ public class GameController : MonoBehaviour
 
     }
 
-   
+    void Start()
+    {
+        InvokeRepeating("PlayFootsteps", 0, speed);
+    }
+
+
     public void OptionsManager()
     {
         OptionsObj.SetActive(!OptionsObj.activeSelf);
@@ -198,6 +204,7 @@ public class GameController : MonoBehaviour
     {
         //gamepad.ResetHaptics();
         controls.Gameplay.Disable();
+        playerisMoving = false;
 
     }
 
@@ -330,6 +337,16 @@ public class GameController : MonoBehaviour
             verticalSpeed = 0;
         }
 
+
+        if (movement == Vector3.zero)
+        {
+            playerisMoving = false;
+        }
+        else if (movement != Vector3.zero)
+        {
+            playerisMoving = true;
+        }
+
     }
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
@@ -355,11 +372,12 @@ public class GameController : MonoBehaviour
         }
     }
 
-    void PlayFootsteps(string footsteps) 
+    void PlayFootsteps(string inputSound) 
     {
-        FMOD.Studio.EventInstance Footsteps = FMODUnity.RuntimeManager.CreateInstance(footsteps);
-        Footsteps.start();
-        Footsteps.release();
+        if (playerisMoving == true)
+        {
+            FMODUnity.RuntimeManager.PlayOneShot(inputSound);
+        }
     }
 
 
@@ -372,4 +390,3 @@ public class GameController : MonoBehaviour
 
     }
 }
-
