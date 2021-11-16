@@ -9,9 +9,11 @@ public class MoveableObjects : MonoBehaviour
     public string boxName;
     float modNum;
     Collider collider;
+    public static bool onSocket;
     // Start is called before the first frame update
     private void Start()
     {
+        onSocket = false;
         collider = GetComponent<Collider>();
         completedBoxes = 0;
     }
@@ -45,12 +47,12 @@ public class MoveableObjects : MonoBehaviour
                 GameController.pullBox = false;
                 GameController.boxPickup = false;
                 GameController.moveableBox = null;
+                RoomComplete.OnSocket();
                 if (completedBoxes % 2 == modNum && completedBoxes != 0 && completedBoxes != 1)
                 {
                     
                     CompletedRoom.completed += 1;
                     //Make mirror active
-                    RoomComplete.RoomCompleted();
                 }
             }
             //rb.constraints = RigidbodyConstraints.FreezeAll;

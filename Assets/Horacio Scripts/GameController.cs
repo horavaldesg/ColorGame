@@ -292,7 +292,7 @@ public class GameController : MonoBehaviour
         {
             moveableBox = null;
         }
-        Debug.Log(moveableBox);
+        //Debug.Log(moveableBox); 
         //Player Rotation
 
         camTransform = FirstCam.transform;
