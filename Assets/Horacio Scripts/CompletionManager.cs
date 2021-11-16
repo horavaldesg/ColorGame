@@ -21,7 +21,7 @@ public class CompletionManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        /*
         if (mirrorsToComplete)
         {
             if (totalRooms == CompletedRoom.completed)
@@ -35,6 +35,11 @@ public class CompletionManager : MonoBehaviour
             {
                 SceneManager.LoadScene(scene);
             }
+        }
+        */
+        if(CompletedRoom.completed == totalRooms)
+        {
+            SceneManager.LoadScene(scene);
         }
         //Debug.Log(MoveableObjects.completedBoxes);
     }

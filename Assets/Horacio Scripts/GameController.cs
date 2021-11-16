@@ -45,7 +45,7 @@ public class GameController : MonoBehaviour
 
     public static int shotCount;
     
-    [SerializeField] CharacterController cc;
+    [SerializeField] public CharacterController cc;
 
     Vector3 movement;
 
