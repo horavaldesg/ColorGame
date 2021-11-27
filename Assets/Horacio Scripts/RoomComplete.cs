@@ -4,8 +4,8 @@ using System.Collections;
 public class RoomComplete : MonoBehaviour
 {
     public GameObject[] sockets;
-    public static Collider collider;
-    public static int onSocket;
+    private static Collider collider;
+    private static int onSocket;
     bool b = false;
     // Use this for initialization
     void Start()
