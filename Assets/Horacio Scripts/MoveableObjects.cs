@@ -37,10 +37,12 @@ public class MoveableObjects : MonoBehaviour
 
 
                 Rigidbody rb = other.GetComponent<Rigidbody>();
+                rb.constraints = RigidbodyConstraints.None;
                 other.transform.position = new Vector3(transform.position.x, other.transform.position.y, transform.position.z);
-                other.transform.rotation = Quaternion.Euler(other.transform.rotation.x, transform.rotation.y, other.transform.rotation.z);
+                other.transform.rotation = Quaternion.Euler(transform.rotation.x, transform.eulerAngles.y, transform.rotation.z);
                 isOnCollider = true;
                 completedBoxes += 1;
+                rb.isKinematic = true;
                 //Debug.Log(boxName);
                 //Debug.Log(other.gameObject.GetComponent<BoxCompletion>().boxName);
                 collider.enabled = false;
