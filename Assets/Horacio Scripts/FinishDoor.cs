@@ -12,9 +12,11 @@ public class FinishDoor : MonoBehaviour
     GameObject player;
     public GameObject brokenMirror;
     public GameObject rippleEffect;
+    public GameObject roomManager;
     // Start is called before the first frame update
     void Start()
     {
+        this.gameObject.SetActive(false);
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
@@ -41,7 +43,7 @@ public class FinishDoor : MonoBehaviour
         player.GetComponent<GameController>().cc.enabled = false;
         player.transform.position = CheckpointPos.lastPos;
         player.GetComponent<GameController>().cc.enabled = true;
-
+        roomManager.SetActive(false);
 
 
     }
