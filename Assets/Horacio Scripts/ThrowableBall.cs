@@ -13,7 +13,7 @@ public class ThrowableBall : MonoBehaviour
     public static GameObject ball;
     public static bool hasBall;
     public static bool canShoot;
-
+    Color lerpColor;
     //Ball Timer 
     [SerializeField] float timeDecrease;
     [SerializeField] float timeIncrease;
@@ -60,12 +60,18 @@ public class ThrowableBall : MonoBehaviour
         {
             interactionText.SetActive(false);
         }
+        //Decrease light
         if (hasBall)
         {
+            float t = 0;
             if (ball.GetComponentInChildren<Light>().intensity > 0)
             {
+                t += Time.deltaTime * timeDecrease / 2;
                 ball.GetComponentInChildren<Light>().intensity -= Time.deltaTime * timeDecrease;
                 ball.GetComponentInChildren<Light>().range -= Time.deltaTime * timeDecrease;
+                lerpColor = Color.Lerp(ball.GetComponent<Renderer>().material.GetColor("_EmissionColor"), Color.black, t);
+                ball.GetComponent<MeshRenderer>().material.SetColor("_EmissionColor", lerpColor);
+
             }
             ball.transform.position = handTransform.transform.position;
             ball.transform.rotation = handTransform.transform.rotation;
@@ -73,13 +79,18 @@ public class ThrowableBall : MonoBehaviour
         }
         else
         {
+            //Increase light
             if (ball != null)
             {
+                float t = 0;
                 if (ball.GetComponentInChildren<Light>().intensity < 6 && ball.GetComponentInChildren<Light>().intensity < 7.5f)
                 {
+                    t += Time.deltaTime * timeIncrease / 2;
+
                     ball.GetComponentInChildren<Light>().intensity += Time.deltaTime * timeIncrease;
                     ball.GetComponentInChildren<Light>().range += Time.deltaTime * timeIncrease;
-
+                    lerpColor = Color.Lerp(ball.GetComponent<Renderer>().material.GetColor("_EmissionColor"), Color.white, t);
+                    ball.GetComponent<MeshRenderer>().material.SetColor("_EmissionColor", lerpColor);
                 }
 
                 // PUT 3D SOUND HERE

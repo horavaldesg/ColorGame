@@ -85,7 +85,7 @@ public class RoamingAI : MonoBehaviour
             {
                 currentState = BehaviorState.SeekHands;
             }
-            Debug.Log("Hand Distance: " + distanceToPrints + "Hand Vector" + handVector.magnitude);
+            //Debug.Log("Hand Distance: " + distanceToPrints + "Hand Vector" + handVector.magnitude);
 
         }
 
@@ -249,14 +249,15 @@ public class RoamingAI : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             Animator anim = other.GetComponent<Animator>();
-            anim.SetBool("Caught", true);
+            //anim.SetBool("Caught", true);
             
             float clipTime = anim.runtimeAnimatorController.animationClips[5].length;
             
             
-            Debug.Log(clipTime);
-            StartCoroutine(loadScene(clipTime));
-            Debug.Log("Caught");
+            //Debug.Log(clipTime);
+            //StartCoroutine(loadScene(clipTime,other.gameObject));
+            RespawnPlayer(other.gameObject);
+            //Debug.Log("Caught");
         }
         if (other.gameObject.CompareTag("HandPrint"))
         {
@@ -264,10 +265,16 @@ public class RoamingAI : MonoBehaviour
         }
 
     }
-    private IEnumerator loadScene(float time)
+    private IEnumerator loadScene(float time, GameObject player)
     {
         yield return new WaitForSeconds(time);
-        SceneManager.LoadScene(currentScene.name);
+        //SceneManager.LoadScene(currentScene.name);
+        Debug.Log("Respawn");
+
+    }
+    void RespawnPlayer(GameObject playerObj)
+    {
+        playerObj.gameObject.GetComponent<GameController>().Respawn();
 
     }
 }

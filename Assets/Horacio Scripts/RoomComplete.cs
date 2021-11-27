@@ -4,23 +4,23 @@ using System.Collections;
 public class RoomComplete : MonoBehaviour
 {
     public GameObject[] sockets;
-    private static Collider collider;
+    public Collider mirrorCollider;
     private static int onSocket;
     bool b = false;
     // Use this for initialization
     void Start()
     {
-        collider = GetComponent<Collider>();
-        collider.enabled = true;
+        this.gameObject.SetActive(false);
+        mirrorCollider.enabled = true;
         onSocket = 0;
-        for (int i = 0; i < sockets.Length; i++)
-        {
-            //Debug.Log(sockets[i].GetComponent<MoveableObjects>().onSocket);
-            if (sockets[i].GetComponent<MoveableObjects>().isOnCollider == false)
-            {
-                //onSocket += 1;
-            }
-        }
+        //for (int i = 0; i < sockets.Length; i++)
+        //{
+        //    //Debug.Log(sockets[i].GetComponent<MoveableObjects>().onSocket);
+        //    if (sockets[i].GetComponent<MoveableObjects>().isOnCollider == false)
+        //    {
+        //        //onSocket += 1;
+        //    }
+        //}
         //Debug.Log(onSocket);
     }
 
@@ -30,9 +30,11 @@ public class RoomComplete : MonoBehaviour
 
         if(onSocket == sockets.Length)
         {
-            collider.isTrigger = true;
+            mirrorCollider.isTrigger = true;
+            onSocket = 0;
+            this.gameObject.SetActive(false);
         }
-        //Debug.Log(onSocket);
+        Debug.Log(onSocket);
     }
     public static void OnSocket()
     {

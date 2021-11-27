@@ -9,7 +9,7 @@ public class FlipMirror : MonoBehaviour
     //Audio
     [FMODUnity.EventRef]
     public string mirrorPhase;
-
+    
     //public GameObject room1;
     // Start is called before the first frame update
     void Start()

@@ -41,8 +41,8 @@ public class MoveableObjects : MonoBehaviour
                 other.transform.rotation = Quaternion.Euler(other.transform.rotation.x, transform.rotation.y, other.transform.rotation.z);
                 isOnCollider = true;
                 completedBoxes += 1;
-                Debug.Log(boxName);
-                Debug.Log(other.gameObject.GetComponent<BoxCompletion>().boxName);
+                //Debug.Log(boxName);
+                //Debug.Log(other.gameObject.GetComponent<BoxCompletion>().boxName);
                 collider.enabled = false;
                 GameController.pullBox = false;
                 GameController.boxPickup = false;

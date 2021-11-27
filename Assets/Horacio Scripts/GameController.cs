@@ -96,6 +96,9 @@ public class GameController : MonoBehaviour
     public string inputSound;
     bool playerisMoving;
 
+    //Player Location
+    public static Vector3 playerInitialPos;
+
     private void Awake()
     {
         hasMoveableObject = false;
@@ -168,9 +171,16 @@ public class GameController : MonoBehaviour
     void Start()
     {
         InvokeRepeating("PlayFootsteps", 0, speed);
+        playerInitialPos = transform.position;
     }
 
-
+    public void Respawn()
+    {
+        cc.enabled = false;
+        transform.position = playerInitialPos;
+        cc.enabled = true;
+        
+    }
     public void OptionsManager()
     {
         OptionsObj.SetActive(!OptionsObj.activeSelf);
@@ -366,10 +376,8 @@ public class GameController : MonoBehaviour
 
                 box.velocity = boxDir * boxPush;
             }
-            
-
-            
         }
+        
     }
 
     void PlayFootsteps(string inputSound) 
@@ -389,4 +397,5 @@ public class GameController : MonoBehaviour
         Drag.release();
 
     }
+   
 }
