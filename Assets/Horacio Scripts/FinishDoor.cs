@@ -10,7 +10,8 @@ public class FinishDoor : MonoBehaviour
     //Counter +1 to room completed
     //Load Next Level when all rooms are completed
     GameObject player;
-    
+    public GameObject brokenMirror;
+    public GameObject rippleEffect;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,10 +35,13 @@ public class FinishDoor : MonoBehaviour
     }
     public void TeleportPlayer()
     {
+        brokenMirror.SetActive(true);
+        rippleEffect.SetActive(false);
         CompletedRoom.completed += 1;
         player.GetComponent<GameController>().cc.enabled = false;
         player.transform.position = CheckpointPos.lastPos;
         player.GetComponent<GameController>().cc.enabled = true;
+
 
 
     }

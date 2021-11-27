@@ -34,7 +34,7 @@ public class RoomComplete : MonoBehaviour
             onSocket = 0;
             this.gameObject.SetActive(false);
         }
-        Debug.Log(onSocket);
+        //Debug.Log(onSocket);
     }
     public static void OnSocket()
     {

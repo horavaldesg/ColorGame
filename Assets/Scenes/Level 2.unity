@@ -1309,6 +1309,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: WalkableDoor (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7866362292208761594, guid: 5f5af1921bf0042928d9652cc2bb2d34, type: 3}
+      propertyPath: brokenMirror
+      value: 
+      objectReference: {fileID: 1079465833}
+    - target: {fileID: 7866362292208761594, guid: 5f5af1921bf0042928d9652cc2bb2d34, type: 3}
+      propertyPath: rippleEffect
+      value: 
+      objectReference: {fileID: 121056406}
     - target: {fileID: 7866362292208761595, guid: 5f5af1921bf0042928d9652cc2bb2d34, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -1355,6 +1363,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5af1921bf0042928d9652cc2bb2d34, type: 3}
+--- !u!1 &121056406 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5983997592174174937, guid: 8d743650a6b43a047b81f27ece91eb26, type: 3}
+  m_PrefabInstance: {fileID: 147249274}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &131557099
 GameObject:
   m_ObjectHideFlags: 0
@@ -17979,6 +17992,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1077288666}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1079465833 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7028595598514206491, guid: 8d743650a6b43a047b81f27ece91eb26, type: 3}
+  m_PrefabInstance: {fileID: 147249274}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1081858096
 GameObject:
   m_ObjectHideFlags: 0
@@ -48906,6 +48924,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 984893460}
+    - target: {fileID: 7028595598514206491, guid: 8d743650a6b43a047b81f27ece91eb26, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7064282599339516853, guid: 8d743650a6b43a047b81f27ece91eb26, type: 3}
       propertyPath: m_Mesh
       value: 
