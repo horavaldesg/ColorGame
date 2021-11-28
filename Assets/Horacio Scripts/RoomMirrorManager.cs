@@ -5,6 +5,7 @@ using UnityEngine;
 public class RoomMirrorManager : MonoBehaviour
 {
     public GameObject RoomManagerObj;
+    public GameObject[] roomsOff;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +19,14 @@ public class RoomMirrorManager : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        RoomManagerObj.SetActive(true);
+        if (other.CompareTag("Player"))
+        {
+            RoomManagerObj.SetActive(true);
+            for (int i = 0; i < roomsOff.Length; i++)
+            {
+                roomsOff[i].SetActive(false);
+            }
+        }
+        
     }
 }
