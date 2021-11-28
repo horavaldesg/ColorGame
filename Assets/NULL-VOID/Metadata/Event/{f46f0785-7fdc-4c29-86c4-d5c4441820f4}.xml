@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="Event" id="{f46f0785-7fdc-4c29-86c4-d5c4441820f4}">
 		<property name="name">
-			<value>5. Calm Before The Storm</value>
+			<value>3. Awakening</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>
@@ -60,7 +60,7 @@
 	<object class="MarkerTrack" id="{5cb11585-974c-4bfc-b187-5c21f8235d55}" />
 	<object class="GroupTrack" id="{87e25ca4-cf87-4546-82b7-6ac59a1ecdc9}">
 		<relationship name="modules">
-			<destination>{bb1ebb46-fd8c-4407-8f15-b90136ccbdb8}</destination>
+			<destination>{c0f77441-7e23-46b1-8732-27b32e07a6d1}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{a37be7bf-2323-4b8d-96a5-c9b93a0a573c}</destination>
@@ -68,7 +68,7 @@
 	</object>
 	<object class="Timeline" id="{fae1c054-3239-44ae-ac8c-604643346a7f}">
 		<relationship name="modules">
-			<destination>{bb1ebb46-fd8c-4407-8f15-b90136ccbdb8}</destination>
+			<destination>{c0f77441-7e23-46b1-8732-27b32e07a6d1}</destination>
 		</relationship>
 		<relationship name="markers">
 			<destination>{4e4fac72-cf76-4123-99ae-69548f7ff01f}</destination>
@@ -91,15 +91,12 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{fece01ba-b97c-40f4-8325-5f5f50f6ef21}" />
-	<object class="SingleSound" id="{bb1ebb46-fd8c-4407-8f15-b90136ccbdb8}">
+	<object class="SingleSound" id="{c0f77441-7e23-46b1-8732-27b32e07a6d1}">
 		<property name="length">
 			<value>166.12566893424037</value>
 		</property>
-		<property name="looping">
-			<value>true</value>
-		</property>
 		<relationship name="audioFile">
-			<destination>{2db26f5e-a771-435b-94b6-4e93c5bbd024}</destination>
+			<destination>{e65432d0-5b31-4c13-a50b-8fd2270c0c5e}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{a37be7bf-2323-4b8d-96a5-c9b93a0a573c}">
