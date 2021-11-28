@@ -10,6 +10,7 @@ public class CompletionManager : MonoBehaviour
     public int totalBoxes;
     public bool mirrorsToComplete;
     public static float boxestoComplete;
+
     // Start is called before the first frame update
     void Start()
     {

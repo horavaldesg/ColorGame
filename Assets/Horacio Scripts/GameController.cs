@@ -96,6 +96,8 @@ public class GameController : MonoBehaviour
     public string inputSound;
     bool playerisMoving;
 
+    private FMOD.Studio.EventInstance footsteps;
+
     //Player Location
     public static Vector3 playerInitialPos;
 
@@ -129,6 +131,7 @@ public class GameController : MonoBehaviour
 
         //Movement
         controls.Gameplay.Move.performed += tgb => move = tgb.ReadValue<Vector2>();
+        controls.Gameplay.Move.performed += tgb => PlayFootsteps();
         controls.Gameplay.Move.canceled += tgb => move = Vector3.zero;
         controls.Gameplay.Move.canceled += tgb => movement = Vector3.zero;
 
@@ -347,16 +350,6 @@ public class GameController : MonoBehaviour
             verticalSpeed = 0;
         }
 
-
-        if (movement == Vector3.zero)
-        {
-            playerisMoving = false;
-        }
-        else if (movement != Vector3.zero)
-        {
-            playerisMoving = true;
-        }
-
     }
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
@@ -380,14 +373,20 @@ public class GameController : MonoBehaviour
         
     }
 
-    void PlayFootsteps(string inputSound) 
+    void PlayFootsteps() 
     {
-        if (playerisMoving == true)
-        {
-            FMODUnity.RuntimeManager.PlayOneShot(inputSound);
-        }
+        footsteps = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Player/Footsteps");
+
+        //footsteps = FMODUnity.RuntimeManager.AttachInstanceToGameObject();
+
+        footsteps.start();
+        footsteps.release();
     }
 
+    void StopFootsteps()
+    {
+        //footsteps.stop(FMOD.Studio.EventInstance);
+    }
 
 
     void PlayDrag(string path)
