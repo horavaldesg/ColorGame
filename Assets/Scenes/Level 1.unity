@@ -19128,6 +19128,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1253325242}
     m_Modifications:
     - target: {fileID: 2821619065334073930, guid: 19fa74a9a37fb1448bcde8657fa7d613, type: 3}
+      propertyPath: AllowFadeout
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2821619065334073930, guid: 19fa74a9a37fb1448bcde8657fa7d613, type: 3}
       propertyPath: OverrideAttenuation
       value: 0
       objectReference: {fileID: 0}
@@ -33363,6 +33367,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6611106592208460037, guid: a5ae197fe5d037142a1354465d831be4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7277288297094896299, guid: a5ae197fe5d037142a1354465d831be4, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7277288297094896299, guid: a5ae197fe5d037142a1354465d831be4, type: 3}
+      propertyPath: AllowFadeout
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7847861356253078223, guid: a5ae197fe5d037142a1354465d831be4, type: 3}
