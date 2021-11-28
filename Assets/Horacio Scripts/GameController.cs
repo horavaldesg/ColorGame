@@ -131,7 +131,6 @@ public class GameController : MonoBehaviour
 
         //Movement
         controls.Gameplay.Move.performed += tgb => move = tgb.ReadValue<Vector2>();
-        controls.Gameplay.Move.performed += tgb => PlayFootsteps();
         controls.Gameplay.Move.canceled += tgb => move = Vector3.zero;
         controls.Gameplay.Move.canceled += tgb => movement = Vector3.zero;
 
@@ -372,22 +371,6 @@ public class GameController : MonoBehaviour
         }
         
     }
-
-    void PlayFootsteps() 
-    {
-        footsteps = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/Player/Footsteps");
-
-        //footsteps = FMODUnity.RuntimeManager.AttachInstanceToGameObject();
-
-        footsteps.start();
-        footsteps.release();
-    }
-
-    void StopFootsteps()
-    {
-        //footsteps.stop(FMOD.Studio.EventInstance);
-    }
-
 
     void PlayDrag(string path)
     {
