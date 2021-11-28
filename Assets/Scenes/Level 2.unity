@@ -21225,6 +21225,10 @@ MonoBehaviour:
   mirrorCollider: {fileID: 262246701}
   finishDoor: {fileID: 1519221437}
   voiceClip: {fileID: 8300000, guid: 16243fa7c23e1f34c9c8ded46fc90dae, type: 3}
+  removePrevVO: 0
+  prevVO: {fileID: 0}
+  playNewVO: 0
+  newVO: {fileID: 0}
 --- !u!1 &1242744093
 GameObject:
   m_ObjectHideFlags: 0
@@ -22260,6 +22264,10 @@ MonoBehaviour:
   mirrorCollider: {fileID: 1450527032}
   finishDoor: {fileID: 2086754153}
   voiceClip: {fileID: 8300000, guid: c81cf8789da54ff48952c58104961fd2, type: 3}
+  removePrevVO: 0
+  prevVO: {fileID: 0}
+  playNewVO: 0
+  newVO: {fileID: 0}
 --- !u!1001 &1325088289
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24228,6 +24236,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1807200830}
     m_Modifications:
+    - target: {fileID: 1523358015205042585, guid: c53c1c40131434f3da59265d5a666cf1, type: 3}
+      propertyPath: cutVO
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1523358015205042585, guid: c53c1c40131434f3da59265d5a666cf1, type: 3}
+      propertyPath: prevVO
+      value: 
+      objectReference: {fileID: 1146107665}
     - target: {fileID: 2217520469075438468, guid: c53c1c40131434f3da59265d5a666cf1, type: 3}
       propertyPath: m_Name
       value: Walkable Mirror (2)
@@ -24954,6 +24970,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1807200830}
     m_Modifications:
+    - target: {fileID: 1523358015205042585, guid: c53c1c40131434f3da59265d5a666cf1, type: 3}
+      propertyPath: cutVO
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1523358015205042585, guid: c53c1c40131434f3da59265d5a666cf1, type: 3}
+      propertyPath: prevVO
+      value: 
+      objectReference: {fileID: 662685496}
     - target: {fileID: 2217520469075438468, guid: c53c1c40131434f3da59265d5a666cf1, type: 3}
       propertyPath: m_Name
       value: Walkable Mirror
@@ -48188,6 +48212,10 @@ MonoBehaviour:
   mirrorCollider: {fileID: 1082425238}
   finishDoor: {fileID: 1434456256}
   voiceClip: {fileID: 8300000, guid: 5e32abe5a3963154cb75cdec368e4343, type: 3}
+  removePrevVO: 0
+  prevVO: {fileID: 0}
+  playNewVO: 0
+  newVO: {fileID: 0}
 --- !u!43 &2076605939
 Mesh:
   m_ObjectHideFlags: 0

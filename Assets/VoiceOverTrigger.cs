@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class VoiceOverTrigger : MonoBehaviour
 {
+
+    public bool cutVO;
+    public GameObject prevVO;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +23,10 @@ public class VoiceOverTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             RoomComplete.PassedTrigger = true;
+            if (cutVO)
+            {
+                Destroy(prevVO);
+            }
         }
     }
 }

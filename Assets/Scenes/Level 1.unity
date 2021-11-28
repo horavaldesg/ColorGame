@@ -5163,7 +5163,11 @@ MonoBehaviour:
   - {fileID: 228389693}
   mirrorCollider: {fileID: 2217520470178499186}
   finishDoor: {fileID: 7866362293365752076}
-  voiceClip: {fileID: 8300000, guid: 5934fab402903404881f614f0c9ef672, type: 3}
+  voiceClip: {fileID: 8300000, guid: d3865e2f404cd4fdfb810fb6bede7a6c, type: 3}
+  removePrevVO: 1
+  prevVO: {fileID: 65605208}
+  playNewVO: 1
+  newVO: {fileID: 1698817101}
 --- !u!4 &465071960
 Transform:
   m_ObjectHideFlags: 0
@@ -12880,6 +12884,34 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &787476434 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2217520469075438468, guid: c53c1c40131434f3da59265d5a666cf1, type: 3}
+  m_PrefabInstance: {fileID: 2217520470178499185}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &787476438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 787476434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Player
+  Event: event:/SFX/Mirror/Mirror Phase
+  PlayEvent: 3
+  StopEvent: 4
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &818399503
 GameObject:
   m_ObjectHideFlags: 0
@@ -32555,7 +32587,7 @@ MonoBehaviour:
   Preload: 0
   Params:
   - Name: SPENSER VO PARAM
-    Value: 0
+    Value: 1
   OverrideAttenuation: 0
   OverrideMinDistance: 0
   OverrideMaxDistance: 0
@@ -32584,7 +32616,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!43 &1655556284
 Mesh:
@@ -33241,6 +33273,76 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7db9207ca3744729a854053f6104029, type: 3}
+--- !u!1 &1698817101
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1698817104}
+  - component: {fileID: 1698817103}
+  - component: {fileID: 1698817102}
+  m_Layer: 0
+  m_Name: Voiceline Trigger (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1698817102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1698817101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Player
+  Event: event:/NARRATIVE/Spenser VO/Spenser VO List
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 1
+  Preload: 0
+  Params:
+  - Name: SPENSER VO PARAM
+    Value: 0
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
+--- !u!65 &1698817103
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1698817101}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4, y: 3, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &1698817104
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1698817101}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 2, z: 12}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1700221549
 GameObject:
   m_ObjectHideFlags: 0
@@ -36955,7 +37057,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 740784480385488575, guid: ddde6d44d4fec4b5684084d73423aec3, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 740784480385488575, guid: ddde6d44d4fec4b5684084d73423aec3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -37006,6 +37108,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1253325242}
     m_Modifications:
+    - target: {fileID: 1523358015205042585, guid: c53c1c40131434f3da59265d5a666cf1, type: 3}
+      propertyPath: cutVO
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1523358015205042585, guid: c53c1c40131434f3da59265d5a666cf1, type: 3}
+      propertyPath: prevVO
+      value: 
+      objectReference: {fileID: 1698817101}
     - target: {fileID: 2217520469075438468, guid: c53c1c40131434f3da59265d5a666cf1, type: 3}
       propertyPath: m_Name
       value: Walkable Mirror
@@ -37163,7 +37273,7 @@ PrefabInstance:
       objectReference: {fileID: 1370755959}
     - target: {fileID: 7866362292208761595, guid: 5f5af1921bf0042928d9652cc2bb2d34, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 7866362292208761595, guid: 5f5af1921bf0042928d9652cc2bb2d34, type: 3}
       propertyPath: m_LocalPosition.x

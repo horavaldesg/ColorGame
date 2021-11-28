@@ -13,6 +13,13 @@ public class RoomComplete : MonoBehaviour
     private static int onSocket;
     bool b = false;
     public static bool PassedTrigger;
+
+    public bool removePrevVO;
+    public GameObject prevVO;
+
+    public bool playNewVO;
+    public GameObject newVO;
+
     // Use this for initialization
     void Start()
     {
@@ -44,6 +51,14 @@ public class RoomComplete : MonoBehaviour
         {
             mirrorCollider.isTrigger = true;
             onSocket = 0;
+            if (removePrevVO)
+            {
+                Destroy(prevVO);
+            }
+            if (playNewVO)
+            {
+                newVO.SetActive(true);
+            }
             
             //this.gameObject.SetActive(false);
         }
@@ -53,7 +68,7 @@ public class RoomComplete : MonoBehaviour
             voI += Time.deltaTime;
         }
 
-        if(voI > voiceClip.length)
+        if(voI > voiceClip.length -5)
         {
             finishDoor.SetActive(true);
         }
