@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class RoomComplete : MonoBehaviour
 {
@@ -18,7 +19,11 @@ public class RoomComplete : MonoBehaviour
         PassedTrigger = false;
         player = GameObject.FindGameObjectWithTag("Player");
         voI = 0;
-        this.gameObject.SetActive(false);
+        if(SceneManager.GetActiveScene().name != "Level 1")
+        {
+            this.gameObject.SetActive(false);
+
+        }
         mirrorCollider.enabled = true;
         onSocket = 0;
         //for (int i = 0; i < sockets.Length; i++)
