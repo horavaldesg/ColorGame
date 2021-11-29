@@ -96,7 +96,8 @@ public class GameController : MonoBehaviour
     public string inputSound;
     bool playerisMoving;
 
-    private FMOD.Studio.EventInstance footsteps;
+    [FMODUnity.EventRef]
+    public string footsteps;
 
     //Player Location
     public static Vector3 playerInitialPos;
@@ -349,6 +350,20 @@ public class GameController : MonoBehaviour
             verticalSpeed = 0;
         }
 
+        /*
+
+        FMOD.Studio.EventInstance footstep = FMODUnity.RuntimeManager.CreateInstance(footsteps);
+
+        if (move.x == 0 && move.y == 0)
+        {
+            footstep.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        }
+        else
+        {
+            StartCoroutine(InvokeDelay());
+        }
+         */
+
     }
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
@@ -377,6 +392,15 @@ public class GameController : MonoBehaviour
         FMOD.Studio.EventInstance Drag = FMODUnity.RuntimeManager.CreateInstance(path);
         Drag.start();
         Drag.release();
+
+    }
+
+    private IEnumerator InvokeDelay()
+    {
+        yield return new WaitForSeconds(1f);
+
+        FMODUnity.RuntimeManager.PlayOneShot(footsteps, transform.position);
+        yield return new WaitForSeconds(1f);
 
     }
    

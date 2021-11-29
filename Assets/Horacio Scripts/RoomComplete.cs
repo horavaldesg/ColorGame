@@ -72,7 +72,7 @@ public class RoomComplete : MonoBehaviour
         {
             finishDoor.SetActive(true);
         }
-        Debug.Log(voI + " " + voiceClip.length);
+        //Debug.Log(voI + " " + voiceClip.length);
         //Debug.Log(onSocket);
     }
     public static void OnSocket()
