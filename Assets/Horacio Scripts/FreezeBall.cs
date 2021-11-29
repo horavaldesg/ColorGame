@@ -21,7 +21,7 @@ public class FreezeBall : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Ground"))
+        if (collision.gameObject.layer == 6)
         {
             rb.constraints = RigidbodyConstraints.FreezeAll;
 

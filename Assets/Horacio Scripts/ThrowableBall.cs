@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ThrowableBall : MonoBehaviour
 {
+    public Animator anim;
+    public static Animator staticAnim;
     public GameObject handTransform;
     [SerializeField] float distanceToDraw;
     public GameObject interactionText;
@@ -24,6 +26,7 @@ public class ThrowableBall : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        staticAnim = anim;
         camTransform = GameObject.FindGameObjectWithTag("MainCamera");
         ballTouching = false;
         hasBall = false;
@@ -63,6 +66,8 @@ public class ThrowableBall : MonoBehaviour
         //Decrease light
         if (hasBall)
         {
+            anim.SetBool("HoldingBall", true);
+            
             float t = 0;
             if (ball.GetComponentInChildren<Light>().intensity > 0)
             {
@@ -99,6 +104,7 @@ public class ThrowableBall : MonoBehaviour
         if (!ballTouching)
         {
             hasBall = false;
+            anim.SetBool("HoldingBall", false);
         }
 
         if (canShoot)
@@ -128,6 +134,8 @@ public class ThrowableBall : MonoBehaviour
     {
         if (hasBall)
         {
+            staticAnim.SetTrigger("ThrowBall");
+
             canShoot = true;
         }
     }
