@@ -6,12 +6,12 @@ using UnityEngine.Audio;
 public class FreezeBall : MonoBehaviour
 {
     Rigidbody rb;
-    AudioSource ballBounce;
+    //AudioSource ballBounce;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        ballBounce = GetComponent<AudioSource>();
+        //ballBounce = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -25,7 +25,7 @@ public class FreezeBall : MonoBehaviour
         {
             rb.constraints = RigidbodyConstraints.FreezeAll;
 
-            ballBounce.Play();
+            //ballBounce.Play();
         }
     }
 }
