@@ -31,6 +31,7 @@ public class FinishDoor : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             TeleportPlayer();
+            this.gameObject.SetActive(false);
         }
         
 
@@ -41,7 +42,7 @@ public class FinishDoor : MonoBehaviour
         rippleEffect.SetActive(false);
         CompletedRoom.completed += 1;
         player.GetComponent<GameController>().cc.enabled = false;
-        player.transform.position = CheckpointPos.lastPos;
+        player.transform.position = GameController.lastPos;
         player.GetComponent<GameController>().cc.enabled = true;
         roomManager.SetActive(false);
 

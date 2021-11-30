@@ -7,7 +7,7 @@ using UnityEngine.Events;
 
 public class GameController : MonoBehaviour
 {
-
+    public static Vector3 lastPos;
     //Controller
     public static PlayerControls controls;
     //Camera

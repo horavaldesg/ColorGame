@@ -19,11 +19,10 @@ public class RoomComplete : MonoBehaviour
 
     public bool playNewVO;
     public GameObject newVO;
-    GameObject rippleEffect;
+    public GameObject rippleEffect;
     // Use this for initialization
     void Start()
     {
-        rippleEffect = GetComponentInChildren<GameObject>().gameObject;
         PassedTrigger = false;
         player = GameObject.FindGameObjectWithTag("Player");
         voI = 0;

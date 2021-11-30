@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class CheckpointPos : MonoBehaviour
 {
-    public static Vector3 lastPos;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +17,6 @@ public class CheckpointPos : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        lastPos = other.transform.position;
+        GameController.lastPos = other.transform.position;
     }
 }
