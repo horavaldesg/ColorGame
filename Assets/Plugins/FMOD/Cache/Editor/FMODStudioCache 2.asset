@@ -928,28 +928,6 @@ MonoBehaviour:
   Type: 1
   IsGlobal: 0
   Exists: 0
---- !u!114 &-6046262449706199633
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Spenser VO List/SPENSER VO PARAM
-  m_EditorClassIdentifier: 
-  Name: SPENSER VO PARAM
-  Min: 0
-  Max: 12
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Type: 1
-  IsGlobal: 0
-  Exists: 1
 --- !u!114 &-6004197918890093828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1390,7 +1368,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 2382597074197123604}
+  - {fileID: 5949022233434084950}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -1417,28 +1395,6 @@ MonoBehaviour:
   IsGlobal: 0
   Exists: 1
 --- !u!114 &-4954788155307618492
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Emma VO List/EMMA VO PARAM
-  m_EditorClassIdentifier: 
-  Name: EMMA VO PARAM
-  Min: 0
-  Max: 8
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Type: 1
-  IsGlobal: 0
-  Exists: 0
---- !u!114 &-4922757706761302119
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1524,7 +1480,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: -6046262449706199633}
+  - {fileID: -786576952066523544}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -1945,28 +1901,6 @@ MonoBehaviour:
   Type: 1
   IsGlobal: 0
   Exists: 1
---- !u!114 &-3282057631234906447
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Spenser VO List/SPENSER VO PARAM
-  m_EditorClassIdentifier: 
-  Name: SPENSER VO PARAM
-  Min: 0
-  Max: 12
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Type: 1
-  IsGlobal: 0
-  Exists: 0
 --- !u!114 &-3092579387557192441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2286,7 +2220,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Ambience.bank
+  m_Name: FMODStudioCache 2
   m_EditorClassIdentifier: 
   Path: Assets/NULL-VOID/Build/Desktop/Ambience.bank
   Name: Ambience
@@ -2738,7 +2672,7 @@ MonoBehaviour:
     data2: 0
   Type: 1
   IsGlobal: 0
-  Exists: 0
+  Exists: 1
 --- !u!114 &-773768781995939138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3775,28 +3709,6 @@ MonoBehaviour:
   Type: 1
   IsGlobal: 0
   Exists: 0
---- !u!114 &2382597074197123604
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Emma VO List/EMMA VO PARAM
-  m_EditorClassIdentifier: 
-  Name: EMMA VO PARAM
-  Min: 0
-  Max: 8
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Type: 1
-  IsGlobal: 0
-  Exists: 1
 --- !u!114 &2402691761954654249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4889,7 +4801,7 @@ MonoBehaviour:
     data2: 0
   Type: 1
   IsGlobal: 0
-  Exists: 0
+  Exists: 1
 --- !u!114 &5961840934963099486
 MonoBehaviour:
   m_ObjectHideFlags: 0

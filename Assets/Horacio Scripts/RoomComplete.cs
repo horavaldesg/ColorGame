@@ -19,10 +19,11 @@ public class RoomComplete : MonoBehaviour
 
     public bool playNewVO;
     public GameObject newVO;
-
+    GameObject rippleEffect;
     // Use this for initialization
     void Start()
     {
+        rippleEffect = GetComponentInChildren<GameObject>().gameObject;
         PassedTrigger = false;
         player = GameObject.FindGameObjectWithTag("Player");
         voI = 0;
@@ -50,6 +51,7 @@ public class RoomComplete : MonoBehaviour
         if(onSocket == sockets.Length)
         {
             mirrorCollider.isTrigger = true;
+            rippleEffect.SetActive(true);
             onSocket = 0;
             if (removePrevVO)
             {
@@ -59,7 +61,7 @@ public class RoomComplete : MonoBehaviour
             {
                 newVO.SetActive(true);
             }
-            
+           
             //this.gameObject.SetActive(false);
         }
 
