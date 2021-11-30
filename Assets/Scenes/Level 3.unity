@@ -1695,6 +1695,22 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 703584146}
+    - target: {fileID: 5452979901191194856, guid: 8d743650a6b43a047b81f27ece91eb26, type: 3}
+      propertyPath: RoomManagerObj
+      value: 
+      objectReference: {fileID: 2013499258}
+    - target: {fileID: 5452979901191194856, guid: 8d743650a6b43a047b81f27ece91eb26, type: 3}
+      propertyPath: roomsOff.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5452979901191194856, guid: 8d743650a6b43a047b81f27ece91eb26, type: 3}
+      propertyPath: roomsOff.Array.data[0]
+      value: 
+      objectReference: {fileID: 1686738171}
+    - target: {fileID: 5452979901191194856, guid: 8d743650a6b43a047b81f27ece91eb26, type: 3}
+      propertyPath: roomsOff.Array.data[1]
+      value: 
+      objectReference: {fileID: 929268458}
     - target: {fileID: 5545863959104580465, guid: 8d743650a6b43a047b81f27ece91eb26, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -1793,6 +1809,16 @@ PrefabInstance:
       objectReference: {fileID: 727587576}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d743650a6b43a047b81f27ece91eb26, type: 3}
+--- !u!1 &171704568 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5983997592174174937, guid: 8d743650a6b43a047b81f27ece91eb26, type: 3}
+  m_PrefabInstance: {fileID: 171704567}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &171704569 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7028595598514206491, guid: 8d743650a6b43a047b81f27ece91eb26, type: 3}
+  m_PrefabInstance: {fileID: 171704567}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &174125172
 GameObject:
   m_ObjectHideFlags: 0
@@ -3462,7 +3488,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-21412
+  m_Name: pb_Mesh-103300
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4101,6 +4127,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: WalkableDoor(2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7866362292208761594, guid: 5f5af1921bf0042928d9652cc2bb2d34, type: 3}
+      propertyPath: roomManager
+      value: 
+      objectReference: {fileID: 2013499258}
+    - target: {fileID: 7866362292208761594, guid: 5f5af1921bf0042928d9652cc2bb2d34, type: 3}
+      propertyPath: brokenMirror
+      value: 
+      objectReference: {fileID: 171704569}
+    - target: {fileID: 7866362292208761594, guid: 5f5af1921bf0042928d9652cc2bb2d34, type: 3}
+      propertyPath: rippleEffect
+      value: 
+      objectReference: {fileID: 171704568}
     - target: {fileID: 7866362292208761595, guid: 5f5af1921bf0042928d9652cc2bb2d34, type: 3}
       propertyPath: m_RootOrder
       value: 35
@@ -7373,7 +7411,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-21436
+  m_Name: pb_Mesh-103324
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -8197,7 +8235,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-21388
+  m_Name: pb_Mesh-103276
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -8563,6 +8601,11 @@ Transform:
 --- !u!65 &772591090 stripped
 BoxCollider:
   m_CorrespondingSourceObject: {fileID: 2217520469075438473, guid: c53c1c40131434f3da59265d5a666cf1, type: 3}
+  m_PrefabInstance: {fileID: 772591088}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &772591091 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2635803965874735956, guid: c53c1c40131434f3da59265d5a666cf1, type: 3}
   m_PrefabInstance: {fileID: 772591088}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &773815061
@@ -13868,6 +13911,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2217520469075438471, guid: c53c1c40131434f3da59265d5a666cf1, type: 3}
   m_PrefabInstance: {fileID: 797278029}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &797278031 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2635803965874735956, guid: c53c1c40131434f3da59265d5a666cf1, type: 3}
+  m_PrefabInstance: {fileID: 797278029}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &817693910
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14163,6 +14211,16 @@ PrefabInstance:
       objectReference: {fileID: 907532155}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d743650a6b43a047b81f27ece91eb26, type: 3}
+--- !u!1 &819911171 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5983997592174174937, guid: 8d743650a6b43a047b81f27ece91eb26, type: 3}
+  m_PrefabInstance: {fileID: 819911170}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &819911172 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7028595598514206491, guid: 8d743650a6b43a047b81f27ece91eb26, type: 3}
+  m_PrefabInstance: {fileID: 819911170}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &829476878
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15347,6 +15405,7 @@ MonoBehaviour:
   prevVO: {fileID: 0}
   playNewVO: 0
   newVO: {fileID: 0}
+  rippleEffect: {fileID: 797278031}
 --- !u!1 &934318212
 GameObject:
   m_ObjectHideFlags: 0
@@ -16529,7 +16588,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-21424
+  m_Name: pb_Mesh-103312
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -17572,6 +17631,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: WalkableDoor
       objectReference: {fileID: 0}
+    - target: {fileID: 7866362292208761594, guid: 5f5af1921bf0042928d9652cc2bb2d34, type: 3}
+      propertyPath: roomManager
+      value: 
+      objectReference: {fileID: 929268458}
+    - target: {fileID: 7866362292208761594, guid: 5f5af1921bf0042928d9652cc2bb2d34, type: 3}
+      propertyPath: brokenMirror
+      value: 
+      objectReference: {fileID: 1610881120}
+    - target: {fileID: 7866362292208761594, guid: 5f5af1921bf0042928d9652cc2bb2d34, type: 3}
+      propertyPath: rippleEffect
+      value: 
+      objectReference: {fileID: 1610881119}
     - target: {fileID: 7866362292208761595, guid: 5f5af1921bf0042928d9652cc2bb2d34, type: 3}
       propertyPath: m_RootOrder
       value: 26
@@ -19311,6 +19382,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: WalkableDoor(1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7866362292208761594, guid: 5f5af1921bf0042928d9652cc2bb2d34, type: 3}
+      propertyPath: roomManager
+      value: 
+      objectReference: {fileID: 1686738171}
+    - target: {fileID: 7866362292208761594, guid: 5f5af1921bf0042928d9652cc2bb2d34, type: 3}
+      propertyPath: brokenMirror
+      value: 
+      objectReference: {fileID: 819911172}
+    - target: {fileID: 7866362292208761594, guid: 5f5af1921bf0042928d9652cc2bb2d34, type: 3}
+      propertyPath: rippleEffect
+      value: 
+      objectReference: {fileID: 819911171}
     - target: {fileID: 7866362292208761595, guid: 5f5af1921bf0042928d9652cc2bb2d34, type: 3}
       propertyPath: m_RootOrder
       value: 21
@@ -20801,7 +20884,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-21376
+  m_Name: pb_Mesh-103264
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -21491,7 +21574,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-21400
+  m_Name: pb_Mesh-103288
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -27932,6 +28015,16 @@ PrefabInstance:
       objectReference: {fileID: 142961876}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d743650a6b43a047b81f27ece91eb26, type: 3}
+--- !u!1 &1610881119 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5983997592174174937, guid: 8d743650a6b43a047b81f27ece91eb26, type: 3}
+  m_PrefabInstance: {fileID: 1610881118}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1610881120 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7028595598514206491, guid: 8d743650a6b43a047b81f27ece91eb26, type: 3}
+  m_PrefabInstance: {fileID: 1610881118}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1631446671
 Mesh:
   m_ObjectHideFlags: 0
@@ -28624,6 +28717,7 @@ MonoBehaviour:
   prevVO: {fileID: 0}
   playNewVO: 0
   newVO: {fileID: 0}
+  rippleEffect: {fileID: 2109480759}
 --- !u!1001 &1687473780
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42525,6 +42619,7 @@ MonoBehaviour:
   prevVO: {fileID: 0}
   playNewVO: 0
   newVO: {fileID: 0}
+  rippleEffect: {fileID: 772591091}
 --- !u!1001 &2019439061
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43484,6 +43579,11 @@ PrefabInstance:
 --- !u!4 &2109480758 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2217520469075438471, guid: c53c1c40131434f3da59265d5a666cf1, type: 3}
+  m_PrefabInstance: {fileID: 2109480757}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2109480759 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2635803965874735956, guid: c53c1c40131434f3da59265d5a666cf1, type: 3}
   m_PrefabInstance: {fileID: 2109480757}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2122778450
