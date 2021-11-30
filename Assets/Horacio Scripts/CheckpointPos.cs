@@ -17,6 +17,6 @@ public class CheckpointPos : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        GameController.lastPos = other.transform.position;
+        GameController.lastPos = this.transform.position;
     }
 }
