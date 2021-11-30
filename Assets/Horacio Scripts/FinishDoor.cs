@@ -13,10 +13,12 @@ public class FinishDoor : MonoBehaviour
     public GameObject brokenMirror;
     public GameObject rippleEffect;
     public GameObject roomManager;
+    GameObject ball;
     // Start is called before the first frame update
     void Start()
     {
         this.gameObject.SetActive(false);
+        ball = GameObject.FindGameObjectWithTag("Ball");
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
@@ -43,6 +45,7 @@ public class FinishDoor : MonoBehaviour
         CompletedRoom.completed += 1;
         player.GetComponent<GameController>().cc.enabled = false;
         player.transform.position = GameController.lastPos;
+        ball.transform.position = GameController.lastPos;
         player.GetComponent<GameController>().cc.enabled = true;
         roomManager.SetActive(false);
 
