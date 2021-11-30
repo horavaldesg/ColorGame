@@ -5168,6 +5168,7 @@ MonoBehaviour:
   prevVO: {fileID: 65605208}
   playNewVO: 1
   newVO: {fileID: 1698817101}
+  rippleEffect: {fileID: 2217520470178499187}
 --- !u!4 &465071960
 Transform:
   m_ObjectHideFlags: 0
@@ -37189,6 +37190,11 @@ PrefabInstance:
 --- !u!65 &2217520470178499186 stripped
 BoxCollider:
   m_CorrespondingSourceObject: {fileID: 2217520469075438473, guid: c53c1c40131434f3da59265d5a666cf1, type: 3}
+  m_PrefabInstance: {fileID: 2217520470178499185}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2217520470178499187 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2635803965874735956, guid: c53c1c40131434f3da59265d5a666cf1, type: 3}
   m_PrefabInstance: {fileID: 2217520470178499185}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6115008105141760278
