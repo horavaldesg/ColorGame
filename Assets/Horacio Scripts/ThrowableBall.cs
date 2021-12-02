@@ -37,11 +37,14 @@ public class ThrowableBall : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         RaycastHit hit;
         if (Physics.Raycast(camTransform.transform.position, camTransform.transform.forward, out hit, distanceToDraw))
         {
             if (hit.collider.CompareTag("Ball"))
             {
+                GameController.controls.Gameplay.Interaction.Enable();
+                GameController.controls.Gameplay.Interaction.performed += tgb => PickUp();
                 interactionText.SetActive(true);
                 ball = hit.collider.gameObject;
                 canGrab = true;
@@ -61,10 +64,11 @@ public class ThrowableBall : MonoBehaviour
         }
         else
         {
+            canGrab = false;
             interactionText.SetActive(false);
         }
         //Decrease light
-        if (hasBall)
+        if (hasBall && !GameController.pullBox)
         {
             anim.SetBool("HoldingBall", true);
             

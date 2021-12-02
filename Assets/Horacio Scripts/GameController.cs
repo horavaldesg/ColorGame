@@ -70,7 +70,7 @@ public class GameController : MonoBehaviour
     
     //Moveable OBJ
     public static bool hasMoveableObject;
-
+    bool canPickup;
     public float boxPush = 2.0f;
     public static bool pullBox;
     public GameObject interactionText;
@@ -161,7 +161,7 @@ public class GameController : MonoBehaviour
 
         //Interaction
 
-        controls.Gameplay.Interaction.performed += tgb => ThrowableBall.PickUp();
+        
         pullBox = false;
 
         
@@ -223,7 +223,11 @@ public class GameController : MonoBehaviour
 
     public void Update()
     {
-        
+        if (!ThrowableBall.canGrab && canPickup)
+        {
+            controls.Gameplay.Interaction.Disable();
+
+        }
         if (OptionsObj.activeSelf)
         {
             Cursor.lockState = CursorLockMode.None;
@@ -270,19 +274,23 @@ public class GameController : MonoBehaviour
         {
             cc.enabled = false;
         }
+
         RaycastHit hit;
         if (Physics.Raycast(camTransform.transform.position, camTransform.transform.forward, out hit, 2))
         {
             if (hit.collider.gameObject.CompareTag("Box"))
             {
+                canPickup = true;
                 moveableBox = hit.collider.gameObject;
-                if (moveableBox != null)
+                if (moveableBox != null && !ThrowableBall.hasBall)
                 {
+                    controls.Gameplay.Interaction.Enable();
                     controls.Gameplay.Interaction.performed += tgb => pullBox = !pullBox;
+                    interactionText.SetActive(true);
                 }
-                interactionText.SetActive(true);
+                
                 Debug.Log("Can pick up");
-                boxPickup = true;
+                //boxPickup = true;
                 
             }
            
@@ -290,11 +298,11 @@ public class GameController : MonoBehaviour
         else
         {
             interactionText.SetActive(false);
-            
+            canPickup = false;
             //pullBox = false;
 
         }
-        if (pullBox && boxPickup && moveableBox != null)
+        if (pullBox && moveableBox != null )
         {
             //PlayDrag(dragSound);
             moveableBox.transform.position = new Vector3(boxTransform.transform.position.x, moveableBox.transform.position.y, boxTransform.transform.position.z);

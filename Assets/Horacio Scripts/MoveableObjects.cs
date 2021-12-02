@@ -43,6 +43,7 @@ public class MoveableObjects : MonoBehaviour
                 isOnCollider = true;
                 completedBoxes += 1;
                 rb.isKinematic = true;
+                other.GetComponent<Collider>().enabled = false;
                 //Debug.Log(boxName);
                 //Debug.Log(other.gameObject.GetComponent<BoxCompletion>().boxName);
                 collider.enabled = false;
