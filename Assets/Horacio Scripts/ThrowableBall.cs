@@ -108,11 +108,13 @@ public class ThrowableBall : MonoBehaviour
         if (!ballTouching)
         {
             hasBall = false;
+            
             anim.SetBool("HoldingBall", false);
         }
 
         if (canShoot)
         {
+            hasBall = false;
             PlayThrow(throwSound);
             hasBall = false;
             Rigidbody rb = ball.GetComponent<Rigidbody>();

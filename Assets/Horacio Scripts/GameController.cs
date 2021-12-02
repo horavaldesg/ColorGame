@@ -70,7 +70,7 @@ public class GameController : MonoBehaviour
     
     //Moveable OBJ
     public static bool hasMoveableObject;
-    bool canPickup;
+    public static bool canPickup;
     public float boxPush = 2.0f;
     public static bool pullBox;
     public GameObject interactionText;
@@ -145,10 +145,11 @@ public class GameController : MonoBehaviour
         {
             controls.Gameplay.Options.performed += tgb => OptionsManager();
             controls.UI1.Options.performed += tgb => OptionsManager();
-
+            
 
             controls.Gameplay.Circle.performed += tgb => OptionsObj.SetActive(false);
             controls.UI1.Circle.performed += tgb => OptionsObj.SetActive(false);
+           
 
         }
         canMove = true;
@@ -186,7 +187,9 @@ public class GameController : MonoBehaviour
     }
     public void OptionsManager()
     {
+        
         OptionsObj.SetActive(!OptionsObj.activeSelf);
+        
         //changeFirstSelected.Invoke();
         if (ctScheme.controlScheme == InputHandler.controlSchemes.Gamepad)
         {
@@ -223,7 +226,17 @@ public class GameController : MonoBehaviour
 
     public void Update()
     {
-        if (!ThrowableBall.canGrab && canPickup)
+        Debug.Log(OptionsObj);
+        Debug.Log(Time.timeScale);
+        if (OptionsObj.activeSelf)
+        {
+            Time.timeScale = 0;
+        }
+        else if (!OptionsObj.activeSelf)
+        {
+            Time.timeScale = 1;
+        }
+        if (!ThrowableBall.canGrab || canPickup)
         {
             controls.Gameplay.Interaction.Disable();
 
@@ -298,12 +311,14 @@ public class GameController : MonoBehaviour
         else
         {
             interactionText.SetActive(false);
-            canPickup = false;
+            
             //pullBox = false;
 
         }
         if (pullBox && moveableBox != null )
         {
+            controls.Gameplay.Interaction.performed += tgb => pullBox = !pullBox;
+
             //PlayDrag(dragSound);
             moveableBox.transform.position = new Vector3(boxTransform.transform.position.x, moveableBox.transform.position.y, boxTransform.transform.position.z);
             moveableBox.transform.rotation = boxTransform.rotation;
@@ -311,6 +326,7 @@ public class GameController : MonoBehaviour
         }
         else
         {
+            canPickup = false;
             moveableBox = null;
         }
         //Debug.Log(moveableBox); 

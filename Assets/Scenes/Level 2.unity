@@ -6586,8 +6586,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534204955}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 31.770004, y: 0, z: -18.300003}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.2, y: 0.8, z: 4.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 745335789466385847}
@@ -7489,6 +7489,7 @@ GameObject:
   - component: {fileID: 664856219}
   - component: {fileID: 664856218}
   - component: {fileID: 664856217}
+  - component: {fileID: 664856221}
   m_Layer: 11
   m_Name: Moveable Objects (1)
   m_TagString: Box
@@ -7552,8 +7553,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.8050556, y: 1.8306594, z: 0.9113947}
-  m_Center: {x: 0.0011320114, y: 0.12927926, z: 0.048179805}
+  m_Size: {x: 0.8050556, y: 0.81869775, z: 0.8833828}
+  m_Center: {x: 0.0011320114, y: -0.36983892, z: -0.15038061}
 --- !u!33 &664856220
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -7562,6 +7563,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 664856215}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &664856221
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 664856215}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.8330326, y: 0.98302853, z: 0.2600901}
+  m_Center: {x: 0.015120506, y: 0.5487153, z: -0.4709264}
 --- !u!1 &665602608
 GameObject:
   m_ObjectHideFlags: 0
@@ -48874,8 +48888,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.8050556, y: 0.8450944, z: 1.826581}
-  m_Center: {x: 0.0011320114, y: 0.029151917, z: 0.11913991}
+  m_Size: {x: 0.8050556, y: 0.81869775, z: 0.8833828}
+  m_Center: {x: 0.0011320114, y: -0.36983892, z: -0.15038061}
 --- !u!1 &745335789466385843
 GameObject:
   m_ObjectHideFlags: 0
@@ -48889,6 +48903,7 @@ GameObject:
   - component: {fileID: 745335789466385842}
   - component: {fileID: 745335789466385846}
   - component: {fileID: 5438815052571788167}
+  - component: {fileID: 745335789466385844}
   m_Layer: 11
   m_Name: Moveable Objects (1)
   m_TagString: Box
@@ -48896,6 +48911,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &745335789466385844
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 745335789466385843}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.8330326, y: 0.98302853, z: 0.2600901}
+  m_Center: {x: 0.015120506, y: 0.5487153, z: -0.4709264}
 --- !u!54 &745335789466385846
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -48920,7 +48948,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 745335789466385843}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -25.88, y: 0.8, z: 22.39}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 745335790931344815}
@@ -49225,13 +49253,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2282018249161676088, guid: a5ae197fe5d037142a1354465d831be4, type: 3}
-      propertyPath: timeDecrease
-      value: 0.1
-      objectReference: {fileID: 0}
     - target: {fileID: 2282018249764314374, guid: a5ae197fe5d037142a1354465d831be4, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 2282018249809902464, guid: a5ae197fe5d037142a1354465d831be4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.049999483
+      objectReference: {fileID: 0}
+    - target: {fileID: 2282018249809902464, guid: a5ae197fe5d037142a1354465d831be4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.32000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 2282018249809902464, guid: a5ae197fe5d037142a1354465d831be4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.7200003
       objectReference: {fileID: 0}
     - target: {fileID: 6611106592208460037, guid: a5ae197fe5d037142a1354465d831be4, type: 3}
       propertyPath: m_RootOrder

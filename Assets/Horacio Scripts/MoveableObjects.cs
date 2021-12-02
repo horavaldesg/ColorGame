@@ -50,6 +50,7 @@ public class MoveableObjects : MonoBehaviour
                 GameController.pullBox = false;
                 GameController.boxPickup = false;
                 GameController.moveableBox = null;
+                GameController.canPickup = false;
                 RoomComplete.OnSocket();
                 //if (completedBoxes % 2 == modNum && completedBoxes != 0 && completedBoxes != 1)
                 //{
