@@ -16,6 +16,7 @@ public class ThrowableBall : MonoBehaviour
     public static bool hasBall;
     public static bool canShoot;
     Color lerpColor;
+    Color lerpColor2;
     //Ball Timer 
     [SerializeField] float timeDecrease;
     [SerializeField] float timeIncrease;
@@ -94,12 +95,14 @@ public class ThrowableBall : MonoBehaviour
                 float t = 0;
                 if (ball.GetComponentInChildren<Light>().intensity < 6 && ball.GetComponentInChildren<Light>().intensity < 7.5f)
                 {
-                    t += Time.deltaTime * timeIncrease / 2;
+                    t += Time.deltaTime * timeIncrease * 3;
 
                     ball.GetComponentInChildren<Light>().intensity += Time.deltaTime * timeIncrease;
                     ball.GetComponentInChildren<Light>().range += Time.deltaTime * timeIncrease;
                     lerpColor = Color.Lerp(ball.GetComponent<Renderer>().material.GetColor("_EmissionColor"), Color.white, t);
+                    lerpColor2 = Color.Lerp(ball.GetComponent<MeshRenderer>().material.color, Color.white, t);
                     ball.GetComponent<MeshRenderer>().material.SetColor("_EmissionColor", lerpColor);
+                    ball.GetComponent<MeshRenderer>().material.color = lerpColor2;
                 }
 
                 // PUT 3D SOUND HERE

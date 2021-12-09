@@ -7,7 +7,7 @@
 [LOG] SystemI::init                            : Output requires a sample rate of 44100Hz, resampling will occur.
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x8000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0x7f832f3a3a08 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0x7f99d892d808 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -23,14 +23,30 @@
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 1269184
 [LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 15552
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x70001159e94c
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x70001004f94c
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x174267c66
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x174267d1d
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x174267d4a
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x174267de8
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7f839947aa78
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x16d50fc66
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x16d50fd1d
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x16d50fd4a
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x16d50fde8
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7f9900450068
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Throw Sound', format=5, channels=1, frequency=48000, lengthbytes=3072, lengthpcm=17554, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.120575.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 1269184
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 15552
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x70001004f94c
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x16d50fc66
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x16d50fd1d
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x16d50fd4a
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x16d50fde8
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7f99dc8914c8
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='LightRecharge', format=5, channels=2, frequency=48000, lengthbytes=52896, lengthpcm=432348, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.360192.
@@ -39,208 +55,47 @@
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 1269184
 [LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 15552
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x70001159e94c
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x70001004f94c
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x174267c66
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x174267d1d
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x174267d4a
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x174267de8
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7f831efff358
-[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
-[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Throw Sound', format=5, channels=1, frequency=48000, lengthbytes=3072, lengthpcm=17554, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.120575.
-[LOG] SoundI::release                          : EMMA VOID 2 (0x7f837f6b2e78)
-[LOG] SoundI::release                          :     EMMA VOID 2 (0x7f83994aa528)
-[LOG] SoundI::release                          :     EMMA VOID 2 (0x7f83994d5e18)
-[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
-[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 1269184
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 15552
-[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x70001159e94c
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x174267c66
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x174267d1d
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x174267d4a
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x174267de8
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7f839a8640e8
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x16d50fc66
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x16d50fd1d
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x16d50fd4a
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x16d50fde8
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7f99dc8ae158
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='MirrorPhase', format=5, channels=2, frequency=48000, lengthbytes=15328, lengthpcm=99206, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.336605.
-[LOG] SystemI::createSound                     : filename = Assets/NULL-VOID/Build/Desktop/Ambience.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 0x7f839a9d8fa8 : node = 0x7f839a95a010
-[LOG] SystemI::createSound                     : add node to async list : head = 0x7f839a899e68.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7f839a9d8fa8
-[LOG] SystemI::createSound                     : filename = Assets/NULL-VOID/Build/Desktop/Ambience.bank : mode 02010082
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSoundInternal             :     Create name='Assets/NULL-VOID/Build/Desktop/Ambience.bank', mode=0x02010082
-[LOG] SystemI::createSound                     :     setdata soundi = 0x7f837f109108 : node = 0x7f837f12d540
-[LOG] SystemI::createSound                     :     add node to async list : head = 0x7f839a899e68.  list count = 0
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1269184
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 15552
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7f839a95a120
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSound                     :     filename = Assets/NULL-VOID/Build/Desktop/Ambience.bank : mode 02010082
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     :     setdata soundi = 0x7f839948e408 : node = 0x7f831f028da0
-[LOG] SystemI::createSound                     :     add node to async list : head = 0x7f839a899e68.  list count = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Mirror Ambience', format=5, channels=2, frequency=48000, lengthbytes=595744, lengthpcm=3352868, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.272461.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7f839a9d8fa8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7f837f109108
-[LOG] SystemI::createSoundInternal             :     Create name='Assets/NULL-VOID/Build/Desktop/Ambience.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1269184
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 15552
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7f837f12d650
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Mirror Ambience', format=5, channels=2, frequency=48000, lengthbytes=595744, lengthpcm=3352868, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.272461.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7f837f109108
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7f839948e408
-[LOG] SystemI::createSoundInternal             :     Create name='Assets/NULL-VOID/Build/Desktop/Ambience.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1269184
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 15552
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7f831f028eb0
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Mirror Ambience', format=5, channels=2, frequency=48000, lengthbytes=595744, lengthpcm=3352868, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.272461.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7f839948e408
-[LOG] SoundI::release                          : Mirror Ambience (0x7f839a8e2538)
-[LOG] SoundI::release                          :     Mirror Ambience (0x7f837f112ab8)
-[LOG] SoundI::release                          :     Mirror Ambience (0x7f83996c9cc8)
-[LOG] SoundI::release                          : Mirror Ambience (0x7f837f6b3e98)
-[LOG] SoundI::release                          :     Mirror Ambience (0x7f83997f7248)
-[LOG] SoundI::release                          :     Mirror Ambience (0x7f846019a3e8)
-[LOG] SoundI::release                          : Mirror Ambience (0x7f837f6b0878)
-[LOG] SoundI::release                          :     Mirror Ambience (0x7f837f7a0978)
-[LOG] SoundI::release                          :     Mirror Ambience (0x7f831efebfa8)
-[LOG] SystemI::createSound                     : filename = Assets/NULL-VOID/Build/Desktop/Ambience.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 0x7f837f559378 : node = 0x7f837f557c10
-[LOG] SystemI::createSound                     : add node to async list : head = 0x7f839a899e68.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7f837f559378
-[LOG] SystemI::createSoundInternal             :     Create name='Assets/NULL-VOID/Build/Desktop/Ambience.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1269184
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 15552
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSound                     : filename = Assets/NULL-VOID/Build/Desktop/Ambience.bank : mode 02010082
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     :     setdata soundi = 0x7f83993519a8 : node = 0x7f839aa22de0
-[LOG] SystemI::createSound                     :     add node to async list : head = 0x7f839a899e68.  list count = 0
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7f837f557d20
-[LOG] SystemI::createSound                     :     filename = Assets/NULL-VOID/Build/Desktop/Ambience.bank : mode 02010082
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     :     setdata soundi = 0x7f831efae158 : node = 0x7f831efae310
-[LOG] SystemI::createSound                     :     add node to async list : head = 0x7f839a899e68.  list count = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Mirror Ambience', format=5, channels=2, frequency=48000, lengthbytes=595744, lengthpcm=3352868, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.272461.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7f837f559378
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7f83993519a8
-[LOG] SystemI::createSoundInternal             :     Create name='Assets/NULL-VOID/Build/Desktop/Ambience.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1269184
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 15552
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7f839aa22ef0
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Mirror Ambience', format=5, channels=2, frequency=48000, lengthbytes=595744, lengthpcm=3352868, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.272461.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7f83993519a8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7f831efae158
-[LOG] SystemI::createSoundInternal             :     Create name='Assets/NULL-VOID/Build/Desktop/Ambience.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1269184
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 15552
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7f831efae420
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Mirror Ambience', format=5, channels=2, frequency=48000, lengthbytes=595744, lengthpcm=3352868, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.272461.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7f831efae158
-[LOG] SoundI::release                          : Mirror Ambience (0x7f839a9d8fa8)
-[LOG] SoundI::release                          :     Mirror Ambience (0x7f837f4209a8)
-[LOG] SoundI::release                          :     Mirror Ambience (0x7f837f420b38)
-[LOG] SoundI::release                          : Mirror Ambience (0x7f837f109108)
-[LOG] SoundI::release                          :     Mirror Ambience (0x7f837f421298)
-[LOG] SoundI::release                          :     Mirror Ambience (0x7f837f41e568)
-[LOG] SoundI::release                          : Mirror Ambience (0x7f839948e408)
-[LOG] SoundI::release                          :     Mirror Ambience (0x7f837f41ecc8)
-[LOG] SoundI::release                          :     Mirror Ambience (0x7f837f41ee58)
 [LOG] SystemI::createSound                     : filename = Assets/NULL-VOID/Build/Desktop/Narrative.bank : mode 02010082
 [LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 0x7f837f1a24c8 : node = 0x7f837f12dfa0
-[LOG] SystemI::createSound                     : add node to async list : head = 0x7f839a899e68.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7f837f1a24c8
+[LOG] SystemI::createSound                     : setdata soundi = 0x7f99dc84a468 : node = 0x7f99dc8f1bf0
+[LOG] SystemI::createSound                     : add node to async list : head = 0x7f99c6f339c8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7f99dc84a468
 [LOG] SystemI::createSoundInternal             :     Create name='Assets/NULL-VOID/Build/Desktop/Narrative.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 9744160
 [LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 10208
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7f837f12e0b0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7f99dc8f1d00
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='3 Spenser Nameless', format=5, channels=2, frequency=48000, lengthbytes=418688, lengthpcm=1526160, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.371063.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7f837f1a24c8
-[LOG] SystemI::createSound                     : filename = Assets/NULL-VOID/Build/Desktop/Music.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 0x7f839a8e2538 : node = 0x7f837f6940a0
-[LOG] SystemI::createSound                     : add node to async list : head = 0x7f839a899e68.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7f839a8e2538
-[LOG] SystemI::createSoundInternal             :     Create name='Assets/NULL-VOID/Build/Desktop/Music.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 9780896
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 6144
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7f837f6941b0
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='3. Awakening', format=5, channels=2, frequency=48000, lengthbytes=1151712, lengthpcm=7974032, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.492920.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7f839a8e2538
-[LOG] SoundI::release                          : 3. Awakening (0x7f837f6af158)
-[LOG] SoundI::release                          :     3. Awakening (0x7f837f7a30d8)
-[LOG] SoundI::release                          :     3. Awakening (0x7f837f7e2fe8)
-[LOG] SoundI::release                          : 3 Spenser Nameless (0x7f837f1a24c8)
-[LOG] SoundI::release                          :     3 Spenser Nameless (0x7f837f6b2198)
-[LOG] SoundI::release                          :     3 Spenser Nameless (0x7f837f6b2328)
-[LOG] SoundI::release                          : 3. Awakening (0x7f839a8e2538)
-[LOG] SoundI::release                          :     3. Awakening (0x7f837efe5698)
-[LOG] SoundI::release                          :     3. Awakening (0x7f837efbb068)
-[LOG] SoundI::release                          : Mirror Ambience (0x7f837f559378)
-[LOG] SoundI::release                          :     Mirror Ambience (0x7f837f1261e8)
-[LOG] SoundI::release                          :     Mirror Ambience (0x7f837f19a138)
-[LOG] SoundI::release                          : Mirror Ambience (0x7f831efae158)
-[LOG] SoundI::release                          :     Mirror Ambience (0x7f83994c7878)
-[LOG] SoundI::release                          :     Mirror Ambience (0x7f837ef099f8)
-[LOG] SoundI::release                          : Mirror Ambience (0x7f83993519a8)
-[LOG] SoundI::release                          :     Mirror Ambience (0x7f837f18c468)
-[LOG] SoundI::release                          :     Mirror Ambience (0x7f83996f9da8)
-[LOG] SoundI::release                          :  (0x7f83997552e8)
-[LOG] SoundI::release                          :     Throw Sound (0x7f837f7e0ce8)
-[LOG] SoundI::release                          :  (0x7f837f4fb0b8)
-[LOG] SoundI::release                          :     MirrorPhase (0x7f837f4ccfd8)
-[LOG] SoundI::release                          :  (0x7f837ef07088)
-[LOG] SoundI::release                          :     LightRecharge (0x7f837ef0e598)
-[LOG] SoundI::release                          :  (0x7f839a98a208)
-[LOG] SoundI::release                          :     NEW Object Slam (0x7f83990760d8)
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='EMMA VOID 1', format=5, channels=2, frequency=48000, lengthbytes=471552, lengthpcm=1926641, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.442017.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7f99dc84a468
+[LOG] SoundI::release                          : 2. Welcome Home (0x7f99002cad88)
+[LOG] SoundI::release                          :     2. Welcome Home (0x7f990041cdf8)
+[LOG] SoundI::release                          :     2. Welcome Home (0x7f99003914f8)
+[LOG] SoundI::release                          : EMMA VOID 1 (0x7f99dc84a468)
+[LOG] SoundI::release                          :     EMMA VOID 1 (0x7f99004520c8)
+[LOG] SoundI::release                          :     EMMA VOID 1 (0x7f99004a6f38)
+[LOG] SoundI::release                          :  (0x7f99dc8be288)
+[LOG] SoundI::release                          :     MirrorPhase (0x7f99dc8db908)
+[LOG] SoundI::release                          :  (0x7f99004146e8)
+[LOG] SoundI::release                          :     Throw Sound (0x7f990049ead8)
+[LOG] SoundI::release                          :  (0x7f99dc888b18)
+[LOG] SoundI::release                          :     LightRecharge (0x7f99dc8e8a98)
+[LOG] SoundI::release                          :  (0x7f99b6f98a18)
+[LOG] SoundI::release                          :     NEW Object Slam (0x7f9901021478)
 [LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients

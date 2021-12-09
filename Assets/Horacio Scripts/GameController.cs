@@ -226,8 +226,8 @@ public class GameController : MonoBehaviour
 
     public void Update()
     {
-        Debug.Log(OptionsObj);
-        Debug.Log(Time.timeScale);
+        //Debug.Log(OptionsObj);
+        //Debug.Log(Time.timeScale);
         if (OptionsObj.activeSelf)
         {
             Time.timeScale = 0;
