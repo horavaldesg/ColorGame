@@ -1068,14 +1068,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CollisionTag: Player
-  Event: event:/NARRATIVE/Emma VO/Emma VO List
+  Event: event:/NARRATIVE/BRENDANS VO/Brendan VO List
   PlayEvent: 3
   StopEvent: 2
   AllowFadeout: 1
   TriggerOnce: 1
   Preload: 0
   Params:
-  - Name: EMMA VO PARAM
+  - Name: VOID VO PARAM
     Value: 0
   OverrideAttenuation: 0
   OverrideMinDistance: 0
@@ -5583,7 +5583,7 @@ MonoBehaviour:
   - {fileID: 228389693}
   mirrorCollider: {fileID: 2217520470178499186}
   finishDoor: {fileID: 7866362293365752076}
-  voiceClip: {fileID: 8300000, guid: d3865e2f404cd4fdfb810fb6bede7a6c, type: 3}
+  voiceClip: {fileID: 8300000, guid: 75259432adcf4d942a873d58b2a87581, type: 3}
   removePrevVO: 1
   prevVO: {fileID: 65605208}
   playNewVO: 1
@@ -33436,15 +33436,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CollisionTag: Player
-  Event: event:/NARRATIVE/Spenser VO/Spenser VO List
+  Event: event:/NARRATIVE/Skye VO/Skye VO List
   PlayEvent: 3
   StopEvent: 2
   AllowFadeout: 1
   TriggerOnce: 1
   Preload: 0
   Params:
-  - Name: SPENSER VO PARAM
-    Value: 1
+  - Name: NAMELESS VO PARAM
+    Value: 2
   OverrideAttenuation: 0
   OverrideMinDistance: 0
   OverrideMaxDistance: 0
@@ -34161,15 +34161,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CollisionTag: Player
-  Event: event:/NARRATIVE/Spenser VO/Spenser VO List
+  Event: event:/NARRATIVE/Skye VO/Skye VO List
   PlayEvent: 1
   StopEvent: 2
   AllowFadeout: 1
   TriggerOnce: 1
   Preload: 0
   Params:
-  - Name: SPENSER VO PARAM
-    Value: 0
+  - Name: NAMELESS VO PARAM
+    Value: 1
   OverrideAttenuation: 0
   OverrideMinDistance: 0
   OverrideMaxDistance: 0

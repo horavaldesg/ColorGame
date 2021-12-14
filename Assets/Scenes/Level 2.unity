@@ -7663,6 +7663,74 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4104011266970767350, guid: 99621c994311940c190be2808a651dd1, type: 3}
   m_PrefabInstance: {fileID: 632758965}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &632997426
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 632997427}
+  - component: {fileID: 632997429}
+  - component: {fileID: 632997428}
+  m_Layer: 0
+  m_Name: Voiceline Trigger (7)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &632997427
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 632997426}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -6, y: 4, z: 45}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1670836707}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &632997428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 632997426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Player
+  Event: event:/NARRATIVE/Skye VO/Skye React VO List
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 1
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
+--- !u!65 &632997429
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 632997426}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 12, y: 5, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &638490896
 GameObject:
   m_ObjectHideFlags: 0
@@ -7913,14 +7981,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CollisionTag: Player
-  Event: event:/NARRATIVE/Emma VO/Emma VO List
+  Event: event:/NARRATIVE/BRENDANS VO/Brendan VO List
   PlayEvent: 3
   StopEvent: 2
   AllowFadeout: 1
   TriggerOnce: 1
   Preload: 0
   Params:
-  - Name: EMMA VO PARAM
+  - Name: VOID VO PARAM
     Value: 2
   OverrideAttenuation: 0
   OverrideMinDistance: 0
@@ -15186,6 +15254,7 @@ Transform:
   - {fileID: 1189903847}
   - {fileID: 1296976077}
   - {fileID: 1893109573}
+  - {fileID: 1670836707}
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -20311,14 +20380,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CollisionTag: 
-  Event: event:/NARRATIVE/Emma VO/Emma VO List
+  Event: event:/NARRATIVE/BRENDANS VO/Brendan VO List
   PlayEvent: 1
   StopEvent: 2
   AllowFadeout: 1
   TriggerOnce: 1
   Preload: 0
   Params:
-  - Name: EMMA VO PARAM
+  - Name: VOID VO PARAM
     Value: 1
   OverrideAttenuation: 0
   OverrideMinDistance: 0
@@ -21119,7 +21188,6 @@ GameObject:
   - component: {fileID: 1189903847}
   - component: {fileID: 1189903849}
   - component: {fileID: 1189903848}
-  - component: {fileID: 1189903850}
   m_Layer: 0
   m_Name: Voiceline Trigger (2)
   m_TagString: Untagged
@@ -21154,15 +21222,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CollisionTag: Player
-  Event: event:/NARRATIVE/Spenser VO/Spenser VO List
+  Event: event:/NARRATIVE/Skye VO/Skye VO List
   PlayEvent: 3
   StopEvent: 2
   AllowFadeout: 1
   TriggerOnce: 1
   Preload: 0
   Params:
-  - Name: SPENSER VO PARAM
-    Value: 2
+  - Name: NAMELESS VO PARAM
+    Value: 3
   OverrideAttenuation: 0
   OverrideMinDistance: 0
   OverrideMaxDistance: 0
@@ -21179,29 +21247,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 12, y: 5, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1189903850
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1189903846}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: Player
-  Event: event:/SFX/Mirror/Mirror Phase
-  PlayEvent: 3
-  StopEvent: 4
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 0
-  OverrideMaxDistance: 0
 --- !u!1001 &1193117730
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21661,11 +21706,11 @@ MonoBehaviour:
   - {fileID: 1345363554}
   mirrorCollider: {fileID: 262246701}
   finishDoor: {fileID: 1519221437}
-  voiceClip: {fileID: 8300000, guid: b9640e72a8e736844bb0d40ae24d41c1, type: 3}
-  removePrevVO: 0
-  prevVO: {fileID: 0}
-  playNewVO: 0
-  newVO: {fileID: 0}
+  voiceClip: {fileID: 8300000, guid: 75259432adcf4d942a873d58b2a87581, type: 3}
+  removePrevVO: 1
+  prevVO: {fileID: 1296976076}
+  playNewVO: 1
+  newVO: {fileID: 632997426}
   rippleEffect: {fileID: 1366211921}
 --- !u!1001 &1238598039
 PrefabInstance:
@@ -21983,7 +22028,6 @@ GameObject:
   - component: {fileID: 1296976077}
   - component: {fileID: 1296976079}
   - component: {fileID: 1296976078}
-  - component: {fileID: 1296976080}
   m_Layer: 0
   m_Name: Voiceline Trigger (3)
   m_TagString: Untagged
@@ -22018,14 +22062,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CollisionTag: Player
-  Event: event:/NARRATIVE/Spenser VO/Spenser VO List
+  Event: event:/NARRATIVE/Skye VO/Skye VO List
   PlayEvent: 3
   StopEvent: 2
   AllowFadeout: 1
   TriggerOnce: 1
   Preload: 0
   Params:
-  - Name: SPENSER VO PARAM
+  - Name: NAMELESS VO PARAM
     Value: 4
   OverrideAttenuation: 0
   OverrideMinDistance: 0
@@ -22043,29 +22087,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 12, y: 5, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1296976080
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1296976076}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: Player
-  Event: event:/SFX/Mirror/Mirror Phase
-  PlayEvent: 3
-  StopEvent: 4
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 0
-  OverrideMaxDistance: 0
 --- !u!1001 &1299777630
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22542,10 +22563,10 @@ MonoBehaviour:
   mirrorCollider: {fileID: 1450527032}
   finishDoor: {fileID: 2086754153}
   voiceClip: {fileID: 8300000, guid: c81cf8789da54ff48952c58104961fd2, type: 3}
-  removePrevVO: 0
-  prevVO: {fileID: 0}
-  playNewVO: 0
-  newVO: {fileID: 0}
+  removePrevVO: 1
+  prevVO: {fileID: 1189903846}
+  playNewVO: 1
+  newVO: {fileID: 1680350516}
   rippleEffect: {fileID: 1752100761}
 --- !u!1001 &1325088289
 PrefabInstance:
@@ -22799,6 +22820,74 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: -7511558181221131132, guid: 6bb9355941b0cdb40995c31b5189fa85, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6bb9355941b0cdb40995c31b5189fa85, type: 3}
+--- !u!1 &1332328936
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1332328937}
+  - component: {fileID: 1332328939}
+  - component: {fileID: 1332328938}
+  m_Layer: 0
+  m_Name: Voiceline Trigger (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1332328937
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1332328936}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -6, y: 4, z: 45}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1670836707}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1332328938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1332328936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Player
+  Event: event:/NARRATIVE/Skye VO/Skye React VO List
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 1
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
+--- !u!65 &1332328939
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1332328936}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 12, y: 5, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1340716493
 GameObject:
   m_ObjectHideFlags: 0
@@ -31037,6 +31126,39 @@ Transform:
   m_Father: {fileID: 1516614589}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1670836706
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1670836707}
+  m_Layer: 0
+  m_Name: NAMELESS
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1670836707
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1670836706}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1332328937}
+  - {fileID: 1680350517}
+  - {fileID: 632997427}
+  m_Father: {fileID: 839555687}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1675278468
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31427,6 +31549,74 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8316962948363607237, guid: 8d743650a6b43a047b81f27ece91eb26, type: 3}
   m_PrefabInstance: {fileID: 1675976220}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1680350516
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1680350517}
+  - component: {fileID: 1680350519}
+  - component: {fileID: 1680350518}
+  m_Layer: 0
+  m_Name: Voiceline Trigger (6)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1680350517
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680350516}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -6, y: 4, z: 45}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1670836707}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1680350518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680350516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Player
+  Event: event:/NARRATIVE/Skye VO/Skye React VO List
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 1
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
+--- !u!65 &1680350519
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680350516}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 12, y: 5, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1680973476
 GameObject:
   m_ObjectHideFlags: 0
@@ -34779,7 +34969,6 @@ GameObject:
   - component: {fileID: 1893109573}
   - component: {fileID: 1893109575}
   - component: {fileID: 1893109574}
-  - component: {fileID: 1893109576}
   m_Layer: 0
   m_Name: Voiceline Trigger (4)
   m_TagString: Untagged
@@ -34814,14 +35003,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CollisionTag: Player
-  Event: event:/NARRATIVE/Spenser VO/Spenser VO List
+  Event: event:/NARRATIVE/Skye VO/Skye VO List
   PlayEvent: 3
   StopEvent: 2
   AllowFadeout: 1
   TriggerOnce: 1
   Preload: 0
   Params:
-  - Name: SPENSER VO PARAM
+  - Name: NAMELESS VO PARAM
     Value: 5
   OverrideAttenuation: 0
   OverrideMinDistance: 0
@@ -34839,29 +35028,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 12, y: 5, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1893109576
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1893109572}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: Player
-  Event: event:/SFX/Mirror/Mirror Phase
-  PlayEvent: 3
-  StopEvent: 4
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 0
-  OverrideMaxDistance: 0
 --- !u!1001 &1897862477
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49318,10 +49484,10 @@ MonoBehaviour:
   mirrorCollider: {fileID: 1082425238}
   finishDoor: {fileID: 1434456256}
   voiceClip: {fileID: 8300000, guid: a285227453ca4154eae1596a21ed5a27, type: 3}
-  removePrevVO: 0
-  prevVO: {fileID: 0}
-  playNewVO: 0
-  newVO: {fileID: 0}
+  removePrevVO: 1
+  prevVO: {fileID: 1146107665}
+  playNewVO: 1
+  newVO: {fileID: 1332328936}
   rippleEffect: {fileID: 944602251}
 --- !u!43 &2076605939
 Mesh:

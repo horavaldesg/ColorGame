@@ -156,6 +156,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 69851
+--- !u!114 &-8583275722751907948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/NARRATIVE/BRENDANS VO/Brendan VO List
+  m_EditorClassIdentifier: 
+  Path: event:/NARRATIVE/BRENDANS VO/Brendan VO List
+  guid: f7071a93d6a1f34fbd49b60160dc7fd6
+  Banks:
+  - {fileID: -4607501197521040263}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 8249897366725522186}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-8520617053310288160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -220,6 +244,28 @@ MonoBehaviour:
   Type: 1
   IsGlobal: 0
   Exists: 1
+--- !u!114 &-8408842446762423957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Spenser VO List/NAMELESS VO PARAM
+  m_EditorClassIdentifier: 
+  Name: NAMELESS VO PARAM
+  Min: 0
+  Max: 14
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 1
+  IsGlobal: 0
+  Exists: 0
 --- !u!114 &-8384384238974248500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -348,7 +394,7 @@ MonoBehaviour:
   Path: Assets/NULL-VOID/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 637736455414336173
+  lastModified: 637751013527361214
   FileSizes:
   - Name: Desktop
     Value: 9787040
@@ -479,6 +525,28 @@ MonoBehaviour:
   Name: EMMA VO PARAM
   Min: 0
   Max: 8
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 1
+  IsGlobal: 0
+  Exists: 0
+--- !u!114 &-7823609123931872329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Skye VO List/NAMELESS VO PARAM
+  m_EditorClassIdentifier: 
+  Name: NAMELESS VO PARAM
+  Min: 0
+  Max: 14
   Default: 0
   ID:
     data1: 0
@@ -816,6 +884,28 @@ MonoBehaviour:
   Type: 1
   IsGlobal: 0
   Exists: 0
+--- !u!114 &-6394280430840566948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Spenser VO List/NAMELESS VO PARAM
+  m_EditorClassIdentifier: 
+  Name: NAMELESS VO PARAM
+  Min: 0
+  Max: 14
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 1
+  IsGlobal: 0
+  Exists: 1
 --- !u!114 &-6351778410528532738
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -839,6 +929,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 274772
+--- !u!114 &-6324743558850713857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/NARRATIVE/BRENDANS VO/Brendan REACT VO List
+  m_EditorClassIdentifier: 
+  Path: event:/NARRATIVE/BRENDANS VO/Brendan REACT VO List
+  guid: 9a0575934ef89a47b96a12e34994db69
+  Banks:
+  - {fileID: -4607501197521040263}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 8499
 --- !u!114 &-6309806143307345853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1104,6 +1217,28 @@ MonoBehaviour:
   Type: 1
   IsGlobal: 0
   Exists: 0
+--- !u!114 &-5830399512343151199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Skye VO List/NAMELESS VO PARAM
+  m_EditorClassIdentifier: 
+  Name: NAMELESS VO PARAM
+  Min: 0
+  Max: 14
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 1
+  IsGlobal: 0
+  Exists: 0
 --- !u!114 &-5821455191984786641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1235,6 +1370,28 @@ MonoBehaviour:
   Type: 1
   IsGlobal: 0
   Exists: 1
+--- !u!114 &-5492534961244755064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Emma VO List/VOID VO PARAM
+  m_EditorClassIdentifier: 
+  Name: VOID VO PARAM
+  Min: 0
+  Max: 8
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 1
+  IsGlobal: 0
+  Exists: 1
 --- !u!114 &-5489288666519109943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1296,6 +1453,28 @@ MonoBehaviour:
   Name: EMMA VO PARAM
   Min: 0
   Max: 8
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 1
+  IsGlobal: 0
+  Exists: 1
+--- !u!114 &-5379216536242573745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Skye VO List/NAMELESS VO PARAM
+  m_EditorClassIdentifier: 
+  Name: NAMELESS VO PARAM
+  Min: 0
+  Max: 14
   Default: 0
   ID:
     data1: 0
@@ -1434,7 +1613,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: -3699548543866700399}
+  - {fileID: 1789831180953269025}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -1473,6 +1652,28 @@ MonoBehaviour:
   m_Name: parameter:/Emma VO List/EMMA VO PARAM
   m_EditorClassIdentifier: 
   Name: EMMA VO PARAM
+  Min: 0
+  Max: 8
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 1
+  IsGlobal: 0
+  Exists: 0
+--- !u!114 &-4946607638380839499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Emma VO List/VOID VO PARAM
+  m_EditorClassIdentifier: 
+  Name: VOID VO PARAM
   Min: 0
   Max: 8
   Default: 0
@@ -1590,7 +1791,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 305089127048367912}
+  - {fileID: 7648966416415433455}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -1672,10 +1873,10 @@ MonoBehaviour:
   Path: Assets/NULL-VOID/Build/Desktop/Narrative.bank
   Name: Narrative
   StudioPath: bank:/Narrative
-  lastModified: 637748492223571461
+  lastModified: 637751013529100427
   FileSizes:
   - Name: Desktop
-    Value: 14576832
+    Value: 19498176
   Exists: 1
 --- !u!114 &-4590641864704221636
 MonoBehaviour:
@@ -1900,7 +2101,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 9138754302014544797}
+  - {fileID: -2749320389904542114}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -1919,10 +2120,10 @@ MonoBehaviour:
   Path: Assets/NULL-VOID/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637748492222910858
+  lastModified: 637751013526842606
   FileSizes:
   - Name: Desktop
-    Value: 2358
+    Value: 2472
   Exists: 1
 --- !u!114 &-3699548543866700399
 MonoBehaviour:
@@ -2250,6 +2451,28 @@ MonoBehaviour:
   Name: EMMA VO PARAM
   Min: 0
   Max: 8
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 1
+  IsGlobal: 0
+  Exists: 1
+--- !u!114 &-2749320389904542114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Skye VO List/NAMELESS VO PARAM
+  m_EditorClassIdentifier: 
+  Name: NAMELESS VO PARAM
+  Min: 0
+  Max: 14
   Default: 0
   ID:
     data1: 0
@@ -3224,12 +3447,14 @@ MonoBehaviour:
   - {fileID: 2814246072206494464}
   - {fileID: 2870185023611191503}
   - {fileID: -3813165586819386818}
+  - {fileID: -6324743558850713857}
+  - {fileID: -8583275722751907948}
   EditorParameters: []
   MasterBanks:
   - {fileID: 2237642186516713750}
   StringsBanks:
   - {fileID: -3787140468433587659}
-  stringsBankWriteTime: 637748492222910858
+  stringsBankWriteTime: 637751013526842606
   cacheVersion: 8
 --- !u!114 &116873962233911229
 MonoBehaviour:
@@ -3476,6 +3701,28 @@ MonoBehaviour:
   Type: 1
   IsGlobal: 0
   Exists: 1
+--- !u!114 &486940388675093663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Spenser VO List/NAMELESS VO PARAM
+  m_EditorClassIdentifier: 
+  Name: NAMELESS VO PARAM
+  Min: 0
+  Max: 14
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 1
+  IsGlobal: 0
+  Exists: 0
 --- !u!114 &587027099764256720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3645,6 +3892,28 @@ MonoBehaviour:
   Name: SPENSER VO PARAM
   Min: 0
   Max: 12
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 1
+  IsGlobal: 0
+  Exists: 0
+--- !u!114 &887117107057399490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Spenser VO List/NAMELESS VO PARAM
+  m_EditorClassIdentifier: 
+  Name: NAMELESS VO PARAM
+  Min: 0
+  Max: 14
   Default: 0
   ID:
     data1: 0
@@ -3847,6 +4116,50 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 166125
+--- !u!114 &1773833453661870199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Brendan VO List/VOID VO PARAM
+  m_EditorClassIdentifier: 
+  Name: VOID VO PARAM
+  Min: 0
+  Max: 8
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 1
+  IsGlobal: 0
+  Exists: 0
+--- !u!114 &1789831180953269025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Emma VO List/VOID VO PARAM
+  m_EditorClassIdentifier: 
+  Name: VOID VO PARAM
+  Min: 0
+  Max: 8
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 1
+  IsGlobal: 0
+  Exists: 1
 --- !u!114 &1882140500247335329
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3972,7 +4285,7 @@ MonoBehaviour:
   Path: Assets/NULL-VOID/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637736455413795568
+  lastModified: 637751013526832594
   FileSizes:
   - Name: Desktop
     Value: 1990
@@ -4153,6 +4466,28 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &2481241891252976877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Skye VO List/NAMELESS VO PARAM
+  m_EditorClassIdentifier: 
+  Name: NAMELESS VO PARAM
+  Min: 0
+  Max: 14
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 1
+  IsGlobal: 0
+  Exists: 0
 --- !u!114 &2485893232636747884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4335,6 +4670,28 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 256403
+--- !u!114 &2999929345529054949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Emma VO List/VOID VO PARAM
+  m_EditorClassIdentifier: 
+  Name: VOID VO PARAM
+  Min: 0
+  Max: 8
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 1
+  IsGlobal: 0
+  Exists: 0
 --- !u!114 &3259041759973965569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4402,6 +4759,28 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 16927
+--- !u!114 &3485205501083580162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Brendan VO List/VOID VO PARAM
+  m_EditorClassIdentifier: 
+  Name: VOID VO PARAM
+  Min: 0
+  Max: 8
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 1
+  IsGlobal: 0
+  Exists: 0
 --- !u!114 &3641135849472884794
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5219,7 +5598,6 @@ MonoBehaviour:
   guid: 671f1e9b24979a41af3da9686d153577
   Banks:
   - {fileID: 7812255373277157013}
-  - {fileID: -4607501197521040263}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -5604,6 +5982,28 @@ MonoBehaviour:
   Type: 1
   IsGlobal: 0
   Exists: 1
+--- !u!114 &7334096742202464497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Brendan VO List/VOID VO PARAM
+  m_EditorClassIdentifier: 
+  Name: VOID VO PARAM
+  Min: 0
+  Max: 8
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 1
+  IsGlobal: 0
+  Exists: 1
 --- !u!114 &7352772500945841058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5717,6 +6117,50 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1000
+--- !u!114 &7614890705018599989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Brendan VO List/VOID VO PARAM
+  m_EditorClassIdentifier: 
+  Name: VOID VO PARAM
+  Min: 0
+  Max: 8
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 1
+  IsGlobal: 0
+  Exists: 0
+--- !u!114 &7648966416415433455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Spenser VO List/NAMELESS VO PARAM
+  m_EditorClassIdentifier: 
+  Name: NAMELESS VO PARAM
+  Min: 0
+  Max: 14
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 1
+  IsGlobal: 0
+  Exists: 1
 --- !u!114 &7703901738643275433
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5776,10 +6220,10 @@ MonoBehaviour:
   Path: Assets/NULL-VOID/Build/Desktop/Ambience.bank
   Name: Ambience
   StudioPath: bank:/Ambience
-  lastModified: 637748492222752957
+  lastModified: 637751013526802573
   FileSizes:
   - Name: Desktop
-    Value: 1284672
+    Value: 1284736
   Exists: 1
 --- !u!114 &7834961192968071857
 MonoBehaviour:
@@ -5913,6 +6357,28 @@ MonoBehaviour:
   Type: 1
   IsGlobal: 0
   Exists: 0
+--- !u!114 &8249897366725522186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Brendan VO List/VOID VO PARAM
+  m_EditorClassIdentifier: 
+  Name: VOID VO PARAM
+  Min: 0
+  Max: 8
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 1
+  IsGlobal: 0
+  Exists: 1
 --- !u!114 &8318898516045820179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6293,6 +6759,28 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 139273
+--- !u!114 &9095483388153620333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Emma VO List/VOID VO PARAM
+  m_EditorClassIdentifier: 
+  Name: VOID VO PARAM
+  Min: 0
+  Max: 8
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Type: 1
+  IsGlobal: 0
+  Exists: 0
 --- !u!114 &9102026102930747596
 MonoBehaviour:
   m_ObjectHideFlags: 0
