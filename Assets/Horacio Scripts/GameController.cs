@@ -287,7 +287,7 @@ public class GameController : MonoBehaviour
         {
             cc.enabled = false;
         }
-
+        //Debug.Log("Pull box: " + pullBox);
         RaycastHit hit;
         if (Physics.Raycast(camTransform.transform.position, camTransform.transform.forward, out hit, 2))
         {
@@ -302,7 +302,7 @@ public class GameController : MonoBehaviour
                     interactionText.SetActive(true);
                 }
                 
-                Debug.Log("Can pick up");
+                //Debug.Log("Can pick up");
                 //boxPickup = true;
                 
             }
@@ -311,7 +311,7 @@ public class GameController : MonoBehaviour
         else
         {
             interactionText.SetActive(false);
-            
+            canPickup = false;
             //pullBox = false;
 
         }

@@ -38,7 +38,7 @@ public class ThrowableBall : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        //Debug.Log("Has Ball: " + hasBall);
         RaycastHit hit;
         if (Physics.Raycast(camTransform.transform.position, camTransform.transform.forward, out hit, distanceToDraw))
         {
@@ -69,7 +69,7 @@ public class ThrowableBall : MonoBehaviour
             interactionText.SetActive(false);
         }
         //Decrease light
-        if (hasBall && !GameController.pullBox)
+        if (hasBall)
         {
             anim.SetBool("HoldingBall", true);
             
@@ -126,7 +126,7 @@ public class ThrowableBall : MonoBehaviour
             canGrab = false;
             canShoot = false;
         }
-
+        
     }
 
     public static void PickUp()
