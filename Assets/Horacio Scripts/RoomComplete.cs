@@ -9,6 +9,7 @@ public class RoomComplete : MonoBehaviour
     GameObject player;
     public GameObject finishDoor;
     public AudioClip voiceClip;
+    public float clipDuration;
     float voI;
     private int onSocket;
     bool b = false;
@@ -71,7 +72,7 @@ public class RoomComplete : MonoBehaviour
             voI += Time.deltaTime;
         }
 
-        if(voI > voiceClip.length -5)
+        if(voI > clipDuration)
         {
             finishDoor.SetActive(true);
             voI = 0;
