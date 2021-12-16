@@ -37842,6 +37842,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WalkableDoor
       objectReference: {fileID: 0}
+    - target: {fileID: 7866362292208761575, guid: 5f5af1921bf0042928d9652cc2bb2d34, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7866362292208761594, guid: 5f5af1921bf0042928d9652cc2bb2d34, type: 3}
       propertyPath: roomManager
       value: 
@@ -37905,6 +37909,29 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7866362292208761575, guid: 5f5af1921bf0042928d9652cc2bb2d34, type: 3}
   m_PrefabInstance: {fileID: 7866362293365752075}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7866362293365752077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7866362293365752076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/SFX/Mirror/Mirror Spawn
+  PlayEvent: 11
+  StopEvent: 2
+  AllowFadeout: 0
+  TriggerOnce: 1
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &8194935650052654379
 PrefabInstance:
   m_ObjectHideFlags: 0
