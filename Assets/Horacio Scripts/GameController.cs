@@ -105,6 +105,8 @@ public class GameController : MonoBehaviour
     public GameObject transtitionOut;
     public GameObject transtionCaught;
 
+    public GameObject uiOverlay;
+    public GameObject reticleOverlay;
     private void Awake()
     {
         paintOnClick = PaintOnClick;
@@ -191,7 +193,8 @@ public class GameController : MonoBehaviour
     {
         
         OptionsObj.SetActive(!OptionsObj.activeSelf);
-        
+        uiOverlay.SetActive(!uiOverlay.activeSelf);
+        reticleOverlay.SetActive(!reticleOverlay.activeSelf);
         //changeFirstSelected.Invoke();
         if (ctScheme.controlScheme == InputHandler.controlSchemes.Gamepad)
         {

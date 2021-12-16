@@ -5986,6 +5986,8 @@ MonoBehaviour:
   footsteps: 
   transtitionOut: {fileID: 230513893836499299}
   transtionCaught: {fileID: 207806663408243808}
+  uiOverlay: {fileID: 2282018249959956932}
+  reticleOverlay: {fileID: 2282018250093481764}
 --- !u!143 &2282018249764314375
 CharacterController:
   m_ObjectHideFlags: 0
@@ -7351,7 +7353,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5153234421727973476}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.00024414065}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2282018249332524140}
@@ -7384,9 +7386,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.26299393, g: 0.4634193, b: 0.7075472, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
+  m_Maskable: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
