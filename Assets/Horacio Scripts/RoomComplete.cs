@@ -47,11 +47,13 @@ public class RoomComplete : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Debug.Log(onSocket);
         if(onSocket == sockets.Length)
         {
+            onSocket = 0;
             mirrorCollider.isTrigger = true;
             rippleEffect.SetActive(true);
-            onSocket = 0;
+            
             if (removePrevVO)
             {
                 Destroy(prevVO);
@@ -72,6 +74,9 @@ public class RoomComplete : MonoBehaviour
         if(voI > voiceClip.length -5)
         {
             finishDoor.SetActive(true);
+            voI = 0;
+            PassedTrigger = false;
+            
         }
         //Debug.Log(voI + " " + voiceClip.length);
         //Debug.Log(onSocket);

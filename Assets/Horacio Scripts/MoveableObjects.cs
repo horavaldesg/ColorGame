@@ -48,10 +48,10 @@ public class MoveableObjects : MonoBehaviour
                 //Debug.Log(boxName);
                 //Debug.Log(other.gameObject.GetComponent<BoxCompletion>().boxName);
                 collider.enabled = false;
-                GameController.pullBox = false;
-                GameController.boxPickup = false;
-                GameController.moveableBox = null;
-                GameController.canPickup = false;
+                ThrowableBall.pullBox = false;
+                ThrowableBall.boxPickup = false;
+                ThrowableBall.moveableBox = null;
+                ThrowableBall.canPickup = false;
                 roomComplete.OnSocket();
                 //if (completedBoxes % 2 == modNum && completedBoxes != 0 && completedBoxes != 1)
                 //{

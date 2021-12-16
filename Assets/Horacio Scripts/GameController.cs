@@ -69,12 +69,12 @@ public class GameController : MonoBehaviour
     public static bool paintOnClick;
     
     //Moveable OBJ
-    public static bool hasMoveableObject;
-    public static bool canPickup;
+    //public static bool hasMoveableObject;
+    //public static bool canPickup;
     public float boxPush = 2.0f;
-    public static bool pullBox;
+    //public static bool pullBox;
     public GameObject interactionText;
-    public static bool boxPickup;
+    //public static bool boxPickup;
 
     //Options Menu
     public UnityEvent changeFirstSelected;
@@ -103,7 +103,6 @@ public class GameController : MonoBehaviour
 
     private void Awake()
     {
-        hasMoveableObject = false;
         paintOnClick = PaintOnClick;
 
         if (gamepad != null)
@@ -162,7 +161,7 @@ public class GameController : MonoBehaviour
         //Interaction
 
         
-        pullBox = false;
+       
 
         
 
@@ -344,7 +343,7 @@ public class GameController : MonoBehaviour
     {
         if (hit.collider.gameObject.CompareTag("Box"))
         {
-            boxPickup = true;
+            //boxPickup = true;
             Rigidbody box = hit.collider.GetComponent<Rigidbody>();
             if (box == null || box.isKinematic)
             {

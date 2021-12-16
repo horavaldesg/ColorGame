@@ -31,7 +31,7 @@ public class ThrowableBall : MonoBehaviour
     public float boxPush = 2.0f;
     public static bool pullBox;
     public static bool boxPickup;
-    GameObject moveableBox;
+    public static GameObject moveableBox;
     // Start is called before the first frame update
     void Start()
     {
@@ -81,7 +81,7 @@ public class ThrowableBall : MonoBehaviour
             {
                 canPickup = true;
                 moveableBox = hit.collider.gameObject;
-                Debug.Log(moveableBox.name);
+                //Debug.Log(moveableBox.name);
                 if (moveableBox != null && !hasBall)
                 {
                     GameController.controls.Gameplay.Interaction.Enable();
@@ -106,7 +106,7 @@ public class ThrowableBall : MonoBehaviour
         if (pullBox && moveableBox != null)
         {
             GameController.controls.Gameplay.Interaction.performed += tgb => pullBox = !pullBox;
-            Debug.Log("HElloung");
+            //Debug.Log("HElloung");
             //PlayDrag(dragSound);
             moveableBox.transform.position = new Vector3(boxTransform.transform.position.x, moveableBox.transform.position.y, boxTransform.transform.position.z);
             moveableBox.transform.rotation = boxTransform.rotation;
