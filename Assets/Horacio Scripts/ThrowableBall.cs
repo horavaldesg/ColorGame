@@ -15,6 +15,8 @@ public class ThrowableBall : MonoBehaviour
     public static GameObject ball;
     public static bool hasBall;
     public static bool canShoot;
+    public Transform boxTransform;
+
     Color lerpColor;
     Color lerpColor2;
     //Ball Timer 
@@ -24,9 +26,16 @@ public class ThrowableBall : MonoBehaviour
     [FMODUnity.EventRef]
     public string throwSound;
 
+    public static bool hasMoveableObject;
+    public static bool canPickup;
+    public float boxPush = 2.0f;
+    public static bool pullBox;
+    public static bool boxPickup;
+    GameObject moveableBox;
     // Start is called before the first frame update
     void Start()
     {
+        moveableBox = null;
         staticAnim = anim;
         camTransform = GameObject.FindGameObjectWithTag("MainCamera");
         ballTouching = false;
@@ -38,6 +47,12 @@ public class ThrowableBall : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!canGrab || canPickup)
+        {
+            GameController.controls.Gameplay.Interaction.Disable();
+
+        }
+
         //Debug.Log("Has Ball: " + hasBall);
         RaycastHit hit;
         if (Physics.Raycast(camTransform.transform.position, camTransform.transform.forward, out hit, distanceToDraw))
@@ -62,11 +77,45 @@ public class ThrowableBall : MonoBehaviour
                 }
 
             }
+            else if (hit.collider.gameObject.CompareTag("Box"))
+            {
+                canPickup = true;
+                moveableBox = hit.collider.gameObject;
+                Debug.Log(moveableBox.name);
+                if (moveableBox != null && !hasBall)
+                {
+                    GameController.controls.Gameplay.Interaction.Enable();
+                    GameController.controls.Gameplay.Interaction.performed += tgb => pullBox = !pullBox;
+                    interactionText.SetActive(true);
+                }
+
+                //Debug.Log("Can pick up");
+                //boxPickup = true;
+
+            }
         }
         else
         {
             canGrab = false;
             interactionText.SetActive(false);
+            interactionText.SetActive(false);
+            canPickup = false;
+            //pullBox = false;
+
+        }
+        if (pullBox && moveableBox != null)
+        {
+            GameController.controls.Gameplay.Interaction.performed += tgb => pullBox = !pullBox;
+            Debug.Log("HElloung");
+            //PlayDrag(dragSound);
+            moveableBox.transform.position = new Vector3(boxTransform.transform.position.x, moveableBox.transform.position.y, boxTransform.transform.position.z);
+            moveableBox.transform.rotation = boxTransform.rotation;
+
+        }
+        else
+        {
+            canPickup = false;
+            moveableBox = null;
         }
         //Decrease light
         if (hasBall)
@@ -126,6 +175,9 @@ public class ThrowableBall : MonoBehaviour
             canGrab = false;
             canShoot = false;
         }
+
+       
+       
         
     }
 

@@ -75,7 +75,6 @@ public class GameController : MonoBehaviour
     public static bool pullBox;
     public GameObject interactionText;
     public static bool boxPickup;
-    public Transform boxTransform;
 
     //Options Menu
     public UnityEvent changeFirstSelected;
@@ -236,11 +235,7 @@ public class GameController : MonoBehaviour
         {
             Time.timeScale = 1;
         }
-        if (!ThrowableBall.canGrab || canPickup)
-        {
-            controls.Gameplay.Interaction.Disable();
-
-        }
+        
         if (OptionsObj.activeSelf)
         {
             Cursor.lockState = CursorLockMode.None;
@@ -278,57 +273,12 @@ public class GameController : MonoBehaviour
 
         MovePlayer();
 
-        if (!hasMoveableObject)
-        {
+       
             cc.enabled = true;
             cc.Move(movement);
-        }
-        else if (hasMoveableObject)
-        {
-            cc.enabled = false;
-        }
+       
         //Debug.Log("Pull box: " + pullBox);
-        RaycastHit hit;
-        if (Physics.Raycast(camTransform.transform.position, camTransform.transform.forward, out hit, 2))
-        {
-            if (hit.collider.gameObject.CompareTag("Box"))
-            {
-                canPickup = true;
-                moveableBox = hit.collider.gameObject;
-                if (moveableBox != null && !ThrowableBall.hasBall)
-                {
-                    controls.Gameplay.Interaction.Enable();
-                    controls.Gameplay.Interaction.performed += tgb => pullBox = !pullBox;
-                    interactionText.SetActive(true);
-                }
-                
-                //Debug.Log("Can pick up");
-                //boxPickup = true;
-                
-            }
-           
-        }
-        else
-        {
-            interactionText.SetActive(false);
-            canPickup = false;
-            //pullBox = false;
-
-        }
-        if (pullBox && moveableBox != null )
-        {
-            controls.Gameplay.Interaction.performed += tgb => pullBox = !pullBox;
-
-            //PlayDrag(dragSound);
-            moveableBox.transform.position = new Vector3(boxTransform.transform.position.x, moveableBox.transform.position.y, boxTransform.transform.position.z);
-            moveableBox.transform.rotation = boxTransform.rotation;
-
-        }
-        else
-        {
-            canPickup = false;
-            moveableBox = null;
-        }
+       
         //Debug.Log(moveableBox); 
         //Player Rotation
 

@@ -3587,7 +3587,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!136 &264595217
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4123,6 +4123,10 @@ PrefabInstance:
       propertyPath: boxName
       value: Table
       objectReference: {fileID: 0}
+    - target: {fileID: 7521532773127245855, guid: c4ff101232de041d198b6450fb859241, type: 3}
+      propertyPath: roomComplete
+      value: 
+      objectReference: {fileID: 1230802342}
     - target: {fileID: 7867107833845007104, guid: c4ff101232de041d198b6450fb859241, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.6700001
@@ -5602,6 +5606,10 @@ PrefabInstance:
       propertyPath: boxName
       value: Chair 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7521532773127245855, guid: c4ff101232de041d198b6450fb859241, type: 3}
+      propertyPath: roomComplete
+      value: 
+      objectReference: {fileID: 1323062101}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4ff101232de041d198b6450fb859241, type: 3}
 --- !u!4 &443602050 stripped
@@ -15103,6 +15111,10 @@ PrefabInstance:
       propertyPath: boxName
       value: Chair 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7521532773127245855, guid: c4ff101232de041d198b6450fb859241, type: 3}
+      propertyPath: roomComplete
+      value: 
+      objectReference: {fileID: 1323062101}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4ff101232de041d198b6450fb859241, type: 3}
 --- !u!4 &829476879 stripped
@@ -22742,6 +22754,10 @@ PrefabInstance:
       propertyPath: boxName
       value: Table
       objectReference: {fileID: 0}
+    - target: {fileID: 7521532773127245855, guid: c4ff101232de041d198b6450fb859241, type: 3}
+      propertyPath: roomComplete
+      value: 
+      objectReference: {fileID: 1323062101}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4ff101232de041d198b6450fb859241, type: 3}
 --- !u!4 &1330447459 stripped
@@ -23040,6 +23056,10 @@ PrefabInstance:
       propertyPath: boxName
       value: Couch
       objectReference: {fileID: 0}
+    - target: {fileID: 7521532773127245855, guid: c4ff101232de041d198b6450fb859241, type: 3}
+      propertyPath: roomComplete
+      value: 
+      objectReference: {fileID: 1230802342}
     - target: {fileID: 7867107833845007104, guid: c4ff101232de041d198b6450fb859241, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.7600002
@@ -23369,6 +23389,10 @@ PrefabInstance:
       propertyPath: boxName
       value: Table
       objectReference: {fileID: 0}
+    - target: {fileID: 7521532773127245855, guid: c4ff101232de041d198b6450fb859241, type: 3}
+      propertyPath: roomComplete
+      value: 
+      objectReference: {fileID: 2060280991}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4ff101232de041d198b6450fb859241, type: 3}
 --- !u!4 &1369615649 stripped
@@ -25336,6 +25360,10 @@ PrefabInstance:
       propertyPath: boxName
       value: Couch
       objectReference: {fileID: 0}
+    - target: {fileID: 7521532773127245855, guid: c4ff101232de041d198b6450fb859241, type: 3}
+      propertyPath: roomComplete
+      value: 
+      objectReference: {fileID: 2060280991}
     - target: {fileID: 7867107833845007104, guid: c4ff101232de041d198b6450fb859241, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

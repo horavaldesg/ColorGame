@@ -10,7 +10,7 @@ public class RoomComplete : MonoBehaviour
     public GameObject finishDoor;
     public AudioClip voiceClip;
     float voI;
-    private static int onSocket;
+    private int onSocket;
     bool b = false;
     public static bool PassedTrigger;
 
@@ -76,7 +76,7 @@ public class RoomComplete : MonoBehaviour
         //Debug.Log(voI + " " + voiceClip.length);
         //Debug.Log(onSocket);
     }
-    public static void OnSocket()
+    public void OnSocket()
     {
 
         onSocket += 1;

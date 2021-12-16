@@ -10,6 +10,7 @@ public class MoveableObjects : MonoBehaviour
     float modNum;
     Collider collider;
     public static bool onSocket;
+    public RoomComplete roomComplete;
     // Start is called before the first frame update
     private void Start()
     {
@@ -51,7 +52,7 @@ public class MoveableObjects : MonoBehaviour
                 GameController.boxPickup = false;
                 GameController.moveableBox = null;
                 GameController.canPickup = false;
-                RoomComplete.OnSocket();
+                roomComplete.OnSocket();
                 //if (completedBoxes % 2 == modNum && completedBoxes != 0 && completedBoxes != 1)
                 //{
                     
