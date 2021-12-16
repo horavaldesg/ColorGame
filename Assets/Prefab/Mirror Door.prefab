@@ -2437,6 +2437,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RoomManagerObj: {fileID: 0}
+  roomsOff: []
 --- !u!1 &4483954373097248226
 GameObject:
   m_ObjectHideFlags: 0
@@ -6020,6 +6021,10 @@ PrefabInstance:
     - target: {fileID: 7481136549810653546, guid: 83c791e7168a0804bb683bd0f9909fb2, type: 3}
       propertyPath: m_Name
       value: Ripple Animation
+      objectReference: {fileID: 0}
+    - target: {fileID: 7481136549810653546, guid: 83c791e7168a0804bb683bd0f9909fb2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7481136549810653546, guid: 83c791e7168a0804bb683bd0f9909fb2, type: 3}
       propertyPath: m_StaticEditorFlags
