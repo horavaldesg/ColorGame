@@ -2236,6 +2236,29 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7521532773127245853, guid: c4ff101232de041d198b6450fb859241, type: 3}
   m_PrefabInstance: {fileID: 228389691}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &228389694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 228389693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Box
+  Event: event:/SFX/Object/Socket
+  PlayEvent: 3
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 1
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &259006149
 GameObject:
   m_ObjectHideFlags: 0
@@ -33187,6 +33210,29 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7521532773127245853, guid: c4ff101232de041d198b6450fb859241, type: 3}
   m_PrefabInstance: {fileID: 1578505581}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1578505584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1578505583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Box
+  Event: event:/SFX/Object/Socket
+  PlayEvent: 3
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 1
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1001 &1605710677
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36138,6 +36184,29 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7521532773127245853, guid: c4ff101232de041d198b6450fb859241, type: 3}
   m_PrefabInstance: {fileID: 1999707342}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1999707344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999707343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Box
+  Event: event:/SFX/Object/Socket
+  PlayEvent: 3
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 1
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &2024332732
 GameObject:
   m_ObjectHideFlags: 0
@@ -37834,6 +37903,29 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2635803965874735956, guid: c53c1c40131434f3da59265d5a666cf1, type: 3}
   m_PrefabInstance: {fileID: 2217520470178499185}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2217520470178499188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2217520470178499187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/SFX/Object/Completion
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 1
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1001 &6115008105141760278
 PrefabInstance:
   m_ObjectHideFlags: 0
