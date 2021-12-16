@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7022947325683189095}
   - component: {fileID: 7022947325683189092}
   - component: {fileID: 7022947325683189094}
+  - component: {fileID: 5398897850178732360}
   m_Layer: 0
   m_Name: Voiceline Trigger
   m_TagString: Untagged
@@ -58,15 +59,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CollisionTag: Player
-  Event: event:/NARRATIVE/BRENDANS VO/Brendan VO List
+  Event: event:/NARRATIVE/Skye VO/Skye VO List
   PlayEvent: 3
   StopEvent: 2
   AllowFadeout: 1
   TriggerOnce: 1
   Preload: 0
-  Params:
-  - Name: VOID VO PARAM
-    Value: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
+--- !u!114 &5398897850178732360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7022947325683189093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Player
+  Event: event:/SFX/Mirror/Mirror Phase
+  PlayEvent: 3
+  StopEvent: 4
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
   OverrideAttenuation: 0
   OverrideMinDistance: 0
   OverrideMaxDistance: 0
