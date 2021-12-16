@@ -18967,6 +18967,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1253325242}
     m_Modifications:
+    - target: {fileID: -331511774378177501, guid: 8d743650a6b43a047b81f27ece91eb26, type: 3}
+      propertyPath: Event
+      value: event:/SFX/Mirror/Mirror Phase
+      objectReference: {fileID: 0}
+    - target: {fileID: -331511774378177501, guid: 8d743650a6b43a047b81f27ece91eb26, type: 3}
+      propertyPath: PlayEvent
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -331511774378177501, guid: 8d743650a6b43a047b81f27ece91eb26, type: 3}
+      propertyPath: StopEvent
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: -331511774378177501, guid: 8d743650a6b43a047b81f27ece91eb26, type: 3}
+      propertyPath: CollisionTag
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: -331511774378177501, guid: 8d743650a6b43a047b81f27ece91eb26, type: 3}
+      propertyPath: OverrideMaxDistance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -331511774378177501, guid: 8d743650a6b43a047b81f27ece91eb26, type: 3}
+      propertyPath: OverrideMinDistance
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 42866319429245229, guid: 8d743650a6b43a047b81f27ece91eb26, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -38191,7 +38215,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7866362292208761595, guid: 5f5af1921bf0042928d9652cc2bb2d34, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -32.45
+      value: -32.12
       objectReference: {fileID: 0}
     - target: {fileID: 7866362292208761595, guid: 5f5af1921bf0042928d9652cc2bb2d34, type: 3}
       propertyPath: m_LocalPosition.y
