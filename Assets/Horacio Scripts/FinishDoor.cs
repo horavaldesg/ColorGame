@@ -13,6 +13,7 @@ public class FinishDoor : MonoBehaviour
     public GameObject brokenMirror;
     public GameObject rippleEffect;
     public GameObject roomManager;
+    public GameObject doorSound;
     GameObject ball;
     // Start is called before the first frame update
     void Start()
@@ -20,6 +21,7 @@ public class FinishDoor : MonoBehaviour
         this.gameObject.SetActive(false);
         ball = GameObject.FindGameObjectWithTag("Ball");
         player = GameObject.FindGameObjectWithTag("Player");
+        doorSound.SetActive(true);
     }
 
     // Update is called once per frame
