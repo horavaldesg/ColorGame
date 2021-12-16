@@ -101,6 +101,10 @@ public class GameController : MonoBehaviour
     //Player Location
     public static Vector3 playerInitialPos;
 
+
+    public GameObject transtitionOut;
+    public GameObject transtionCaught;
+
     private void Awake()
     {
         paintOnClick = PaintOnClick;

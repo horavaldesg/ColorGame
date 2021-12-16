@@ -13,6 +13,7 @@ public class RoamingAI : MonoBehaviour
     public float detectionDistance;
     public Transform[] target;
     public Transform player;
+    GameObject playerObj;
     AudioSource audioSc;
     Rigidbody rb;
     float speed = 3f;
@@ -27,14 +28,18 @@ public class RoamingAI : MonoBehaviour
     [SerializeField] float distanceToRemove;
     GameObject[] paints;
     GameObject ball;
+
+    Vector3 momTransform;
     public enum BehaviorState { SeekPlayer, Seek, Stop, SeekInOrder, SeekBall, SeekHands};
 
     public BehaviorState currentState;
     // Start is called before the first frame update
     void Start()
     {
+        momTransform = this.gameObject.transform.position;
         ball = GameObject.FindGameObjectWithTag("Ball");
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        playerObj = GameObject.FindGameObjectWithTag("Player");
         currentScene = SceneManager.GetActiveScene();
         //Randomize();
         audioSc = GetComponent<AudioSource>();
@@ -51,7 +56,7 @@ public class RoamingAI : MonoBehaviour
     private void FixedUpdate()
     {
         paints = GameObject.FindGameObjectsWithTag("HandPrint");
-
+        Debug.Log(momTransform);
         //Debug.Log(i);
         switch (currentState)
         {
@@ -117,6 +122,7 @@ public class RoamingAI : MonoBehaviour
            
 
         }
+        /*
         if(paints != null)
         {
             currentState = BehaviorState.SeekHands;
@@ -215,8 +221,8 @@ public class RoamingAI : MonoBehaviour
     void Stop()
     {
 
-        agent.destination = transform.position;
-
+        //agent.destination = transform.position;
+        
 
     }
     void Randomize()
@@ -248,15 +254,11 @@ public class RoamingAI : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Animator anim = other.GetComponent<Animator>();
-            //anim.SetBool("Caught", true);
-            
-            float clipTime = anim.runtimeAnimatorController.animationClips[5].length;
-            
+            playerObj.GetComponent<GameController>().transtionCaught.SetActive(true);
             
             //Debug.Log(clipTime);
-            //StartCoroutine(loadScene(clipTime,other.gameObject));
-            RespawnPlayer(other.gameObject);
+            StartCoroutine(loadScene(other.gameObject,2));
+            
             //Debug.Log("Caught");
         }
         if (other.gameObject.CompareTag("HandPrint"))
@@ -265,11 +267,14 @@ public class RoamingAI : MonoBehaviour
         }
 
     }
-    private IEnumerator loadScene(float time, GameObject player)
+    private IEnumerator loadScene(GameObject other,float time)
     {
         yield return new WaitForSeconds(time);
         //SceneManager.LoadScene(currentScene.name);
-        Debug.Log("Respawn");
+        RespawnPlayer(other.gameObject);
+        agent.Warp(momTransform);
+        playerObj.GetComponent<GameController>().transtionCaught.SetActive(false);
+
 
     }
     void RespawnPlayer(GameObject playerObj)

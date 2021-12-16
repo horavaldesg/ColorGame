@@ -10,13 +10,13 @@ public class CompletionManager : MonoBehaviour
     public int totalBoxes;
     public bool mirrorsToComplete;
     public static float boxestoComplete;
-
+    GameObject player;
     // Start is called before the first frame update
     void Start()
     {
         CompletedRoom.totalRooms = totalRooms;
         boxestoComplete = totalBoxes;
-
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
@@ -40,6 +40,14 @@ public class CompletionManager : MonoBehaviour
         */
         if(CompletedRoom.completed == totalRooms)
         {
+            player.GetComponent<GameController>().transtitionOut.SetActive(true);
+            StartCoroutine(enumerator());
+            
+        }
+         IEnumerator enumerator()
+        {
+
+            yield return new WaitForSeconds(2);
             SceneManager.LoadScene(scene);
         }
         //Debug.Log(MoveableObjects.completedBoxes);
